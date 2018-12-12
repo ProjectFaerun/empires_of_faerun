@@ -1,0 +1,4 @@
+1360.1.2 = { #starting date
+	holder = 58202
+	government = celestial_bureaucracy
+	}

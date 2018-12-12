@@ -1,0 +1,12 @@
+e_shou_lung_chancellor = { #Shou Lung Chancellor
+	color={ 245 240 10 }
+	color2={ 220 220 0 }
+	capital = 1364
+	religion = the_path
+	culture = shou
+	title = "regfe"
+	title_female = "regfeia" 
+	short_name = yes
+	primary = yes
+	dignity = 10
+	}
