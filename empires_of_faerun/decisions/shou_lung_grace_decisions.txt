@@ -9,7 +9,7 @@ offmap_decisions = {
 	shou_lung_grace_send_gift = {
 		only_playable = yes
 		button_name = offmap_gifts
-		ai_check_interval = 12
+		ai_check_interval = 120
 
 		potential = {
 			is_offmap_tag = shou_lung
@@ -40,7 +40,7 @@ offmap_decisions = {
 		}
 		effect = {
 			FROM = {
-				#sound_effect = shou_lung_grace_gain
+				sound_effect = china_grace_gain
 				scaled_wealth = { value = -4 min = -500 } #If this changes the ai chances should probably be adjusted
 				hidden_effect = {
 					add_character_modifier = {
@@ -67,7 +67,7 @@ offmap_decisions = {
 							offmap = shou_lung
 							value = 450
 						}
-						e_shou_lung_chancellor = {
+						e_shou_lung_west_governor = {
 							show_scope_change = no
 							offmap_power = {
 								show_scope_change = no
@@ -92,7 +92,7 @@ offmap_decisions = {
 							offmap = shou_lung
 							value = 150
 						}
-						e_shou_lung_chancellor = {
+						e_shou_lung_west_governor = {
 							show_scope_change = no
 							offmap_power = {
 								show_scope_change = no
@@ -115,7 +115,7 @@ offmap_decisions = {
 							offmap = shou_lung
 							value = 300
 						}
-						e_shou_lung_chancellor = {
+						e_shou_lung_west_governor = {
 							show_scope_change = no
 							offmap_power = {
 								show_scope_change = no
@@ -153,7 +153,7 @@ offmap_decisions = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 0.1 # slow down
+				factor = 0.66 # slow down
 			}
 			modifier = {
 				factor = 0.1
@@ -166,7 +166,7 @@ offmap_decisions = {
 	shou_lung_grace_become_tributary = {
 		only_independent = yes
 		button_name = offmap_gifts
-		ai_check_interval = 12
+		ai_check_interval = 36
 
 		potential = {
 			is_offmap_tag = shou_lung
@@ -189,14 +189,14 @@ offmap_decisions = {
 					custom_tooltip = { #Borders the Western Governate
 						text = shou_lung_grace_become_tributary_allow_governor_neighbor_tt
 						any_neighbor_independent_ruler = {
-							has_landed_title = e_shou_lung_chancellor
+							has_landed_title = e_shou_lung_west_governor
 						}
 					}
 					custom_tooltip = { #Borders a shou_lung tributary
 						text = shou_lung_grace_become_tributary_allow_tributary_neighbor_tt
 						any_neighbor_independent_ruler = {
 							suzerain = {
-								has_landed_title = e_shou_lung_chancellor
+								has_landed_title = e_shou_lung_west_governor
 							}
 						}
 					}
@@ -247,7 +247,7 @@ offmap_decisions = {
 			custom_tooltip = { text = shou_lung_grace_become_tributary_effect_TT }
 			FROM = {
 				show_scope_change = no
-				sound_effect = shou_lung_grace_gain
+				sound_effect = china_grace_gain
 				tooltip = {
 					if = {
 						limit = {
@@ -266,7 +266,7 @@ offmap_decisions = {
 							offmap = shou_lung
 							value = 400
 						}
-						e_shou_lung_chancellor = {
+						e_shou_lung_west_governor = {
 							show_scope_change = no
 							offmap_power = {
 								show_scope_change = no
@@ -291,7 +291,7 @@ offmap_decisions = {
 							offmap = shou_lung
 							value = 100
 						}
-						e_shou_lung_chancellor = {
+						e_shou_lung_west_governor = {
 							show_scope_change = no
 							offmap_power = {
 								show_scope_change = no
@@ -314,7 +314,7 @@ offmap_decisions = {
 							offmap = shou_lung
 							value = 200
 						}
-						e_shou_lung_chancellor = {
+						e_shou_lung_west_governor = {
 							show_scope_change = no
 							offmap_power = {
 								show_scope_change = no
@@ -397,14 +397,14 @@ offmap_decisions = {
 					custom_tooltip = { #Borders the Western Governate
 						text = shou_lung_grace_become_tributary_allow_governor_neighbor_tt
 						any_neighbor_independent_ruler = {
-							has_landed_title = e_shou_lung_chancellor
+							has_landed_title = e_shou_lung_west_governor
 						}
 					}
 					custom_tooltip = { #Borders a shou_lung tributary
 						text = shou_lung_grace_become_tributary_allow_tributary_neighbor_tt
 						any_neighbor_independent_ruler = {
 							suzerain = {
-								has_landed_title = e_shou_lung_chancellor
+								has_landed_title = e_shou_lung_west_governor
 							}
 						}
 					}
@@ -448,7 +448,7 @@ offmap_decisions = {
 							offmap = shou_lung
 							value = 150
 						}
-						e_shou_lung_chancellor = {
+						e_shou_lung_west_governor = {
 							show_scope_change = no
 							offmap_power = {
 								show_scope_change = no
@@ -471,7 +471,7 @@ offmap_decisions = {
 							offmap = shou_lung
 							value = 50
 						}
-						e_shou_lung_chancellor = {
+						e_shou_lung_west_governor = {
 							show_scope_change = no
 							offmap_power = {
 								show_scope_change = no
@@ -492,7 +492,7 @@ offmap_decisions = {
 							offmap = shou_lung
 							value = 150
 						}
-						e_shou_lung_chancellor = {
+						e_shou_lung_west_governor = {
 							show_scope_change = no
 							offmap_power = {
 								show_scope_change = no
@@ -604,7 +604,7 @@ offmap_decisions = {
 						offmap = shou_lung
 						value = -150
 					}
-					e_shou_lung_chancellor = {
+					e_shou_lung_west_governor = {
 						show_scope_change = no
 						offmap_power = {
 							show_scope_change = no
@@ -627,7 +627,7 @@ offmap_decisions = {
 						offmap = shou_lung
 						value = -50
 					}
-					e_shou_lung_chancellor = {
+					e_shou_lung_west_governor = {
 						show_scope_change = no
 						offmap_power = {
 							show_scope_change = no
@@ -648,7 +648,7 @@ offmap_decisions = {
 						offmap = shou_lung
 						value = -150
 					}
-					e_shou_lung_chancellor = {
+					e_shou_lung_west_governor = {
 						show_scope_change = no
 						offmap_power = {
 							show_scope_change = no
@@ -716,6 +716,10 @@ offmap_decisions = {
 
 		potential = {
 			is_offmap_tag = shou_lung
+			OR = {
+				ai = no
+				shou_lung_offmap_tribute_decisions_enabled_trigger = yes # Allow is checked for each valid 3rd party, so it is cheaper to check it here for the AI
+			}
 		}
 	
 		from_potential = {
@@ -738,7 +742,13 @@ offmap_decisions = {
 				is_inaccessible_trigger = no
 			}
 			# shou_lung_offmap_decisions_enabled_trigger = yes #leave in please, to be used if the tooltip for shou_lung_offmap_tribute_decisions_enabled_trigger changes and we need to reference things uniquely again
-			shou_lung_offmap_tribute_decisions_enabled_trigger = yes
+			tooltip = { shou_lung_offmap_tribute_decisions_enabled_trigger = yes }
+			hidden_tooltip = {
+				OR = { 
+					ai = yes
+					shou_lung_offmap_tribute_decisions_enabled_trigger = yes # AI has already checked this in the potential
+				}
+			}
 		}
 		
 		third_party_potential = {
@@ -1050,6 +1060,13 @@ offmap_decisions = {
 				}
 			}
 			additive_modifier = {
+				value = 20
+				FROMFROM = { 
+					show_scope_change = no
+					trait = groomed
+				}
+			}
+			additive_modifier = {
 				value = 40
 				FROMFROM = { 
 					show_scope_change = no
@@ -1161,7 +1178,7 @@ offmap_decisions = {
 				OR = {
 					shou_lung = {
 						show_scope_change = no 
-						offmap_has_like = shou_lung_likes_eunuchs
+						offmap_has_like = likes_eunuchs
 					}
 				}
 			}
@@ -1178,7 +1195,7 @@ offmap_decisions = {
 				factor = 0.5
 				shou_lung = {
 					show_scope_change = no 
-					offmap_has_dislike = shou_lung_likes_eunuchs
+					offmap_has_dislike = likes_eunuchs
 				}
 			}
 			modifier = {
@@ -1281,7 +1298,7 @@ offmap_decisions = {
 						}
 					}
 				}
-				e_shou_lung_chancellor = {
+				e_shou_lung_west_governor = {
 					show_scope_change = no
 					offmap_power = {
 						show_scope_change = no
@@ -1321,7 +1338,7 @@ offmap_decisions = {
 						}
 					}
 				}
-				e_shou_lung_chancellor = {
+				e_shou_lung_west_governor = {
 					show_scope_change = no
 					offmap_power = {
 						show_scope_change = no
@@ -1360,7 +1377,7 @@ offmap_decisions = {
 						}
 					}
 				}
-				e_shou_lung_chancellor = {
+				e_shou_lung_west_governor = {
 					show_scope_change = no
 					offmap_power = {
 						show_scope_change = no
@@ -1429,11 +1446,15 @@ offmap_decisions = {
 		third_party_filter = home_court
 		ai_third_party_filter = home_court
 		third_party = FROM
-		ai_check_interval = 12
+		ai_check_interval = 20
 		show_third_party_potential = yes
 
 		potential = {
 			is_offmap_tag = shou_lung
+			OR = {
+				ai = no
+				shou_lung_offmap_tribute_decisions_enabled_trigger = yes # Allow is checked for each valid 3rd party, so it is cheaper to check it here for the AI
+			}
 		}
 	
 		from_potential = {
@@ -1456,7 +1477,13 @@ offmap_decisions = {
 				is_inaccessible_trigger = no
 			}
 			# shou_lung_offmap_decisions_enabled_trigger = yes #leave in please, to be used if the tooltip for shou_lung_offmap_tribute_decisions_enabled_trigger changes and we need to reference things uniquely again
-			shou_lung_offmap_tribute_decisions_enabled_trigger = yes
+			tooltip = { shou_lung_offmap_tribute_decisions_enabled_trigger = yes }
+			hidden_tooltip = {
+				OR = { 
+					ai = yes
+					shou_lung_offmap_tribute_decisions_enabled_trigger = yes # AI has already checked this in the potential
+				}
+			}
 		}
 							
 		third_party_potential = {
@@ -1749,10 +1776,24 @@ offmap_decisions = {
 				}
 			}
 			additive_modifier = {
+				value = 40
+				FROMFROM = { 
+					show_scope_change = no
+					trait = groomed
+				}
+			}
+			additive_modifier = {
 				value = -80
 				FROMFROM = { 
 					show_scope_change = no
 					trait = ugly
+				}
+			}
+			additive_modifier = {
+				value = -40
+				FROMFROM = { 
+					show_scope_change = no
+					trait = uncouth
 				}
 			}
 			additive_modifier = {
@@ -1853,7 +1894,7 @@ offmap_decisions = {
 				OR = {
 					shou_lung = {
 						show_scope_change = no 
-						offmap_has_like = shou_lung_likes_concubines
+						offmap_has_like = likes_concubines
 					}
 				}
 			}
@@ -1870,7 +1911,7 @@ offmap_decisions = {
 				factor = 0.5
 				shou_lung = {
 					show_scope_change = no 
-					offmap_has_dislike = shou_lung_likes_concubines
+					offmap_has_dislike = likes_concubines
 				}
 			}
 			modifier = {
@@ -1905,7 +1946,7 @@ offmap_decisions = {
 		effect = {
 			save_event_target_as = target_governor
 			FROM = {
-				sound_effect = shou_lung_grace_gain
+				sound_effect = china_grace_gain
 				save_event_target_as = target_tribute_sender
 			}
 			FROMFROM = {
@@ -1966,7 +2007,7 @@ offmap_decisions = {
 						}
 					}
 				}
-				e_shou_lung_chancellor = {
+				e_shou_lung_west_governor = {
 					show_scope_change = no
 					offmap_power = {
 						show_scope_change = no
@@ -2006,7 +2047,7 @@ offmap_decisions = {
 						}
 					}
 				}
-				e_shou_lung_chancellor = {
+				e_shou_lung_west_governor = {
 					show_scope_change = no
 					offmap_power = {
 						show_scope_change = no
@@ -2045,7 +2086,7 @@ offmap_decisions = {
 						}
 					}
 				}
-				e_shou_lung_chancellor = {
+				e_shou_lung_west_governor = {
 					show_scope_change = no
 					offmap_power = {
 						show_scope_change = no
@@ -2093,7 +2134,7 @@ offmap_decisions = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 0.3 # slow down
+				factor = 0.5 # slow down
 			}
 		}
 	}
@@ -2598,7 +2639,7 @@ offmap_decisions = {
 						}
 					}
 				}
-				e_shou_lung_chancellor = {
+				e_shou_lung_west_governor = {
 					show_scope_change = no
 					offmap_power = {
 						show_scope_change = no
@@ -2634,7 +2675,7 @@ offmap_decisions = {
 						}
 					}
 				}
-				e_shou_lung_chancellor = {
+				e_shou_lung_west_governor = {
 					show_scope_change = no
 					offmap_power = {
 						show_scope_change = no
@@ -2669,7 +2710,7 @@ offmap_decisions = {
 						}
 					}
 				}
-				e_shou_lung_chancellor = {
+				e_shou_lung_west_governor = {
 					show_scope_change = no
 					offmap_power = {
 						show_scope_change = no
@@ -3097,7 +3138,7 @@ offmap_decisions = {
 						offmap = shou_lung
 						value = 750
 					}
-					e_shou_lung_chancellor = {
+					e_shou_lung_west_governor = {
 						show_scope_change = no
 						offmap_power = {
 							show_scope_change = no
@@ -3120,7 +3161,7 @@ offmap_decisions = {
 						offmap = shou_lung
 						value = 250
 					}
-					e_shou_lung_chancellor = {
+					e_shou_lung_west_governor = {
 						show_scope_change = no
 						offmap_power = {
 							show_scope_change = no
@@ -3141,7 +3182,7 @@ offmap_decisions = {
 						offmap = shou_lung
 						value = 500
 					}
-					e_shou_lung_chancellor = {
+					e_shou_lung_west_governor = {
 						show_scope_change = no
 						offmap_power = {
 							show_scope_change = no
@@ -3228,6 +3269,7 @@ offmap_decisions = {
 					text = send_artifact_potential_tt
 					quality > 2
 					NOR = {
+						has_artifact_flag = flag_considering_donation 
 						has_artifact_flag = curse
 						has_artifact_flag = shou_lung
 					}
@@ -3286,14 +3328,14 @@ offmap_decisions = {
 				factor = 1.5
 				shou_lung = {
 					show_scope_change = no 
-					offmap_has_like = shou_lung_likes_wealth
+					offmap_has_like = likes_wealth
 				}
 			}
 			modifier = {
 				factor = 0.5
 				shou_lung = {
 					show_scope_change = no 
-					offmap_has_dislike = shou_lung_likes_wealth
+					offmap_has_like = likes_wealth
 				}
 			}
 			modifier = {
@@ -3336,7 +3378,7 @@ offmap_decisions = {
 							}
 						}
 						shou_lung = {
-							offmap_has_like = shou_lung_likes_wealth
+							offmap_has_like = likes_wealth
 						}
 					}
 					NOR = {
@@ -3346,11 +3388,11 @@ offmap_decisions = {
 							}
 						}
 						shou_lung = {
-							offmap_has_dislike = shou_lung_likes_wealth
+							offmap_has_dislike = likes_wealth
 						}
 					}
 				}
-				e_shou_lung_chancellor = {
+				e_shou_lung_west_governor = {
 					show_scope_change = no
 					offmap_power = {
 						show_scope_change = no
@@ -3382,7 +3424,7 @@ offmap_decisions = {
 						}
 					}
 				}
-				e_shou_lung_chancellor = {
+				e_shou_lung_west_governor = {
 					show_scope_change = no
 					offmap_power = {
 						show_scope_change = no
@@ -3413,7 +3455,7 @@ offmap_decisions = {
 						}
 					}
 				}
-				e_shou_lung_chancellor = {
+				e_shou_lung_west_governor = {
 					show_scope_change = no
 					offmap_power = {
 						show_scope_change = no
@@ -3439,7 +3481,7 @@ offmap_decisions = {
 			}
 			save_event_target_as = target_governor
 			FROM = {
-				sound_effect = shou_lung_grace_gain
+				sound_effect = china_grace_gain
 				save_event_target_as = target_tribute_sender
 			}
 
@@ -3488,13 +3530,7 @@ offmap_decisions = {
 	shou_lung_kow_tow_pilgrimage = {
 		only_playable = yes
 		button_name = offmap_gifts
-		ai_check_interval = 10
-		
-		from_potential = {
-		}
-		
-		potential = {
-		}
+		ai_check_interval = 120
 		
 		allow = {
 			show_only_failed_conditions = yes
@@ -3577,7 +3613,7 @@ offmap_decisions = {
 		ai_will_do ={
 			factor = 1
 			modifier = {
-				factor = 0.01 #slow down
+				factor = 0.1 #slow down
 			}
 		}
 	}
@@ -3885,11 +3921,10 @@ offmap_decisions = {
 	shou_lung_siege_engineers = {
 		only_playable = yes
 		button_name = offmap_boons
-		ai_check_interval = 60
+		ai = no
 
 		from_potential = {
 			has_dlc = "Jade Dragon"
-			ai = no
 			mercenary = no
 			holy_order = no
 			is_landed = yes
@@ -4266,7 +4301,7 @@ offmap_decisions = {
 		third_party_filter = realm_including_me
 		ai_third_party_filter = court
 		third_party = from
-		ai_check_interval = 6
+		ai_check_interval = 12
 		show_third_party_potential = yes
 		
 		from_potential = {
@@ -4404,7 +4439,7 @@ offmap_decisions = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 0.05 # slow down
+				factor = 0.1 # slow down
 			}
 			modifier = {
 				factor = 0.5
@@ -4431,14 +4466,13 @@ offmap_decisions = {
 		third_party_filter = independent_rulers
 		ai_third_party_filter = independent_rulers
 		third_party = from
-		ai_check_interval = 360
+		ai = no
 		show_third_party_potential = yes
 		
 		from_potential = {
 			has_dlc = "Jade Dragon"
 			mercenary = no
 			holy_order = no
-			ai = no
 			is_landed = yes
 		}
 
@@ -4749,9 +4783,9 @@ offmap_decisions = {
 	shou_lung_force_to_open = {
 		only_playable = yes
 		button_name = offmap_hostility
+		ai = no
 	
 		from_potential = {
-			ai = no
 			has_dlc = "Jade Dragon"
 			mercenary = no
 			holy_order = no
@@ -4782,14 +4816,14 @@ offmap_decisions = {
 					custom_tooltip = { #Borders the Western Governate
 						text = shou_lung_grace_become_tributary_allow_governor_neighbor_tt
 						any_neighbor_independent_ruler = {
-							has_landed_title = e_shou_lung_chancellor
+							has_landed_title = e_shou_lung_west_governor
 						}
 					}
 					custom_tooltip = { #Borders a shou_lung tributary
 						text = shou_lung_grace_become_tributary_allow_tributary_neighbor_tt
 						any_neighbor_independent_ruler = {
 							suzerain = {
-								has_landed_title = e_shou_lung_chancellor
+								has_landed_title = e_shou_lung_west_governor
 							}
 						}
 					}
@@ -4862,9 +4896,9 @@ offmap_decisions = {
 	shou_lung_tributary_break_free = {
 		only_playable = yes
 		button_name = offmap_hostility
+		ai = no
 	
 		from_potential = {
-			ai = no
 			has_dlc = "Jade Dragon"
 			mercenary = no
 			holy_order = no
@@ -4929,9 +4963,9 @@ offmap_decisions = {
 		ai_third_party_filter = home_court
 		third_party = FROM
 		show_third_party_potential = yes
+		ai = no
 	
 		from_potential = {
-			ai = no
 			has_dlc = "Jade Dragon"
 			mercenary = no
 			holy_order = no
@@ -4958,7 +4992,7 @@ offmap_decisions = {
 					custom_tooltip = { #Borders the Western Governate
 						text = shou_lung_grace_become_tributary_allow_governor_neighbor_tt
 						any_neighbor_independent_ruler = {
-							has_landed_title = e_shou_lung_chancellor
+							has_landed_title = e_shou_lung_west_governor
 						}
 					}
 					custom_tooltip = { #Borders the eastern edge of the map

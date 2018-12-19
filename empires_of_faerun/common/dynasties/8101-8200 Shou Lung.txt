@@ -1,2 +1,2 @@
-8101 = { name="Chin" culture=shou }
-8102 = { name="Chou" culture=shou }
+8901 = { name="Chin" culture=shou }
+8902 = { name="Chou" culture=shou }

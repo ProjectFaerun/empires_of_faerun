@@ -168,7 +168,7 @@ character_event = {
 						trait = strong
 						trait = genius
 						trait = quick
-						trait = fair
+						has_fair_trait_trigger = yes
 						trait = robust
 						trait = shrewd
 						trait = architect
@@ -211,7 +211,7 @@ character_event = {
 						trait = strong
 						trait = genius
 						trait = quick
-						trait = fair
+						has_fair_trait_trigger = yes
 						trait = robust
 						trait = shrewd
 						trait = architect
@@ -367,7 +367,7 @@ character_event = {
 					}
 				}
 			}
-			e_shou_lung_chancellor = {
+			e_shou_lung_west_governor = {
 				offmap_power = {
 					show_scope_change = no
 					custom_tooltip = { text = JD_60002_likes_tt }
@@ -406,7 +406,7 @@ character_event = {
 					}
 				}
 			}
-			e_shou_lung_chancellor = {
+			e_shou_lung_west_governor = {
 				offmap_power = {
 					show_scope_change = no
 					custom_tooltip = { text = JD_60002_dislikes_tt }
@@ -445,7 +445,7 @@ character_event = {
 					}
 				}
 			}
-			e_shou_lung_chancellor = {
+			e_shou_lung_west_governor = {
 				offmap_power = {
 					show_scope_change = no
 					custom_tooltip = { text = JD_60002_likes_but_dislikes_tt }
@@ -494,7 +494,7 @@ character_event = {
 					}
 				}
 			}
-			e_shou_lung_chancellor = {
+			e_shou_lung_west_governor = {
 				offmap_power = {
 					show_scope_change = no
 					custom_tooltip = { text = JD_60002_likes_tt }
@@ -533,7 +533,7 @@ character_event = {
 					}
 				}
 			}
-			e_shou_lung_chancellor = {
+			e_shou_lung_west_governor = {
 				offmap_power = {
 					show_scope_change = no
 					custom_tooltip = { text = JD_60002_dislikes_tt }
@@ -572,7 +572,7 @@ character_event = {
 					}
 				}
 			}
-			e_shou_lung_chancellor = {
+			e_shou_lung_west_governor = {
 				offmap_power = {
 					show_scope_change = no
 					custom_tooltip = { text = JD_60002_likes_but_dislikes_tt }
@@ -607,7 +607,7 @@ character_event = {
 					}
 				}
 			}
-			e_shou_lung_chancellor = {
+			e_shou_lung_west_governor = {
 				offmap_power = {
 					show_scope_change = no
 					custom_tooltip = { text = JD_60002_likes_tt }
@@ -632,7 +632,7 @@ character_event = {
 					}
 				}
 			}
-			e_shou_lung_chancellor = {
+			e_shou_lung_west_governor = {
 				offmap_power = {
 					show_scope_change = no
 					custom_tooltip = { text = JD_60002_dislikes_tt }
@@ -655,7 +655,7 @@ character_event = {
 					}
 				}
 			}
-			e_shou_lung_chancellor = {
+			e_shou_lung_west_governor = {
 				offmap_power = {
 					show_scope_change = no
 					custom_tooltip = { text = JD_60002_likes_but_dislikes_tt }
@@ -672,7 +672,7 @@ character_event = {
 				ROOT = { liked_by_offmap = { type = shou_lung } }
 				NOT = { ROOT = { disliked_by_offmap = { type = shou_lung } } }
 			}
-			e_shou_lung_chancellor = {
+			e_shou_lung_west_governor = {
 				offmap_power = {
 					show_scope_change = no
 					custom_tooltip = { text = JD_60002_likes_tt }
@@ -685,7 +685,7 @@ character_event = {
 				ROOT = { disliked_by_offmap = { type = shou_lung } }
 				NOT = { ROOT = { liked_by_offmap = { type = shou_lung } } }
 			}
-			e_shou_lung_chancellor = {
+			e_shou_lung_west_governor = {
 				offmap_power = {
 					show_scope_change = no
 					custom_tooltip = { text = JD_60002_dislikes_tt }
@@ -698,7 +698,7 @@ character_event = {
 				ROOT = { liked_by_offmap = { type = shou_lung } }
 				ROOT = { disliked_by_offmap = { type = shou_lung } }
 			}
-			e_shou_lung_chancellor = {
+			e_shou_lung_west_governor = {
 				offmap_power = {
 					show_scope_change = no
 					custom_tooltip = { text = JD_60002_likes_but_dislikes_tt }

@@ -1,15 +1,11 @@
-1300.7.1 = {
-holder = 58203
-government=celestial_government
+1335.1.1 = { # Starting Date minus 10 years
+	holder=60002
 }
-1339.1.1 = { # Starting Date minus 10 years
-	holder=58201
-	}
 1360.1.1 = {
 	status = shou_lung_stable
 	policy = shou_lung_isolationist
-	set_governor_title = e_shou_lung_chancellor
-	set_governor = 58202
-	set_offmap_name = "Seb"
+	set_governor_title = e_shou_lung_west_governor
+	set_governor = 60001
+	government=celestial_government
 }
 	

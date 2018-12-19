@@ -4,7 +4,7 @@ shou_lung_jade_dragon = {
 	diplomacy = 2
 	quality = 5
 	flags = { shou_lung statue rare }
-	picture = "GFX_chinese_jade_dragon"
+	picture = "GFX_jade_dragon"
 	stacking = no
 }
 shou_lung_dragon_amulet = {
@@ -62,7 +62,7 @@ shou_lung_silk_shroud = {
 		is_adult = yes
 	}
 	flags = { shou_lung textile clothing }
-	picture = "GFX_chinese_silk_shroud"
+	picture = "GFX_silk_shroud"
 	stacking = no
 	slot = ceremonial_torso
 }
@@ -71,27 +71,32 @@ shou_lung_water_clock = {
 	monthly_character_piety = 0.5
 	learning = 2
 	flags = { shou_lung clock }
-	picture = "GFX_chinese_water_clock"
+	picture = "GFX_water_clock"
 	stacking = no
 }
 shou_lung_jian_sword = {
 	quality = 4
 	monthly_character_prestige = 1
-	martial = 3
-	combat_rating = 3
+	martial = 2
+	combat_rating = 12
+	command_modifier = {
+		heavy_infantry = 0.10
+		light_cavalry = 0.125
+		actual_light_infantry = 0.125
+	}
 	active = {
 		is_adult = yes
 	}
 	flags = { shou_lung sword }
 	stacking = no
-	picture = "GFX_chinese_jian_sword"
+	picture = "GFX_jian_sword"
 	slot = weapon
 }
 shou_lung_prev_emperor_sculpture = {
 	monthly_character_prestige = 0.15
 	quality = 1
 	flags = { shou_lung sculpture decor }
-	picture = "GFX_small_shou_lung_figurine"
+	picture = "GFX_small_chinese_figurine"
 	#stacking = no
 }
 shou_lung_arm_protector = {
@@ -106,34 +111,36 @@ shou_lung_arm_protector = {
 }
 shou_lung_serpent_spear = {
 	monthly_character_prestige = 0.4
-	martial = 2
-	combat_rating = 1
+	martial = 1
+	combat_rating = 7
 	command_modifier = {
-		cavalry = 0.025
-		heavy_infantry = 0.025
+		cavalry = 0.05
+		heavy_infantry = 0.035
+		pikemen = 0.035
 	}
 	quality = 2
 	active = {
 		is_adult = yes
 	}
-	flags = { shou_lung combat_weapon lance }
+	flags = { shou_lung combat_weapon lance spear }
 	stacking = no
 	picture = "GFX_serpent_spear"
 	slot = weapon
 }
 shou_lung_ji = {
 	monthly_character_prestige = 0.65
-	martial = 3
-	combat_rating = 1
+	martial = 2
+	combat_rating = 8
 	command_modifier = {
-		cavalry = 0.05
-		heavy_infantry = 0.05
+		cavalry = 0.1
+		heavy_infantry = 0.075
+		pikemen = 0.075
 	}
 	quality = 3
 	active = {
 		is_adult = yes
 	}
-	flags = { shou_lung combat_weapon lance }
+	flags = { shou_lung combat_weapon lance spear }
 	stacking = no
 	picture = "GFX_ji"
 	slot = weapon
@@ -141,7 +148,7 @@ shou_lung_ji = {
 shou_lung_crossbow = {
 	monthly_character_prestige = 0.25
 	martial = 2
-	combat_rating = 1
+	combat_rating = 8
 	defensive_plot_power_modifier = 0.15
 	command_modifier = {
 		light_infantry = 0.10
@@ -160,7 +167,7 @@ shou_lung_bronze_sculpture = {
 	stewardship = 1
 	quality = 3
 	flags = { shou_lung art decor }
-	picture = "GFX_shou_lung_bronze_statue"
+	picture = "GFX_chinese_bronze_statue"
 	stacking = no
 }
 
@@ -177,7 +184,7 @@ shou_lung_tapestry = {
 	build_cost_modifier = -0.02
 	quality = 2
 	flags = { shou_lung art decor }
-	picture = "GFX_shou_lung_tapestry"
+	picture = "GFX_chinese_tapestry"
 	stacking = no
 }
 shou_lung_tapestry_grand = {
@@ -185,8 +192,26 @@ shou_lung_tapestry_grand = {
 	short_reign_length = -2
 	quality = 3
 	flags = { shou_lung art decor }
-	picture = "GFX_shou_lung_tapestry"
+	picture = "GFX_chinese_tapestry"
 	stacking = no
+}
+art_of_war = {
+	quality = 5
+	monthly_character_prestige = 1
+	martial = 5
+	flags = { shou_lung book very_rare }
+	picture = "GFX_art_of_war"
+	stacking = no
+	slot = library
+}
+classic_of_poetry = {
+	quality = 5
+	monthly_character_piety = 0.5
+	learning = 3
+	flags = { shou_lung book }
+	picture = "GFX_classic_of_poetry"
+	stacking = no
+	slot = library
 }
 shou_lung_book_health = {
 	quality = 3
@@ -196,8 +221,9 @@ shou_lung_book_health = {
 	health = 0.5
 	fertility = 0.15
 	flags = { shou_lung book }
-	picture = "GFX_shou_lung_compendium_of_medicine"
+	picture = "GFX_chinese_compendium_of_medicine"
 	stacking = no
+	slot = library
 }
 shou_lung_book_law = {
 	quality = 3
@@ -206,8 +232,9 @@ shou_lung_book_law = {
 	}
 	vassal_opinion = 5
 	flags = { shou_lung book }
-	picture = "GFX_shou_lung_treatise_on_law"
+	picture = "GFX_chinese_treatise_on_law"
 	stacking = no
+	slot = library
 }
 shou_lung_book_history = {
 	quality = 1
@@ -217,8 +244,9 @@ shou_lung_book_history = {
 	monthly_character_prestige = 0.1
 	fertility = 0.05
 	flags = { shou_lung book }
-	picture = "GFX_shou_lung_history_book"
+	picture = "GFX_chinese_history_book"
 	#stacking = no
+	slot = library
 }
 shou_lung_book_economy = {
 	quality = 3
@@ -228,6 +256,7 @@ shou_lung_book_economy = {
 	stewardship = 1
 	monthly_character_wealth = 1
 	flags = { shou_lung book }
-	picture = "GFX_shou_lung_economic_chronicle"
+	picture = "GFX_chinese_economic_chronicle"
 	stacking = no
+	slot = library
 }

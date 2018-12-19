@@ -21,14 +21,12 @@ feudal_governments = {
 		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
 			tribal_government
 		}
-		frame_suffix = "_chinaimperial"
+		frame_suffix = "_chineseimperial"
 		potential = {
 			tier = EMPEROR
 			primary_title = { has_title_flag = pretender_shou_lung_empire }
 			OR = {
 				culture_group = kara_turan_group
-				culture = khitan
-				culture = tangut
 				culture = tuigan
 				has_character_flag = celestial_government_preserve #keeps government when player is given culture change opton
 			}
@@ -54,6 +52,7 @@ feudal_governments = {
 		vassal_government_opinion_penalties = no
 		can_grant_kingdoms_and_empires_to_other_government_group = yes
 		free_retract_vassalage = yes
+		marriage_ignore_religion = yes
 		
 		vassal_limit = 10
 		
@@ -87,11 +86,11 @@ republic_governments = {
 			merchant_republic_government
 			republic_government
 		}
-		gets_religion_opinion_penalties = yes
-		vassal_government_opinion_penalties = yes
-		#free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
-		#	tribal_government
-		#}
+		gets_religion_opinion_penalties = no
+		vassal_government_opinion_penalties = no
+		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
+			tribal_government
+		}
 		frame_suffix = "_confucian"
 		potential = {
 			is_offmap_tag = shou_lung
@@ -106,10 +105,10 @@ republic_governments = {
 		
 		capital_move_delay = 600
 		
-		aggression = 2
-		#can_create_kingdoms = no
-		#can_create_empires = no
-		#can_demand_religious_conversion = no
-		#can_inherit = no
+		aggression = 0 # AI only attacks by script
+		can_create_kingdoms = no
+		can_create_empires = no
+		can_demand_religious_conversion = no
+		can_inherit = no
 	}
 }

@@ -162,16 +162,16 @@ shou_lung_offmap_hostile_decisions_enabled_trigger = {
 }
 
 #Used with Sending Tribute characters to shou_lung...
-#local_third_party_score_low_trigger = {
-#	NOT = { check_variable = { which = local_third_party_score value = 91 } }
-#}
-#local_third_party_score_medium_trigger = {
-	#check_variable = { which = local_third_party_score value = 91 }
-	#NOT = { check_variable = { which = local_third_party_score value = 141 } }
-#}
-#local_third_party_score_great_trigger = {
-#	check_variable = { which = local_third_party_score value = 141 }
-#}
+local_third_party_score_low_trigger = {
+	NOT = { check_variable = { which = local_third_party_score value = 91 } }
+}
+local_third_party_score_medium_trigger = {
+	check_variable = { which = local_third_party_score value = 91 }
+	NOT = { check_variable = { which = local_third_party_score value = 141 } }
+}
+local_third_party_score_great_trigger = {
+	check_variable = { which = local_third_party_score value = 141 }
+}
 
 # For checking the shou_lung Emperor's likes & dislikes
 is_liked_by_shou_lung_trigger = {
@@ -218,56 +218,56 @@ is_liked_and_disliked_by_shou_lung = {
 }
 
 #Used in the invasion script...
-#valid_shou_lung_target = {
-#	NOT = { character = ROOT }
-#	NOT = { has_character_modifier = peace_deal_with_shou_lung }
-#	NOT = { has_character_flag = defeated_shou_lung }
-#	NOT = {	is_tributary = { suzerain = ROOT } }
-#	in_revolt = no
-#	is_within_diplo_range = ROOT
-#	is_landed = yes
-#	higher_tier_than = BARON
-#	NOT = { primary_title = { has_title_flag = rebel_general_title } } #uses special cb to target
-#	NOT = { shou_lung = { offmap_ruler = { dynasty = PREVPREV } } }
-#}
+valid_shou_lung_target = {
+	NOT = { character = ROOT }
+	NOT = { has_character_modifier = peace_deal_with_shou_lung }
+	NOT = { has_character_flag = defeated_shou_lung }
+	NOT = {	is_tributary = { suzerain = ROOT } }
+	in_revolt = no
+	is_within_diplo_range = ROOT
+	is_landed = yes
+	higher_tier_than = BARON
+	NOT = { primary_title = { has_title_flag = rebel_general_title } } #uses special cb to target
+	NOT = { shou_lung = { offmap_ruler = { dynasty = PREVPREV } } }
+}
 
-#valid_shou_lung_target_location = {
-#	OR = {
-#		any_realm_province = { region = custom_shou_lung_invasion_target_region }
-#		any_neighbor_independent_ruler = {
-#			has_landed_title = e_shou_lung_chancellor
-#		}
-#	}
-#}
+valid_shou_lung_target_location = {
+	OR = {
+		any_realm_province = { region = custom_shou_lung_invasion_target_region }
+		any_neighbor_independent_ruler = {
+			has_landed_title = e_shou_lung_west_governor
+		}
+	}
+}
 
-#valid_shou_lung_target_location_tributary_chain = {
-#	OR = {
-#		#any_realm_province = { region = custom_shou_lung_invasion_target_region }
-#		any_neighbor_independent_ruler = {
-#			has_landed_title = e_shou_lung_chancellor
-#		}
-#		any_neighbor_independent_ruler = {
-#			is_tributary = yes
-#			suzerain = {
-#				has_landed_title = e_shou_lung_chancellor
-#			}
-#		}
-#	}
-#}
+valid_shou_lung_target_location_tributary_chain = {
+	OR = {
+		#any_realm_province = { region = custom_shou_lung_invasion_target_region }
+		any_neighbor_independent_ruler = {
+			has_landed_title = e_shou_lung_west_governor
+		}
+		any_neighbor_independent_ruler = {
+			is_tributary = yes
+			suzerain = {
+				has_landed_title = e_shou_lung_west_governor
+			}
+		}
+	}
+}
 
 # JADE DRAGON
 # EMPEROR LIKES & DISLIKES
-shou_lung_likes_concubines = {
+likes_concubines = {
 	context = concubine # Not a trigger, but used by the 'liked_by_offmap' & 'disliked_by_offmap' triggers
 }
-shou_lung_likes_eunuchs = {
+likes_eunuchs = {
 	context = eunuch # Not a trigger, but used by the 'liked_by_offmap' & 'disliked_by_offmap' triggers
 	trait = eunuch
 }
-shou_lung_likes_wealth = {
+likes_wealth = {
 	context = wealth # Not a trigger, but used by the 'liked_by_offmap' & 'disliked_by_offmap' triggers
 }
-shou_lung_likes_tributaries = {
+likes_tributaries = {
 	context = tributary # Not a trigger, but used by the 'liked_by_offmap' & 'disliked_by_offmap' triggers
 }
 

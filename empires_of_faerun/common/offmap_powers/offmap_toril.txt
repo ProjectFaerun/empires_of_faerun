@@ -1,14 +1,12 @@
 shou_lung = {
 	name = shou_lung_shou_lung
-	short_name = yes
 	window_name = domestic_offmaps_window
 	button_name = icon_offmaps_entry
-	currency_name = SHOU_LUNG_GRACE 
-	currency_gain = monthly_shou_lung_grace
+	currency_name = TXT_GRACE
+	currency_gain = monthly_grace
 	currency_reset_on_dynasty_change = yes
-	culture = shou
 	holder_title = title_celestial_emperor	
-	governor = e_shou_lung_chancellor
+	governor_title = e_shou_lung_west_governor
 	tier = emperor
 	non_aggression_modifier = peace_deal_with_shou_lung
 	government = celestial_bureaucracy
@@ -16,9 +14,6 @@ shou_lung = {
 	sound = china_interaction_interface	
 	display_trigger = {
 		has_dlc = "Jade Dragon"
-		#trade_route = silk_road
-		#			region = mulhorand_region
-		#			region = kara_tur_region
 	}
 	policies = {
 		shou_lung_open
@@ -154,10 +149,10 @@ shou_lung = {
 			FROM = { is_liked_by_shou_lung_trigger = yes }
 			is_within_diplo_range = FROM
 		}
-		shou_lung_shou_lung_likes_tributaries = {
+		shou_lung_likes_tributaries = {
 			value = 2
 			shou_lung = {			
-				offmap_has_like = shou_lung_likes_tributaries
+				offmap_has_like = likes_tributaries
 			}
 			FROM = {
 				is_tributary = {
@@ -165,15 +160,15 @@ shou_lung = {
 				}
 			}
 		}
-		vassal_of_chancellor = {
+		vassal_of_WP = {
 			value = 2
 			FROM = {
 				liege = {
-					has_landed_title = e_shou_lung_chancellor
+					has_landed_title = e_shou_lung_west_governor
 				}
 			}
 		}
-		shou_lung_same_culture_and_religion = {
+		offmap_same_culture_and_religion = {
 			value = 2
 			offmap_ruler = {
 				culture = FROM
@@ -195,7 +190,13 @@ shou_lung = {
 			Chengzu
 		}
 		{ # Successor names
-			
+			Zhenzong
+			Renzong
+			Zhongzong
+			Yingzong
+			Shenzong
+			Zhezhong
+			Huizong
 			Qinzong
 			Xiaozong
 			Guangzong
@@ -264,7 +265,7 @@ shou_lung = {
 			}
 			FROM = { # default culture for new emperor
 								# the left side here (and for culture, religion, graphical_culture and dynasty) can be a right hand side value (FROM, ROOT, a culture name, etc). and the right hand side / inside the brackets is a standard MTTH evaluation. Only the one with the highest weight will be used. If there's a tie, one of the tied values is picked at random
-				value = 100
+				value = 0
 				additive_modifier = { #the new emperor will keep current culture if things are great
 					value = 100
 					#shou_lung_is_fine_trigger = yes
@@ -312,20 +313,20 @@ shou_lung = {
 		}
 		
 		likes = {
-			shou_lung_likes_concubines = {
+			likes_concubines = {
 				value = 300
 				modifier = {
 					factor = 0.1
 					FROMFROM = { is_female = yes }
 				}
 			}
-			shou_lung_likes_eunuchs = {
+			likes_eunuchs = {
 				value = 300
 			}
-			shou_lung_likes_wealth = {
+			likes_wealth = {
 				value = 300
 			}
-			shou_lung_likes_tributaries = {
+			likes_tributaries = {
 				value = 100
 			}
 			likes_gnome_group = {
@@ -1679,14 +1680,14 @@ shou_lung = {
 			#}
 			top_liege = {
 				suzerain = {
-					has_landed_title = e_shou_lung_chancellor
+					has_landed_title = e_shou_lung_west_governor
 				}
 			}
 			any_neighbor_independent_ruler = {
 				OR = {
-					has_landed_title = e_shou_lung_chancellor
+					has_landed_title = e_shou_lung_west_governor
 					suzerain = {
-						has_landed_title = e_shou_lung_chancellor
+						has_landed_title = e_shou_lung_west_governor
 					}
 				}
 			}

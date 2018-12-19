@@ -78,7 +78,7 @@ character_event = {
             factor = 0.1
         }
         modifier = {
-            is_tributary = { type = offmap suzerain = e_shou_lung_chancellor }
+            is_tributary = { type = offmap suzerain = e_shou_lung_west_governor }
             factor = 1.5
         }
     }
@@ -92,10 +92,7 @@ character_event = {
                     20 = {
                         trigger = {
 							job_chancellor = {
-								OR = {
-									culture_group = kara_turan_group
-									culture_group = altaic
-								}
+								culture_group = kara_turan_group
                                 NOT = { character = ROOT }
 							}
 						}
@@ -110,10 +107,7 @@ character_event = {
                     20 = {
                         trigger = {
 							job_marshal = {
-								OR = {
-									culture_group = kara_turan_group
-									culture_group = altaic
-								}
+								culture_group = kara_turan_group
                                 NOT = { character = ROOT }
 							} 
 						}
@@ -136,10 +130,7 @@ character_event = {
                     20 = {
                         trigger = {
 							job_treasurer = {
-								OR = {
-									culture_group = kara_turan_group
-									culture_group = altaic
-								}
+								culture_group = kara_turan_group
                                 NOT = { character = ROOT }
 							}
 						}
@@ -162,10 +153,7 @@ character_event = {
                     20 = {
                         trigger = {
 							job_spiritual = {
-								OR = {
-									culture_group = kara_turan_group
-									culture_group = altaic
-								}
+								culture_group = kara_turan_group
                                 NOT = { character = ROOT }
 							}
 						}
@@ -199,11 +187,87 @@ character_event = {
     is_triggered_only = yes
     immediate = { 
     	save_event_target_as = shou_lung_guest
+        save_persistent_event_target = {
+            name = host_of_shou_lung_diplomat
+            scope = FROM
+        } 
     	FROM = { letter_event = { id = JD.20002 } } 
     }
 }
 
-#shou_lung guests announces their intention to visit
+
+character_event = { #Fired from on_death to the character receiving the chinese diplomat
+    id = JD.10022
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        persistent_event_target:host_of_shou_lung_diplomat = { always = yes }
+    }
+
+    immediate = {
+        persistent_event_target:host_of_shou_lung_diplomat = {
+            character_event = { id = JD.10023 } #visible event for player
+        }
+    }
+}
+
+character_event = { # Fallback (in case the visitor died/imprisoned)
+    id = JD.10023
+    has_dlc = "Jade Dragon"
+    picture = GFX_evt_chinese_bureaucrat
+    border = GFX_event_normal_frame_diplomacy
+    is_triggered_only = yes
+
+    desc = {
+        text = EVTDESC_JD_10023_death
+        trigger = {
+            NOT = { FROM = { is_alive = yes } }
+            death_no_trace_trigger = no
+        }
+    }
+    desc = {
+        text = EVTDESC_JD_10023_prison
+        trigger = { FROM = { prisoner = yes } }
+    }
+    desc = {
+        text = EVTDESC_JD_10023_missing
+        trigger = {
+            FROM = { death_no_trace_trigger = yes }
+        }
+    }
+
+    trigger = {
+        FROM = { death_in_shou_lung_trigger = no }
+    }
+
+    option = {      
+        name = EVTOPTA_JD_10023
+        prestige = -50
+        wealth = -15
+        add_offmap_currency = {
+            offmap = shou_lung
+            value = 15
+        }
+
+        shou_lung = {
+            governor = {
+                show_portrait = yes
+            }
+        }
+    }
+    option = {      
+        name = EVTOPTB_JD_10023
+    }
+
+    after = {
+        #Clean-up event
+        character_event = { id = JD.20020 days = 1 }
+        FROM = { clear_persistent_event_target = host_of_shou_lung_diplomat }
+    }
+}
+
+#Chinese guests announces their intention to visit
 letter_event = {
     id = JD.20002
 	has_dlc = "Jade Dragon"
@@ -223,7 +287,7 @@ letter_event = {
     #Welcome!
     option = { 
         name = EVTOPTA_JD_20002
-		sound_effect = shou_lung_grace_gain
+		sound_effect = china_grace_gain
         custom_tooltip = { text = EVTOPTA_JD_20002_TT }
 
         add_grace_trivial_effect = yes
@@ -269,7 +333,8 @@ character_event = {
     hide_window = yes
     is_triggered_only = yes
     trigger = { 
-        is_alive = yes 
+        is_alive = yes
+        prisoner = no
         shou_lung = { governor = { is_liege_of = ROOT } }
     }
     immediate = { 
@@ -324,12 +389,13 @@ character_event = {
                 }
                 10 = { #Greet in shou_lung? 
                     modifier = { is_learned_trigger = yes factor = 1.3 }
-                    trigger = { shou_lung = { governor = { NOT = { culture = ROOT } } } }
+                    trigger = { event_target:shou_lung_guest = { NOT = { culture = FROMFROM } } }
                     character_event = { id = JD.20006 } 
                 }
                 10 = { #Wearing the clothes wrong
                     modifier = { is_dumb_trigger = yes factor = 1.3 }
                     modifier = { trait = greedy factor = 1.3 }
+                    trigger = { event_target:shou_lung_guest = { NOT = { culture = FROMFROM } } }
                     character_event = { id = JD.20011 }
                 }
                 10 = { #What you said (apparently) had a deep hidden meaning
@@ -352,7 +418,7 @@ character_event = {
     id = JD.20004
 	has_dlc = "Jade Dragon"
     desc = EVTDESC_JD_20004
-    picture = GFX_evt_shou_lung_diplomatic_success
+    picture = GFX_evt_china_diplomatic_success
     border = GFX_event_normal_frame_diplomacy
 
     is_triggered_only = yes
@@ -360,10 +426,11 @@ character_event = {
     option = { 
         name = EVTOPTA_JD_20004
         add_grace_minor_effect = yes
-		sound_effect = shou_lung_grace_gain
+		sound_effect = china_grace_gain
         
-        event_target:corresponding_councilor = {
+        event_target:shou_lung_guest = {
             show_portrait = yes
+            clear_persistent_event_target = host_of_shou_lung_diplomat
         }
 
         hidden_effect = {
@@ -383,7 +450,18 @@ character_event = {
 character_event = {
     id = JD.20005
 	has_dlc = "Jade Dragon"
-    desc = EVTDESC_JD_20005
+    desc = { 
+        trigger = { 
+            shou_lung = { offmap_ruler = { NOT = { culture = ROOT } } }
+        } 
+        text =EVTDESC_JD_20005 
+    }
+    desc = { 
+        trigger = { 
+            shou_lung = { offmap_ruler = { culture = ROOT } }
+        } 
+        text =EVTDESC_JD_20005_B
+    }
     picture = GFX_evt_comet
     border = GFX_event_normal_frame_religion
 
@@ -393,6 +471,10 @@ character_event = {
         name = EVTOPTA_JD_20005
         custom_tooltip = { text = EVTOPTA_JD_20005_tt }
         detract_grace_minor_effect = yes
+        event_target:shou_lung_guest = {
+            show_portrait = yes
+            clear_persistent_event_target = host_of_shou_lung_diplomat
+        }
     }
 }
 
