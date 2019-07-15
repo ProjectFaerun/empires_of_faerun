@@ -59,6 +59,8 @@ feudal_governments = {
 		character_modifier = {
 			monthly_character_piety = 1
 		}
+		## Modifiers
+		court_size_modifier = 15
 	}
 }
 	
@@ -110,5 +112,8 @@ republic_governments = {
 		can_create_empires = no
 		can_demand_religious_conversion = no
 		can_inherit = no
+
+		## Modifiers
+		court_size_modifier = 10
 	}
 }
