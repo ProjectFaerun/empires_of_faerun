@@ -1675,34 +1675,17 @@ likes_concubines;Concubines;les concubines;Konkubinen;;concubinas;;;;;;;;;x
 likes_eunuchs;Eunuchs;les eunuques;Eunuchen;;eunucos;;;;;;;;;x
 likes_wealth;Wealth;la richesse;Wohlstand;;riquezas;;;;;;;;;x
 likes_tributaries;Tributaries;les tributaires;Tributstaaten;;tributarios;;;;;;;;;x
-likes_indians;Indian Cultures;les cultures indiennes;indische Kulturen;;culturas indias;;;;;;;;;x
-likes_dravidians;Dravidian Cultures;les cultures dravidiennes;dravidianische Kulturen;;culturas dravídicas;;;;;;;;;x
-likes_tibetans;Tibetan Cultures;les cultures tibétaines;tibetische Kulturen;;culturas tibetanas;;;;;;;;;x
-likes_germanics;Germanic Cultures;les cultures germaniques;germanische Kulturen;;culturas germánicas;;;;;;;;;x
-likes_latino_iberians;Latin-Iberian Cultures;les cultures latino-ibériques;latein-spanische Kulturen;;culturas ibericolatinas;;;;;;;;;x
-likes_byzantines;Byzantine Cultures;les cultures byzantines;byzantinische Kulturen;;culturas bizantinas;;;;;;;;;x
-likes_celts;Celtic Cultures;les cultures celtes;keltische Kulturen;;culturas célticas;;;;;;;;;x
-likes_finno_ugrics;Finno-Magyar Cultures;les cultures finno-magyares;finnisch-magrarische Kulturen;;culturas finoúgrias;;;;;;;;;x
-likes_altaics;Altaic Cultures;les cultures altaïques;altaische Kulturen;;culturas altaicas;;;;;;;;;x
-likes_balto_slavics;Balto-Slavic Cultures;les cultures balto-slaves;baltisch-slawische Kulturen;;culturas baltoeslavas;;;;;;;;;x
-likes_arabs;Arabic Cultures;les cultures arabes;arabische Kulturen;;culturas arábigas;;;;;;;;;x
-likes_iranians;Iranian Cultures;les cultures iraniennes;iranische Kulturen;;culturas iranias;;;;;;;;;x
-likes_africans;African Cultures;les cultures africaines;afrikanische Kulturen;;culturas africanas;;;;;;;;;x
-likes_mesoamericans;Mesoamerican Cultures;les cultures mésoaméricaines;mesoamerikanische Kulturen;;culturas mesoamericanas;;;;;;;;;x
-likes_muslims;Muslims;les musulmans;Moslems;;musulmanes;;;;;;;;;x
-likes_christians;Christians;les chrétiens;Christen;;cristianos;;;;;;;;;x
-likes_mazdans;Mazdan Religions;les mazdéens;mazdanische Religionen;;religiones mazdeístas;;;;;;;;;x
-likes_zoroastrians;Zoroastrians;les zoroastriens;Zoroastrische;;zoroastrianos;;;;;;;;;x
-likes_mazdakis;Mazdakis;les mazdakites;Mazdakische;;mazdekitas;;;;;;;;;x
-likes_manicheans;Manicheans;les manichéens;Manichaner;;maniqueos;;;;;;;;;x
-likes_khurmaztans;Khurmaztans;les khurmaztans;Khurmaztaner;;khurmaztanos;;;;;;;;;x
-likes_buddhists;Buddhists;les bouddhistes;Buddhisten;;budistas;;;;;;;;;x
-likes_hindus;Hindus;les hindous;Hindus;;hindúes;;;;;;;;;x
-likes_jains;Jains;les jaïns;Jinistische;;jainistas;;;;;;;;;x
-likes_tengris;Tengris;les tengristes;Tengri;;tengris;;;;;;;;;x
-likes_zunists;Zunists;les zunistes;Zunisten;;zunistas;;;;;;;;;x
-likes_jews;Jews;les juifs;Juden;;judíos;;;;;;;;;x
-likes_bon;Bön Religion;les bön;bönische Religion;;religión bön;;;;;;;;;x
+likes_chondathan_group;Chondathan Cultures;;;;;;;;;;;x
+likes_coldlander_group;Coldlander Cultures;;;;;;;;;;;x
+likes_dwarf_group;Dwarven Cultures;;;;;;;;;;;x
+likes_elf_group;Elven Cultures;;;;;;;;;;;x
+likes_gnome_group;Gnomes;;;;;;;;;;;x
+likes_halfling_group;Halfling Cultures;;;;;;;;;;;x
+likes_illuskan_group;Illuskan Cultures;;;;;;;;;;;x
+likes_imaskari_group;Imaskari Cultures;;;;;;;;;;;x
+likes_katashakan_group;Katashakan Cultures;;;;;;;;;;;x
+likes_orc_group;Orcs;;;;;;;;;;;x
+likes_outsiders;Native Outsiders;;;;;;;;;;;x
 likes_tt;(§GLikes [This.GetLike]§!);(§GAime [This.GetLike]§!);(§GMag [This.GetLike]§!);;(le §Ggustan [This.GetLike]§!);;;;;;;;;x
 dislikes_tt;(§RDislikes [This.GetDislike]§!);(§RDéteste [This.GetDislike]§!);(§RMag keine [This.GetDislike]§!);;(le §Rdisgustan [This.GetDislike]§!);;;;;;;;;x
 likes_but_dislikes_tt;(§GLikes [This.GetLike]§! but §RDislikes [This.GetDislike]§!);(§GAime [This.GetLike]§! mais §Rdéteste [This.GetDislike]§!);(§GMag [This.GetLike]§!, aber §Rmag keine [This.GetDislike]§!);;(le §Ggustan [This.GetLike]§! pero le §Rdisgustan [This.GetDislike]§!);;;;;;;;;x

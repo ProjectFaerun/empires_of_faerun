@@ -329,6 +329,54 @@ shou_lung = {
 			likes_tributaries = {
 				value = 100
 			}
+			likes_chondathan_group = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							culture_group = chondathan_group
+							is_within_diplo_range = shou_lung
+						}
+					}
+				}
+			}
+			likes_coldlander_group = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							culture_group = coldlander_group
+							is_within_diplo_range = shou_lung
+						}
+					}
+				}
+			}
+			likes_dwarf_group = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							culture_group = dwarf_group
+							is_within_diplo_range = shou_lung
+						}
+					}
+				}
+			}
+			likes_elf_group = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							culture_group = elf_group
+							is_within_diplo_range = shou_lung
+						}
+					}
+				}
+			}
 			likes_gnome_group = {
 				value = 100
 				modifier = {
@@ -336,6 +384,66 @@ shou_lung = {
 					NOT = {
 						any_province = {
 							culture_group = gnome_group
+							is_within_diplo_range = shou_lung
+						}
+					}
+				}
+			}
+			likes_halfling_group = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							culture_group = halfling_group
+							is_within_diplo_range = shou_lung
+						}
+					}
+				}
+			}
+			likes_illuskan_group = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							culture_group = illuskan_group
+							is_within_diplo_range = shou_lung
+						}
+					}
+				}
+			}
+			likes_imaskari_group = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							culture_group = imaskari_group
+							is_within_diplo_range = shou_lung
+						}
+					}
+				}
+			}
+			likes_katashakan_group = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							culture_group = katashakan_group
+							is_within_diplo_range = shou_lung
+						}
+					}
+				}
+			}
+			likes_orc_group = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							culture_group = orc_group
 							is_within_diplo_range = shou_lung
 						}
 					}
