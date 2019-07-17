@@ -3709,12 +3709,7 @@ offmap_decisions = {
 								character = ROOT
 							}
 							capital_scope = {
-								OR = {
-									region = world_india_deccan
-									region = world_india_bengal
-									region = world_steppe_east
-									region = world_himalayas
-								}
+								region = kara_tur_region
 							}
 						}
 						NOT = {

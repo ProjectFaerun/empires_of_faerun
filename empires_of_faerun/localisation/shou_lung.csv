@@ -1683,7 +1683,9 @@ likes_gnome_group;Gnomes;;;;;;;;;;;x
 likes_halfling_group;Halfling Cultures;;;;;;;;;;;x
 likes_illuskan_group;Illuskan Cultures;;;;;;;;;;;x
 likes_imaskari_group;Imaskari Cultures;;;;;;;;;;;x
+likes_kara_turan_group;Kara Turan Cultures;;;;;;;;;;;x
 likes_katashakan_group;Katashakan Cultures;;;;;;;;;;;x
+likes_lapal_group;Lapal Cultures;;;;;;;;;;;x
 likes_orc_group;Orcs;;;;;;;;;;;x
 likes_outsiders;Native Outsiders;;;;;;;;;;;x
 likes_tt;(§GLikes [This.GetLike]§!);(§GAime [This.GetLike]§!);(§GMag [This.GetLike]§!);;(le §Ggustan [This.GetLike]§!);;;;;;;;;x
