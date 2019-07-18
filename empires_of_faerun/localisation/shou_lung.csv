@@ -1686,6 +1686,9 @@ likes_imaskari_group;Imaskari Cultures;;;;;;;;;;;x
 likes_kara_turan_group;Kara Turan Cultures;;;;;;;;;;;x
 likes_katashakan_group;Katashakan Cultures;;;;;;;;;;;x
 likes_lapal_group;Lapal Cultures;;;;;;;;;;;x
+likes_maztican_group;Maztican Cultures;;;;;;;;;;;x
+likes_narfelli_group;Narfelli Cultures;;;;;;;;;;;x
+likes_mulan_group;Mulan Cultures;;;;;;;;;;;x
 likes_orc_group;Orcs;;;;;;;;;;;x
 likes_outsiders;Native Outsiders;;;;;;;;;;;x
 likes_tt;(§GLikes [This.GetLike]§!);(§GAime [This.GetLike]§!);(§GMag [This.GetLike]§!);;(le §Ggustan [This.GetLike]§!);;;;;;;;;x

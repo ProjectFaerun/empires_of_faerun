@@ -303,6 +303,15 @@ likes_katashakan_group = {
 likes_lapal_group = {
 	culture_group = lapal_group
 }
+likes_maztican_group = {
+	culture_group = maztican_group
+}
+likes_mulan_group = {
+	culture_group = mulan_group
+}
+likes_narfelli_group = {
+	culture_group = narfelli_group
+}
 likes_orc_group = {
 	culture_group = orc_group
 }
