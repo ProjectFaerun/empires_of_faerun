@@ -312,11 +312,41 @@ likes_mulan_group = {
 likes_narfelli_group = {
 	culture_group = narfelli_group
 }
+likes_netherese_group = {
+	culture_group = netherese_group
+}
 likes_orc_group = {
 	culture_group = orc_group
 }
 likes_outsiders = {
 	is_native_outsider = yes
+}
+likes_raum_group = {
+	culture_group = raum_group
+}
+likes_shaaran_group = {
+	culture_group = shaaran_group
+}
+likes_tethyrian_group = {
+	culture_group = tethyrian_group
+}
+likes_taan_group = {
+	culture_group = taan_group
+}
+likes_turami_group = {
+	culture_group = turami_group
+}
+likes_uluik_group = {
+	culture_group = uluik_group
+}
+likes_zakharan = {
+	culture_group = zakharan_group
+}
+likes_good_human_pantheon_group = {
+	religion_group = good_human_pantheon_group
+}
+likes_evil_human_pantheon_group = {
+	religion_group = evil_human_pantheon_group
 }
 
 #silk_road_trade_post_trigger = {

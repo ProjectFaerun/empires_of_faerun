@@ -1688,9 +1688,19 @@ likes_katashakan_group;Katashakan Cultures;;;;;;;;;;;x
 likes_lapal_group;Lapal Cultures;;;;;;;;;;;x
 likes_maztican_group;Maztican Cultures;;;;;;;;;;;x
 likes_narfelli_group;Narfelli Cultures;;;;;;;;;;;x
+likes_netherese_group;Netherese Cultures;;;;;;;;;;;x
 likes_mulan_group;Mulan Cultures;;;;;;;;;;;x
 likes_orc_group;Orcs;;;;;;;;;;;x
 likes_outsiders;Native Outsiders;;;;;;;;;;;x
+likes_raum_group;Raum Cultures;;;;;;;;;;;x
+likes_shaaran_group;Shaaran Cultures;;;;;;;;;;;x
+likes_tethyrian_group;Tethyrian Cultures;;;;;;;;;;;x
+likes_taan_group;Taan Cultures;;;;;;;;;;;x
+likes_turami_group;Turami Cultures;;;;;;;;;;;x
+likes_uluik_group;Uluik Cultures;;;;;;;;;;;x
+likes_zakharan;Zakharan Cultures;;;;;;;;;;;x
+likes_good_human_pantheon_group;Good Human Faiths;;;;;;;;;;;x
+likes_evil_human_pantheon_group;Evil Human Faiths;;;;;;;;;;;x
 likes_tt;(§GLikes [This.GetLike]§!);(§GAime [This.GetLike]§!);(§GMag [This.GetLike]§!);;(le §Ggustan [This.GetLike]§!);;;;;;;;;x
 dislikes_tt;(§RDislikes [This.GetDislike]§!);(§RDéteste [This.GetDislike]§!);(§RMag keine [This.GetDislike]§!);;(le §Rdisgustan [This.GetDislike]§!);;;;;;;;;x
 likes_but_dislikes_tt;(§GLikes [This.GetLike]§! but §RDislikes [This.GetDislike]§!);(§GAime [This.GetLike]§! mais §Rdéteste [This.GetDislike]§!);(§GMag [This.GetLike]§!, aber §Rmag keine [This.GetDislike]§!);;(le §Ggustan [This.GetLike]§! pero le §Rdisgustan [This.GetDislike]§!);;;;;;;;;x
