@@ -1701,6 +1701,17 @@ likes_uluik_group;Uluik Cultures;;;;;;;;;;;x
 likes_zakharan;Zakharan Cultures;;;;;;;;;;;x
 likes_good_human_pantheon_group;Good Human Faiths;;;;;;;;;;;x
 likes_evil_human_pantheon_group;Evil Human Faiths;;;;;;;;;;;x
+likes_zakharan_group;Zakharan Faiths;;;;;;;;;;;x
+likes_karaturan_group;Kara Turan Faiths;;;;;;;;;;;x
+likes_elven_pantheon_group;Elven Faiths;;;;;;;;;;;x
+likes_drow_pantheon;Drow Faiths;;;;;;;;;;;x
+likes_dwarven_pantheon_group;Dwarven Faiths;;;;;;;;;;;x
+likes_giant_pantheon_group;Giant Faiths;;;;;;;;;;;x
+likes_goblin_pantheon_group;Goblin Faiths;;;;;;;;;;;x
+likes_orc_pantheon_group;Orc Faiths;;;;;;;;;;;x
+likes_monster_group;Monster Faiths;;;;;;;;;;;x
+likes_draconic_group;Draconic Faiths;;;;;;;;;;;x
+likes_pagan_group;Pagan Faiths;;;;;;;;;;;x
 likes_tt;(§GLikes [This.GetLike]§!);(§GAime [This.GetLike]§!);(§GMag [This.GetLike]§!);;(le §Ggustan [This.GetLike]§!);;;;;;;;;x
 dislikes_tt;(§RDislikes [This.GetDislike]§!);(§RDéteste [This.GetDislike]§!);(§RMag keine [This.GetDislike]§!);;(le §Rdisgustan [This.GetDislike]§!);;;;;;;;;x
 likes_but_dislikes_tt;(§GLikes [This.GetLike]§! but §RDislikes [This.GetDislike]§!);(§GAime [This.GetLike]§! mais §Rdéteste [This.GetDislike]§!);(§GMag [This.GetLike]§!, aber §Rmag keine [This.GetDislike]§!);;(le §Ggustan [This.GetLike]§! pero le §Rdisgustan [This.GetDislike]§!);;;;;;;;;x
