@@ -136,7 +136,7 @@ character_event = {
 		text = EVT_DESC_JD_60002_B
 		trigger = { FROM = { has_character_flag = is_shou_lung_envoy } }
 	}
-    picture = GFX_evt_shou_lung_bureaucrat
+    picture = GFX_evt_chinese_bureaucrat
     border = GFX_event_normal_frame_diplomacy
 	
 	is_triggered_only = yes
@@ -174,7 +174,6 @@ character_event = {
 						trait = architect
 						trait = strategist
 						trait = scholar
-						trait = faqih
 					}
 					OR = {
 						is_adult = yes
@@ -217,7 +216,6 @@ character_event = {
 						trait = architect
 						trait = strategist
 						trait = scholar
-						trait = faqih
 					}
 					OR = {
 						is_adult = yes
@@ -747,7 +745,7 @@ character_event = {
 		text = EVT_DESC_JD_60003_C
 		trigger = { has_character_flag = shou_lung_envoy_feast_bad }
 	}
-    picture = GFX_evt_shou_lung_diplomatic_success
+    picture = GFX_evt_china_diplomatic_success
     border = GFX_event_normal_frame_diplomacy
 	
 	is_triggered_only = yes
@@ -977,7 +975,7 @@ character_event = {
 			NOT = { has_character_flag = shou_lung_envoy_feast_bad }
 			event_target:shou_lung_envoy_artifact = { has_artifact_flag = decor }
 		}
-		sound_effect = shou_lung_grace_gain
+		sound_effect = china_grace_gain
 		custom_tooltip = {
 			text = artifact_added_tt
 		}
@@ -989,7 +987,7 @@ character_event = {
 			NOT = { has_character_flag = shou_lung_envoy_feast_bad }
 			NOT = { event_target:shou_lung_envoy_artifact = { has_artifact_flag = decor } }
 		}
-		sound_effect = shou_lung_grace_gain
+		sound_effect = china_grace_gain
 		custom_tooltip = {
 			text = artifact_added_tt
 		}
@@ -1022,7 +1020,7 @@ character_event = {
 	id = JD.60004
 	has_dlc = "Jade Dragon"
 	desc = EVT_DESC_JD_60004
-	picture = GFX_evt_shou_lung_diplomatic_success
+	picture = GFX_evt_china_diplomatic_success
     border = GFX_event_normal_frame_diplomacy
 	
 	is_triggered_only = yes
@@ -1215,7 +1213,7 @@ character_event = {
 		trigger = { 
 			event_target:shou_lung_envoy_artifact = { has_artifact_flag = decor }
 		}
-		sound_effect = shou_lung_grace_gain
+		sound_effect = china_grace_gain
 		tooltip = { 
 			event_target:shou_lung_envoy_artifact = { 
 				show_scope_change = no
@@ -1232,7 +1230,7 @@ character_event = {
 		trigger = { 
 			NOT = { event_target:shou_lung_envoy_artifact = { has_artifact_flag = decor } }
 		}
-		sound_effect = shou_lung_grace_gain
+		sound_effect = china_grace_gain
 		tooltip = { 
 			event_target:shou_lung_envoy_artifact = { 
 				show_scope_change = no
@@ -1243,51 +1241,6 @@ character_event = {
 			}
 		}
 		add_grace_trivial_effect = yes
-	}
-}
-
-#Ruler can get an artifact in JD.10013 as well
-
-### Events for converting and destroying prosthetics ###
-#On startup convert modifiers into artifacts
-character_event = {
-	id = JD.60005
-
-	hide_window = yes
-	is_triggered_only = yes
-	ai = no
-	only_playable = yes
-
-	trigger = {
-		is_multiplayer_host_character = yes
-		is_save_game = yes
-	}
-
-	immediate = {
-		any_character = {
-			limit = {
-				OR = {
-					has_character_modifier = golden_hand
-					has_character_modifier = iron_hand
-					has_character_modifier = prosthetic_leg
-				}
-			}
-			trigger_switch = {
-				on_trigger = has_character_modifier
-				golden_hand = {
-					remove_character_modifier = golden_hand
-					add_artifact = prosthetic_hand_gold
-				}
-				iron_hand = {
-					remove_character_modifier = iron_hand
-					add_artifact = prosthetic_hand_metal
-				}
-				prosthetic_leg = {
-					remove_character_modifier = prosthetic_leg
-					add_artifact = prosthetic_leg_artifact
-				}
-			}
-		}
 	}
 }
 

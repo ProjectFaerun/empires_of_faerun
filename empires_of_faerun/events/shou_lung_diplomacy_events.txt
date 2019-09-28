@@ -571,7 +571,7 @@ character_event = {
     #You're multilingual already!
     option = {
         trigger = { has_character_modifier = multilingual }
-		sound_effect = shou_lung_grace_gain
+		sound_effect = china_grace_gain
         tooltip_info = yes
         custom_tooltip = { text = multilingual_option_available_tt }
 
@@ -583,7 +583,7 @@ character_event = {
     #Let your translator do the hard work.
     option = {
         name = EVTOPTD_JD_20006
-		sound_effect = shou_lung_grace_gain
+		sound_effect = china_grace_gain
         custom_tooltip = { text = EVTOPTD_JD_20006_TT }
 
         add_grace_minor_effect = yes
@@ -602,7 +602,7 @@ character_event = {
     
     option = { 
         name = EVTOPTA_JD_20007
-		sound_effect = shou_lung_grace_gain
+		sound_effect = china_grace_gain
         custom_tooltip = { text = EVTOPTA_JD_20007_TT }
 
         if = {
@@ -679,7 +679,7 @@ character_event = {
     option = { 
         name = EVTOPTA_JD_20009
         custom_tooltip = { text = EVTOPTA_JD_20009_TT }
-		sound_effect = shou_lung_grace_gain
+		sound_effect = china_grace_gain
         
         add_grace_medium_effect = yes
 
@@ -745,7 +745,7 @@ character_event = {
     
     option = { 
         name = EVTOPTA_JD_20012
-		sound_effect = shou_lung_grace_gain
+		sound_effect = china_grace_gain
         custom_tooltip = { text = EVTOPTA_JD_20012_tt }
         add_grace_medium_effect = yes
 
@@ -1647,7 +1647,7 @@ character_event = { # Things went great
 
     option = {
         name = EVTOPTA_JD_10013
-		sound_effect = shou_lung_grace_gain
+		sound_effect = china_grace_gain
         custom_tooltip = { text = EVTOPTA_JD_10013_TT }
         FROM = {
             add_trait_silently_proud_effect = yes
@@ -1683,7 +1683,7 @@ character_event = { # Things went good
 
     option = {      
         name = EVTOPTA_JD_10014
-		sound_effect = shou_lung_grace_gain
+		sound_effect = china_grace_gain
         add_grace_minor_effect = yes
         FROM = {
             random = { chance = 50 add_trait_patient_effect = yes }
@@ -1702,7 +1702,7 @@ character_event = { # Things went decently
 
     option = {      
         name = EVTOPTA_JD_10015
-		sound_effect = shou_lung_grace_gain
+		sound_effect = china_grace_gain
         add_grace_trivial_effect = yes
         hidden_effect = { FROM = { remove_character_modifier = out_traveling } }
         clr_character_flag = is_sending_someone_to_shou_lung
@@ -1809,7 +1809,7 @@ character_event = { # Special case 1 - The courtier you sent away to shou_lung h
 
     option = { #They bring someone home
         name = EVTOPTA_JD_10018
-		sound_effect = shou_lung_grace_gain
+		sound_effect = china_grace_gain
         custom_tooltip = { text = EVTOPTA_JD_10018_TT }
         
         #moves the lover to your court (and leaves a flag for later marriage hook-in)...
@@ -1823,7 +1823,7 @@ character_event = { # Special case 1 - The courtier you sent away to shou_lung h
     }
     option = { #We don't have room for strangers
         name = EVTOPTB_JD_10018
-		sound_effect = shou_lung_grace_gain
+		sound_effect = china_grace_gain
         hidden_effect = { FROM = { remove_character_modifier = out_traveling } }
         
         reverse_opinion = {
@@ -1877,7 +1877,7 @@ character_event = { # Special case 2 - The courtier you sent away to shou_lung h
             text = EVTOPTA_JD_10019_poet
             trigger = { OR = { trait = poet trait = kind } }
         }
-		sound_effect = shou_lung_grace_gain
+		sound_effect = china_grace_gain
 
         if = { #Do they have family?
             limit = {
@@ -1951,7 +1951,7 @@ character_event = { # Special case 2 - The courtier you sent away to shou_lung h
 
     option = { #They are angry
         name = EVTOPTB_JD_10019
-		sound_effect = shou_lung_grace_gain
+		sound_effect = china_grace_gain
         add_grace_medium_effect = yes
         hidden_effect = {  FROM = { remove_character_modifier = out_traveling } }
         reverse_opinion = {
@@ -1979,7 +1979,7 @@ character_event = { # Special case 2 - The courtier you sent away to shou_lung h
     option = { #Plead to them from the bottom of your heart
         name = EVTOPTD_JD_10019
         custom_tooltip = { text = EVTOPTD_JD_10019_TT }
-		sound_effect = shou_lung_grace_gain
+		sound_effect = china_grace_gain
 		
         add_grace_medium_effect = yes
         hidden_effect = { FROM = { remove_character_modifier = out_traveling } }
@@ -2574,7 +2574,7 @@ character_event = {
 	
 	option = {
 		name = EVTOPTA_JD_30011
-		sound_effect = shou_lung_grace_gain
+		sound_effect = china_grace_gain
 		
 		add_offmap_currency = {
 			offmap = shou_lung
@@ -3306,7 +3306,7 @@ letter_event = {
         trigger = {
             has_character_flag = trade_competition_city_winner
         }
-		sound_effect = shou_lung_grace_gain
+		sound_effect = china_grace_gain
 		
         clr_character_flag = trade_competition_build_city
         clr_character_flag = trade_competition_participant
@@ -4108,7 +4108,7 @@ letter_event = {
             has_character_flag = trade_competition_winner
         }
 		
-		sound_effect = shou_lung_grace_gain
+		sound_effect = china_grace_gain
 		
         clr_character_flag = trade_competition_winner
         clr_character_flag = trade_competition_participant
@@ -4449,7 +4449,7 @@ character_event = {			#You let shou_lung know
 	option = {
 		name = EVTOPTA_JD_70005
 		
-		sound_effect = shou_lung_grace_gain
+		sound_effect = china_grace_gain
 		add_grace_medium_effect = yes
 	
 		event_target:escaped_shou_lung_noble = {

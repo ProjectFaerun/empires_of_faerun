@@ -32,7 +32,7 @@ letter_event = {
     option = { 
         name = EVTOPTA_JD_20024
 		
-		sound_effect = shou_lung_grace_gain
+		sound_effect = china_grace_gain
 		if = {
             limit = { NOT = { has_character_flag = jd_gifting_artifact } }
     		if = {
@@ -118,7 +118,7 @@ letter_event = {
     option = { 
         name = EVTOPTA_JD_20028
 		
-		sound_effect = shou_lung_grace_gain
+		sound_effect = china_grace_gain
 		if = {
 			limit = {
 				OR={
@@ -4072,7 +4072,7 @@ letter_event = {
     option = { 
         name = EVTOPTA_JD_3041
 		
-		sound_effect = shou_lung_grace_gain
+		sound_effect = china_grace_gain
 		add_character_modifier = {
 			name = shou_lung_supply_horses
 			duration = -1
