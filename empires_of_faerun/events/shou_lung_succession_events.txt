@@ -169,7 +169,7 @@ character_event = {
 							culture = khatin
 						}
 					}
-	    			set_offmap_name = "tang1_shou_lung" 
+	    			set_offmap_name = "tang_shou_lung" 
 	    		}
 	    		30 = {  #more likely, in general
 		    		trigger = { NOT = { has_offmap_name = "jin_shou_lung" } }
@@ -184,19 +184,19 @@ character_event = {
 						factor = 3
 						culture = tuigan
 					}    			
-	    			set_offmap_name = "jin2_shou_lung"
+	    			set_offmap_name = "jin_shou_lung"
 	    		}
 	    		20 = {
 	    			trigger = { NOT = { has_offmap_name = "wei_shou_lung" } }
-	    			set_offmap_name = "wei3_shou_lung"
+	    			set_offmap_name = "wei_shou_lung"
 	    		}
 	    		20 = {
 	    			trigger = { NOT = { has_offmap_name = "qi_shou_lung" } }
-	    			set_offmap_name = "qi4_shou_lung"
+	    			set_offmap_name = "qi_shou_lung"
 	    		}
 	    		30 = { #more likely, in general
 	    			trigger = { NOT = { has_offmap_name = "zhou_shou_lung" } }
-	    			set_offmap_name = "zhou5_shou_lung"
+	    			set_offmap_name = "zhou_shou_lung"
 	    		}
 	    		30 = { #more likely, in general
 	    			trigger = { NOT = { has_offmap_name = "han_shou_lung" } }
@@ -211,15 +211,15 @@ character_event = {
 	    		}
 	    		30 = { #more likely, in general
 	    			trigger = { NOT = { has_offmap_name = "qin_shou_lung" } }
-	    			set_offmap_name = "6qin_shou_lung"
+	    			set_offmap_name = "qin_shou_lung"
 	    		}
 	    		30 = { #more likely, in general
 	    			trigger = { NOT = { has_offmap_name = "yan_shou_lung" } }
-	    			set_offmap_name = "7yan_shou_lung"
+	    			set_offmap_name = "yan_shou_lung"
 	    		}
 	    		20 = {
 	    			trigger = { NOT = { has_offmap_name = "zhao_shou_lung" } }
-	    			set_offmap_name = "z8hao_shou_lung"
+	    			set_offmap_name = "zhao_shou_lung"
 	    		}
 
 	    		#Foreign cultures...
@@ -232,7 +232,7 @@ character_event = {
 						factor = 5
 						culture = khitan
 					}
-	    			set_offmap_name = "9liao_shou_lung"
+	    			set_offmap_name = "liao_shou_lung"
 	    		}
 	    		20 = {
 	    			trigger = {
@@ -250,7 +250,7 @@ character_event = {
 							dynasty = 1051210
 						}
 					}
-	    			set_offmap_name = "1yuan_shou_lung"
+	    			set_offmap_name = "yuan_shou_lung"
 	    		}
 	    		20 = {
 	    			trigger = {
@@ -267,7 +267,7 @@ character_event = {
 							culture = tuigan
 						}
 					}
-	    			set_offmap_name = "1xia_shou_lung"
+	    			set_offmap_name = "xia_shou_lung"
 	    		}
 	    		20 = {
 	    			trigger = {
@@ -282,16 +282,16 @@ character_event = {
 						factor = 0.1
 						NOT = { year = 1200 }
 					}
-	    			set_offmap_name = "1qing_shou_lung"
+	    			set_offmap_name = "qing_shou_lung"
     			
 	    		}
 	    		10 = { #less likely, in general
 	    			trigger = { NOT = { has_offmap_name = "dai_shou_lung" } }
-	    			set_offmap_name = "1dai_shou_lung"
+	    			set_offmap_name = "dai_shou_lung"
 	    		}
 	    		10 = { #less likely, in general
 	    			trigger = { NOT = { has_offmap_name = "cheng_shou_lung" } }
-	    			set_offmap_name = "1cheng_shou_lung"
+	    			set_offmap_name = "cheng_shou_lung"
 	    		}
 
 	    		#Han culture... (Picked with a lot less frequency than the above ones)
@@ -300,14 +300,14 @@ character_event = {
 	    				NOT = { has_offmap_name = "liang_shou_lung" }
 	    				culture = shou
 	    			}
-	    			set_offmap_name = "1liang_shou_lung"
+	    			set_offmap_name = "liang_shou_lung"
 	    		}
 	    		10 = {  #more likely within the category of Han, but less likely in general
 		    		trigger = {
 		    			NOT = { has_offmap_name = "song_shou_lung" }
 		    			culture = shou
 		    		}
-	    			set_offmap_name = "1song_shou_lung"
+	    			set_offmap_name = "song_shou_lung"
 	    		}
 	    		5 = { #less likely, in general
 	    			trigger = {
@@ -318,42 +318,42 @@ character_event = {
 						factor = 0.1
 						NOT = { year = 1200 }
 					}
-	    			set_offmap_name = "1ming_shou_lung"
+	    			set_offmap_name = "ming_shou_lung"
 	    		}
 	    		5 = { #less likely, in general
 	    			trigger = {
 	    				NOT = { has_offmap_name = "shu_shou_lung" }
 	    				culture = shou
 	    			}
-	    			set_offmap_name = "1shu_shou_lung"
+	    			set_offmap_name = "shu_shou_lung"
 	    		}
 	    		5 = { #less likely, in general
 	    			trigger = {
 	    				NOT = { has_offmap_name = "wu_shou_lung" }
 	    				culture = shou
 	    			}
-	    			set_offmap_name = "1wu_shou_lung"
+	    			set_offmap_name = "wu_shou_lung"
 	    		}
 	    		5 = { #less likely, in general
 	    			trigger = {
 	    				NOT = { has_offmap_name = "chu_shou_lung" }
 	    				culture = shou
 	    			}
-	    			set_offmap_name = "1chu_shou_lung"
+	    			set_offmap_name = "chu_shou_lung"
 	    		}
 	    		5 = { #less likely, in general
 	    			trigger = {
 	    				NOT = { has_offmap_name = "yue_shou_lung" }
 	    				culture = shou
 	    			}
-		  			set_offmap_name = "1yue_shou_lung"
+		  			set_offmap_name = "yue_shou_lung"
 	    		}
 	    		3 = { #even less likely, in general
 	    			trigger = {
 	    				NOT = { has_offmap_name = "yin_shou_lung" }
 	    				culture = shou
 	    			}
-	    			set_offmap_name = "1yin_shou_lung"
+	    			set_offmap_name = "yin_shou_lung"
 	    		}
 	    		3 = { #even less likely, in general
 	    			trigger = {
@@ -364,14 +364,14 @@ character_event = {
 						factor = 0.1
 						NOT = { year = 1200 }
 					}
-	    			set_offmap_name = "1shun_shou_lung"
+	    			set_offmap_name = "shun_shou_lung"
 	    		}
 	    		3 = { #even less likely, in general
 	    			trigger = {
 	    				NOT = { has_offmap_name = "qi_shou_lung" }
 	    				culture = shou
 	    			}
-	    			set_offmap_name = "1qi_shou_lung"
+	    			set_offmap_name = "qi_shou_lung"
 	    		}
 	    	}
 		}

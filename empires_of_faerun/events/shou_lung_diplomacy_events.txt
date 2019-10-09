@@ -578,15 +578,26 @@ character_event = {
         name = EVTOPTC_JD_20006
         custom_tooltip = { text = EVTOPTC_JD_20006_TT }
         add_grace_medium_effect = yes
+        hidden_effect = {
+            event_target:shou_lung_guest = {
+                clear_persistent_event_target = host_of_shou_lung_diplomat
+            }
+        }
     }
     
-    #Let your translator do the hard work.
+    #Let your translator do the hard work. - END
     option = {
         name = EVTOPTD_JD_20006
 		sound_effect = china_grace_gain
         custom_tooltip = { text = EVTOPTD_JD_20006_TT }
 
         add_grace_minor_effect = yes
+
+        hidden_effect = {
+            event_target:shou_lung_guest = {
+                clear_persistent_event_target = host_of_shou_lung_diplomat
+            }
+        }
     }
 }
 
@@ -595,10 +606,17 @@ character_event = {
     id = JD.20007
 	has_dlc = "Jade Dragon"
     desc = EVTDESC_JD_20007
-    picture = GFX_evt_shou_lung_bureaucrat
+    picture = GFX_evt_chinese_bureaucrat
     border = GFX_event_normal_frame_religion
 
     is_triggered_only = yes
+
+    trigger = {
+        event_target:shou_lung_guest = {
+            is_alive = yes
+            prisoner = no
+        }
+    }
     
     option = { 
         name = EVTOPTA_JD_20007
@@ -642,6 +660,9 @@ character_event = {
                 }
                 character_event = { id = JD.60004 days = 1 }
             }
+            event_target:shou_lung_guest = {
+                clear_persistent_event_target = host_of_shou_lung_diplomat
+            }
         }
     }
 }
@@ -656,6 +677,13 @@ character_event = {
 
     is_triggered_only = yes
 
+    trigger = {
+        event_target:shou_lung_guest = {
+            is_alive = yes
+            prisoner = no
+        }
+    }
+
     hide_from = yes
     
     option = { 
@@ -663,6 +691,12 @@ character_event = {
         custom_tooltip = { text = EVTOPTA_JD_20008_TT }
         
         detract_grace_major_effect = yes
+
+        hidden_effect = {
+            event_target:shou_lung_guest = {
+                clear_persistent_event_target = host_of_shou_lung_diplomat
+            }
+        }
     }
 }
 
@@ -671,10 +705,17 @@ character_event = {
     id = JD.20009
 	has_dlc = "Jade Dragon"
     desc = EVTDESC_JD_20009
-    picture = GFX_evt_shou_lung_bureaucrat
+    picture = GFX_evt_chinese_bureaucrat
     border = GFX_event_normal_frame_religion
 
     is_triggered_only = yes
+
+    trigger = {
+        event_target:shou_lung_guest = {
+            is_alive = yes
+            prisoner = no
+        }
+    }
     
     option = { 
         name = EVTOPTA_JD_20009
@@ -692,6 +733,9 @@ character_event = {
                 }
                 character_event = { id = JD.60004 days = 1 }
             }
+            event_target:shou_lung_guest = {
+                clear_persistent_event_target = host_of_shou_lung_diplomat
+            }
         }
     }
 }
@@ -701,16 +745,28 @@ character_event = {
     id = JD.20010
 	has_dlc = "Jade Dragon"
     desc = EVTDESC_JD_20010
-    picture = GFX_evt_shou_lung_diplomatic_incident
+    picture = GFX_evt_china_diplomatic_incident
     border = GFX_event_normal_frame_religion
 
     is_triggered_only = yes
+
+    trigger = {
+        event_target:shou_lung_guest = {
+            is_alive = yes
+            prisoner = no
+        }
+    }
     
     option = { 
         name = EVTOPTA_JD_20010
         custom_tooltip = { text = EVTOPTA_JD_20010_TT }
         
         detract_grace_minor_effect = yes
+        hidden_effect = {
+            event_target:shou_lung_guest = {
+                clear_persistent_event_target = host_of_shou_lung_diplomat
+            }
+        }
     }
 }
 
@@ -721,15 +777,27 @@ character_event = {
     id = JD.20011
 	has_dlc = "Jade Dragon"
     desc = EVTDESC_JD_20011
-    picture = GFX_evt_shou_lung_diplomatic_incident
+    picture = GFX_evt_china_diplomatic_incident
     border = GFX_event_normal_frame_diplomacy
 
     is_triggered_only = yes
+
+    trigger = {
+        event_target:shou_lung_guest = {
+            is_alive = yes
+            prisoner = no
+        }
+    }
     
     option = { 
         name = EVTOPTA_JD_20011
         custom_tooltip = { text = EVTOPTA_JD_20011_tt }
         detract_grace_minor_effect = yes
+        hidden_effect = {
+            event_target:shou_lung_guest = {
+                clear_persistent_event_target = host_of_shou_lung_diplomat
+            }
+        }
     }
 }
 
@@ -737,11 +805,29 @@ character_event = {
 character_event = {
     id = JD.20012
 	has_dlc = "Jade Dragon"
-    desc = EVTDESC_JD_20012
+    desc = { 
+        trigger = { 
+            shou_lung = { offmap_ruler = { NOT = { culture = ROOT } } }
+        } 
+        text = EVTDESC_JD_20012 
+    }
+    desc = { 
+        trigger = { 
+            shou_lung = { offmap_ruler = { culture = ROOT } }
+        } 
+        text = EVTDESC_JD_20012_B
+    }
     picture = GFX_evt_garden
     border = GFX_event_normal_frame_diplomacy
 
     is_triggered_only = yes
+
+    trigger = {
+        event_target:shou_lung_guest = {
+            is_alive = yes
+            prisoner = no
+        }
+    }
     
     option = { 
         name = EVTOPTA_JD_20012
@@ -757,6 +843,9 @@ character_event = {
                     any_artifact = { has_artifact_flag = shou_lung }
                 }
                 character_event = { id = JD.60004 days = 1 }
+            }
+            event_target:shou_lung_guest = {
+                clear_persistent_event_target = host_of_shou_lung_diplomat
             }
         }
     }
@@ -778,6 +867,27 @@ character_event = {
             clr_character_flag = cg_trade
             clr_character_flag = cg_preaching
             clr_character_flag = cg_study_theology
+            if = {
+                limit = {
+                    persistent_event_target:host_of_shou_lung_diplomat = { always = yes }
+                }
+                clear_persistent_event_target = host_of_shou_lung_diplomat
+            }
+        }
+        FROMFROM = { #for the fallback if death/prison
+            clr_character_flag = cg_diplomatic_visit
+            clr_character_flag = cg_oversee_troops
+            clr_character_flag = cg_study_military
+            clr_character_flag = cg_oversee_tax_collection
+            clr_character_flag = cg_trade
+            clr_character_flag = cg_preaching
+            clr_character_flag = cg_study_theology
+            if = {
+                limit = {
+                    persistent_event_target:host_of_shou_lung_diplomat = { always = yes }
+                }
+                clear_persistent_event_target = host_of_shou_lung_diplomat
+            }
         }
     }
 }
@@ -841,7 +951,7 @@ character_event = {
     }
 
     immediate = {
-        random_courtier = {
+        any_courtier = {
             limit = {
                 ai = yes
 				NOT = {
@@ -858,10 +968,14 @@ character_event = {
                 NOT = { has_character_flag = wants_to_travel_2 }
                 NOT = { has_character_flag = originated_from_shou_lung_court }
             }
+            score_value = { #Prioritizes selecting an interesting courtier...
+                value = 10
+                interesting_courtier_selection_score = yes
+            }
             save_event_target_as = adventurous_spirit
             set_character_flag = wants_to_travel_0
         }
-        random_courtier = {
+        any_courtier = {
             limit = {
                 ai = yes
 				NOT = {
@@ -878,6 +992,10 @@ character_event = {
                 NOT = { has_character_flag = wants_to_travel_2 }
                 NOT = { has_character_flag = originated_from_shou_lung_court }
                 is_liked_by_shou_lung_trigger = yes
+            }
+            score_value = { #Prioritizes selecting an interesting courtier...
+                value = 10
+                interesting_courtier_selection_score = yes
             }
             save_event_target_as = adventurous_spirit
             set_character_flag = wants_to_travel_0
@@ -901,7 +1019,7 @@ character_event = {
     id = JD.10011
 	has_dlc = "Jade Dragon"
     desc = EVTDESC_JD_10011
-    picture = GFX_evt_shou_lung_open
+    picture = GFX_evt_china_open
     border = GFX_event_normal_frame_diplomacy
     is_triggered_only = yes
 
@@ -918,7 +1036,7 @@ character_event = {
         }
 
         #Find a suitable back-up for the journey... (preferably a spouse, then a lover, then a friend, and in worst case, some random person at court)
-        random_courtier = {
+        any_courtier = {
             limit = {
                 ai = yes
 				NOT = {
@@ -934,10 +1052,14 @@ character_event = {
                 NOT = { has_character_flag = wants_to_travel_2 }
                 NOT = { has_character_flag = originated_from_shou_lung_court }
             }
+            score_value = { #Prioritizes selecting an interesting courtier...
+                value = 10
+                interesting_courtier_selection_score = yes
+            }
             save_event_target_as = back_up_target_1
             set_character_flag = wants_to_travel_1
         }
-        random_courtier = {
+        any_courtier = {
             limit = {
                 ai = yes
 				NOT = {
@@ -954,10 +1076,14 @@ character_event = {
                 NOT = { has_character_flag = wants_to_travel_2 }
                 NOT = { has_character_flag = originated_from_shou_lung_court }
             }
+            score_value = { #Prioritizes selecting an interesting courtier...
+                value = 10
+                interesting_courtier_selection_score = yes
+            }
             save_event_target_as = back_up_target_1
             set_character_flag = wants_to_travel_1
         }
-        random_courtier = {
+        any_courtier = {
             limit = {
                 ai = yes
 				NOT = {
@@ -974,10 +1100,14 @@ character_event = {
                 NOT = { has_character_flag = wants_to_travel_2 }
                 NOT = { has_character_flag = originated_from_shou_lung_court }
             }
+            score_value = { #Prioritizes selecting an interesting courtier...
+                value = 10
+                interesting_courtier_selection_score = yes
+            }
             save_event_target_as = back_up_target_1
             set_character_flag = wants_to_travel_1
         }
-        random_courtier = {
+        any_courtier = {
             limit = {
                 ai = yes
 				NOT = {
@@ -994,12 +1124,16 @@ character_event = {
                 NOT = { has_character_flag = wants_to_travel_2 }
                 NOT = { has_character_flag = originated_from_shou_lung_court }
             }
+            score_value = { #Prioritizes selecting an interesting courtier...
+                value = 10
+                interesting_courtier_selection_score = yes
+            }
             save_event_target_as = back_up_target_1
             set_character_flag = wants_to_travel_1
         }
 
         #Find a suitable second back-up for the journey... (preferably a child who's not an heir, otherwise a grown-up un-landed child, and in worst case, some random person at court)
-        random_courtier = {
+        any_courtier = {
             limit = {
                 ai = yes
 				NOT = {
@@ -1015,10 +1149,14 @@ character_event = {
                 NOT = { has_character_flag = wants_to_travel_2 }
                 NOT = { has_character_flag = originated_from_shou_lung_court }
             }
+            score_value = { #Prioritizes selecting an interesting courtier...
+                value = 10
+                interesting_courtier_selection_score = yes
+            }
             save_event_target_as = back_up_target_2
             set_character_flag = wants_to_travel_2
         }
-        random_courtier = {
+        any_courtier = {
             limit = {
                 ai = yes
 				NOT = {
@@ -1035,10 +1173,14 @@ character_event = {
                 NOT = { has_character_flag = wants_to_travel_2 }
                 NOT = { has_character_flag = originated_from_shou_lung_court }
             }
+            score_value = { #Prioritizes selecting an interesting courtier...
+                value = 10
+                interesting_courtier_selection_score = yes
+            }
             save_event_target_as = back_up_target_2
             set_character_flag = wants_to_travel_2
         }
-        random_courtier = {
+        any_courtier = {
             limit = {
                 ai = yes
 				NOT = {
@@ -1055,6 +1197,10 @@ character_event = {
                 NOT = { has_character_flag = wants_to_travel_1 }
                 NOT = { has_character_flag = wants_to_travel_2 }
                 NOT = { has_character_flag = originated_from_shou_lung_court }
+            }
+            score_value = { #Prioritizes selecting an interesting courtier...
+                value = 10
+                interesting_courtier_selection_score = yes
             }
             save_event_target_as = back_up_target_2
             set_character_flag = wants_to_travel_2
@@ -2567,7 +2713,7 @@ character_event = {
 	has_dlc = "Jade Dragon"
 	
 	desc = EVTDESC_JD_30011
-	picture = GFX_evt_shou_lung_bureaucrat
+	picture = GFX_evt_chinese_bureaucrat
 	border = GFX_event_normal_frame_diplomacy
 	
 	is_triggered_only = yes
@@ -2601,7 +2747,7 @@ character_event = {
 	has_dlc = "Jade Dragon"
 	
 	desc = EVTDESC_JD_30012
-	picture = GFX_evt_shou_lung_diplomatic_incident
+	picture = GFX_evt_china_diplomatic_incident
 	border = GFX_event_normal_frame_diplomacy
 	
 	is_triggered_only = yes
@@ -3655,7 +3801,7 @@ character_event = {
         text = EVTDESC_JD_40009_B # not ahead
         trigger = { NOT = { has_character_flag = trade_competition_halftime_winner } }
     }
-    picture = GFX_evt_shou_lung_stable
+    picture = GFX_evt_china_stable
     border = GFX_event_normal_frame_diplomacy
     
     is_triggered_only = yes
@@ -4197,6 +4343,16 @@ character_event = {
     }
 
 	immediate = {
+        if = { #Quick fix to reduce the amount of time the AI gets the events
+            limit = {
+                ai = yes
+            }
+            random = {
+                chance = 95
+                break = yes
+            }
+        }    
+
     	shou_lung = {
 			offmap_ruler = {
 				save_event_target_as = shou_lung_emperor
@@ -4241,7 +4397,7 @@ character_event = {		#Escaped shou_lung Noble appears
 	id = JD.70002
 	has_dlc = "Jade Dragon"
 	desc = EVTDESC_JD_70002
-    picture = GFX_evt_shou_lung_bureaucrat
+    picture = GFX_evt_chinese_bureaucrat
     border = GFX_event_normal_frame_diplomacy
 
 	is_triggered_only = yes
@@ -4372,7 +4528,7 @@ character_event = {			#shou_lung does not find out
 	id = JD.70004
 	has_dlc = "Jade Dragon"
 	desc = EVTDESC_JD_70004
-    picture = GFX_evt_shou_lung_bureaucrat
+    picture = GFX_evt_chinese_bureaucrat
     border = GFX_event_normal_frame_diplomacy
 	
 	hide_from = yes
@@ -4434,7 +4590,7 @@ character_event = {			#You let shou_lung know
 	id = JD.70005
 	has_dlc = "Jade Dragon"
 	desc = EVTDESC_JD_70005
-    picture = GFX_evt_shou_lung_diplomatic_success
+    picture = GFX_evt_china_diplomatic_success
     border = GFX_event_normal_frame_diplomacy
 
 	is_triggered_only = yes
@@ -4455,7 +4611,6 @@ character_event = {			#You let shou_lung know
 		event_target:escaped_shou_lung_noble = {
 			death = {
 				death_reason = death_executed_by_shou_lung_emperor
-				killer = event_target:shou_lung_emperor
 			}
 		}
 	}
@@ -4465,7 +4620,7 @@ character_event = {			#You let shou_lung know but the noble escapes
 	id =  JD.70008
 	has_dlc = "Jade Dragon"
 	desc = EVTDESC_JD_70008
-    picture = GFX_evt_shou_lung_bureaucrat
+    picture = GFX_evt_chinese_bureaucrat
     border = GFX_event_normal_frame_diplomacy
  
 	is_triggered_only = yes
@@ -5180,7 +5335,7 @@ character_event = {
                     }
                     random_list = {
                         71 = { } #Nothing
-                        20 = { add_trait = scarred }
+                        20 = { add_scarred_tiered_effect = yes }
                         5 = { 
                             trigger = { has_dlc = Reapers }
                             add_trait = one_eyed 
@@ -5492,7 +5647,7 @@ character_event = {
                                 50 = { add_trait = duelist }
                                 50 = { add_trait = scholar }
                             }
-                            add_trait = scarred
+                            add_scarred_tiered_effect = yes
                             add_trait = robust
                             random_list = {
                                 60 = { } #Nothing
@@ -5657,6 +5812,7 @@ character_event = {
                             remove_trait = stutter
                             remove_trait = ugly
                             remove_trait = dwarf
+                            remove_trait = giant
                             remove_trait = weak
                         }
                     }
@@ -5951,7 +6107,7 @@ character_event = {
 character_event = { # Traveling Teacher
 	id = JD.7000
 	desc = EVTDESC_JD_7000
-    picture = GFX_evt_shou_lung_stable
+    picture = GFX_evt_china_stable
 	
 	only_playable = yes
 	only_capable = yes
@@ -6316,6 +6472,10 @@ character_event = { # Radhanite Merchant
 		NOR = {
 			has_character_flag = radhanite_visit
 			has_character_modifier = expelled_jewish
+			has_alternate_start_parameter = {
+				key = religion_names
+				value = random
+			}
 		}
 		any_realm_province = {
 			trade_route = silk_road
@@ -6331,6 +6491,16 @@ character_event = { # Radhanite Merchant
 			}
 		}
 	}
+
+    weight_multiplier = {
+        days = 1
+        modifier = {
+            factor = 2
+            any_owned_bloodline = {
+                has_bloodline_flag = jewish_saintly_bloodline
+            }
+        }
+    }
 	
 	immediate = {
 		hidden_effect = {
