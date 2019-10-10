@@ -442,3 +442,10 @@ likes_pagan_group = {
 #		}
 #	}
 #}
+
+courtier_from_shou_lung_trigger = {
+	custom_tooltip = {
+		text = courtier_from_shou_lung_trigger_tt
+		has_character_flag = originated_from_shou_lung_court
+	}
+}
