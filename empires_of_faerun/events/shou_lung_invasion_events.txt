@@ -94,23 +94,26 @@ character_event = {
 				}
 				if = {
 					random_list = {
-						10 = { #Anxi
-							1408 = { save_event_target_as = shou_lung_invasion_spawn_point_province }
+						10 = { #Kangste
+							1378 = { save_event_target_as = shou_lung_invasion_spawn_point_province }
 						}
-						10 = { #Dunhuang
-							1448 = { save_event_target_as = shou_lung_invasion_spawn_point_province }
+						10 = { #Taotie
+							1382 = { save_event_target_as = shou_lung_invasion_spawn_point_province }
 						}
-						10 = { #Jiuquan
-							1513 = { save_event_target_as = shou_lung_invasion_spawn_point_province } 
+						10 = { #Zhoman
+							1772 = { save_event_target_as = shou_lung_invasion_spawn_point_province } 
 						}
-						10 = { #Yizhou
-							1450 = { save_event_target_as = shou_lung_invasion_spawn_point_province } 
+						10 = { #Shou Kuan
+							1383 = { save_event_target_as = shou_lung_invasion_spawn_point_province } 
 						}
-						10 = { #Gaochang
-							1446 = { save_event_target_as = shou_lung_invasion_spawn_point_province } 
+						10 = { #To Ming
+							1363 = { save_event_target_as = shou_lung_invasion_spawn_point_province } 
 						}
-						10 = { #Luntai
-							1449 = { save_event_target_as = shou_lung_invasion_spawn_point_province } 
+						10 = { #White Hills
+							1415 = { save_event_target_as = shou_lung_invasion_spawn_point_province } 
+						}
+						10 = { #feifeng
+							1374 = { save_event_target_as = chinese_invasion_spawn_point_province } 
 						}
 					}
 				}
@@ -805,8 +808,8 @@ character_event = {
 				random_list = {
 					100 = { # Go for Jiuquan (Grab Dunhuang, Anxi, etc - regardless of expansionist or not, on map or not) 
 						trigger = {
-							NOT = { completely_controls = d_jiuquan }
-	    					d_jiuquan = {
+							NOT = { completely_controls = d_taotie }
+	    					d_taotie = {
 	    						any_direct_de_jure_vassal_title = {
 		    						holder_scope = {
 										top_liege = {
@@ -818,7 +821,7 @@ character_event = {
 						}
 
 						#The WP will try to grab whatever they can within Jiuquan...
-						d_jiuquan = {
+						d_taotie = {
 							#add_claim = ROOT #No claim on the duchy title, as then they can grab more land than intended - they can usurp it afterwards instead					
 							any_direct_de_jure_vassal_title = {
 								add_claim = ROOT
@@ -1143,7 +1146,7 @@ character_event = {
 character_event = {
     id = JD.10130
     is_triggered_only = yes
-    picture = GFX_evt_shou_lung_invades
+    picture = GFX_evt_china_invades
     desc = EVTDESC_JD_10130_A
     has_dlc = "Jade Dragon"
 
@@ -1277,7 +1280,7 @@ character_event = {
 
     has_dlc = "Jade Dragon"
 
-    picture = GFX_evt_shou_lung_invades
+    picture = GFX_evt_china_invades
     border = GFX_event_normal_frame_war
     is_triggered_only = yes
 
@@ -1300,11 +1303,11 @@ character_event = {
 			limit = { has_offmap_tmp_flag = WP_is_not_on_map }
 
 			random_list = {
-				10 = { #Anxi
-					1408 = { save_event_target_as = shou_lung_invasion_spawn_point_province }
+				10 = { #Kangste
+					1378 = { save_event_target_as = shou_lung_invasion_spawn_point_province }
 				}
-				10 = { #Dunhuang
-					1448 = { save_event_target_as = shou_lung_invasion_spawn_point_province }
+				10 = { #Taotie
+					1382 = { save_event_target_as = shou_lung_invasion_spawn_point_province }
 				}
 			}
 		}
@@ -1373,7 +1376,7 @@ narrative_event = { #NEWS: visible event for player (someone PEACEFULLY became a
     id = JD.10105
 	has_dlc = "Jade Dragon"
     title = NEWS_FROM_shou_lung
-	picture = GFX_evt_shou_lung_invades
+	picture = GFX_evt_china_invades
 	portrait = shou_lung
 	window = EventWindowOffmap
 	background = GFX_event_window_news_from_china
@@ -1408,7 +1411,7 @@ narrative_event = { # NEWS: visible event for player (tributary invasion)
     id = JD.10102
 	has_dlc = "Jade Dragon"
     title = NEWS_FROM_shou_lung
-	picture = GFX_evt_shou_lung_invades
+	picture = GFX_evt_china_invades
 	portrait = shou_lung
 	window = EventWindowOffmap
 	background = GFX_event_window_news_from_china
@@ -1508,23 +1511,26 @@ character_event = {
 			limit = { has_offmap_tmp_flag = WP_is_not_on_map }
 
 			random_list = {
-				10 = { #Anxi
-					1408 = { save_event_target_as = shou_lung_invasion_spawn_point_province }
+				10 = { #Kangste
+					1378 = { save_event_target_as = shou_lung_invasion_spawn_point_province }
 				}
-				10 = { #Dunhuang
-					1448 = { save_event_target_as = shou_lung_invasion_spawn_point_province }
+				10 = { #Taotie
+					1382 = { save_event_target_as = shou_lung_invasion_spawn_point_province }
 				}
-				10 = { #Jiuquan
-					1513 = { save_event_target_as = shou_lung_invasion_spawn_point_province } 
+				10 = { #Zhoman
+					1772 = { save_event_target_as = shou_lung_invasion_spawn_point_province } 
 				}
-				10 = { #Yizhou
-					1450 = { save_event_target_as = shou_lung_invasion_spawn_point_province } 
+				10 = { #Shou Kuan
+					1383 = { save_event_target_as = shou_lung_invasion_spawn_point_province } 
 				}
-				10 = { #Gaochang
-					1446 = { save_event_target_as = shou_lung_invasion_spawn_point_province } 
+				10 = { #To Ming
+					1363 = { save_event_target_as = shou_lung_invasion_spawn_point_province } 
 				}
-				10 = { #Luntai
-					1449 = { save_event_target_as = shou_lung_invasion_spawn_point_province } 
+				10 = { #White Hills
+					1415 = { save_event_target_as = shou_lung_invasion_spawn_point_province } 
+				}
+				10 = { #feifeng
+					1374 = { save_event_target_as = chinese_invasion_spawn_point_province } 
 				}
 			}
 		}
@@ -1668,7 +1674,7 @@ character_event = {
 narrative_event = { # NEWS: Major invasion declared on <target>! (Visible event for players + player target, fired from JD.10103)
     id = JD.10104
     title = NEWS_FROM_shou_lung
-	picture = GFX_evt_shou_lung_invades
+	picture = GFX_evt_china_invades
 	portrait = shou_lung
 	window = EventWindowOffmap
 	background = GFX_event_window_news_from_china
@@ -1923,7 +1929,7 @@ narrative_event = {
     id = JD.10108
 	has_dlc = "Jade Dragon"
     title = NEWS_FROM_shou_lung
-	picture = GFX_evt_shou_lung_rebel_general
+	picture = GFX_evt_china_rebel_general
 	portrait = shou_lung
 	window = EventWindowOffmap
 	background = GFX_event_window_news_from_china
@@ -2009,8 +2015,8 @@ character_event = {
 			50 = {
 				create_character = {
 					random_traits = yes
-					religion = the_path
-					culture = khitan
+					religion = tuigan_shamanism
+					culture = tuigan
 					dynasty = actually_culture
 					female = no
 					age = 30
@@ -2246,14 +2252,14 @@ character_event = {
 
 		if = {
 			limit = { has_character_flag = is_tuigan_invader }
-			1457 = { #Karabalgasun
+			1378 = { #Kangste
 				save_event_target_as = target_province
 			}
 		}
 
 		if = {
 			limit = { has_character_flag = is_displaced_prince }
-			1513 = { #Jiuquan
+			1382 = { #Taotie
 				save_event_target_as = target_province
 			}
 		}
@@ -3194,7 +3200,7 @@ character_event = {
 character_event = {
 	id = JD.60202
 	desc = EVT_DESC_JD_60202
-	picture = GFX_evt_shou_lung_rebel_general
+	picture = GFX_evt_china_rebel_general
 	border = GFX_event_normal_frame_war
 
 	is_triggered_only = yes
