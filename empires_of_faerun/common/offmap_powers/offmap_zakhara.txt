@@ -180,66 +180,8 @@ zakhara = {
 	
 	temple_names = {
 		{ # Founder names
-			Gaozu
-			Taizu
-			Shizu
-			Zhaozu
-			Jingzu
-			Xianzu
-			Liezu
-			Chengzu
 		}
 		{ # Successor names
-			
-			Qinzong
-			Xiaozong
-			Guangzong
-			Ningzong
-			Lizong
-			Duzong
-			Duanzong
-			Xuanzong
-			Suzong
-			Daizong
-			Muzong
-			Jingzong
-			Wenzong
-			Wuzong
-			Zhaozong
-			Xizong
-			Xuanzong
-			Shizong
-			Zhangzong
-			Ruizong
-			Dingzong
-			Xianzong
-			Chengzong
-			Mingzong
-			Jinzong
-			Yizong
-			Xiangzong
-			Huanzong
-			Chongzong
-			Daozong
-			Liezong
-			Aizong
-			Zhangzong
-			Dezong
-			Shengzong
-			Xingzong
-			Kangzong
-			Zhuangzong
-			Pingzong
-			Sizong
-			Anzong
-			Yangzong
-			Shangzong
-			Shunzong
-			Zhizong
-			Chuangzong
-			Shaozong
-			Gongzong
-			Yingzong
 		}
 	}
 	holder_succession = {
@@ -254,12 +196,12 @@ zakhara = {
 			}
 		}
 		culture = {
-			shou = { # default culture for new emperor
+			hadhar = { # default culture for new emperor
 				value = 99 # if any other value reaches 100, it will be picked instead
 			}
 			FROM = { # default culture for new emperor
 								# the left side here (and for culture, religion, graphical_culture and dynasty) can be a right hand side value (FROM, ROOT, a culture name, etc). and the right hand side / inside the brackets is a standard MTTH evaluation. Only the one with the highest weight will be used. If there's a tie, one of the tied values is picked at random
-				value = 100
+				value = 0
 				additive_modifier = { #the new emperor will keep current culture if things are great
 					value = 100
 					#zakhara_is_fine_trigger = yes
@@ -307,54 +249,30 @@ zakhara = {
 		}
 		
 		likes = {
-			zakhara_likes_concubines = {
+			likes_concubines = {
 				value = 300
 				modifier = {
 					factor = 0.1
 					FROMFROM = { is_female = yes }
 				}
 			}
-			zakhara_likes_eunuchs = {
+			likes_eunuchs = {
 				value = 300
 			}
-			zakhara_likes_wealth = {
+			likes_wealth = {
 				value = 300
 			}
-			zakhara_likes_tributaries = {
+			likes_tributaries = {
 				value = 100
 			}
-			likes_gnome_group = {
+			likes_chondathan_group = {
 				value = 100
 				modifier = {
 					factor = 0
 					NOT = {
 						any_province = {
-							culture_group = gnome_group
-							is_within_diplo_range = zakhara
-						}
-					}
-				}
-			}
-			likes_beholder_group = {
-				value = 100
-				modifier = {
-					factor = 0
-					NOT = {
-						any_province = {
-							culture_group = beholder_group
-							is_within_diplo_range = zakhara
-						}
-					}
-				}
-			}
-			likes_centaur_group = {
-				value = 100
-				modifier = {
-					factor = 0
-					NOT = {
-						any_province = {
-							culture_group = centaur_group
-							is_within_diplo_range = zakhara
+							culture_group = chondathan_group
+							is_within_diplo_range = shou_lung
 						}
 					}
 				}
@@ -366,7 +284,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = coldlander_group
-							is_within_diplo_range = zakhara
+							is_within_diplo_range = shou_lung
 						}
 					}
 				}
@@ -378,11 +296,11 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = dwarf_group
-							is_within_diplo_range = zakhara
+							is_within_diplo_range = shou_lung
 						}
 					}
 				}
-			}			
+			}
 			likes_elf_group = {
 				value = 100
 				modifier = {
@@ -390,59 +308,23 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = elf_group
-							is_within_diplo_range = zakhara
+							is_within_diplo_range = shou_lung
 						}
 					}
 				}
-			}			
-			likes_fey_group = {
+			}
+			likes_gnome_group = {
 				value = 100
 				modifier = {
 					factor = 0
 					NOT = {
 						any_province = {
-							culture_group = fey_group
-							is_within_diplo_range = zakhara
+							culture_group = gnome_group
+							is_within_diplo_range = shou_lung
 						}
 					}
 				}
-			}			
-			likes_giant_group = {
-				value = 100
-				modifier = {
-					factor = 0
-					NOT = {
-						any_province = {
-							culture_group = giant_group
-							is_within_diplo_range = zakhara
-						}
-					}
-				}
-			}			
-			likes_gnoll_group = {
-				value = 100
-				modifier = {
-					factor = 0
-					NOT = {
-						any_province = {
-							culture_group = gnoll_group
-							is_within_diplo_range = zakhara
-						}
-					}
-				}
-			}			
-			likes_goblinoid_group = {
-				value = 100
-				modifier = {
-					factor = 0
-					NOT = {
-						any_province = {
-							culture_group = goblinoid_group
-							is_within_diplo_range = zakhara
-						}
-					}
-				}
-			}			
+			}
 			likes_halfling_group = {
 				value = 100
 				modifier = {
@@ -450,23 +332,11 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = halfling_group
-							is_within_diplo_range = zakhara
+							is_within_diplo_range = shou_lung
 						}
 					}
 				}
 			}
-			likes_illithid_group = {
-				value = 100
-				modifier = {
-					factor = 0
-					NOT = {
-						any_province = {
-							culture_group = illithid_group
-							is_within_diplo_range = zakhara
-						}
-					}
-				}
-			}			
 			likes_illuskan_group = {
 				value = 100
 				modifier = {
@@ -474,11 +344,11 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = illuskan_group
-							is_within_diplo_range = zakhara
+							is_within_diplo_range = shou_lung
 						}
 					}
 				}
-			}			
+			}
 			likes_imaskari_group = {
 				value = 100
 				modifier = {
@@ -486,47 +356,11 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = imaskari_group
-							is_within_diplo_range = zakhara
+							is_within_diplo_range = shou_lung
 						}
 					}
 				}
-			}			
-			likes_jhaamdathan_group = {
-				value = 100
-				modifier = {
-					factor = 0
-					NOT = {
-						any_province = {
-							culture_group = jhaamdathan_group
-							is_within_diplo_range = zakhara
-						}
-					}
-				}
-			}			
-			likes_katashakan_group = {
-				value = 100
-				modifier = {
-					factor = 0
-					NOT = {
-						any_province = {
-							culture_group = katashakan_group
-							is_within_diplo_range = zakhara
-						}
-					}
-				}
-			}			
-			likes_mesoamerican = {
-				value = 100
-				modifier = {
-					factor = 0
-					NOT = {
-						any_province = {
-							culture_group = mesoamerican
-							is_within_diplo_range = zakhara
-						}
-					}
-				}
-			}			
+			}
 			likes_kara_turan_group = {
 				value = 100
 				modifier = {
@@ -534,11 +368,23 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = kara_turan_group
-							is_within_diplo_range = zakhara
+							is_within_diplo_range = shou_lung
 						}
 					}
 				}
-			}			
+			}
+			likes_katashakan_group = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							culture_group = katashakan_group
+							is_within_diplo_range = shou_lung
+						}
+					}
+				}
+			}
 			likes_lapal_group = {
 				value = 100
 				modifier = {
@@ -546,11 +392,11 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = lapal_group
-							is_within_diplo_range = zakhara
+							is_within_diplo_range = shou_lung
 						}
 					}
 				}
-			}			
+			}
 			likes_maztican_group = {
 				value = 100
 				modifier = {
@@ -558,35 +404,11 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = maztican_group
-							is_within_diplo_range = zakhara
+							is_within_diplo_range = shou_lung
 						}
 					}
 				}
-			}			
-			likes_minotaur_group = {
-				value = 100
-				modifier = {
-					factor = 0
-					NOT = {
-						any_province = {
-							culture_group = minotaur_group
-							is_within_diplo_range = zakhara
-						}
-					}
-				}
-			}			
-			likes_monster_group = {
-				value = 100
-				modifier = {
-					factor = 0
-					NOT = {
-						any_province = {
-							culture_group = monster_group
-							is_within_diplo_range = zakhara
-						}
-					}
-				}
-			}			
+			}
 			likes_mulan_group = {
 				value = 100
 				modifier = {
@@ -594,12 +416,11 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = mulan_group
-							is_within_diplo_range = zakhara
+							is_within_diplo_range = shou_lung
 						}
 					}
 				}
-			}			
-						
+			}
 			likes_narfelli_group = {
 				value = 100
 				modifier = {
@@ -607,11 +428,11 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = narfelli_group
-							is_within_diplo_range = zakhara
+							is_within_diplo_range = shou_lung
 						}
 					}
 				}
-			}			
+			}
 			likes_netherese_group = {
 				value = 100
 				modifier = {
@@ -619,11 +440,11 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = netherese_group
-							is_within_diplo_range = zakhara
+							is_within_diplo_range = shou_lung
 						}
 					}
 				}
-			}			
+			}
 			likes_orc_group = {
 				value = 100
 				modifier = {
@@ -631,11 +452,14 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = orc_group
-							is_within_diplo_range = zakhara
+							is_within_diplo_range = shou_lung
 						}
 					}
 				}
-			}			
+			}
+			likes_outsiders = {
+				value = 100
+			}
 			likes_raum_group = {
 				value = 100
 				modifier = {
@@ -643,35 +467,11 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = raum_group
-							is_within_diplo_range = zakhara
+							is_within_diplo_range = shou_lung
 						}
 					}
 				}
-			}			
-			likes_raumthari_group = {
-				value = 100
-				modifier = {
-					factor = 0
-					NOT = {
-						any_province = {
-							culture_group = raumthari_group
-							is_within_diplo_range = zakhara
-						}
-					}
-				}
-			}			
-			likes_scaly_group = {
-				value = 100
-				modifier = {
-					factor = 0
-					NOT = {
-						any_province = {
-							culture_group = scaly_group
-							is_within_diplo_range = zakhara
-						}
-					}
-				}
-			}	
+			}
 			likes_shaaran_group = {
 				value = 100
 				modifier = {
@@ -679,7 +479,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = shaaran_group
-							is_within_diplo_range = zakhara
+							is_within_diplo_range = shou_lung
 						}
 					}
 				}
@@ -691,19 +491,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = tethyrian_group
-							is_within_diplo_range = zakhara
-						}
-					}
-				}
-			}
-			likes_tuigan_group = {
-				value = 100
-				modifier = {
-					factor = 0
-					NOT = {
-						any_province = {
-							culture_group = tuigan_group
-							is_within_diplo_range = zakhara
+							is_within_diplo_range = shou_lung
 						}
 					}
 				}
@@ -715,7 +503,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = taan_group
-							is_within_diplo_range = zakhara
+							is_within_diplo_range = shou_lung
 						}
 					}
 				}
@@ -727,67 +515,31 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = turami_group
-							is_within_diplo_range = zakhara
+							is_within_diplo_range = shou_lung
 						}
 					}
 				}
 			}
-			likes_uluiki_group = {
+			likes_uluik_group = {
 				value = 100
 				modifier = {
 					factor = 0
 					NOT = {
 						any_province = {
-							culture_group = uluiki_group
-							is_within_diplo_range = zakhara
+							culture_group = uluik_group
+							is_within_diplo_range = shou_lung
 						}
 					}
 				}
 			}
-			likes_undead_group = {
-				value = 100
-				modifier = {
-					factor = 0
-					NOT = {
-						any_province = {
-							culture_group = undead_group
-							is_within_diplo_range = zakhara
-						}
-					}
-				}
-			}
-			likes_westerner_group = {
-				value = 100
-				modifier = {
-					factor = 0
-					NOT = {
-						any_province = {
-							culture_group = westerner_group
-							is_within_diplo_range = zakhara
-						}
-					}
-				}
-			}
-			likes_yikarian_group = {
-				value = 100
-				modifier = {
-					factor = 0
-					NOT = {
-						any_province = {
-							culture_group = yikarian_group
-							is_within_diplo_range = zakhara
-						}
-					}
-				}
-			}
-			likes_zakharan_group = {
+			likes_zakharan = {
 				value = 100
 				modifier = {
 					factor = 0
 					NOT = {
 						any_province = {
 							culture_group = zakharan_group
-							is_within_diplo_range = zakhara
+							is_within_diplo_range = shou_lung
 						}
 					}
 				}
@@ -799,7 +551,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							religion_group = good_human_pantheon_group
-							is_within_diplo_range = zakhara
+							is_within_diplo_range = shou_lung
 						}
 					}
 				}
@@ -815,29 +567,13 @@ zakhara = {
 					NOT = {
 						any_province = {
 							religion_group = evil_human_pantheon_group
-							is_within_diplo_range = zakhara
+							is_within_diplo_range = shou_lung
 						}
 					}
 				}
 				modifier = {
 					factor = 0.5
 					FROMFROM = { religion_group = evil_human_pantheon_group }
-				}
-			}
-			likes_goblin_pantheon_group = {
-				value = 100
-				modifier = {
-					factor = 0
-					NOT = {
-						any_province = {
-							religion_group = goblin_pantheon_group
-							is_within_diplo_range = zakhara
-						}
-					}
-				}
-				modifier = {
-					factor = 0.5
-					FROMFROM = { religion_group = goblin_pantheon_group }
 				}
 			}
 			likes_zakharan_group = {
@@ -847,29 +583,13 @@ zakhara = {
 					NOT = {
 						any_province = {
 							religion_group = zakharan_group
-							is_within_diplo_range = zakhara
+							is_within_diplo_range = shou_lung
 						}
 					}
 				}
 				modifier = {
 					factor = 0.5
 					FROMFROM = { religion_group = zakharan_group }
-				}
-			}
-			likes_elven_pantheon_group = {
-				value = 100
-				modifier = {
-					factor = 0
-					NOT = {
-						any_province = {
-							religion_group = elven_pantheon_group
-							is_within_diplo_range = zakhara
-						}
-					}
-				}
-				modifier = {
-					factor = 0.5
-					FROMFROM = { religion_group = elven_pantheon_group }
 				}
 			}
 			likes_karaturan_group = {
@@ -879,7 +599,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							religion_group = karaturan_group
-							is_within_diplo_range = zakhara
+							is_within_diplo_range = shou_lung
 						}
 					}
 				}
@@ -888,20 +608,20 @@ zakhara = {
 					FROMFROM = { religion_group = karaturan_group }
 				}
 			}
-			likes_dwarven_pantheon_group = {
+			likes_elven_pantheon_group = {
 				value = 100
 				modifier = {
 					factor = 0
 					NOT = {
 						any_province = {
-							religion_group = dwarven_pantheon_group
-							is_within_diplo_range = zakhara
+							religion_group = elven_pantheon_group
+							is_within_diplo_range = shou_lung
 						}
 					}
 				}
 				modifier = {
 					factor = 0.5
-					FROMFROM = { religion_group = dwarven_pantheon_group }
+					FROMFROM = { religion_group = elven_pantheon_group }
 				}
 			}
 			likes_drow_pantheon = {
@@ -911,13 +631,29 @@ zakhara = {
 					NOT = {
 						any_province = {
 							religion_group = drow_pantheon
-							is_within_diplo_range = zakhara
+							is_within_diplo_range = shou_lung
 						}
 					}
 				}
 				modifier = {
 					factor = 0.5
 					FROMFROM = { religion_group = drow_pantheon }
+				}
+			}
+			likes_dwarven_pantheon_group = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							religion_group = dwarven_pantheon_group
+							is_within_diplo_range = shou_lung
+						}
+					}
+				}
+				modifier = {
+					factor = 0.5
+					FROMFROM = { religion_group = dwarven_pantheon_group }
 				}
 			}
 			likes_giant_pantheon_group = {
@@ -927,29 +663,29 @@ zakhara = {
 					NOT = {
 						any_province = {
 							religion_group = giant_pantheon_group
-							is_within_diplo_range = zakhara
+							is_within_diplo_range = shou_lung
 						}
 					}
 				}
 				modifier = {
 					factor = 0.5
-					FROMFROM = { religion_group = pagan_group }
+					FROMFROM = { religion_group = giant_pantheon_group }
 				}
 			}
-			likes_monster_group = {
+			likes_goblin_pantheon_group = {
 				value = 100
 				modifier = {
 					factor = 0
 					NOT = {
 						any_province = {
-							religion_group = monster_group
-							is_within_diplo_range = zakhara
+							religion_group = goblin_pantheon_group
+							is_within_diplo_range = shou_lung
 						}
 					}
 				}
 				modifier = {
 					factor = 0.5
-					FROMFROM = { religion_group = monster_group }
+					FROMFROM = { religion_group = goblin_pantheon_group }
 				}
 			}
 			likes_orc_pantheon_group = {
@@ -959,13 +695,29 @@ zakhara = {
 					NOT = {
 						any_province = {
 							religion_group = orc_pantheon_group
-							is_within_diplo_range = zakhara
+							is_within_diplo_range = shou_lung
 						}
 					}
 				}
 				modifier = {
 					factor = 0.5
 					FROMFROM = { religion_group = orc_pantheon_group }
+				}
+			}
+			likes_monster_group = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							religion_group = monster_group
+							is_within_diplo_range = shou_lung
+						}
+					}
+				}
+				modifier = {
+					factor = 0.5
+					FROMFROM = { religion_group = monster_group }
 				}
 			}
 			likes_draconic_group = {
@@ -975,13 +727,29 @@ zakhara = {
 					NOT = {
 						any_province = {
 							religion_group = draconic_group
-							is_within_diplo_range = zakhara
+							is_within_diplo_range = shou_lung
 						}
 					}
 				}
 				modifier = {
 					factor = 0.5
 					FROMFROM = { religion_group = draconic_group }
+				}
+			}
+			likes_pagan_group = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							religion_group = pagan_group
+							is_within_diplo_range = shou_lung
+						}
+					}
+				}
+				modifier = {
+					factor = 0.5
+					FROMFROM = { religion_group = pagan_group }
 				}
 			}
 		}
