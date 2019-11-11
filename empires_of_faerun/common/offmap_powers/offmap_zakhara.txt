@@ -24,8 +24,8 @@ zakhara = {
 		zakhara_stable
 		zakhara_unrest
 		zakhara_civil_war
-		zakhara_tuigan_invasion
-		zakhara_tu_lung_invasion
+		zakhara_pantheist_invasion
+		zakhara_badia_invasion
 		zakhara_famine
 		zakhara_plague
 		zakhara_golden_age
