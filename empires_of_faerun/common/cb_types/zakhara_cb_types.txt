@@ -28,14 +28,14 @@ offmap_submission = {
 			piety = -100
 			prestige = -100
 			
-			if = { # Remove Raid shou_lung if active
+			if = { # Remove Raid zakhara if active
 				limit = {
-					has_character_modifier = shou_lung_raid_active
+					has_character_modifier = zakhara_raid_active
 				}
-				remove_character_modifier = shou_lung_raid_active
+				remove_character_modifier = zakhara_raid_active
 				hidden_effect = {
 					add_character_modifier = {
-						name = shou_lung_raid_grace_cd
+						name = zakhara_raid_grace_cd
 						hidden = yes
 						years = 5
 					}
@@ -130,11 +130,11 @@ offmap_submission = {
 							}
 						}
 					}
-					if = { #shou_lung with no land calculates what to do with nomad provinces
+					if = { #zakhara with no land calculates what to do with nomad provinces
 						limit = { 
 							is_offmap_governor = yes
-							offmap_power = { is_offmap_tag = shou_lung }
-							shou_lung = { has_offmap_tmp_flag = WP_is_not_on_map }
+							offmap_power = { is_offmap_tag = zakhara }
+							zakhara = { has_offmap_tmp_flag = WP_is_not_on_map }
 							NOT = { wealth = 2500 } #unless already rich from tributes
 						}
 						set_variable = { which = "WP_nomad_provinces" value = 0 }
@@ -145,7 +145,7 @@ offmap_submission = {
 							}
 							province_event = { id = JD.60100 } #increase counter for each nomad province
 						}
-						character_event = { id = JD.60101 days = 1 } #calculate gold sent from shou_lung for building holdings
+						character_event = { id = JD.60101 days = 1 } #calculate gold sent from zakhara for building holdings
 					}
 					if = { #New Empire
 						limit = { has_character_flag = is_rebel_general }
@@ -153,9 +153,9 @@ offmap_submission = {
 						primary_title = { 
 							set_title_landless = { title = THIS status = no }
 							set_title_flag = uses_temple_names_by_script #Titles with this flag give their heirs a temple name via on_death event
-							set_title_flag = pretender_chinese_empire #Blocks all grace interactions
+							set_title_flag = pretender__empire #Blocks all grace interactions
 							set_title_flag = rebel_general_title
-							adjective = e_shou_lung_west_governor_adj #Use WP adj as it is "Chinese" but also gives the right one in different languages
+							adjective = e_zakhara_west_governor_adj #Use WP adj as it is "Chinese" but also gives the right one in different languages
 							random_list = { #Random Empire name that China doesn't have
 								1 = { 
 									trigger = { NOT = { shou_lung = { has_offmap_name = tang_shou_lung } } }
