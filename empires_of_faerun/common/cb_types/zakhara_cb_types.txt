@@ -1,4 +1,4 @@
-offmap_submission = {
+zakhara_offmap_submission = {
 	name = CB_NAME_OFFMAP_SUBMISSION
 	war_name = WAR_NAME_OFFMAP_SUBMISSION
 	sprite = 30
@@ -153,129 +153,129 @@ offmap_submission = {
 						primary_title = { 
 							set_title_landless = { title = THIS status = no }
 							set_title_flag = uses_temple_names_by_script #Titles with this flag give their heirs a temple name via on_death event
-							set_title_flag = pretender__empire #Blocks all grace interactions
+							set_title_flag = pretender_zakhara_empire #Blocks all grace interactions
 							set_title_flag = rebel_general_title
 							adjective = e_zakhara_west_governor_adj #Use WP adj as it is "Chinese" but also gives the right one in different languages
 							random_list = { #Random Empire name that China doesn't have
 								1 = { 
-									trigger = { NOT = { shou_lung = { has_offmap_name = tang_shou_lung } } }
+									trigger = { NOT = { zakhara = { has_offmap_name = tang_zakhara } } }
 									set_name = "Tang Empire"
-									set_title_flag = shou_lung_name_Tang
+									set_title_flag = zakhara_name_Tang
 								}
 								1 = { 
-									trigger = { NOT = { shou_lung = { has_offmap_name = jin_shou_lung } } }
+									trigger = { NOT = { zakhara = { has_offmap_name = jin_zakhara } } }
 									set_name = "Jin Empire"
-									set_title_flag = shou_lung_name_Jin
+									set_title_flag = zakhara_name_Jin
 								}
 								1 = { 
-									trigger = { NOT = { shou_lung = { has_offmap_name = wei_shou_lung } } }
+									trigger = { NOT = { zakhara = { has_offmap_name = wei_zakhara } } }
 									set_name = "Wei Empire"
-									set_title_flag = shou_lung_name_Wei
+									set_title_flag = zakhara_name_Wei
 								}
 								1 = { 
-									trigger = { NOT = { shou_lung = { has_offmap_name = qi_shou_lung } } }
+									trigger = { NOT = { zakhara = { has_offmap_name = qi_zakhara } } }
 									set_name = "Qi Empire"
-									set_title_flag = shou_lung_name_Qi
+									set_title_flag = zakhara_name_Qi
 								}
 								1 = { 
-									trigger = { NOT = { shou_lung = { has_offmap_name = zhou_shou_lung } } }
+									trigger = { NOT = { zakhara = { has_offmap_name = zhou_zakhara } } }
 									set_name = "Zhou Empire"
-									set_title_flag = shou_lung_name_Zhou
+									set_title_flag = zakhara_name_Zhou
 								}
 								1 = { 
-									trigger = { NOT = { shou_lung = { has_offmap_name = han_shou_lung } } }
+									trigger = { NOT = { zakhara = { has_offmap_name = han_zakhara } } }
 									set_name = "Han Empire"
-									set_title_flag = shou_lung_name_Han
+									set_title_flag = zakhara_name_Han
 								}
 								1 = { 
-									trigger = { NOT = { shou_lung = { has_offmap_name = qin_shou_lung } } }
+									trigger = { NOT = { zakhara = { has_offmap_name = qin_zakhara } } }
 									set_name = "Qin Empire"
-									set_title_flag = shou_lung_name_Qin
+									set_title_flag = zakhara_name_Qin
 								}
 								1 = { 
-									trigger = { NOT = { shou_lung = { has_offmap_name = yan_shou_lung } } }
+									trigger = { NOT = { zakhara = { has_offmap_name = yan_zakhara } } }
 									set_name = "Yan Empire"
-									set_title_flag = shou_lung_name_Yan
+									set_title_flag = zakhara_name_Yan
 								}
 								1 = { 
-									trigger = { NOT = { shou_lung = { has_offmap_name = zhao_shou_lung } } }
+									trigger = { NOT = { zakhara = { has_offmap_name = zhao_zakhara } } }
 									set_name = "Zhao Empire"
-									set_title_flag = shou_lung_name_Zhao
+									set_title_flag = zakhara_name_Zhao
 								}
 								1 = { 
-									trigger = { NOT = { shou_lung = { has_offmap_name = liao_shou_lung } } }
+									trigger = { NOT = { zakhara = { has_offmap_name = liao_zakhara } } }
 									set_name = "Liao Empire"
-									set_title_flag = shou_lung_name_Liao
+									set_title_flag = zakhara_name_Liao
 								}
 								1 = { 
-									trigger = { NOT = { shou_lung = { has_offmap_name = yuan_shou_lung } } }
+									trigger = { NOT = { zakhara = { has_offmap_name = yuan_zakhara } } }
 									set_name = "Yuan Empire"
-									set_title_flag = shou_lung_name_Yuan
+									set_title_flag = zakhara_name_Yuan
 								}
 								1 = { 
-									trigger = { NOT = { shou_lung = { has_offmap_name = xia_shou_lung } } }
+									trigger = { NOT = { zakhara = { has_offmap_name = xia_zakhara } } }
 									set_name = "Xia Empire"
-									set_title_flag = shou_lung_name_Xia
+									set_title_flag = zakhara_name_Xia
 								}
 								1 = { 
-									trigger = { NOT = { shou_lung = { has_offmap_name = qing_shou_lung } } }
+									trigger = { NOT = { zakhara = { has_offmap_name = qing_zakhara } } }
 									set_name = "Qing Empire"
-									set_title_flag = shou_lung_name_Qing
+									set_title_flag = zakhara_name_Qing
 								}
 								1 = { 
-									trigger = { NOT = { shou_lung = { has_offmap_name = dai_shou_lung } } }
+									trigger = { NOT = { zakhara = { has_offmap_name = dai_zakhara } } }
 									set_name = "Dai Empire"
-									set_title_flag = shou_lung_name_Dai
+									set_title_flag = zakhara_name_Dai
 								}
 								1 = { 
-									trigger = { NOT = { shou_lung = { has_offmap_name = cheng_shou_lung } } }
+									trigger = { NOT = { zakhara = { has_offmap_name = cheng_zakhara } } }
 									set_name = "Cheng Empire"
-									set_title_flag = shou_lung_name_Cheng
+									set_title_flag = zakhara_name_Cheng
 								}
 								1 = { 
-									trigger = { NOT = { shou_lung = { has_offmap_name = liang_shou_lung } } }
+									trigger = { NOT = { zakhara = { has_offmap_name = liang_zakhara } } }
 									set_name = "Liang Empire"
-									set_title_flag = shou_lung_name_Liang
+									set_title_flag = zakhara_name_Liang
 								}
 								1 = { 
-									trigger = { NOT = { shou_lung = { has_offmap_name = song_shou_lung } } }
+									trigger = { NOT = { zakhara = { has_offmap_name = song_zakhara } } }
 									set_name = "Song Empire"
-									set_title_flag = shou_lung_name_Song
+									set_title_flag = zakhara_name_Song
 								}
 								1 = { 
-									trigger = { NOT = { shou_lung = { has_offmap_name = ming_shou_lung } } }
+									trigger = { NOT = { zakhara = { has_offmap_name = ming_zakhara } } }
 									set_name = "Ming Empire"
-									set_title_flag = shou_lung_name_Ming
+									set_title_flag = zakhara_name_Ming
 								}
 								1 = { 
-									trigger = { NOT = { shou_lung = { has_offmap_name = shu_shou_lung } } }
+									trigger = { NOT = { zakhara = { has_offmap_name = shu_zakhara } } }
 									set_name = "Shu Empire"
-									set_title_flag = shou_lung_name_Shu
+									set_title_flag = zakhara_name_Shu
 								}
 								1 = { 
-									trigger = { NOT = { shou_lung = { has_offmap_name = wu_shou_lung } } }
+									trigger = { NOT = { zakhara = { has_offmap_name = wu_zakhara } } }
 									set_name = "Wu Empire"
-									set_title_flag = shou_lung_name_Wu
+									set_title_flag = zakhara_name_Wu
 								}
 								1 = { 
-									trigger = { NOT = { shou_lung = { has_offmap_name = chu_shou_lung } } }
+									trigger = { NOT = { zakhara = { has_offmap_name = chu_zakhara } } }
 									set_name = "Chu Empire"
-									set_title_flag = shou_lung_name_Chu
+									set_title_flag = zakhara_name_Chu
 								}
 								1 = { 
-									trigger = { NOT = { shou_lung = { has_offmap_name = yue_shou_lung } } }
+									trigger = { NOT = { zakhara = { has_offmap_name = yue_zakhara } } }
 									set_name = "Yue Empire"
-									set_title_flag = shou_lung_name_Yue
+									set_title_flag = zakhara_name_Yue
 								}
 								1 = { 
-									trigger = { NOT = { shou_lung = { has_offmap_name = yin_shou_lung } } }
+									trigger = { NOT = { zakhara = { has_offmap_name = yin_zakhara } } }
 									set_name = "Yin Empire"
-									set_title_flag = shou_lung_name_Yin
+									set_title_flag = zakhara_name_Yin
 								}
 								1 = { 
-									trigger = { NOT = { shou_lung = { has_offmap_name = shun_shou_lung } } }
+									trigger = { NOT = { zakhara = { has_offmap_name = shun_zakhara } } }
 									set_name = "Shun Empire"
-									set_title_flag = shou_lung_name_Shun
+									set_title_flag = zakhara_name_Shun
 								}
 							}
 							add_law = {
@@ -284,27 +284,19 @@ offmap_submission = {
 								opinion_effect = no
 							}
 						}
-						set_government_type = chinese_imperial_government
-						random_list = { #Give a temple name
-							1 = { set_name = Gaozu }
-							1 = { set_name = Taizu }
-							1 = { set_name = Shizu }
-							1 = { set_name = Zhaozu }
-							1 = { set_name = Jingzu }
-							1 = { set_name = Xianzu }
-							1 = { set_name = Liezu }
-							1 = { set_name = Chengzu }
-						}
+						set_government_type = zakhara_government
+						# random_list = { #Give a temple name
+						# }
 						set_character_flag = given_temple_name_by_script
 						remove_special_character_title = TITLE_GENERAL
 						#Some starting stuff
 						wealth = 1000
 						prestige = 500
 						piety = 200
-						shou_lung = { set_offmap_flag = no_war_news }
+						zakhara = { set_offmap_flag = no_war_news }
 						any_player = {
 							limit = {
-								has_offmap_news_enabled = shou_lung
+								has_offmap_news_enabled = zakhara
 								is_within_diplo_range = PREV
 							}
 							narrative_event = { id = JD.60211 days = 1 }
@@ -381,7 +373,7 @@ offmap_submission = {
 		FROM = {
 			piety = 100
 			participation_scaled_prestige = 250
-			set_character_flag = defeated_shou_lung
+			set_character_flag = defeated_zakhara
 		}
 		any_defender = {
 			limit = { NOT = { character = FROM } }
@@ -431,43 +423,43 @@ offmap_submission = {
 				}
 			}
 			hidden_effect = {
-				if = { #Makes shou_lung have a chance of leaving Expanionist policy...
+				if = { #Makes zakhara have a chance of leaving Expanionist policy...
 					limit = {
 						NOT = {
 							has_character_flag = is_rebel_general
 						}
-						is_offmap_tag = shou_lung
-						shou_lung = {
-							has_policy = shou_lung_expansionist
+						is_offmap_tag = zakhara
+						zakhara = {
+							has_policy = zakhara_expansionist
 						}
 					}
 					random = {
 						chance = 50
-						shou_lung = {
-							set_policy = shou_lung_open
+						zakhara = {
+							set_policy = zakhara_open
 						}
-						log = "shou_lung War Logging: shou_lung was forced out of Expansionism"
+						log = "zakhara War Logging: zakhara was forced out of Expansionism"
 						if = {
 							limit = {
-								shou_lung = {
-									has_status = shou_lung_stable
+								zakhara = {
+									has_status = zakhara_stable
 								}
 							}
 							random = {
 								chance = 30
-								shou_lung = {
-									set_status = shou_lung_unrest
+								zakhara = {
+									set_status = zakhara_unrest
 								}
-								log = "shou_lung War Logging: shou_lung was forced into Unrest"
+								log = "zakhara War Logging: zakhara was forced into Unrest"
 							}
 						}
 					}
 				}
-				log = "shou_lung War Logging: shou_lung lost a submission war against [FROM.GetBestName]"
+				log = "zakhara War Logging: zakhara lost a submission war against [FROM.GetBestName]"
 			}
 		}
 		FROM = {
-			set_character_flag = defeated_shou_lung
+			set_character_flag = defeated_zakhara
 			piety = 500
 			# if = {
 				# limit = { 
@@ -497,12 +489,12 @@ offmap_submission = {
 			limit = { ROOT = { has_character_flag = is_rebel_general } }
 			end_war = invalid
 			ROOT = {
-				any_courtier = { death = { death_reason = death_went_back_to_shou_lung } }
+				any_courtier = { death = { death_reason = death_went_back_to_zakhara } }
 				primary_title = {
 					activate_title = { title = THIS status = no }
 					destroy_landed_title = THIS
 				}
-				death = { death_reason = death_went_back_to_shou_lung }
+				death = { death_reason = death_went_back_to_zakhara }
 			}
 		}
 	}
@@ -566,10 +558,10 @@ tributary_offmap_cb = {
 
 	on_success = {
 		log = "---------------------"
-		log = "shou_lung Logging:"
-		log = "The [shou_lung.GetShortName] invasion of [From.GetTitledName] has ended"
-		log = "The war ended in a victory for shou_lung"
-		log = "[From.GetTitledName] is now tributary of shou_lung"
+		log = "zakhara Logging:"
+		log = "The [zakhara.GetShortName] invasion of [From.GetTitledName] has ended"
+		log = "The war ended in a victory for zakhara"
+		log = "[From.GetTitledName] is now tributary of zakhara"
 		log = "---------------------"
 		FROM = {
 			save_event_target_as = target_loser
@@ -584,14 +576,14 @@ tributary_offmap_cb = {
 					}
 				}
 			}
-			if = { # Remove Raid shou_lung if active
+			if = { # Remove Raid zakhara if active
 				limit = {
-					has_character_modifier = shou_lung_raid_active
+					has_character_modifier = zakhara_raid_active
 				}
-				remove_character_modifier = shou_lung_raid_active
+				remove_character_modifier = zakhara_raid_active
 				hidden_effect = {
 					add_character_modifier = {
-						name = shou_lung_raid_grace_cd
+						name = zakhara_raid_grace_cd
 						hidden = yes
 						years = 5
 					}
@@ -607,8 +599,8 @@ tributary_offmap_cb = {
 
 	on_fail = {
 		log = "---------------------"
-		log = "shou_lung Logging:"
-		log = "The [shou_lung.GetShortName] invasion of [From.GetTitledName] has ended"
+		log = "zakhara Logging:"
+		log = "The [zakhara.GetShortName] invasion of [From.GetTitledName] has ended"
 		log = "The war ended in a white peace"
 		log = "---------------------"
 		ROOT = {
@@ -616,14 +608,14 @@ tributary_offmap_cb = {
 		}
 		FROM = {
 			prestige = 200
-			set_character_flag = defeated_shou_lung
+			set_character_flag = defeated_zakhara
 		}
 	}
 
 	on_reverse_demand = {
 		log = "---------------------"
-		log = "shou_lung Logging:"
-		log = "The [shou_lung.GetShortName] invasion of [From.GetTitledName] has ended"
+		log = "zakhara Logging:"
+		log = "The [zakhara.GetShortName] invasion of [From.GetTitledName] has ended"
 		log = "The war ended in a victory for [From.GetTitledName]"
 		log = "---------------------"
 		ROOT = {
@@ -634,28 +626,28 @@ tributary_offmap_cb = {
 				min = 1000
 			}
 			hidden_effect = {
-				if = { #Makes shou_lung have a chance of leaving Expansionist policy...
+				if = { #Makes zakhara have a chance of leaving Expansionist policy...
 					limit = {
-						is_offmap_tag = shou_lung
-						shou_lung = {
-							has_policy = shou_lung_expansionist
+						is_offmap_tag = zakhara
+						zakhara = {
+							has_policy = zakhara_expansionist
 						}
 					}
 					random = {
 						chance = 50
-						shou_lung = {
-							set_policy = shou_lung_open
+						zakhara = {
+							set_policy = zakhara_open
 						}
 					}
 				}
-				log = "shou_lung War Logging: shou_lung lost a I'll-make-you-my-tributary war against [From.GetBestName]"
+				log = "zakhara War Logging: zakhara lost a I'll-make-you-my-tributary war against [From.GetBestName]"
 			}
 		}
 
 		FROM = {
 			piety = 500
 			participation_scaled_prestige = 2500
-			set_character_flag = defeated_shou_lung
+			set_character_flag = defeated_zakhara
 		}
 		any_defender = {
 			limit = { NOT = { character = FROM } }
@@ -688,9 +680,9 @@ tributary_offmap_cb = {
 	}
 }
 
-dismantle_pretender_shou_lung_cb = {
-	name = CB_NAME_DISMANTLE_PRETENDER_shou_lung
-	war_name = WAR_NAME_DISMANTLE_PRETENDER_shou_lung
+dismantle_pretender_zakhara_cb = {
+	name = CB_NAME_DISMANTLE_PRETENDER_zakhara
+	war_name = WAR_NAME_DISMANTLE_PRETENDER_zakhara
 	sprite = 30
 	truce_days = 365
 	hostile_against_others = yes
@@ -715,22 +707,22 @@ dismantle_pretender_shou_lung_cb = {
 
 	on_success = {
 		log = "---------------------"
-		log = "shou_lung Logging:"
-		log = "The [shou_lung.GetShortName] dismantle pretender on [From.GetTitledName] has ended"
-		log = "The war ended in a victory for shou_lung"
-		log = "[From.GetTitledName] is now dismantled of shou_lung"
+		log = "zakhara Logging:"
+		log = "The [zakhara.GetShortName] dismantle pretender on [From.GetTitledName] has ended"
+		log = "The war ended in a victory for zakhara"
+		log = "[From.GetTitledName] is now dismantled of zakhara"
 		log = "---------------------"
 		FROM = {
 			custom_tooltip = { 
-				text = dismantle_pretender_shou_lung_success_tt
+				text = dismantle_pretender_zakhara_success_tt
 				hidden_effect = {
-					shou_lung = { set_offmap_flag = no_war_news }
+					zakhara = { set_offmap_flag = no_war_news }
 					any_player = {
 						limit = {
 							NOT = { character = ROOT_FROM }
 							OR = {
 								AND = {
-									has_offmap_news_enabled = shou_lung
+									has_offmap_news_enabled = zakhara
 									is_within_diplo_range = ROOT
 								}
 								liege = { character = ROOT_FROM }
@@ -738,12 +730,12 @@ dismantle_pretender_shou_lung_cb = {
 						}
 						narrative_event = { id = JD.60209 }
 					}
-					any_courtier = { death = { death_reason = death_executed_by_shou_lung_emperor } }
+					any_courtier = { death = { death_reason = death_executed_by_zakhara_emperor } }
 					primary_title = {
 						activate_title = { title = THIS status = no }
 						destroy_landed_title = THIS
 					}
-					death = { death_reason = death_executed_by_shou_lung_emperor }
+					death = { death_reason = death_executed_by_zakhara_emperor }
 				}
 			}
 		}
@@ -754,9 +746,9 @@ dismantle_pretender_shou_lung_cb = {
 
 	on_fail = {
 		log = "---------------------"
-		log = "shou_lung Logging:"
-		log = "The [shou_lung.GetShortName] dismantle pretender on [From.GetTitledName] has ended"
-		log = "The war ended in a white peace for shou_lung"
+		log = "zakhara Logging:"
+		log = "The [zakhara.GetShortName] dismantle pretender on [From.GetTitledName] has ended"
+		log = "The war ended in a white peace for zakhara"
 		log = "---------------------"
 		FROM = {
 			piety = 100
@@ -773,9 +765,9 @@ dismantle_pretender_shou_lung_cb = {
 
 	on_reverse_demand = {
 		log = "---------------------"
-		log = "shou_lung Logging:"
-		log = "The [shou_lung.GetShortName] dismantle pretender on [From.GetTitledName] has ended"
-		log = "The war ended in a defeat for shou_lung"
+		log = "zakhara Logging:"
+		log = "The [zakhara.GetShortName] dismantle pretender on [From.GetTitledName] has ended"
+		log = "The war ended in a defeat for zakhara"
 		log = "---------------------"
 		ROOT = {
 			piety = -200
@@ -784,7 +776,7 @@ dismantle_pretender_shou_lung_cb = {
 				value = 5.0
 				min = 500
 			}
-			offmap_power = { set_offmap_tmp_flag = pretender_shou_lung_empire_war_cooldown }
+			offmap_power = { set_offmap_tmp_flag = pretender_zakhara_empire_war_cooldown }
 		}
 		FROM = {
 			piety = 200
@@ -798,9 +790,9 @@ dismantle_pretender_shou_lung_cb = {
 	
 	on_attacker_leader_death = {
 		log = "---------------------"
-		log = "shou_lung Logging:"
-		log = "The [shou_lung.GetShortName] dismantle pretender on [From.GetTitledName] has ended"
-		log = "The war was invalidated for shou_lung"
+		log = "zakhara Logging:"
+		log = "The [zakhara.GetShortName] dismantle pretender on [From.GetTitledName] has ended"
+		log = "The war was invalidated for zakhara"
 		log = "---------------------"
 		#end_war = invalid
 	}
@@ -826,9 +818,9 @@ dismantle_pretender_shou_lung_cb = {
 	}
 }
 
-force_open_shou_lung_cb = {
-	name = CB_NAME_FORCE_OPEN_shou_lung
-	war_name = WAR_NAME_FORCE_OPEN_shou_lung
+force_open_zakhara_cb = {
+	name = CB_NAME_FORCE_OPEN_zakhara
+	war_name = WAR_NAME_FORCE_OPEN_zakhara
 	sprite = 30
 	truce_days = 365
 	hostile_against_others = yes
@@ -848,12 +840,12 @@ force_open_shou_lung_cb = {
 		
 		FROM = {
 			is_offmap_governor = yes
-			offmap_power = { is_offmap_tag = shou_lung }
+			offmap_power = { is_offmap_tag = zakhara }
 		}
 	}
 
 	is_valid = {
-		shou_lung = { has_policy = shou_lung_isolationist }
+		zakhara = { has_policy = zakhara_isolationist }
 	}
 
 	on_success = {
@@ -861,14 +853,14 @@ force_open_shou_lung_cb = {
 			save_event_target_as = target_governor
 			offmap_power = { 
 				set_offmap_flag = no_policy_news
-				set_policy = shou_lung_open
+				set_policy = zakhara_open
 				log = "--------------------------------"
-				log = "shou_lung Policy Logging:"
-				log = "shou_lungs new Policy is now OPEN"
+				log = "zakhara Policy Logging:"
+				log = "zakharas new Policy is now OPEN"
 				log = "-------------------------------------"
-				set_offmap_tmp_flag = shou_lung_forced_open
+				set_offmap_tmp_flag = zakhara_forced_open
 				set_offmap_flag = no_war_news
-				custom_tooltip = { text = shou_lung_forced_open_tt }
+				custom_tooltip = { text = zakhara_forced_open_tt }
 				hidden_effect = {
 					any_player = {
 						limit = {
@@ -879,14 +871,14 @@ force_open_shou_lung_cb = {
 					}
 					clr_offmap_flag = no_policy_news
 				}
-				clr_offmap_tmp_flag = shou_lung_force_open_in_progress
+				clr_offmap_tmp_flag = zakhara_force_open_in_progress
 			}
 		}
 		ROOT = {
 			participation_scaled_prestige = 1000
 			add_grace_massive_effect = yes
 			add_character_modifier = {
-				modifier = shou_lung_favored_in_trade
+				modifier = zakhara_favored_in_trade
 				inherit = yes
 				years = 25
 			}
@@ -908,7 +900,7 @@ force_open_shou_lung_cb = {
 		FROM = {
 			piety = 100
 			participation_scaled_prestige = 50
-			hidden_effect = { offmap_power = { clr_offmap_tmp_flag = shou_lung_force_open_in_progress } }
+			hidden_effect = { offmap_power = { clr_offmap_tmp_flag = zakhara_force_open_in_progress } }
 		}
 		any_defender = {
 			limit = { NOT = { character = FROM } }
@@ -929,9 +921,9 @@ force_open_shou_lung_cb = {
 				min = 500
 			}
 			custom_tooltip = {
-				text = angered_shou_lung_tt #Scripter! Update this is you change the value below.
+				text = angered_zakhara_tt #Scripter! Update this is you change the value below.
 				add_character_modifier = {
-					modifier = angered_shou_lung_modifier
+					modifier = angered_zakhara_modifier
 					inherit = yes
 					years = 50
 				}
@@ -950,7 +942,7 @@ force_open_shou_lung_cb = {
 						}
 						narrative_event = { id = JD.60303 }
 					}
-					clr_offmap_tmp_flag = shou_lung_force_open_in_progress
+					clr_offmap_tmp_flag = zakhara_force_open_in_progress
 				}
 			}
 		}
@@ -985,9 +977,9 @@ force_open_shou_lung_cb = {
 	}
 }
 
-destabilization_shou_lung_cb = {
-	name = CB_NAME_DESTABILIZATION_shou_lung
-	war_name = WAR_NAME_DESTABILIZATION_shou_lung
+destabilization_zakhara_cb = {
+	name = CB_NAME_DESTABILIZATION_zakhara
+	war_name = WAR_NAME_DESTABILIZATION_zakhara
 	sprite = 30
 	truce_days = 365
 	hostile_against_others = yes
@@ -1009,15 +1001,15 @@ destabilization_shou_lung_cb = {
 	on_success = {
 		FROM = {
 			custom_tooltip = {
-				text = destabilization_shou_lung_success_tt
+				text = destabilization_zakhara_success_tt
 				hidden_effect = {
-					shou_lung = { set_offmap_flag = no_war_news }
+					zakhara = { set_offmap_flag = no_war_news }
 					any_player = {
 						limit = {
 							NOT = { character = ROOT_FROM }
 							OR = {
 								AND = {
-									has_offmap_news_enabled = shou_lung
+									has_offmap_news_enabled = zakhara
 									is_within_diplo_range = ROOT
 								}
 								liege = { character = ROOT_FROM }
@@ -1035,7 +1027,7 @@ destabilization_shou_lung_cb = {
 						}
 						unsafe_destroy_landed_title = THIS
 					}
-					#death = { death_reason = death_executed_by_shou_lung_emperor }
+					#death = { death_reason = death_executed_by_zakhara_emperor }
 				}
 			}
 		}
@@ -1070,7 +1062,7 @@ destabilization_shou_lung_cb = {
 		FROM = {
 			piety = 500
 			participation_scaled_prestige = 2500
-			set_character_flag = defeated_shou_lung
+			set_character_flag = defeated_zakhara
 		}
 		any_defender = {
 			limit = { NOT = { character = FROM } }
@@ -1103,9 +1095,9 @@ destabilization_shou_lung_cb = {
 	}
 }
 
-invasion_of_shou_lung_cb = {
-	name = CB_NAME_INVASION_OF_shou_lung
-	war_name = WAR_NAME_INVASION_OF_shou_lung
+invasion_of_zakhara_cb = {
+	name = CB_NAME_INVASION_OF_zakhara
+	war_name = WAR_NAME_INVASION_OF_zakhara
 	sprite = 30
 	truce_days = 365
 	hostile_against_others = yes
@@ -1117,7 +1109,7 @@ invasion_of_shou_lung_cb = {
 	max_defender_occupation_score = 50
 	max_attacker_battle_score = 100
 	capturing_defender_is_complete_victory = no
-	third_party_portrait = event_target:invasion_of_shou_lung_claimant
+	third_party_portrait = event_target:invasion_of_zakhara_claimant
 
 	# attacker_unoccupied_warscore = yes - If attacker completely unoccupied, attacker will get ticking warscore. Only works if no title is targetted
 	# defender_unoccupied_warscore = yes - If defender completely unoccupied, defender will get ticking warscore. Only works if no title is targetted
@@ -1131,20 +1123,20 @@ invasion_of_shou_lung_cb = {
 		}
 		FROM = {
 			is_offmap_governor = yes
-			offmap_power = { is_offmap_tag = shou_lung }
+			offmap_power = { is_offmap_tag = zakhara }
 		}
 	}
 
-	is_valid = { event_target:invasion_of_shou_lung_claimant = { is_alive = yes } }
+	is_valid = { event_target:invasion_of_zakhara_claimant = { is_alive = yes } }
 
 	on_success = {
 		ROOT = {
 			show_scope_change = no
 			custom_tooltip = {
-				text = invasion_of_shou_lung_success_tt
+				text = invasion_of_zakhara_success_tt
 				hidden_effect = {
-					remove_character_modifier = shou_lung_raid_active
-					event_target:invasion_of_shou_lung_claimant = {
+					remove_character_modifier = zakhara_raid_active
+					event_target:invasion_of_zakhara_claimant = {
 						betrothed = { break_betrothal = PREV }
 						spouse = {
 							if = {
@@ -1152,7 +1144,7 @@ invasion_of_shou_lung_cb = {
 									is_ruler = no
 									is_primary_heir = no
 								}
-								leave_court_for_shou_lung_effect = yes
+								leave_court_for_zakhara_effect = yes
 							}
 						}
 						any_child = {
@@ -1161,18 +1153,18 @@ invasion_of_shou_lung_cb = {
 									is_ruler = no
 									is_primary_heir = no
 								}
-								leave_court_for_shou_lung_effect = yes
+								leave_court_for_zakhara_effect = yes
 							}
 						}
 						abdicate = yes
 						any_claim = {
-							remove_claim = event_target:invasion_of_shou_lung_claimant
+							remove_claim = event_target:invasion_of_zakhara_claimant
 						}
 						clr_character_flag = no_court_invites
 						remove_trait = cannot_marry
 						diplomatic_immunity = no
 					}
-					shou_lung = {
+					zakhara = {
 						governor = {
 							any_vassal = {
 								set_defacto_liege = ROOT
@@ -1189,39 +1181,39 @@ invasion_of_shou_lung_cb = {
 						ROOT = {
 							if = {
 								limit = { government = celestial_government }
-								shou_lung = { set_offmap_flag = rename_override }
+								zakhara = { set_offmap_flag = rename_override }
 								primary_title = {
 									trigger_switch = {
 										on_trigger = has_title_flag
-										shou_lung_name_Tang = { shou_lung = { set_offmap_name = "tang_shou_lung" } }
-										shou_lung_name_Jin = { shou_lung = { set_offmap_name = "jin_shou_lung" } }
-										shou_lung_name_Wei = { shou_lung = { set_offmap_name = "wei_shou_lung" } }
-										shou_lung_name_Qi = { shou_lung = { set_offmap_name = "qi_shou_lung" } }
-										shou_lung_name_Zhou = { shou_lung = { set_offmap_name = "zhou_shou_lung" } }
-										shou_lung_name_Han = { shou_lung = { set_offmap_name = "han_shou_lung" } }
-										shou_lung_name_Qin = { shou_lung = { set_offmap_name = "qin_shou_lung" } }
-										shou_lung_name_Yan = { shou_lung = { set_offmap_name = "yan_shou_lung" } }
-										shou_lung_name_Zhao = { shou_lung = { set_offmap_name = "zhao_shou_lung" } }
-										shou_lung_name_Liao = { shou_lung = { set_offmap_name = "liao_shou_lung" } }
-										shou_lung_name_Yuan = { shou_lung = { set_offmap_name = "yuan_shou_lung" } }
-										shou_lung_name_Xia = { shou_lung = { set_offmap_name = "xia_shou_lung" } }
-										shou_lung_name_Qing = { shou_lung = { set_offmap_name = "qing_shou_lung" } }
-										shou_lung_name_Dai = { shou_lung = { set_offmap_name = "dai_shou_lung" } }
-										shou_lung_name_Cheng = { shou_lung = { set_offmap_name = "cheng_shou_lung" } }
-										shou_lung_name_Liang = { shou_lung = { set_offmap_name = "liang_shou_lung" } }
-										shou_lung_name_Song = { shou_lung = { set_offmap_name = "song_shou_lung" } }
-										shou_lung_name_Ming = { shou_lung = { set_offmap_name = "ming_shou_lung" } }
-										shou_lung_name_Shu = { shou_lung = { set_offmap_name = "shu_shou_lung" } }
-										shou_lung_name_Wu = { shou_lung = { set_offmap_name = "wu_shou_lung" } }
-										shou_lung_name_Chu = { shou_lung = { set_offmap_name = "chu_shou_lung" } }
-										shou_lung_name_Yue = { shou_lung = { set_offmap_name = "yue_shou_lung" } }
-										shou_lung_name_Yin = { shou_lung = { set_offmap_name = "yin_shou_lung" } }
-										shou_lung_name_Shun = { shou_lung = { set_offmap_name = "shun_shou_lung" } }
+										zakhara_name_Tang = { zakhara = { set_offmap_name = "tang_zakhara" } }
+										zakhara_name_Jin = { zakhara = { set_offmap_name = "jin_zakhara" } }
+										zakhara_name_Wei = { zakhara = { set_offmap_name = "wei_zakhara" } }
+										zakhara_name_Qi = { zakhara = { set_offmap_name = "qi_zakhara" } }
+										zakhara_name_Zhou = { zakhara = { set_offmap_name = "zhou_zakhara" } }
+										zakhara_name_Han = { zakhara = { set_offmap_name = "han_zakhara" } }
+										zakhara_name_Qin = { zakhara = { set_offmap_name = "qin_zakhara" } }
+										zakhara_name_Yan = { zakhara = { set_offmap_name = "yan_zakhara" } }
+										zakhara_name_Zhao = { zakhara = { set_offmap_name = "zhao_zakhara" } }
+										zakhara_name_Liao = { zakhara = { set_offmap_name = "liao_zakhara" } }
+										zakhara_name_Yuan = { zakhara = { set_offmap_name = "yuan_zakhara" } }
+										zakhara_name_Xia = { zakhara = { set_offmap_name = "xia_zakhara" } }
+										zakhara_name_Qing = { zakhara = { set_offmap_name = "qing_zakhara" } }
+										zakhara_name_Dai = { zakhara = { set_offmap_name = "dai_zakhara" } }
+										zakhara_name_Cheng = { zakhara = { set_offmap_name = "cheng_zakhara" } }
+										zakhara_name_Liang = { zakhara = { set_offmap_name = "liang_zakhara" } }
+										zakhara_name_Song = { zakhara = { set_offmap_name = "song_zakhara" } }
+										zakhara_name_Ming = { zakhara = { set_offmap_name = "ming_zakhara" } }
+										zakhara_name_Shu = { zakhara = { set_offmap_name = "shu_zakhara" } }
+										zakhara_name_Wu = { zakhara = { set_offmap_name = "wu_zakhara" } }
+										zakhara_name_Chu = { zakhara = { set_offmap_name = "chu_zakhara" } }
+										zakhara_name_Yue = { zakhara = { set_offmap_name = "yue_zakhara" } }
+										zakhara_name_Yin = { zakhara = { set_offmap_name = "yin_zakhara" } }
+										zakhara_name_Shun = { zakhara = { set_offmap_name = "shun_zakhara" } }
 									}
-									clr_title_flag = pretender_shou_lung_empire
+									clr_title_flag = pretender_zakhara_empire
 									clr_title_flag = uses_temple_names_by_script
 									clear_flags_with_prefix = temple_name_
-									clear_flags_with_prefix = shou_lung_name_
+									clear_flags_with_prefix = zakhara_name_
 									set_name = "[Root.Capital.GetName] Empire"
 								}
 								clr_character_flag = given_temple_name_by_script
@@ -1250,21 +1242,21 @@ invasion_of_shou_lung_cb = {
 						}
 						set_offmap_flag = no_succession_news
 						set_offmap_flag = no_war_news
-						clr_offmap_flag = shou_lung_invaded_player_dynasty
-						set_offmap_flag = shou_lung_invaded_player_dynasty
-						set_offmap_holder = event_target:invasion_of_shou_lung_claimant
+						clr_offmap_flag = zakhara_invaded_player_dynasty
+						set_offmap_flag = zakhara_invaded_player_dynasty
+						set_offmap_holder = event_target:invasion_of_zakhara_claimant
 						clr_offmap_flag = no_succession_news
 						clr_offmap_flag = rename_override
 						
 						if = {
 							limit = {
 								NOR = {
-									has_status = shou_lung_stable
-									has_status = shou_lung_golden_age
+									has_status = zakhara_stable
+									has_status = zakhara_golden_age
 								}
 							}
 							set_offmap_flag = no_status_news
-							set_status = shou_lung_stable
+							set_status = zakhara_stable
 							clr_offmap_flag = no_status_news
 						}
 					}
@@ -1272,7 +1264,7 @@ invasion_of_shou_lung_cb = {
 						limit = {
 							OR = {
 								AND = {
-									has_offmap_news_enabled = shou_lung
+									has_offmap_news_enabled = zakhara
 									is_within_diplo_range = FROM
 								}
 								liege = { character = ROOT }
@@ -1283,34 +1275,34 @@ invasion_of_shou_lung_cb = {
 				}
 			}
 			participation_scaled_prestige = 5000
-			set_offmap_currency = { offmap = shou_lung value = 5000 }
+			set_offmap_currency = { offmap = zakhara value = 5000 }
 			wealth = 10000
-			add_character_modifier = { name = shou_lung_favored_in_trade inherit = yes years = 50 }
+			add_character_modifier = { name = zakhara_favored_in_trade inherit = yes years = 50 }
 			if = {
-				limit = { NOT = { has_artifact = shou_lung_jade_dragon } }
-				add_artifact = shou_lung_jade_dragon
+				limit = { NOT = { has_artifact = zakhara_jade_dragon } }
+				add_artifact = zakhara_jade_dragon
 			}
 			if = {
-				limit = { NOT = { has_artifact = shou_lung_dragon_amulet } }
-				add_artifact = shou_lung_dragon_amulet
+				limit = { NOT = { has_artifact = zakhara_dragon_amulet } }
+				add_artifact = zakhara_dragon_amulet
 			}
 			if = {
-				limit = { NOT = { has_artifact = shou_lung_water_clock } }
-				add_artifact = shou_lung_water_clock
+				limit = { NOT = { has_artifact = zakhara_water_clock } }
+				add_artifact = zakhara_water_clock
 			}
 			if = {
-				limit = { NOT = { has_artifact = shou_lung_jian_sword } }
-				add_artifact = shou_lung_jian_sword
+				limit = { NOT = { has_artifact = zakhara_jian_sword } }
+				add_artifact = zakhara_jian_sword
 			}
-			hidden_effect = { add_character_modifier = { name = peace_deal_with_shou_lung inherit = yes years = 50 } }
-			remove_character_modifier = shou_lung_raid_active
-			remove_character_modifier = war_with_shou_lung_modifier
+			hidden_effect = { add_character_modifier = { name = peace_deal_with_zakhara inherit = yes years = 50 } }
+			remove_character_modifier = zakhara_raid_active
+			remove_character_modifier = war_with_zakhara_modifier
 		}
 		any_attacker = {
 			limit = { NOT = { character = ROOT } }
 			hidden_tooltip = { participation_scaled_prestige = 2000 }
 		}
-		clear_global_event_target = invasion_of_shou_lung_claimant
+		clear_global_event_target = invasion_of_zakhara_claimant
 	}
 
 	on_invalidation = {
@@ -1324,18 +1316,18 @@ invasion_of_shou_lung_cb = {
 		}
 		ROOT = {
 			prestige = -2500
-			remove_character_modifier = war_with_shou_lung_modifier
+			remove_character_modifier = war_with_zakhara_modifier
 			custom_tooltip = {
-				text = invasion_of_shou_lung_cb_fail_tt
-				hidden_effect = { add_character_modifier = { name = failed_invasion_of_shou_lung duration = -1 hidden = yes } }
+				text = invasion_of_zakhara_cb_fail_tt
+				hidden_effect = { add_character_modifier = { name = failed_invasion_of_zakhara duration = -1 hidden = yes } }
 			}
 			hidden_effect = {
-				shou_lung = { set_offmap_flag = no_war_news }
+				zakhara = { set_offmap_flag = no_war_news }
 				any_player = {
 					limit = {
 						OR = {
 							AND = {
-								has_offmap_news_enabled = shou_lung
+								has_offmap_news_enabled = zakhara
 								is_within_diplo_range = FROM
 							}
 							liege = { character = ROOT }
@@ -1345,15 +1337,15 @@ invasion_of_shou_lung_cb = {
 				}
 			}
 			custom_tooltip = {
-				text = angered_shou_lung_tt #Scripter! Update this is you change the value below.
+				text = angered_zakhara_tt #Scripter! Update this is you change the value below.
 				add_character_modifier = {
-					modifier = angered_shou_lung_modifier
+					modifier = angered_zakhara_modifier
 					inherit = yes
 					years = 50
 				}
 			}
 		}
-		clear_global_event_target = invasion_of_shou_lung_claimant
+		clear_global_event_target = invasion_of_zakhara_claimant
 	}
 
 	on_reverse_demand = {
@@ -1364,20 +1356,20 @@ invasion_of_shou_lung_cb = {
 				value = 5.0
 				min = 5000
 			}
-			remove_character_modifier = war_with_shou_lung_modifier
+			remove_character_modifier = war_with_zakhara_modifier
 			custom_tooltip = {
-				text = invasion_of_shou_lung_cb_fail_tt
-				hidden_effect = { add_character_modifier = { name = failed_invasion_of_shou_lung duration = -1 hidden = yes } }
+				text = invasion_of_zakhara_cb_fail_tt
+				hidden_effect = { add_character_modifier = { name = failed_invasion_of_zakhara duration = -1 hidden = yes } }
 			}
 			custom_tooltip = {
-				text = destabilization_shou_lung_success_tt
+				text = destabilization_zakhara_success_tt
 				hidden_effect = { 
-					shou_lung = { set_offmap_flag = no_war_news }
+					zakhara = { set_offmap_flag = no_war_news }
 					any_player = {
 						limit = {
 							OR = {
 								AND = {
-									has_offmap_news_enabled = shou_lung
+									has_offmap_news_enabled = zakhara
 									is_within_diplo_range = FROM
 								}
 								liege = { character = ROOT }
@@ -1398,9 +1390,9 @@ invasion_of_shou_lung_cb = {
 				}
 			}
 			custom_tooltip = {
-				text = angered_shou_lung_tt #Scripter! Update this is you change the value below.
+				text = angered_zakhara_tt #Scripter! Update this is you change the value below.
 				add_character_modifier = {
-					modifier = angered_shou_lung_modifier
+					modifier = angered_zakhara_modifier
 					inherit = yes
 					years = 50
 				}
@@ -1414,7 +1406,7 @@ invasion_of_shou_lung_cb = {
 			limit = { NOT = { character = FROM } }
 			hidden_tooltip = { participation_scaled_prestige = 1000 }
 		}
-		clear_global_event_target = invasion_of_shou_lung_claimant
+		clear_global_event_target = invasion_of_zakhara_claimant
 	}
 	
 	on_attacker_leader_death = {
