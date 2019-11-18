@@ -520,7 +520,7 @@ zakhara_offmap_submission = {
 	}
 }
 
-tributary_offmap_cb = {
+zakhara_tributary_offmap_cb = {
 	name = CB_NAME_PERMANENT_TRIBUTARY
 	war_name = WAR_NAME_PERMANENT_TRIBUTARY
 	sprite = 30
@@ -1180,7 +1180,7 @@ invasion_of_zakhara_cb = {
 						}
 						ROOT = {
 							if = {
-								limit = { government = celestial_government }
+								limit = { government = zakhara_government }
 								zakhara = { set_offmap_flag = rename_override }
 								primary_title = {
 									trigger_switch = {
@@ -1226,10 +1226,15 @@ invasion_of_zakhara_cb = {
 								}
 								else_if = {
 									limit = {
-										culture_group = tibetan_group
 										OR = {
-											religion = bon
-											religion = buddhist
+											culture = halfling
+											culture = khatin
+											culture = tabotan
+											culture = gugari
+											AND = {
+												culture = shou
+												religion = padhran
+											}
 										}
 										higher_tier_than = BARON
 									}
