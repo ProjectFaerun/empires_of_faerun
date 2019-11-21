@@ -930,7 +930,7 @@ zakhara_war_modify_variables_by_status_effect = {
 
 
 #Checks whether the Emperor likes target and shows tooltips (used in event JD.10010)
-check_likes_or_dislikes_THIS_effect = {
+zakhara_check_likes_or_dislikes_THIS_effect = {
  	if = {  #If the current Emperor LIKES target
         limit = {
             is_liked_by_zakhara_trigger = yes
@@ -1002,7 +1002,7 @@ print_zakhara_status_update_effect = {
 		}
 		10 = {
 			trigger = {
-				has_status = zakhara_tuigan_invasion
+				has_status = zakhara_badia_invasion
 			}
 			change_variable = {
 				which = global_amount_of_times_zakhara_tuigan_invasion
@@ -1011,7 +1011,7 @@ print_zakhara_status_update_effect = {
 		}
 		10 = {
 			trigger = {
-				has_status = zakhara_tu_lung_invasion
+				has_status = zakhara_pantheist_invasion
 			}
 			change_variable = {
 				which = global_amount_of_times_zakhara_tu_lung_invasion
@@ -1194,7 +1194,7 @@ print_zakhara_ruler_update_effect = {
 	log = "----------------"
 }
 
-abort_kow_tow_effect = {
+zakhara_abort_kow_tow_effect = {
 	if = {
 		limit = {
 			NOT = { has_character_flag = kow_tow_hide_abort_notification }
@@ -1211,7 +1211,7 @@ abort_kow_tow_effect = {
 	clean_up_after_kow_tow_effect = yes
 }
 
-return_to_travel_tombola_effect = {
+zakhara_return_to_travel_tombola_effect = {
 	hidden_effect = {
 		event_target:kow_tow_traveler = {
 			subtract_variable = {
@@ -1243,7 +1243,7 @@ return_to_zakhara_tombola_effect = {
 	}
 }
 
-clean_up_after_kow_tow_effect = {
+zakhara_clean_up_after_kow_tow_effect = {
 	remove_trait = kow_tow_travels
 	clr_character_flag = do_not_disturb
 	
