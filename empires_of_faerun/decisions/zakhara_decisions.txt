@@ -456,8 +456,8 @@ decisions = {
 					has_status = zakhara_plague
 					has_status = zakhara_famine
 					has_status = zakhara_civil_war
-					has_status = zakhara_tuigan_invasion
-					has_status = zakhara_tu_lung_invasion
+					has_status = zakhara_badia_invasion
+					has_status = zakhara_pantheist_invasion
 				}
 			}
 		}
@@ -604,8 +604,8 @@ decisions = {
 			zakhara = {
 				OR = {
 					has_status = zakhara_civil_war
-					has_status = zakhara_tuigan_invasion
-					has_status = zakhara_tu_lung_invasion
+					has_status = zakhara_badia_invasion
+					has_status = zakhara_pantheist_invasion
 				}
 			}
 		}
@@ -678,8 +678,8 @@ decisions = {
 				NOR = {
 					has_status = zakhara_famine
 					has_status = zakhara_civil_war
-					has_status = zakhara_tuigan_invasion
-					has_status = zakhara_tu_lung_invasion
+					has_status = zakhara_badia_invasion
+					has_status = zakhara_pantheist_invasion
 					has_status = zakhara_plague
 				}
 			}

@@ -1,4 +1,4 @@
-###GRACE INTERACTION DECISIONS FOR shou_lung###
+###GRACE INTERACTION DECISIONS FOR zakhara###
 
 #Add the decisions in a nice order which will make sense in the menu! For example, ranked by cost/reward.
 
@@ -6,13 +6,13 @@
 #PAYING TRIBUTE DECISIONS (GAIN GRACE)
 offmap_decisions = {
 
-	shou_lung_grace_send_gift = {
+	zakhara_grace_send_gift = {
 		only_playable = yes
 		button_name = offmap_gifts
 		ai_check_interval = 120
 
 		potential = {
-			is_offmap_tag = shou_lung
+			is_offmap_tag = zakhara
 		}
 
 		from_potential = {
@@ -28,15 +28,15 @@ offmap_decisions = {
 				show_scope_change = no
 				scaled_wealth = { value = 4 min = 500 }
 				custom_tooltip = {
-					text = shou_lung_grace_send_gift_allow_tt 
-					NOT = { has_character_modifier = shou_lung_grace_send_gift_timer }
+					text = zakhara_grace_send_gift_allow_tt 
+					NOT = { has_character_modifier = zakhara_grace_send_gift_timer }
 				}
 				prisoner = no
 				NOT = { trait = incapable }
 				is_inaccessible_trigger = no
 			}
-			# shou_lung_offmap_decisions_enabled_trigger = yes #leave in please, to be used if the tooltip for shou_lung_offmap_tribute_decisions_enabled_trigger changes and we need to reference things uniquely again
-			shou_lung_offmap_tribute_decisions_enabled_trigger = yes
+			# zakhara_offmap_decisions_enabled_trigger = yes #leave in please, to be used if the tooltip for zakhara_offmap_tribute_decisions_enabled_trigger changes and we need to reference things uniquely again
+			zakhara_offmap_tribute_decisions_enabled_trigger = yes
 		}
 		effect = {
 			FROM = {
@@ -45,29 +45,29 @@ offmap_decisions = {
 				hidden_effect = {
 					add_character_modifier = {
 						hidden = yes
-						name = shou_lung_grace_send_gift_timer
-						years = 15 #Change shou_lung_grace_send_gift_allow_tt if this number changes
+						name = zakhara_grace_send_gift_timer
+						years = 15 #Change zakhara_grace_send_gift_allow_tt if this number changes
 					} 
 				}
 				tooltip = {
 					if = {
 						limit = {
 							liked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 								context = wealth
 							}
 							NOT = {
 								disliked_by_offmap = {
-									type = shou_lung
+									type = zakhara
 									context = wealth
 								}
 							}
 						}
 						add_offmap_currency = {
-							offmap = shou_lung
+							offmap = zakhara
 							value = 450
 						}
-						e_shou_lung_west_governor = {
+						e_zakhara_west_governor = {
 							show_scope_change = no
 							offmap_power = {
 								show_scope_change = no
@@ -78,21 +78,21 @@ offmap_decisions = {
 					if = {
 						limit = {
 							disliked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 								context = wealth
 							}
 							NOT = {
 								liked_by_offmap = {
-									type = shou_lung
+									type = zakhara
 									context = wealth
 								}
 							}
 						}
 						add_offmap_currency = {
-							offmap = shou_lung
+							offmap = zakhara
 							value = 150
 						}
-						e_shou_lung_west_governor = {
+						e_zakhara_west_governor = {
 							show_scope_change = no
 							offmap_power = {
 								show_scope_change = no
@@ -103,19 +103,19 @@ offmap_decisions = {
 					if = {
 						limit = {
 							liked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 								context = wealth
 							}
 							disliked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 								context = wealth
 							}
 						}
 						add_offmap_currency = {
-							offmap = shou_lung
+							offmap = zakhara
 							value = 300
 						}
-						e_shou_lung_west_governor = {
+						e_zakhara_west_governor = {
 							show_scope_change = no
 							offmap_power = {
 								show_scope_change = no
@@ -127,23 +127,23 @@ offmap_decisions = {
 						limit = {
 							NOR = {
 								liked_by_offmap = {
-									type = shou_lung
+									type = zakhara
 									context = wealth
 								}
 								disliked_by_offmap = {
-									type = shou_lung
+									type = zakhara
 									context = wealth
 								}
 							}
 						}
 						add_offmap_currency = {
-							offmap = shou_lung
+							offmap = zakhara
 							value = 300
 						}
 					}
 				}
 			}
-			hidden_effect = { shou_lung = { governor = { character_event = { id = JD.20023 } } } }
+			hidden_effect = { zakhara = { governor = { character_event = { id = JD.20023 } } } }
 		}
 
 		revoke_allowed = {
@@ -163,13 +163,13 @@ offmap_decisions = {
 	}
 
 	#Offering to become tributary
-	shou_lung_grace_become_tributary = {
+	zakhara_grace_become_tributary = {
 		only_independent = yes
 		button_name = offmap_gifts
 		ai_check_interval = 36
 
 		potential = {
-			is_offmap_tag = shou_lung
+			is_offmap_tag = zakhara
 		}
 	
 		from_potential = {
@@ -187,27 +187,27 @@ offmap_decisions = {
 				war = no
 				OR = {
 					custom_tooltip = { #Borders the Western Governate
-						text = shou_lung_grace_become_tributary_allow_governor_neighbor_tt
+						text = zakhara_grace_become_tributary_allow_governor_neighbor_tt
 						any_neighbor_independent_ruler = {
-							has_landed_title = e_shou_lung_west_governor
+							has_landed_title = e_zakhara_west_governor
 						}
 					}
-					custom_tooltip = { #Borders a shou_lung tributary
-						text = shou_lung_grace_become_tributary_allow_tributary_neighbor_tt
+					custom_tooltip = { #Borders a zakhara tributary
+						text = zakhara_grace_become_tributary_allow_tributary_neighbor_tt
 						any_neighbor_independent_ruler = {
 							suzerain = {
-								has_landed_title = e_shou_lung_west_governor
+								has_landed_title = e_zakhara_west_governor
 							}
 						}
 					}
 					custom_tooltip = { #Borders the eastern edge of the map
-						text = shou_lung_grace_become_tributary_allow_shou_lung_influence_tt
+						text = zakhara_grace_become_tributary_allow_zakhara_influence_tt
 						any_realm_province = {
-							region = custom_shou_lung_invasion_target_region
+							region = custom_zakhara_invasion_target_region
 						}
 					}
-					custom_tooltip = { #Within diplo range of shou_lung and has a port in India
-						text = shou_lung_grace_become_tributary_allow_india_tt
+					custom_tooltip = { #Within diplo range of zakhara and has a port in India
+						text = zakhara_grace_become_tributary_allow_india_tt
 						any_realm_province = { 
 							port = yes 
 							region = kara_tur_region
@@ -215,36 +215,36 @@ offmap_decisions = {
 					}
 				}
 				custom_tooltip = {
-					text = shou_lung_grace_become_tributary_allow_suzerain_tt
+					text = zakhara_grace_become_tributary_allow_suzerain_tt
 					NOT = {
 						is_tributary = yes
 					}
 				}
 				NOT = { tier = emperor }
 				custom_tooltip = {
-					text = shou_lung_tribute_become_tributary_cooldown_tt
-					NOT = { has_character_modifier = shou_lung_grace_tributary_timer }
+					text = zakhara_tribute_become_tributary_cooldown_tt
+					NOT = { has_character_modifier = zakhara_grace_tributary_timer }
 				}
 				prisoner = no
 				NOT = { trait = incapable }
 				NOT = { has_character_flag = asked_to_become_tributary }
 				is_inaccessible_trigger = no
 			}
-			# shou_lung_offmap_decisions_enabled_trigger = yes #leave in please, to be used if the tooltip for shou_lung_offmap_tribute_decisions_enabled_trigger changes and we need to reference things uniquely again
-			shou_lung_offmap_tribute_decisions_enabled_trigger = yes
+			# zakhara_offmap_decisions_enabled_trigger = yes #leave in please, to be used if the tooltip for zakhara_offmap_tribute_decisions_enabled_trigger changes and we need to reference things uniquely again
+			zakhara_offmap_tribute_decisions_enabled_trigger = yes
 		}
 
 		effect = {
 			log = "---------------------"
-			log = "shou_lung Logging:"
-			log = "[From.GetTitledName] has voluntarily become a tributary of the [shou_lung.GetFullname]"
+			log = "zakhara Logging:"
+			log = "[From.GetTitledName] has voluntarily become a tributary of the [zakhara.GetFullname]"
 			log = "---------------------"
 			make_tributary = {
 				who = FROM
 				tributary_type = offmap
 			}
-			hidden_effect = { shou_lung = { governor = { character_event = { id = JD.20027 } } } }
-			custom_tooltip = { text = shou_lung_grace_become_tributary_effect_TT }
+			hidden_effect = { zakhara = { governor = { character_event = { id = JD.20027 } } } }
+			custom_tooltip = { text = zakhara_grace_become_tributary_effect_TT }
 			FROM = {
 				show_scope_change = no
 				sound_effect = china_grace_gain
@@ -252,21 +252,21 @@ offmap_decisions = {
 					if = {
 						limit = {
 							liked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 								context = tributary
 							}
 							NOT = {
 								disliked_by_offmap = {
-									type = shou_lung
+									type = zakhara
 									context = tributary
 								}
 							}
 						}
 						add_offmap_currency = {
-							offmap = shou_lung
+							offmap = zakhara
 							value = 400
 						}
-						e_shou_lung_west_governor = {
+						e_zakhara_west_governor = {
 							show_scope_change = no
 							offmap_power = {
 								show_scope_change = no
@@ -277,21 +277,21 @@ offmap_decisions = {
 					if = {
 						limit = {
 							disliked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 								context = tributary
 							}
 							NOT = {
 								liked_by_offmap = {
-									type = shou_lung
+									type = zakhara
 									context = tributary
 								}
 							}
 						}
 						add_offmap_currency = {
-							offmap = shou_lung
+							offmap = zakhara
 							value = 100
 						}
-						e_shou_lung_west_governor = {
+						e_zakhara_west_governor = {
 							show_scope_change = no
 							offmap_power = {
 								show_scope_change = no
@@ -302,19 +302,19 @@ offmap_decisions = {
 					if = {
 						limit = {
 							liked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 								context = tributary
 							}
 							disliked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 								context = tributary
 							}
 						}
 						add_offmap_currency = {
-							offmap = shou_lung
+							offmap = zakhara
 							value = 200
 						}
-						e_shou_lung_west_governor = {
+						e_zakhara_west_governor = {
 							show_scope_change = no
 							offmap_power = {
 								show_scope_change = no
@@ -326,17 +326,17 @@ offmap_decisions = {
 						limit = {
 							NOR = {
 								liked_by_offmap = {
-									type = shou_lung
+									type = zakhara
 									context = tributary
 								}
 								disliked_by_offmap = {
-									type = shou_lung
+									type = zakhara
 									context = tributary
 								}
 							}
 						}
 						add_offmap_currency = {
-							offmap = shou_lung
+							offmap = zakhara
 							value = 200
 						}
 					}
@@ -358,13 +358,13 @@ offmap_decisions = {
 		}
 	}
 	
-	shou_lung_grace_supply_horses = {
+	zakhara_grace_supply_horses = {
 		only_playable = yes
 		button_name = offmap_gifts
 		ai_check_interval = 36
     
 		potential = {
-			is_offmap_tag = shou_lung
+			is_offmap_tag = zakhara
 		}
 	
 		from_potential = {
@@ -381,13 +381,13 @@ offmap_decisions = {
 				show_scope_change = no
 				is_nomadic = yes
 				custom_tooltip = {
-					text = shou_lung_grace_supply_horses_not_already_supplying_tt
+					text = zakhara_grace_supply_horses_not_already_supplying_tt
 					NOT = {
-						has_character_modifier = shou_lung_supply_horses
+						has_character_modifier = zakhara_supply_horses
 					}
 				}
 				custom_tooltip = {
-					text = shou_lung_grace_supply_horses_stopped_supplying_tt
+					text = zakhara_grace_supply_horses_stopped_supplying_tt
 					NOT = {
 						has_character_flag = stopped_supplying_horses
 					}
@@ -395,23 +395,23 @@ offmap_decisions = {
 				war = no
 				OR = {
 					custom_tooltip = { #Borders the Western Governate
-						text = shou_lung_grace_become_tributary_allow_governor_neighbor_tt
+						text = zakhara_grace_become_tributary_allow_governor_neighbor_tt
 						any_neighbor_independent_ruler = {
-							has_landed_title = e_shou_lung_west_governor
+							has_landed_title = e_zakhara_west_governor
 						}
 					}
-					custom_tooltip = { #Borders a shou_lung tributary
-						text = shou_lung_grace_become_tributary_allow_tributary_neighbor_tt
+					custom_tooltip = { #Borders a zakhara tributary
+						text = zakhara_grace_become_tributary_allow_tributary_neighbor_tt
 						any_neighbor_independent_ruler = {
 							suzerain = {
-								has_landed_title = e_shou_lung_west_governor
+								has_landed_title = e_zakhara_west_governor
 							}
 						}
 					}
 					custom_tooltip = { #Borders the eastern edge of the map
-						text = shou_lung_grace_become_tributary_allow_shou_lung_influence_tt
+						text = zakhara_grace_become_tributary_allow_zakhara_influence_tt
 						any_realm_province = {
-							region = custom_shou_lung_invasion_target_region
+							region = custom_zakhara_invasion_target_region
 						}
 					}
 				}
@@ -419,36 +419,36 @@ offmap_decisions = {
 				NOT = { trait = incapable }
 				is_inaccessible_trigger = no
 			}
-			# shou_lung_offmap_decisions_enabled_trigger = yes #leave in please, to be used if the tooltip for shou_lung_offmap_tribute_decisions_enabled_trigger changes and we need to reference things uniquely again
-			shou_lung_offmap_tribute_decisions_enabled_trigger = yes
+			# zakhara_offmap_decisions_enabled_trigger = yes #leave in please, to be used if the tooltip for zakhara_offmap_tribute_decisions_enabled_trigger changes and we need to reference things uniquely again
+			zakhara_offmap_tribute_decisions_enabled_trigger = yes
 		}
     
 		effect = {
-			hidden_effect = { shou_lung = { governor = { character_event = { id = JD.3040 } } } }
+			hidden_effect = { zakhara = { governor = { character_event = { id = JD.3040 } } } }
 			FROM = {
-				sound_effect = shou_lung_grace_gain
+				sound_effect = zakhara_grace_gain
 				tooltip = {
 					add_character_modifier = {
-						name = shou_lung_supply_horses
+						name = zakhara_supply_horses
 						duration = -1
 						inherit = yes
 					}
 					if = {
 						limit = {
 							liked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 							}
 							NOT = {
 								disliked_by_offmap = {
-									type = shou_lung
+									type = zakhara
 								}
 							}
 						}
 						add_offmap_currency = {
-							offmap = shou_lung
+							offmap = zakhara
 							value = 150
 						}
-						e_shou_lung_west_governor = {
+						e_zakhara_west_governor = {
 							show_scope_change = no
 							offmap_power = {
 								show_scope_change = no
@@ -459,19 +459,19 @@ offmap_decisions = {
 					if = {
 						limit = {
 							disliked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 							}
 							NOT = {
 								liked_by_offmap = {
-									type = shou_lung
+									type = zakhara
 								}
 							}
 						}
 						add_offmap_currency = {
-							offmap = shou_lung
+							offmap = zakhara
 							value = 50
 						}
-						e_shou_lung_west_governor = {
+						e_zakhara_west_governor = {
 							show_scope_change = no
 							offmap_power = {
 								show_scope_change = no
@@ -482,17 +482,17 @@ offmap_decisions = {
 					if = {
 						limit = {
 							liked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 							}
 							disliked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 							}
 						}
 						add_offmap_currency = {
-							offmap = shou_lung
+							offmap = zakhara
 							value = 150
 						}
-						e_shou_lung_west_governor = {
+						e_zakhara_west_governor = {
 							show_scope_change = no
 							offmap_power = {
 								show_scope_change = no
@@ -504,15 +504,15 @@ offmap_decisions = {
 						limit = {
 							NOR = {
 								liked_by_offmap = {
-									type = shou_lung
+									type = zakhara
 								}
 								disliked_by_offmap = {
-									type = shou_lung
+									type = zakhara
 								}
 							}
 						}
 						add_offmap_currency = {
-							offmap = shou_lung
+							offmap = zakhara
 							value = 100
 						}
 					}
@@ -556,13 +556,13 @@ offmap_decisions = {
 		}
 	}
 	
-	shou_lung_grace_stop_supply_horses = {
+	zakhara_grace_stop_supply_horses = {
 		only_playable = yes
 		button_name = offmap_gifts
 		ai_check_interval = 36
     
 		potential = {
-			is_offmap_tag = shou_lung
+			is_offmap_tag = zakhara
 		}
 	
 		from_potential = {
@@ -570,41 +570,41 @@ offmap_decisions = {
 			mercenary = no
 			holy_order = no
 			is_landed = yes
-			has_character_modifier = shou_lung_supply_horses
+			has_character_modifier = zakhara_supply_horses
 		}
     
 		allow = {
 			show_only_failed_conditions = yes
 			FROM = {
 				show_scope_change = no
-				has_character_modifier = shou_lung_supply_horses
+				has_character_modifier = zakhara_supply_horses
 			}
-			# shou_lung_offmap_decisions_enabled_trigger = yes #leave in please, to be used if the tooltip for shou_lung_offmap_tribute_decisions_enabled_trigger changes and we need to reference things uniquely again
-			#shou_lung_offmap_tribute_decisions_enabled_trigger = yes
+			# zakhara_offmap_decisions_enabled_trigger = yes #leave in please, to be used if the tooltip for zakhara_offmap_tribute_decisions_enabled_trigger changes and we need to reference things uniquely again
+			#zakhara_offmap_tribute_decisions_enabled_trigger = yes
 		}
     
 		effect = {
-			#hidden_effect = { shou_lung = { governor = { character_event = { id = JD.3040 } } } }
+			#hidden_effect = { zakhara = { governor = { character_event = { id = JD.3040 } } } }
 			FROM = {
-				sound_effect = shou_lung_angered_emperor
+				sound_effect = zakhara_angered_emperor
 				set_character_flag = stopped_supplying_horses
-				remove_character_modifier = shou_lung_supply_horses
+				remove_character_modifier = zakhara_supply_horses
 				if = {
 					limit = {
 						liked_by_offmap = {
-							type = shou_lung
+							type = zakhara
 						}
 						NOT = {
 							disliked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 							}
 						}
 					}
 					add_offmap_currency = {
-						offmap = shou_lung
+						offmap = zakhara
 						value = -150
 					}
-					e_shou_lung_west_governor = {
+					e_zakhara_west_governor = {
 						show_scope_change = no
 						offmap_power = {
 							show_scope_change = no
@@ -615,19 +615,19 @@ offmap_decisions = {
 				if = {
 					limit = {
 						disliked_by_offmap = {
-							type = shou_lung
+							type = zakhara
 						}
 						NOT = {
 							liked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 							}
 						}
 					}
 					add_offmap_currency = {
-						offmap = shou_lung
+						offmap = zakhara
 						value = -50
 					}
-					e_shou_lung_west_governor = {
+					e_zakhara_west_governor = {
 						show_scope_change = no
 						offmap_power = {
 							show_scope_change = no
@@ -638,17 +638,17 @@ offmap_decisions = {
 				if = {
 					limit = {
 						liked_by_offmap = {
-							type = shou_lung
+							type = zakhara
 						}
 						disliked_by_offmap = {
-							type = shou_lung
+							type = zakhara
 						}
 					}
 					add_offmap_currency = {
-						offmap = shou_lung
+						offmap = zakhara
 						value = -150
 					}
-					e_shou_lung_west_governor = {
+					e_zakhara_west_governor = {
 						show_scope_change = no
 						offmap_power = {
 							show_scope_change = no
@@ -660,15 +660,15 @@ offmap_decisions = {
 					limit = {
 						NOR = {
 							liked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 							}
 							disliked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 							}
 						}
 					}
 					add_offmap_currency = {
-						offmap = shou_lung
+						offmap = zakhara
 						value = -100
 					}
 				}
@@ -704,7 +704,7 @@ offmap_decisions = {
 		}
 	}
 
-	shou_lung_grace_offer_eunuch = {
+	zakhara_grace_offer_eunuch = {
 		only_playable = yes
 		button_name = offmap_gifts
 		
@@ -715,10 +715,10 @@ offmap_decisions = {
 		show_third_party_potential = yes
 
 		potential = {
-			is_offmap_tag = shou_lung
+			is_offmap_tag = zakhara
 			OR = {
 				ai = no
-				shou_lung_offmap_tribute_decisions_enabled_trigger = yes # Allow is checked for each valid 3rd party, so it is cheaper to check it here for the AI
+				zakhara_offmap_tribute_decisions_enabled_trigger = yes # Allow is checked for each valid 3rd party, so it is cheaper to check it here for the AI
 			}
 		}
 	
@@ -734,19 +734,19 @@ offmap_decisions = {
 			FROM = {
 				show_scope_change = no
 				custom_tooltip = {
-					text = shou_lung_tribute_send_eunuch_cooldown_tt
-					NOT = { has_character_modifier = shou_lung_grace_send_eunuch_timer }
+					text = zakhara_tribute_send_eunuch_cooldown_tt
+					NOT = { has_character_modifier = zakhara_grace_send_eunuch_timer }
 				}
 				prisoner = no
 				NOT = { trait = incapable }
 				is_inaccessible_trigger = no
 			}
-			# shou_lung_offmap_decisions_enabled_trigger = yes #leave in please, to be used if the tooltip for shou_lung_offmap_tribute_decisions_enabled_trigger changes and we need to reference things uniquely again
-			tooltip = { shou_lung_offmap_tribute_decisions_enabled_trigger = yes }
+			# zakhara_offmap_decisions_enabled_trigger = yes #leave in please, to be used if the tooltip for zakhara_offmap_tribute_decisions_enabled_trigger changes and we need to reference things uniquely again
+			tooltip = { zakhara_offmap_tribute_decisions_enabled_trigger = yes }
 			hidden_tooltip = {
 				OR = { 
 					ai = yes
-					shou_lung_offmap_tribute_decisions_enabled_trigger = yes # AI has already checked this in the potential
+					zakhara_offmap_tribute_decisions_enabled_trigger = yes # AI has already checked this in the potential
 				}
 			}
 		}
@@ -780,10 +780,10 @@ offmap_decisions = {
 					NOT = { is_betrothed = yes }
 					NOT = { is_married = yes }
 				}
-				custom_tooltip = { #can't be from shou_lung
-					text = is_not_from_shou_lung_tt
+				custom_tooltip = { #can't be from zakhara
+					text = is_not_from_zakhara_tt
 					NOT = {	has_character_flag = eunuch_gift }
-					courtier_from_shou_lung_trigger = no
+					courtier_from_zakhara_trigger = no
 				}
 				custom_tooltip = {
 					text = is_not_incapable_inbred_or_imbecile_tt
@@ -817,7 +817,7 @@ offmap_decisions = {
 						is_close_relative = ROOT_FROM
 					}
 					custom_tooltip = {
-						text = shou_lung_tribute_send_eunuch_stats_tt
+						text = zakhara_tribute_send_eunuch_stats_tt
 						OR = {
 							diplomacy = 20
 							martial = 20
@@ -827,7 +827,7 @@ offmap_decisions = {
 						}
 					}
 					custom_tooltip = {
-						text = shou_lung_tribute_send_eunuch_congenital_tt
+						text = zakhara_tribute_send_eunuch_congenital_tt
 						OR = {
 							trait = strong
 							trait = genius
@@ -836,7 +836,7 @@ offmap_decisions = {
 						}
 					}
 					custom_tooltip = {
-						text = shou_lung_tribute_send_eunuch_non_inherit_congenital_tt
+						text = zakhara_tribute_send_eunuch_non_inherit_congenital_tt
 						OR = {
 							trait = robust
 							trait = shrewd
@@ -1176,7 +1176,7 @@ offmap_decisions = {
 			modifier = {
 				factor = 2.0
 				OR = {
-					shou_lung = {
+					zakhara = {
 						show_scope_change = no 
 						offmap_has_like = likes_eunuchs
 					}
@@ -1187,13 +1187,13 @@ offmap_decisions = {
 				FROMFROM = {
 					show_scope_change = no 
 					liked_by_offmap = {
-			            type = shou_lung
+			            type = zakhara
 			        }
 				}
 			}
 			modifier = {
 				factor = 0.5
-				shou_lung = {
+				zakhara = {
 					show_scope_change = no 
 					offmap_has_dislike = likes_eunuchs
 				}
@@ -1203,7 +1203,7 @@ offmap_decisions = {
 				FROMFROM = {
 					show_scope_change = no 
 					disliked_by_offmap = {
-				        type = shou_lung
+				        type = zakhara
 				    }
 				}
 			}
@@ -1212,7 +1212,7 @@ offmap_decisions = {
 				FROM = { 
 					show_scope_change = no
 					liked_by_offmap = {
-						type = shou_lung
+						type = zakhara
 					}
 				}
 			}
@@ -1221,7 +1221,7 @@ offmap_decisions = {
 				FROM = {
 					show_scope_change = no 
 					disliked_by_offmap = {
-						type = shou_lung
+						type = zakhara
 					}
 				}
 			}
@@ -1230,7 +1230,7 @@ offmap_decisions = {
 		effect = {
 			save_event_target_as = target_governor
 			FROM = {
-				sound_effect = shou_lung_grace_gain
+				sound_effect = zakhara_grace_gain
 				save_event_target_as = target_tribute_sender
 			}
 			FROMFROM = {
@@ -1238,21 +1238,21 @@ offmap_decisions = {
 			}
 			#if = {
 			#	limit = {
-			#		FROMFROM = { disliked_by_offmap = shou_lung }
+			#		FROMFROM = { disliked_by_offmap = zakhara }
 			#	}
-			#	custom_tooltip = { text = notification_shou_lung_dislike_tt }
+			#	custom_tooltip = { text = notification_zakhara_dislike_tt }
 			#}
 			#if = {
 			#	limit = {
-			#		NOT = { FROMFROM = { disliked_by_offmap = shou_lung } }
-			#		FROMFROM = { liked_by_offmap = shou_lung }
+			#		NOT = { FROMFROM = { disliked_by_offmap = zakhara } }
+			#		FROMFROM = { liked_by_offmap = zakhara }
 			#	}
-			#	custom_tooltip = { text = notification_shou_lung_like_tt }
+			#	custom_tooltip = { text = notification_zakhara_like_tt }
 			#}
 			FROM = {
 				show_scope_change = no
 				add_offmap_currency = {
-					offmap = shou_lung
+					offmap = zakhara
 					value = local_third_party_score
 				}
 				hidden_effect = {
@@ -1260,7 +1260,7 @@ offmap_decisions = {
 						limit = {
 							ai = no
 						}
-						set_character_flag = achievement_snipped_off_to_shou_lung
+						set_character_flag = achievement_snipped_off_to_zakhara
 					}
 				}
 			}
@@ -1272,13 +1272,13 @@ offmap_decisions = {
 					OR = {
 						FROM = {
 							liked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 								context = eunuch
 							}
 						}
 						FROMFROM = {
 							liked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 								context = eunuch
 							}
 						}
@@ -1286,19 +1286,19 @@ offmap_decisions = {
 					NOR = {
 						FROM = {
 							disliked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 								context = eunuch
 							}
 						}
 						FROMFROM = {
 							disliked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 								context = eunuch
 							}
 						}
 					}
 				}
-				e_shou_lung_west_governor = {
+				e_zakhara_west_governor = {
 					show_scope_change = no
 					offmap_power = {
 						show_scope_change = no
@@ -1312,13 +1312,13 @@ offmap_decisions = {
 					OR = {
 						FROM = {
 							disliked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 								context = eunuch
 							}
 						}
 						FROMFROM = {
 							disliked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 								context = eunuch
 							}
 						}
@@ -1326,19 +1326,19 @@ offmap_decisions = {
 					NOR = {
 						FROM = {
 							liked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 								context = eunuch
 							}
 						}
 						FROMFROM = {
 							liked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 								context = eunuch
 							}
 						}
 					}
 				}
-				e_shou_lung_west_governor = {
+				e_zakhara_west_governor = {
 					show_scope_change = no
 					offmap_power = {
 						show_scope_change = no
@@ -1351,13 +1351,13 @@ offmap_decisions = {
 					OR = {
 						FROM = {
 							liked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 								context = eunuch
 							}
 						}
 						FROMFROM = {
 							liked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 								context = eunuch
 							}
 						}
@@ -1365,19 +1365,19 @@ offmap_decisions = {
 					OR = {
 						FROM = {
 							disliked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 								context = eunuch
 							}
 						}
 						FROMFROM = {
 							disliked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 								context = eunuch
 							}
 						}
 					}
 				}
-				e_shou_lung_west_governor = {
+				e_zakhara_west_governor = {
 					show_scope_change = no
 					offmap_power = {
 						show_scope_change = no
@@ -1399,12 +1399,12 @@ offmap_decisions = {
 						add_trait = eunuch
 					}
 				}
-				leave_court_for_shou_lung_effect = yes
+				leave_court_for_zakhara_effect = yes
 			}
 			hidden_effect = {
 				FROM = {
 					add_character_modifier = {
-						modifier = shou_lung_grace_send_eunuch_timer
+						modifier = zakhara_grace_send_eunuch_timer
 						hidden = yes
 						years = 20
 					
@@ -1439,7 +1439,7 @@ offmap_decisions = {
 		}
 	}
 	
-	shou_lung_grace_offer_concubine = {
+	zakhara_grace_offer_concubine = {
 		only_playable = yes
 		button_name = offmap_gifts
 		
@@ -1450,10 +1450,10 @@ offmap_decisions = {
 		show_third_party_potential = yes
 
 		potential = {
-			is_offmap_tag = shou_lung
+			is_offmap_tag = zakhara
 			OR = {
 				ai = no
-				shou_lung_offmap_tribute_decisions_enabled_trigger = yes # Allow is checked for each valid 3rd party, so it is cheaper to check it here for the AI
+				zakhara_offmap_tribute_decisions_enabled_trigger = yes # Allow is checked for each valid 3rd party, so it is cheaper to check it here for the AI
 			}
 		}
 	
@@ -1469,19 +1469,19 @@ offmap_decisions = {
 			FROM = {
 				show_scope_change = no
 				custom_tooltip = {
-					text = shou_lung_tribute_send_concubine_cooldown_tt
-					NOT = { has_character_modifier = shou_lung_grace_send_concubine_timer }
+					text = zakhara_tribute_send_concubine_cooldown_tt
+					NOT = { has_character_modifier = zakhara_grace_send_concubine_timer }
 				}
 				prisoner = no
 				NOT = { trait = incapable }
 				is_inaccessible_trigger = no
 			}
-			# shou_lung_offmap_decisions_enabled_trigger = yes #leave in please, to be used if the tooltip for shou_lung_offmap_tribute_decisions_enabled_trigger changes and we need to reference things uniquely again
-			tooltip = { shou_lung_offmap_tribute_decisions_enabled_trigger = yes }
+			# zakhara_offmap_decisions_enabled_trigger = yes #leave in please, to be used if the tooltip for zakhara_offmap_tribute_decisions_enabled_trigger changes and we need to reference things uniquely again
+			tooltip = { zakhara_offmap_tribute_decisions_enabled_trigger = yes }
 			hidden_tooltip = {
 				OR = { 
 					ai = yes
-					shou_lung_offmap_tribute_decisions_enabled_trigger = yes # AI has already checked this in the potential
+					zakhara_offmap_tribute_decisions_enabled_trigger = yes # AI has already checked this in the potential
 				}
 			}
 		}
@@ -1489,10 +1489,10 @@ offmap_decisions = {
 		third_party_potential = {
 			show_only_failed_conditions = yes
 			custom_tooltip = {
-				text = shou_lung_tribute_send_concubine_preference_tt
+				text = zakhara_tribute_send_concubine_preference_tt
 				OR = {
 					AND = {
-						shou_lung = {
+						zakhara = {
 							offmap_ruler = {
 								is_female = yes
 							}
@@ -1502,7 +1502,7 @@ offmap_decisions = {
 						}
 					}
 					AND = {
-						shou_lung = {
+						zakhara = {
 							offmap_ruler = {
 								is_female = no
 							}
@@ -1536,8 +1536,8 @@ offmap_decisions = {
 					NOT = { is_married = yes }
 				}
 				custom_tooltip = {
-					text = is_not_from_shou_lung_tt
-					courtier_from_shou_lung_trigger = no
+					text = is_not_from_zakhara_tt
+					courtier_from_zakhara_trigger = no
 				}
 				custom_tooltip = {
 					text = is_not_incapable_inbred_or_imbecile_tt
@@ -1892,7 +1892,7 @@ offmap_decisions = {
 			modifier = {
 				factor = 2.0
 				OR = {
-					shou_lung = {
+					zakhara = {
 						show_scope_change = no 
 						offmap_has_like = likes_concubines
 					}
@@ -1903,13 +1903,13 @@ offmap_decisions = {
 				FROMFROM = {
 					show_scope_change = no 
 					liked_by_offmap = {
-			            type = shou_lung
+			            type = zakhara
 			        }
 				}
 			}
 			modifier = {
 				factor = 0.5
-				shou_lung = {
+				zakhara = {
 					show_scope_change = no 
 					offmap_has_dislike = likes_concubines
 				}
@@ -1919,7 +1919,7 @@ offmap_decisions = {
 				FROMFROM = {
 					show_scope_change = no 
 					disliked_by_offmap = {
-				        type = shou_lung
+				        type = zakhara
 				    }
 				}
 			}
@@ -1928,7 +1928,7 @@ offmap_decisions = {
 				FROM = { 
 					show_scope_change = no
 					liked_by_offmap = {
-						type = shou_lung
+						type = zakhara
 					}
 				}
 			}
@@ -1937,7 +1937,7 @@ offmap_decisions = {
 				FROM = {
 					show_scope_change = no 
 					disliked_by_offmap = {
-						type = shou_lung
+						type = zakhara
 					}
 				}
 			}
@@ -1954,22 +1954,22 @@ offmap_decisions = {
 			}
 			#if = {
 			#	limit = {
-			#		FROMFROM = { disliked_by_offmap = shou_lung }
+			#		FROMFROM = { disliked_by_offmap = zakhara }
 			#	}
-			#	custom_tooltip = { text = notification_shou_lung_dislike_tt }
+			#	custom_tooltip = { text = notification_zakhara_dislike_tt }
 			#}
 			#if = {
 			#	limit = {
-			#		NOT = { FROMFROM = { disliked_by_offmap = shou_lung } }
-			#		FROMFROM = { liked_by_offmap = shou_lung }
+			#		NOT = { FROMFROM = { disliked_by_offmap = zakhara } }
+			#		FROMFROM = { liked_by_offmap = zakhara }
 			#	}
-			#	custom_tooltip = { text = notification_shou_lung_like_tt }
+			#	custom_tooltip = { text = notification_zakhara_like_tt }
 			#}
 			
 			FROM = {
 				show_scope_change = no
 				add_offmap_currency = {
-					offmap = shou_lung
+					offmap = zakhara
 					value = local_third_party_score
 				}
 			}
@@ -1981,13 +1981,13 @@ offmap_decisions = {
 					OR = {
 						FROM = {
 							liked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 								context = concubine
 							}
 						}
 						FROMFROM = {
 							liked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 								context = concubine
 							}
 						}
@@ -1995,19 +1995,19 @@ offmap_decisions = {
 					NOR = {
 						FROM = {
 							disliked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 								context = concubine
 							}
 						}
 						FROMFROM = {
 							disliked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 								context = concubine
 							}
 						}
 					}
 				}
-				e_shou_lung_west_governor = {
+				e_zakhara_west_governor = {
 					show_scope_change = no
 					offmap_power = {
 						show_scope_change = no
@@ -2021,13 +2021,13 @@ offmap_decisions = {
 					OR = {
 						FROM = {
 							disliked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 								context = concubine
 							}
 						}
 						FROMFROM = {
 							disliked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 								context = concubine
 							}
 						}
@@ -2035,19 +2035,19 @@ offmap_decisions = {
 					NOR = {
 						FROM = {
 							liked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 								context = concubine
 							}
 						}
 						FROMFROM = {
 							liked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 								context = concubine
 							}
 						}
 					}
 				}
-				e_shou_lung_west_governor = {
+				e_zakhara_west_governor = {
 					show_scope_change = no
 					offmap_power = {
 						show_scope_change = no
@@ -2060,13 +2060,13 @@ offmap_decisions = {
 					OR = {
 						FROM = {
 							liked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 								context = concubine
 							}
 						}
 						FROMFROM = {
 							liked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 								context = concubine
 							}
 						}
@@ -2074,19 +2074,19 @@ offmap_decisions = {
 					OR = {
 						FROM = {
 							disliked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 								context = concubine
 							}
 						}
 						FROMFROM = {
 							disliked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 								context = concubine
 							}
 						}
 					}
 				}
-				e_shou_lung_west_governor = {
+				e_zakhara_west_governor = {
 					show_scope_change = no
 					offmap_power = {
 						show_scope_change = no
@@ -2099,12 +2099,12 @@ offmap_decisions = {
 			
 			FROMFROM = {
 				show_scope_change = no
-				leave_court_for_shou_lung_effect = yes
+				leave_court_for_zakhara_effect = yes
 			}
 			hidden_effect = {
 				FROM = {
 					add_character_modifier = {
-						modifier = shou_lung_grace_send_concubine_timer
+						modifier = zakhara_grace_send_concubine_timer
 						hidden = yes
 						years = 20
 					
@@ -2139,7 +2139,7 @@ offmap_decisions = {
 		}
 	}
 	
-	shou_lung_grace_offer_commander = {
+	zakhara_grace_offer_commander = {
 		only_playable = yes
 		button_name = offmap_gifts
 		
@@ -2150,12 +2150,12 @@ offmap_decisions = {
 		show_third_party_potential = yes
 
 		potential = {
-			is_offmap_tag = shou_lung
+			is_offmap_tag = zakhara
 			OR = {
-				shou_lung = { has_status = shou_lung_unrest }
-				shou_lung = { has_status = shou_lung_civil_war }
-				shou_lung = { has_status = shou_lung_tu_lung_invasion }
-				shou_lung = { has_status = shou_lung_tuigan_invasion }
+				zakhara = { has_status = zakhara_unrest }
+				zakhara = { has_status = zakhara_civil_war }
+				zakhara = { has_status = zakhara_tu_lung_invasion }
+				zakhara = { has_status = zakhara_tuigan_invasion }
 			}
 		}
 	
@@ -2168,26 +2168,26 @@ offmap_decisions = {
 
 		allow = {
 			show_only_failed_conditions = yes
-			shou_lung = {
+			zakhara = {
 				OR = {
-					has_status = shou_lung_unrest
-					has_status = shou_lung_civil_war
-					has_status = shou_lung_tu_lung_invasion
-					has_status = shou_lung_tuigan_invasion
+					has_status = zakhara_unrest
+					has_status = zakhara_civil_war
+					has_status = zakhara_tu_lung_invasion
+					has_status = zakhara_tuigan_invasion
 				}
 			}
 			FROM = {
 				show_scope_change = no
 				custom_tooltip = {
-					text = shou_lung_tribute_send_commander_cooldown_tt
-					NOT = { has_character_modifier = shou_lung_grace_send_commander_timer }
+					text = zakhara_tribute_send_commander_cooldown_tt
+					NOT = { has_character_modifier = zakhara_grace_send_commander_timer }
 				}
 				prisoner = no
 				NOT = { trait = incapable }
 				is_inaccessible_trigger = no
 			}
-			# shou_lung_offmap_decisions_enabled_trigger = yes #leave in please, to be used if the tooltip for shou_lung_offmap_tribute_decisions_enabled_trigger changes and we need to reference things uniquely again
-			shou_lung_offmap_tribute_decisions_enabled_trigger = yes
+			# zakhara_offmap_decisions_enabled_trigger = yes #leave in please, to be used if the tooltip for zakhara_offmap_tribute_decisions_enabled_trigger changes and we need to reference things uniquely again
+			zakhara_offmap_tribute_decisions_enabled_trigger = yes
 		}
 		
 		third_party_potential = {
@@ -2206,8 +2206,8 @@ offmap_decisions = {
 					NOT = { is_married = yes }
 				}
 				custom_tooltip = {
-					text = is_not_from_shou_lung_tt
-					courtier_from_shou_lung_trigger = no
+					text = is_not_from_zakhara_tt
+					courtier_from_zakhara_trigger = no
 				}
 				custom_tooltip = {
 					text = is_not_incapable_inbred_or_imbecile_tt
@@ -2547,7 +2547,7 @@ offmap_decisions = {
 				FROMFROM = { 
 					show_scope_change = no
 					liked_by_offmap = {
-						type = shou_lung
+						type = zakhara
 					}
 				}
 			}
@@ -2556,7 +2556,7 @@ offmap_decisions = {
 				FROMFROM = {
 					show_scope_change = no 
 					disliked_by_offmap = {
-						type = shou_lung
+						type = zakhara
 					}
 				}
 			}
@@ -2565,7 +2565,7 @@ offmap_decisions = {
 				FROM = { 
 					show_scope_change = no
 					liked_by_offmap = {
-						type = shou_lung
+						type = zakhara
 					}
 				}
 			}
@@ -2574,7 +2574,7 @@ offmap_decisions = {
 				FROM = {
 					show_scope_change = no 
 					disliked_by_offmap = {
-						type = shou_lung
+						type = zakhara
 					}
 				}
 			}
@@ -2591,21 +2591,21 @@ offmap_decisions = {
 			}
 			#if = {
 			#	limit = {
-			#		FROMFROM = { disliked_by_offmap = shou_lung }
+			#		FROMFROM = { disliked_by_offmap = zakhara }
 			#	}
-			#	custom_tooltip = { text = notification_shou_lung_dislike_tt }
+			#	custom_tooltip = { text = notification_zakhara_dislike_tt }
 			#}
 			#if = {
 			#	limit = {
-			#		NOT = { FROMFROM = { disliked_by_offmap = shou_lung } }
-			#		FROMFROM = { liked_by_offmap = shou_lung }
+			#		NOT = { FROMFROM = { disliked_by_offmap = zakhara } }
+			#		FROMFROM = { liked_by_offmap = zakhara }
 			#	}
-			#	custom_tooltip = { text = notification_shou_lung_like_tt }
+			#	custom_tooltip = { text = notification_zakhara_like_tt }
 			#}
 			FROM = {
 				show_scope_change = no
 				add_offmap_currency = {
-					offmap = shou_lung
+					offmap = zakhara
 					value = local_third_party_score
 				}
 			}
@@ -2617,29 +2617,29 @@ offmap_decisions = {
 					OR = {
 						FROM = {
 							liked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 							}
 						}
 						FROMFROM = {
 							liked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 							}
 						}
 					}
 					NOR = {
 						FROM = {
 							disliked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 							}
 						}
 						FROMFROM = {
 							disliked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 							}
 						}
 					}
 				}
-				e_shou_lung_west_governor = {
+				e_zakhara_west_governor = {
 					show_scope_change = no
 					offmap_power = {
 						show_scope_change = no
@@ -2653,29 +2653,29 @@ offmap_decisions = {
 					OR = {
 						FROM = {
 							disliked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 							}
 						}
 						FROMFROM = {
 							disliked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 							}
 						}
 					}
 					NOR = {
 						FROM = {
 							liked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 							}
 						}
 						FROMFROM = {
 							liked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 							}
 						}
 					}
 				}
-				e_shou_lung_west_governor = {
+				e_zakhara_west_governor = {
 					show_scope_change = no
 					offmap_power = {
 						show_scope_change = no
@@ -2688,29 +2688,29 @@ offmap_decisions = {
 					OR = {
 						FROM = {
 							liked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 							}
 						}
 						FROMFROM = {
 							liked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 							}
 						}
 					}
 					OR = {
 						FROM = {
 							disliked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 							}
 						}
 						FROMFROM = {
 							disliked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 							}
 						}
 					}
 				}
-				e_shou_lung_west_governor = {
+				e_zakhara_west_governor = {
 					show_scope_change = no
 					offmap_power = {
 						show_scope_change = no
@@ -2722,12 +2722,12 @@ offmap_decisions = {
 			
 			FROMFROM = {
 				show_scope_change = no
-				leave_court_for_shou_lung_effect = yes
+				leave_court_for_zakhara_effect = yes
 			}
 			hidden_effect = {
 				FROM = {
 					add_character_modifier = {
-						modifier = shou_lung_grace_send_commander_timer
+						modifier = zakhara_grace_send_commander_timer
 						hidden = yes
 						years = 20
 					}
@@ -2760,7 +2760,7 @@ offmap_decisions = {
 		}
 	}
 	
-	shou_lung_grace_offer_physician = {
+	zakhara_grace_offer_physician = {
 		only_playable = yes
 		button_name = offmap_gifts
 		
@@ -2771,8 +2771,8 @@ offmap_decisions = {
 		show_third_party_potential = yes
 
 		potential = {
-			is_offmap_tag = shou_lung
-			shou_lung = { has_status = shou_lung_plague }
+			is_offmap_tag = zakhara
+			zakhara = { has_status = zakhara_plague }
 		}
 	
 		from_potential = {
@@ -2787,15 +2787,15 @@ offmap_decisions = {
 			FROM = {
 				show_scope_change = no
 				custom_tooltip = {
-					text = shou_lung_tribute_send_physician_tt
-					NOT = { has_character_flag = shou_lung_grace_physician_sent }
+					text = zakhara_tribute_send_physician_tt
+					NOT = { has_character_flag = zakhara_grace_physician_sent }
 				}
 				prisoner = no
 				NOT = { trait = incapable }
 				is_inaccessible_trigger = no
 			}
-			# shou_lung_offmap_decisions_enabled_trigger = yes #leave in please, to be used if the tooltip for shou_lung_offmap_tribute_decisions_enabled_trigger changes and we need to reference things uniquely again
-			shou_lung_offmap_tribute_decisions_enabled_trigger = yes
+			# zakhara_offmap_decisions_enabled_trigger = yes #leave in please, to be used if the tooltip for zakhara_offmap_tribute_decisions_enabled_trigger changes and we need to reference things uniquely again
+			zakhara_offmap_tribute_decisions_enabled_trigger = yes
 		}
 		
 		third_party_potential = {
@@ -2816,8 +2816,8 @@ offmap_decisions = {
 					NOT = { is_married = yes }
 				}
 				custom_tooltip = {
-					text = is_not_from_shou_lung_tt
-					courtier_from_shou_lung_trigger = no
+					text = is_not_from_zakhara_tt
+					courtier_from_zakhara_trigger = no
 				}
 				custom_tooltip = {
 					text = is_not_incapable_inbred_or_imbecile_tt
@@ -2999,7 +2999,7 @@ offmap_decisions = {
 				FROM = { 
 					show_scope_change = no
 					liked_by_offmap = {
-						type = shou_lung
+						type = zakhara
 					}
 				}
 			}
@@ -3008,7 +3008,7 @@ offmap_decisions = {
 				FROM = {
 					show_scope_change = no 
 					disliked_by_offmap = {
-						type = shou_lung
+						type = zakhara
 					}
 				}
 			}
@@ -3025,32 +3025,32 @@ offmap_decisions = {
 			}
 			#if = {
 			#	limit = {
-			#		FROMFROM = { disliked_by_offmap = shou_lung }
+			#		FROMFROM = { disliked_by_offmap = zakhara }
 			#	}
-			#	custom_tooltip = { text = notification_shou_lung_dislike_tt }
+			#	custom_tooltip = { text = notification_zakhara_dislike_tt }
 			#}
 			#if = {
 			#	limit = {
-			#		NOT = { FROMFROM = { disliked_by_offmap = shou_lung } }
-			#		FROMFROM = { liked_by_offmap = shou_lung }
+			#		NOT = { FROMFROM = { disliked_by_offmap = zakhara } }
+			#		FROMFROM = { liked_by_offmap = zakhara }
 			#	}
-			#	custom_tooltip = { text = notification_shou_lung_like_tt }
+			#	custom_tooltip = { text = notification_zakhara_like_tt }
 			#}
 			FROM = {
 				show_scope_change = no
 				add_offmap_currency = {
-					offmap = shou_lung
+					offmap = zakhara
 					value = local_third_party_score
 				}
 			}
 			
 			FROMFROM = {
 				show_scope_change = no
-				leave_court_for_shou_lung_effect = yes
+				leave_court_for_zakhara_effect = yes
 			}
 			hidden_effect = {
 				FROM = {
-					set_character_flag = shou_lung_grace_physician_sent
+					set_character_flag = zakhara_grace_physician_sent
 					if = {
 						limit = { local_third_party_score_low_trigger = yes }
 						set_character_flag = sent_bad_tribute
@@ -3080,14 +3080,14 @@ offmap_decisions = {
 		}
 	}
 	
-	shou_lung_grace_send_relief = {
+	zakhara_grace_send_relief = {
 		only_playable = yes
 		button_name = offmap_gifts
 		ai_check_interval = 60
 
 		potential = {
-			is_offmap_tag = shou_lung
-			shou_lung = { has_status = shou_lung_famine }
+			is_offmap_tag = zakhara
+			zakhara = { has_status = zakhara_famine }
 		}
 
 		from_potential = {
@@ -3104,41 +3104,41 @@ offmap_decisions = {
 				is_nomadic = no
 				is_tribal = no
 				NOT = {
-					has_character_modifier = shou_lung_send_relief
+					has_character_modifier = zakhara_send_relief
 				}
 				prisoner = no
 				NOT = { trait = incapable }
 				is_inaccessible_trigger = no
 			}
-			# shou_lung_offmap_decisions_enabled_trigger = yes #leave in please, to be used if the tooltip for shou_lung_offmap_tribute_decisions_enabled_trigger changes and we need to reference things uniquely again
-			shou_lung_offmap_tribute_decisions_enabled_trigger = yes
+			# zakhara_offmap_decisions_enabled_trigger = yes #leave in please, to be used if the tooltip for zakhara_offmap_tribute_decisions_enabled_trigger changes and we need to reference things uniquely again
+			zakhara_offmap_tribute_decisions_enabled_trigger = yes
 		}
 
 		effect = {
-			hidden_effect = { shou_lung = { governor = { character_event = { id = JD.3010 } } } }
+			hidden_effect = { zakhara = { governor = { character_event = { id = JD.3010 } } } }
 			FROM = {
 				sound_effect = china_grace_gain
 				add_character_modifier = {
 					inherit = yes
-					name = shou_lung_send_relief
+					name = zakhara_send_relief
 					years = 10
 				}
 				if = {
 					limit = {
 						liked_by_offmap = {
-							type = shou_lung
+							type = zakhara
 						}
 						NOT = {
 							disliked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 							}
 						}
 					}
 					add_offmap_currency = {
-						offmap = shou_lung
+						offmap = zakhara
 						value = 750
 					}
-					e_shou_lung_west_governor = {
+					e_zakhara_west_governor = {
 						show_scope_change = no
 						offmap_power = {
 							show_scope_change = no
@@ -3149,19 +3149,19 @@ offmap_decisions = {
 				if = {
 					limit = {
 						disliked_by_offmap = {
-							type = shou_lung
+							type = zakhara
 						}
 						NOT = {
 							liked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 							}
 						}
 					}
 					add_offmap_currency = {
-						offmap = shou_lung
+						offmap = zakhara
 						value = 250
 					}
-					e_shou_lung_west_governor = {
+					e_zakhara_west_governor = {
 						show_scope_change = no
 						offmap_power = {
 							show_scope_change = no
@@ -3172,17 +3172,17 @@ offmap_decisions = {
 				if = {
 					limit = {
 						liked_by_offmap = {
-							type = shou_lung
+							type = zakhara
 						}
 						disliked_by_offmap = {
-							type = shou_lung
+							type = zakhara
 						}
 					}
 					add_offmap_currency = {
-						offmap = shou_lung
+						offmap = zakhara
 						value = 500
 					}
-					e_shou_lung_west_governor = {
+					e_zakhara_west_governor = {
 						show_scope_change = no
 						offmap_power = {
 							show_scope_change = no
@@ -3194,15 +3194,15 @@ offmap_decisions = {
 					limit = {
 						NOR = {
 							liked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 							}
 							disliked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 							}
 						}
 					}
 					add_offmap_currency = {
-						offmap = shou_lung
+						offmap = zakhara
 						value = 500
 					}
 				}
@@ -3228,7 +3228,7 @@ offmap_decisions = {
 		}
 	}
 	
-	shou_lung_grace_offer_artifact = {
+	zakhara_grace_offer_artifact = {
 		only_playable = yes
 		button_name = offmap_gifts
 		
@@ -3246,7 +3246,7 @@ offmap_decisions = {
 		}
 
 		potential = {
-			is_offmap_tag = shou_lung
+			is_offmap_tag = zakhara
 		}
 
 		allow = {
@@ -3257,8 +3257,8 @@ offmap_decisions = {
 				NOT = { trait = incapable }
 				is_inaccessible_trigger = no
 			}
-			# shou_lung_offmap_decisions_enabled_trigger = yes #leave in please, to be used if the tooltip for shou_lung_offmap_tribute_decisions_enabled_trigger changes and we need to reference things uniquely again
-			shou_lung_offmap_tribute_decisions_enabled_trigger = yes
+			# zakhara_offmap_decisions_enabled_trigger = yes #leave in please, to be used if the tooltip for zakhara_offmap_tribute_decisions_enabled_trigger changes and we need to reference things uniquely again
+			zakhara_offmap_tribute_decisions_enabled_trigger = yes
 		}
 		
 		third_party_potential = {
@@ -3271,7 +3271,7 @@ offmap_decisions = {
 					NOR = {
 						has_artifact_flag = flag_considering_donation 
 						has_artifact_flag = curse
-						has_artifact_flag = shou_lung
+						has_artifact_flag = zakhara
 					}
 				}
 			}
@@ -3326,14 +3326,14 @@ offmap_decisions = {
 			}
 			modifier = {
 				factor = 1.5
-				shou_lung = {
+				zakhara = {
 					show_scope_change = no 
 					offmap_has_like = likes_wealth
 				}
 			}
 			modifier = {
 				factor = 0.5
-				shou_lung = {
+				zakhara = {
 					show_scope_change = no 
 					offmap_has_like = likes_wealth
 				}
@@ -3343,7 +3343,7 @@ offmap_decisions = {
 				FROM = { 
 					show_scope_change = no
 					liked_by_offmap = {
-						type = shou_lung
+						type = zakhara
 					}
 				}
 			}
@@ -3352,7 +3352,7 @@ offmap_decisions = {
 				FROM = {
 					show_scope_change = no 
 					disliked_by_offmap = {
-						type = shou_lung
+						type = zakhara
 					}
 				}
 			}
@@ -3362,7 +3362,7 @@ offmap_decisions = {
 			FROM = {
 				show_scope_change = no
 				add_offmap_currency = {
-					offmap = shou_lung
+					offmap = zakhara
 					value = local_third_party_score
 				}
 			}
@@ -3374,25 +3374,25 @@ offmap_decisions = {
 					OR = {
 						FROM = {
 							liked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 							}
 						}
-						shou_lung = {
+						zakhara = {
 							offmap_has_like = likes_wealth
 						}
 					}
 					NOR = {
 						FROM = {
 							disliked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 							}
 						}
-						shou_lung = {
+						zakhara = {
 							offmap_has_dislike = likes_wealth
 						}
 					}
 				}
-				e_shou_lung_west_governor = {
+				e_zakhara_west_governor = {
 					show_scope_change = no
 					offmap_power = {
 						show_scope_change = no
@@ -3406,25 +3406,25 @@ offmap_decisions = {
 					OR = {
 						FROM = {
 							disliked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 							}
 						}
-						shou_lung = {
-							offmap_has_dislike = shou_lung_likes_wealth
+						zakhara = {
+							offmap_has_dislike = zakhara_likes_wealth
 						}
 					}
 					NOR = {
 						FROM = {
 							liked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 							}
 						}
-						shou_lung = {
-							offmap_has_like = shou_lung_likes_wealth
+						zakhara = {
+							offmap_has_like = zakhara_likes_wealth
 						}
 					}
 				}
-				e_shou_lung_west_governor = {
+				e_zakhara_west_governor = {
 					show_scope_change = no
 					offmap_power = {
 						show_scope_change = no
@@ -3437,25 +3437,25 @@ offmap_decisions = {
 					OR = {
 						FROM = {
 							liked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 							}
 						}
-						shou_lung = {
-							offmap_has_like = shou_lung_likes_wealth
+						zakhara = {
+							offmap_has_like = zakhara_likes_wealth
 						}
 					}
 					OR = {
 						FROM = {
 							disliked_by_offmap = {
-								type = shou_lung
+								type = zakhara
 							}
 						}
-						shou_lung = {
-							offmap_has_dislike = shou_lung_likes_wealth
+						zakhara = {
+							offmap_has_dislike = zakhara_likes_wealth
 						}
 					}
 				}
-				e_shou_lung_west_governor = {
+				e_zakhara_west_governor = {
 					show_scope_change = no
 					offmap_power = {
 						show_scope_change = no
@@ -3486,7 +3486,7 @@ offmap_decisions = {
 			}
 
 			hidden_effect = { #to reduce cluttered tooltip (effect already heavily implied...)
-				shou_lung = {
+				zakhara = {
 					offmap_ruler = {
 						ROOT_FROMFROM = {
 							show_scope_change = no
@@ -3506,7 +3506,7 @@ offmap_decisions = {
 				FROM = {
 					set_character_flag = jd_gifting_artifact
 				}
-				hidden_effect = { shou_lung = { governor = { character_event = { id = JD.20023 } } } }
+				hidden_effect = { zakhara = { governor = { character_event = { id = JD.20023 } } } }
 			}
 		}
 	
@@ -3527,7 +3527,7 @@ offmap_decisions = {
 			}
 		}
 	}
-	shou_lung_kow_tow_pilgrimage = {
+	zakhara_kow_tow_pilgrimage = {
 		only_playable = yes
 		button_name = offmap_gifts
 		ai_check_interval = 120
@@ -3595,8 +3595,8 @@ offmap_decisions = {
 					}
 				}
 			}
-			# shou_lung_offmap_decisions_enabled_trigger = yes #leave in please, to be used if the tooltip for shou_lung_offmap_tribute_decisions_enabled_trigger changes and we need to reference things uniquely again
-			shou_lung_offmap_tribute_decisions_enabled_trigger = yes
+			# zakhara_offmap_decisions_enabled_trigger = yes #leave in please, to be used if the tooltip for zakhara_offmap_tribute_decisions_enabled_trigger changes and we need to reference things uniquely again
+			zakhara_offmap_tribute_decisions_enabled_trigger = yes
 		}
 		
 		effect = {
@@ -3624,10 +3624,10 @@ offmap_decisions = {
 #REQUESTING BOON DECISIONS (PENDING GRACE)
 offmap_decisions = {
 	
-	#If your grace decisions will spawn a character then give them an appropriate flag eg: is_shou_lung_administrator and add them to the JD.60310 trigger switch to refund grace if they die early
+	#If your grace decisions will spawn a character then give them an appropriate flag eg: is_zakhara_administrator and add them to the JD.60310 trigger switch to refund grace if they die early
 
 	#Get a peace deal
-	shou_lung_grace_peace_deal = {
+	zakhara_grace_peace_deal = {
 		only_playable = yes
 		button_name = offmap_boons
 		ai_check_interval = 12
@@ -3640,11 +3640,11 @@ offmap_decisions = {
 		}
 
 		potential = {
-			is_offmap_tag = shou_lung
+			is_offmap_tag = zakhara
 		}
 
 #		potential = {
-#			shou_lung = { governor = { character = ROOT } }
+#			zakhara = { governor = { character = ROOT } }
 #		}
 
 		allow = {
@@ -3654,19 +3654,19 @@ offmap_decisions = {
 				in_revolt = no
 				independent = yes
 				NOT = { pays_tribute_to = ROOT }
-				has_offmap_currency = { offmap = shou_lung value = 250 }
+				has_offmap_currency = { offmap = zakhara value = 250 }
 				custom_tooltip = {
-					text = shou_lung_grace_peace_deal_allow_tt
-					NOT = { has_character_modifier = peace_deal_with_shou_lung }
+					text = zakhara_grace_peace_deal_allow_tt
+					NOT = { has_character_modifier = peace_deal_with_zakhara }
 				}
 				prisoner = no
 				NOT = { trait = incapable }
 				is_inaccessible_trigger = no
 			}
-			shou_lung = {
-				NOT = { has_policy = shou_lung_expansionist }
+			zakhara = {
+				NOT = { has_policy = zakhara_expansionist }
 			}
-			shou_lung_offmap_boon_decisions_enabled_trigger = yes
+			zakhara_offmap_boon_decisions_enabled_trigger = yes
 		}
 
 		effect = {
@@ -3674,13 +3674,13 @@ offmap_decisions = {
 				sound_effect = china_grace_spend
 				show_scope_change = no
 				add_offmap_currency = {
-					offmap = shou_lung
+					offmap = zakhara
 					value = -250
 				}
 			}
-			custom_tooltip = { text = shou_lung_grace_peace_deal_effect_tt }
-			hidden_effect = { shou_lung = { governor = { character_event = { id = JD.20025 } } } }
-			hidden_effect = { FROM = { set_shou_lung_boon_cd_effect = yes } }
+			custom_tooltip = { text = zakhara_grace_peace_deal_effect_tt }
+			hidden_effect = { zakhara = { governor = { character_event = { id = JD.20025 } } } }
+			hidden_effect = { FROM = { set_zakhara_boon_cd_effect = yes } }
 		}
 
 		revoke_allowed = {
@@ -3715,8 +3715,8 @@ offmap_decisions = {
 						NOT = {
 							independent = yes
 						}
-						shou_lung = {
-							has_policy = shou_lung_isolationist
+						zakhara = {
+							has_policy = zakhara_isolationist
 						}
 					}
 				}
@@ -3730,8 +3730,8 @@ offmap_decisions = {
 		}
 	}
 	
-	#Get a shou_lung doctor
-	shou_lung_grace_doctor = {
+	#Get a zakhara doctor
+	zakhara_grace_doctor = {
 		only_playable = yes
 		button_name = offmap_boons
 		ai_check_interval = 12
@@ -3745,27 +3745,27 @@ offmap_decisions = {
 		}
 
 		potential = {
-			is_offmap_tag = shou_lung
+			is_offmap_tag = zakhara
 		}
 
 #		potential = {
-#			shou_lung = { governor = { character = ROOT } }
+#			zakhara = { governor = { character = ROOT } }
 #		}
 
 		allow = {
 			show_only_failed_conditions = yes
 			FROM = {
 				show_scope_change = no
-				has_offmap_currency = { offmap = shou_lung value = 250 }
+				has_offmap_currency = { offmap = zakhara value = 250 }
 				custom_tooltip = {
-					text = shou_lung_grace_doctor_allow_tt
+					text = zakhara_grace_doctor_allow_tt
 					NOT = { any_courtier = { has_minor_title = title_court_physician } }
 				}
 				prisoner = no
 				NOT = { trait = incapable }
 				is_inaccessible_trigger = no
 			}
-			shou_lung_offmap_boon_decisions_enabled_trigger = yes
+			zakhara_offmap_boon_decisions_enabled_trigger = yes
 		}
 
 		effect = {
@@ -3773,12 +3773,12 @@ offmap_decisions = {
 				show_scope_change = no
 				sound_effect = china_grace_spend
 				add_offmap_currency = {
-					offmap = shou_lung
+					offmap = zakhara
 					value = -250
 				}
 			}
-			hidden_effect = { shou_lung = { governor = { character_event = { id = JD.20021 } } } }
-			hidden_effect = { FROM = { set_shou_lung_boon_cd_effect = yes } }
+			hidden_effect = { zakhara = { governor = { character_event = { id = JD.20021 } } } }
+			hidden_effect = { FROM = { set_zakhara_boon_cd_effect = yes } }
 		}
 
 		revoke_allowed = {
@@ -3815,8 +3815,8 @@ offmap_decisions = {
 		}
 	}
 	
-	# shou_lung Artifact
-	shou_lung_artifact = {
+	# zakhara Artifact
+	zakhara_artifact = {
 		only_playable = yes
 		button_name = offmap_boons
 		ai_check_interval = 60
@@ -3829,48 +3829,48 @@ offmap_decisions = {
 		}
 
 		potential = {
-			is_offmap_tag = shou_lung
+			is_offmap_tag = zakhara
 		}
 	
 		allow = {
 			show_only_failed_conditions = yes
 			FROM = {
 				show_scope_change = no
-				has_offmap_currency = { offmap = shou_lung value = 500 }
+				has_offmap_currency = { offmap = zakhara value = 500 }
 				prisoner = no
 				NOT = { trait = incapable }
 				is_inaccessible_trigger = no
 			}
-			shou_lung_offmap_boon_decisions_enabled_trigger = yes
+			zakhara_offmap_boon_decisions_enabled_trigger = yes
 			custom_tooltip = {
-				text = shou_lung_artifact_has_all_tt
+				text = zakhara_artifact_has_all_tt
 				hidden_tooltip = {
 					FROM = {
 						NAND = {
-							has_artifact = shou_lung_artwork
-							has_artifact = shou_lung_calligraphy
-							has_artifact = shou_lung_sculpture
-							has_artifact = shou_lung_ceremonial_robes
+							has_artifact = zakhara_artwork
+							has_artifact = zakhara_calligraphy
+							has_artifact = zakhara_sculpture
+							has_artifact = zakhara_ceremonial_robes
 							OR = {
-								has_artifact = shou_lung_prev_emperor_sculpture
-								shou_lung = {
+								has_artifact = zakhara_prev_emperor_sculpture
+								zakhara = {
 									offmap_prev_ruler = {
 										always = no
 									}
 								}
 							}
-							has_artifact = shou_lung_arm_protector
-							has_artifact = shou_lung_serpent_spear
-							has_artifact = shou_lung_ji
-							has_artifact = shou_lung_crossbow
-							has_artifact = shou_lung_bronze_sculpture
-							has_artifact = shou_lung_book_health
-							has_artifact = shou_lung_book_law
-							has_artifact = shou_lung_book_history
-							has_artifact = shou_lung_book_economy
-							has_artifact = shou_lung_painting_of_glitterhoof
-							has_artifact = shou_lung_tapestry
-							has_artifact = shou_lung_tapestry_grand
+							has_artifact = zakhara_arm_protector
+							has_artifact = zakhara_serpent_spear
+							has_artifact = zakhara_ji
+							has_artifact = zakhara_crossbow
+							has_artifact = zakhara_bronze_sculpture
+							has_artifact = zakhara_book_health
+							has_artifact = zakhara_book_law
+							has_artifact = zakhara_book_history
+							has_artifact = zakhara_book_economy
+							has_artifact = zakhara_painting_of_glitterhoof
+							has_artifact = zakhara_tapestry
+							has_artifact = zakhara_tapestry_grand
 						}
 					}
 				}
@@ -3884,13 +3884,13 @@ offmap_decisions = {
 				sound_effect = china_grace_spend
 
 				add_offmap_currency = {
-					offmap = shou_lung
+					offmap = zakhara
 					value = -500
 				}
-				custom_tooltip = { text = shou_lung_artifact_effect_tt }
+				custom_tooltip = { text = zakhara_artifact_effect_tt }
 			}
-			hidden_effect = { shou_lung = { governor = { character_event = { id = JD.3030 } } } }
-			hidden_effect = { FROM = { set_shou_lung_boon_cd_effect = yes } }
+			hidden_effect = { zakhara = { governor = { character_event = { id = JD.3030 } } } }
+			hidden_effect = { FROM = { set_zakhara_boon_cd_effect = yes } }
 		}
 
 		revoke_allowed = {
@@ -3913,7 +3913,7 @@ offmap_decisions = {
 	}
 	
 	# Siege Engineers
-	shou_lung_siege_engineers = {
+	zakhara_siege_engineers = {
 		only_playable = yes
 		button_name = offmap_boons
 		ai = no
@@ -3926,19 +3926,19 @@ offmap_decisions = {
 		}
 
 		potential = {
-			is_offmap_tag = shou_lung
+			is_offmap_tag = zakhara
 		}
 	
 		allow = {
 			show_only_failed_conditions = yes
 			FROM = {
 				show_scope_change = no
-				has_offmap_currency = { offmap = shou_lung value = 750 }
+				has_offmap_currency = { offmap = zakhara value = 750 }
 				prisoner = no
 				NOT = { trait = incapable }
 				is_inaccessible_trigger = no
 			}
-			shou_lung_offmap_boon_decisions_enabled_trigger = yes
+			zakhara_offmap_boon_decisions_enabled_trigger = yes
 		}
 
 		effect = {
@@ -3948,13 +3948,13 @@ offmap_decisions = {
 				sound_effect = china_grace_spend
 
 				add_offmap_currency = {
-					offmap = shou_lung
+					offmap = zakhara
 					value = -750
 				}
-				custom_tooltip = { text = shou_lung_siege_engineers_effect_tt }
+				custom_tooltip = { text = zakhara_siege_engineers_effect_tt }
 			}
-			hidden_effect = { shou_lung = { governor = { character_event = { id = JD.3000 } } } }
-			hidden_effect = { FROM = { set_shou_lung_boon_cd_effect = yes } }
+			hidden_effect = { zakhara = { governor = { character_event = { id = JD.3000 } } } }
+			hidden_effect = { FROM = { set_zakhara_boon_cd_effect = yes } }
 		}
 
 		revoke_allowed = {
@@ -3967,7 +3967,7 @@ offmap_decisions = {
 	}
 
 	#Strategist
-	shou_lung_strategist = {
+	zakhara_strategist = {
 		only_playable = yes
 		button_name = offmap_boons
 		ai_check_interval = 60
@@ -3980,19 +3980,19 @@ offmap_decisions = {
 		}
 
 		potential = {
-			is_offmap_tag = shou_lung
+			is_offmap_tag = zakhara
 		}
 	
 		allow = {
 			show_only_failed_conditions = yes
 			FROM = {
 				show_scope_change = no
-				has_offmap_currency = { offmap = shou_lung value = 750 }
+				has_offmap_currency = { offmap = zakhara value = 750 }
 				prisoner = no
 				NOT = { trait = incapable }
 				is_inaccessible_trigger = no
 			}
-			shou_lung_offmap_boon_decisions_enabled_trigger = yes
+			zakhara_offmap_boon_decisions_enabled_trigger = yes
 		}
 
 		effect = {
@@ -4000,17 +4000,17 @@ offmap_decisions = {
 				show_scope_change = no
 				sound_effect = china_grace_spend
 				add_offmap_currency = {
-					offmap = shou_lung
+					offmap = zakhara
 					value = -750
 				}
-				custom_tooltip = { text = shou_lung_strategist_effect_tt }
+				custom_tooltip = { text = zakhara_strategist_effect_tt }
 			}
-			hidden_effect = { shou_lung = { governor = { character_event = { id = JD.20039 } } } }
-			hidden_effect = { FROM = { set_shou_lung_boon_cd_effect = yes } }
+			hidden_effect = { zakhara = { governor = { character_event = { id = JD.20039 } } } }
+			hidden_effect = { FROM = { set_zakhara_boon_cd_effect = yes } }
 			hidden_effect = {
 				if = {
 					limit = {
-						shou_lung = { has_status = shou_lung_golden_age }
+						zakhara = { has_status = zakhara_golden_age }
 					}
 					set_character_flag = jd_strategist_golden_age
 				}
@@ -4042,7 +4042,7 @@ offmap_decisions = {
 	}
 	
 	#Request master engineer
-	shou_lung_administrator = {
+	zakhara_administrator = {
 		only_playable = yes
 		button_name = offmap_boons
 		ai_check_interval = 60
@@ -4055,23 +4055,23 @@ offmap_decisions = {
 		}
 
 		potential = {
-			is_offmap_tag = shou_lung
+			is_offmap_tag = zakhara
 		}
 
 		allow = {
 			show_only_failed_conditions = yes
 			FROM = {
 				show_scope_change = no
-				has_offmap_currency = { offmap = shou_lung value = 1000 }
+				has_offmap_currency = { offmap = zakhara value = 1000 }
 				custom_tooltip = {
-					text = shou_lung_administrator_allow_tt
+					text = zakhara_administrator_allow_tt
 					NOT = { any_courtier = { has_minor_title = title_administrator } }
 				}
 				prisoner = no
 				NOT = { trait = incapable }
 				is_inaccessible_trigger = no
 			}
-			shou_lung_offmap_boon_decisions_enabled_trigger = yes
+			zakhara_offmap_boon_decisions_enabled_trigger = yes
 		}
 
 		effect = {
@@ -4079,12 +4079,12 @@ offmap_decisions = {
 				show_scope_change = no
 				sound_effect = china_grace_spend
 				add_offmap_currency = {
-					offmap = shou_lung
+					offmap = zakhara
 					value = -1000
 				}
-				custom_tooltip = { text = shou_lung_administrator_effect_tt }
+				custom_tooltip = { text = zakhara_administrator_effect_tt }
 				if = {
-					limit = { shou_lung = { has_status = shou_lung_golden_age } }
+					limit = { zakhara = { has_status = zakhara_golden_age } }
 					tooltip = {
 						add_character_modifier = {
 							name = employing_jd_administrator_golden_age
@@ -4101,8 +4101,8 @@ offmap_decisions = {
 					}
 				}
 			}
-			hidden_effect = { shou_lung = { governor = { character_event = { id = JD.20029 } } } }
-			hidden_effect = { FROM = { set_shou_lung_boon_cd_effect = yes } }
+			hidden_effect = { zakhara = { governor = { character_event = { id = JD.20029 } } } }
+			hidden_effect = { FROM = { set_zakhara_boon_cd_effect = yes } }
 		}
 
 		revoke_allowed = {
@@ -4132,7 +4132,7 @@ offmap_decisions = {
 		}
 	}
 
-	shou_lung_master_engineer = {
+	zakhara_master_engineer = {
 		only_playable = yes
 		button_name = offmap_boons
 		ai_check_interval = 60
@@ -4145,7 +4145,7 @@ offmap_decisions = {
 		}
 
 		potential = {
-			is_offmap_tag = shou_lung
+			is_offmap_tag = zakhara
 		}
 	
 		allow = {
@@ -4153,16 +4153,16 @@ offmap_decisions = {
 			FROM = {
 				show_scope_change = no
 				higher_tier_than = COUNT
-				has_offmap_currency = { offmap = shou_lung value = 1000 }
+				has_offmap_currency = { offmap = zakhara value = 1000 }
 				custom_tooltip = {
-					text = shou_lung_master_engineer_allow_tt
+					text = zakhara_master_engineer_allow_tt
 					NOT = { any_courtier = { has_minor_title = title_master_engineer } }
 				}
 				prisoner = no
 				NOT = { trait = incapable }
 				is_inaccessible_trigger = no
 			}
-			shou_lung_offmap_boon_decisions_enabled_trigger = yes
+			zakhara_offmap_boon_decisions_enabled_trigger = yes
 		}
 
 		effect = {
@@ -4170,13 +4170,13 @@ offmap_decisions = {
 				show_scope_change = no
 				sound_effect = china_grace_spend
 				add_offmap_currency = {
-					offmap = shou_lung
+					offmap = zakhara
 					value = -1000
 				}
-				custom_tooltip = { text = shou_lung_master_engineer_effect_tt }
+				custom_tooltip = { text = zakhara_master_engineer_effect_tt }
 			}
-			hidden_effect = { shou_lung = { governor = { character_event = { id = JD.20031 } } } }
-			hidden_effect = { FROM = { set_shou_lung_boon_cd_effect = yes } }
+			hidden_effect = { zakhara = { governor = { character_event = { id = JD.20031 } } } }
+			hidden_effect = { FROM = { set_zakhara_boon_cd_effect = yes } }
 		}
 
 		revoke_allowed = {
@@ -4206,13 +4206,13 @@ offmap_decisions = {
 		}
 	}
 
-	shou_lung_silk_road_favored_status = {
+	zakhara_silk_road_favored_status = {
 		only_playable = yes
 		button_name = offmap_boons
 		ai_check_interval = 36
 		
 		potential = {
-			is_offmap_tag = shou_lung
+			is_offmap_tag = zakhara
 		}
 
 		from_potential = {
@@ -4226,9 +4226,9 @@ offmap_decisions = {
 			show_only_failed_conditions = yes
 			FROM = {
 				show_scope_change = no
-				has_offmap_currency = { offmap = shou_lung value = 2000 }
-				NOT = { has_character_modifier = shou_lung_imperial_trade_contract }
-				NOT = { has_character_modifier = shou_lung_favored_in_trade }
+				has_offmap_currency = { offmap = zakhara value = 2000 }
+				NOT = { has_character_modifier = zakhara_imperial_trade_contract }
+				NOT = { has_character_modifier = zakhara_favored_in_trade }
 				custom_tooltip = {
 					text = tooltip_silk_road_required
 					hidden_tooltip = {
@@ -4241,7 +4241,7 @@ offmap_decisions = {
 				NOT = { trait = incapable }
 				is_inaccessible_trigger = no
 			}
-			shou_lung_offmap_boon_decisions_enabled_trigger = yes
+			zakhara_offmap_boon_decisions_enabled_trigger = yes
 		}
 
 		effect = {
@@ -4249,12 +4249,12 @@ offmap_decisions = {
 				show_scope_change = no
 				sound_effect = china_grace_spend
 				add_offmap_currency = {
-					offmap = shou_lung
+					offmap = zakhara
 					value = -2000
 				}
 				hidden_effect = {
 					add_character_modifier = {
-						modifier = shou_lung_imperial_trade_contract
+						modifier = zakhara_imperial_trade_contract
 						inherit = yes
 						years = 25
 					}
@@ -4262,9 +4262,9 @@ offmap_decisions = {
 				}
 			}
 			custom_tooltip = {
-				text = shou_lung_silk_road_favored_status_modifier_tt
+				text = zakhara_silk_road_favored_status_modifier_tt
 			}
-			hidden_effect = { FROM = { set_shou_lung_boon_cd_effect = yes } }
+			hidden_effect = { FROM = { set_zakhara_boon_cd_effect = yes } }
 		}
 
 		revoke_allowed = {
@@ -4290,7 +4290,7 @@ offmap_decisions = {
 		}
 	}
 
-	shou_lung_imperial_marriage = {
+	zakhara_imperial_marriage = {
 		only_playable = yes
 		button_name = offmap_boons
 		third_party_filter = realm_including_me
@@ -4307,7 +4307,7 @@ offmap_decisions = {
 		}
 
 		potential = {
-			is_offmap_tag = shou_lung
+			is_offmap_tag = zakhara
 		}
 
 		allow = {
@@ -4315,16 +4315,16 @@ offmap_decisions = {
 			FROM = {
 				show_scope_change = no
 				conditional_tooltip = {
-					trigger = { NOT = { has_character_modifier = peace_deal_with_shou_lung } }
-					has_offmap_currency = { offmap = shou_lung value = 1000 }
+					trigger = { NOT = { has_character_modifier = peace_deal_with_zakhara } }
+					has_offmap_currency = { offmap = zakhara value = 1000 }
 				}
 				conditional_tooltip = {
-					trigger = { has_character_modifier = peace_deal_with_shou_lung }
-					has_offmap_currency = { offmap = shou_lung value = 750 }
+					trigger = { has_character_modifier = peace_deal_with_zakhara }
+					has_offmap_currency = { offmap = zakhara value = 750 }
 				}
 				OR = {
 					custom_tooltip = {
-						text = can_marry_shou_lung_royal_tt
+						text = can_marry_zakhara_royal_tt
 						AND = {
 							is_adult = yes
 							is_married = no
@@ -4351,7 +4351,7 @@ offmap_decisions = {
 				NOT = { trait = incapable }
 				is_inaccessible_trigger = no
 			}
-			shou_lung_offmap_boon_decisions_enabled_trigger = yes
+			zakhara_offmap_boon_decisions_enabled_trigger = yes
 		}
 
 		third_party_potential = {
@@ -4379,7 +4379,7 @@ offmap_decisions = {
 			show_only_failed_conditions = yes
 			FROMFROM = {
 				custom_tooltip = {
-					text = can_marry_shou_lung_royal_tt
+					text = can_marry_zakhara_royal_tt
 					can_marry = yes
 					is_married = no
 				}
@@ -4391,31 +4391,31 @@ offmap_decisions = {
 				show_scope_change = no
 				sound_effect = china_grace_spend
 				if = {
-					limit = { has_character_modifier = peace_deal_with_shou_lung }
+					limit = { has_character_modifier = peace_deal_with_zakhara }
 					add_offmap_currency = {
-						offmap = shou_lung
+						offmap = zakhara
 						value = -750
 					}
 				}
 				else = {
 					add_offmap_currency = {
-						offmap = shou_lung
+						offmap = zakhara
 						value = -1000
 					}
-					custom_tooltip = { text = shou_lung_imperial_marriage_peace_deal_tt }	
+					custom_tooltip = { text = zakhara_imperial_marriage_peace_deal_tt }	
 				}				
 			}
 			if = { 
 				limit = { FROMFROM = { is_female = yes } } 
-				custom_tooltip = { text = shou_lung_imperial_marriage_prince_effect_tt }
+				custom_tooltip = { text = zakhara_imperial_marriage_prince_effect_tt }
 			}
 			if = { 
 				limit = { FROMFROM = { is_female = no } } 
-				custom_tooltip = { text = shou_lung_imperial_marriage_princess_effect_tt }
+				custom_tooltip = { text = zakhara_imperial_marriage_princess_effect_tt }
 			}
 			hidden_effect = { FROMFROM = { add_trait = cannot_marry } }
-			hidden_effect = { shou_lung = { governor = { character_event = { id = JD.20045 } } } }
-			hidden_effect = { FROM = { set_shou_lung_boon_cd_effect = yes } }
+			hidden_effect = { zakhara = { governor = { character_event = { id = JD.20045 } } } }
+			hidden_effect = { FROM = { set_zakhara_boon_cd_effect = yes } }
 			FROM = {
 				if = {
 					limit = {
@@ -4455,7 +4455,7 @@ offmap_decisions = {
 		}
 	}
 
-	shou_lung_request_invasion = {
+	zakhara_request_invasion = {
 		only_playable = yes
 		button_name = offmap_boons
 		third_party_filter = independent_rulers
@@ -4472,30 +4472,30 @@ offmap_decisions = {
 		}
 
 		potential = {
-			is_offmap_tag = shou_lung
+			is_offmap_tag = zakhara
 		}
 		
 		allow = {
 			show_only_failed_conditions = yes
 			FROM = {
 				show_scope_change = no
-				has_offmap_currency = { offmap = shou_lung value = 5000 }
+				has_offmap_currency = { offmap = zakhara value = 5000 }
 				prisoner = no
 				NOT = { trait = incapable }
 				is_inaccessible_trigger = no
 			}
-			shou_lung = {
+			zakhara = {
 				governor = {
 					show_scope_change = no
 					war = no
 				}
 				OR = {
-					has_status = shou_lung_stable
-					has_status = shou_lung_golden_age
+					has_status = zakhara_stable
+					has_status = zakhara_golden_age
 				}
-				NOT = { has_policy = shou_lung_expansionist }
+				NOT = { has_policy = zakhara_expansionist }
 			}
-			shou_lung_offmap_boon_decisions_enabled_trigger = yes
+			zakhara_offmap_boon_decisions_enabled_trigger = yes
 		}
 
 		third_party_potential = {
@@ -4510,7 +4510,7 @@ offmap_decisions = {
 				num_of_count_titles_in_realm = 40
 				is_within_diplo_range = ROOT
 				custom_tooltip = {
-					text = shou_lung_request_invasion_rel_head_tt
+					text = zakhara_request_invasion_rel_head_tt
 					NOT = {
 						any_demesne_title = {
 							higher_tier_than = DUKE
@@ -4519,9 +4519,9 @@ offmap_decisions = {
 					}
 				}
 				custom_tooltip = {
-					text = shou_lung_request_invasion_defeated_shou_lung_tt
+					text = zakhara_request_invasion_defeated_zakhara_tt
 					NOT = {
-						has_character_flag = defeated_shou_lung
+						has_character_flag = defeated_zakhara
 					}
 				}
 			}
@@ -4535,10 +4535,10 @@ offmap_decisions = {
 					has_non_aggression_pact_with = ROOT
 					is_allied_with = ROOT
 					liked_by_offmap = {
-						type = shou_lung
+						type = zakhara
 					}
 					is_tributary = { suzerain = ROOT }
-					has_character_modifier = peace_deal_with_shou_lung
+					has_character_modifier = peace_deal_with_zakhara
 				}
 			}
 		}
@@ -4548,18 +4548,18 @@ offmap_decisions = {
 				show_scope_change = no
 				sound_effect = china_grace_spend
 				add_offmap_currency = {
-					offmap = shou_lung
+					offmap = zakhara
 					value = -5000
 				}
-				save_event_target_as = shou_lung_invasion_instigator
+				save_event_target_as = zakhara_invasion_instigator
 			}
 			
 			FROMFROM = {
-				save_event_target_as = shou_lung_invasion_target
+				save_event_target_as = zakhara_invasion_target
 			}
 			
 			hidden_effect = {
-				shou_lung = {
+				zakhara = {
 					governor = {
 						save_event_target_as = invasion_governor
 						character_event = { id = JD.3020 } 
@@ -4568,18 +4568,18 @@ offmap_decisions = {
 			}
 			
 			hidden_effect = {
-				shou_lung = {
+				zakhara = {
 					governor = {
 						war = {
 							target = FROMFROM
-							casus_belli = destabilization_shou_lung_cb
+							casus_belli = destabilization_zakhara_cb
 						}
 					}
 				}
 				#Send news of invasion to interested player parties...
 				any_player = {
 					limit = {
-						has_offmap_news_enabled = shou_lung
+						has_offmap_news_enabled = zakhara
 						is_within_diplo_range = ROOT
 					}
 					narrative_event = { id = JD.3022 days = 1 }
@@ -4598,10 +4598,10 @@ offmap_decisions = {
 	}
 }
 
-#HOSTILE DECISIONS (ATTACKING shou_lung)
+#HOSTILE DECISIONS (ATTACKING zakhara)
 offmap_decisions = {
 	
-	shou_lung_raid = {
+	zakhara_raid = {
 		only_playable = yes
 		button_name = offmap_hostility
 		ai_check_interval = 36
@@ -4612,12 +4612,12 @@ offmap_decisions = {
 			holy_order = no
 			is_landed = yes
 			NOT = {
-				has_character_modifier = shou_lung_raid_active
+				has_character_modifier = zakhara_raid_active
 			}
 		}
 
 		potential = {
-			is_offmap_tag = shou_lung
+			is_offmap_tag = zakhara
 		}
 
 		allow = {
@@ -4632,30 +4632,30 @@ offmap_decisions = {
 						suzerain = ROOT
 					}
 				}
-				NOT = { has_character_modifier = peace_deal_with_shou_lung }
+				NOT = { has_character_modifier = peace_deal_with_zakhara }
 				custom_tooltip = {
-					text = shou_lung_grace_supply_horses_not_already_supplying_tt
+					text = zakhara_grace_supply_horses_not_already_supplying_tt
 					NOT = {
-						has_character_modifier = shou_lung_supply_horses
+						has_character_modifier = zakhara_supply_horses
 					}
 				}
 				custom_tooltip = { #Borders the eastern edge of the map
-					text = shou_lung_grace_become_tributary_allow_shou_lung_influence_tt
+					text = zakhara_grace_become_tributary_allow_zakhara_influence_tt
 					any_realm_province = {
-						region = custom_shou_lung_invasion_target_region
+						region = custom_zakhara_invasion_target_region
 					}
 				}
 				custom_tooltip = {
-					text = shou_lung_offmap_boon_decisions_enabled_trigger_raiding_tt
+					text = zakhara_offmap_boon_decisions_enabled_trigger_raiding_tt
 					NOT = {
-						has_character_modifier = shou_lung_raid_grace_cd
+						has_character_modifier = zakhara_raid_grace_cd
 					}
 				}
 				prisoner = no
 				NOT = { trait = incapable }
 				is_inaccessible_trigger = no
 			}
-			shou_lung_offmap_hostile_decisions_enabled_trigger = yes
+			zakhara_offmap_hostile_decisions_enabled_trigger = yes
 		}
 
 		effect = {
@@ -4664,18 +4664,18 @@ offmap_decisions = {
 				show_scope_change = no
 				sound_effect = china_angered_emperor
 				add_offmap_currency = {
-					offmap = shou_lung
+					offmap = zakhara
 					value = -500
 				}
 				hidden_effect = {
 					add_character_modifier = {
 						inherit = yes
-						name = shou_lung_raid_active
+						name = zakhara_raid_active
 						duration = -1
 					}
 				}
 			}
-			hidden_effect = { shou_lung = { governor = { character_event = { id = JD.3050 } } } }
+			hidden_effect = { zakhara = { governor = { character_event = { id = JD.3050 } } } }
 		}
 
 		revoke_allowed = {
@@ -4702,12 +4702,12 @@ offmap_decisions = {
 			}
 			modifier = {
 				factor = 0
-				shou_lung = { offmap_ruler = { dynasty = FROM } }
+				zakhara = { offmap_ruler = { dynasty = FROM } }
 			}
 		}
 	}
 	
-	shou_lung_stop_raid = {
+	zakhara_stop_raid = {
 		only_playable = yes
 		button_name = offmap_hostility
 		ai_check_interval = 36
@@ -4717,17 +4717,17 @@ offmap_decisions = {
 			mercenary = no
 			holy_order = no
 			is_landed = yes
-			has_character_modifier = shou_lung_raid_active
+			has_character_modifier = zakhara_raid_active
 		}
 
 		potential = {
-			is_offmap_tag = shou_lung
+			is_offmap_tag = zakhara
 		}
 
 		allow = {
 			show_only_failed_conditions = yes
 			FROM = {
-				has_character_modifier = shou_lung_raid_active
+				has_character_modifier = zakhara_raid_active
 			}
 		}
 
@@ -4736,10 +4736,10 @@ offmap_decisions = {
 			FROM = {
 				show_scope_change = no
 				sound_effect = china_grace_gain
-				remove_character_modifier = shou_lung_raid_active
+				remove_character_modifier = zakhara_raid_active
 				hidden_effect = {
 					add_character_modifier = {
-						name = shou_lung_raid_grace_cd
+						name = zakhara_raid_grace_cd
 						hidden = yes
 						years = 5
 					}
@@ -4755,7 +4755,7 @@ offmap_decisions = {
 			factor = 0.1
 			modifier = {
 				factor = 10
-				shou_lung = { offmap_ruler = { dynasty = FROM } }
+				zakhara = { offmap_ruler = { dynasty = FROM } }
 			}
 			modifier = {
 				factor = 0
@@ -4768,14 +4768,14 @@ offmap_decisions = {
 						}
 					}
 					NOT = {
-						shou_lung = { offmap_ruler = { dynasty = FROM } }
+						zakhara = { offmap_ruler = { dynasty = FROM } }
 					}
 				}
 			}
 		}
 	}
 
-	shou_lung_force_to_open = {
+	zakhara_force_to_open = {
 		only_playable = yes
 		button_name = offmap_hostility
 		ai = no
@@ -4788,8 +4788,8 @@ offmap_decisions = {
 		}
 
 		potential = {
-			is_offmap_tag = shou_lung
-			#shou_lung = { has_policy = shou_lung_isolationist }
+			is_offmap_tag = zakhara
+			#zakhara = { has_policy = zakhara_isolationist }
 		}
 
 		allow = {
@@ -4804,32 +4804,32 @@ offmap_decisions = {
 					}
 				}
 				custom_tooltip = {
-					text = force_shou_lung_open_cooldown_tt
-					NOT = { has_character_modifier = shou_lung_force_open_cooldown }
+					text = force_zakhara_open_cooldown_tt
+					NOT = { has_character_modifier = zakhara_force_open_cooldown }
 				}
 				OR = {
 					custom_tooltip = { #Borders the Western Governate
-						text = shou_lung_grace_become_tributary_allow_governor_neighbor_tt
+						text = zakhara_grace_become_tributary_allow_governor_neighbor_tt
 						any_neighbor_independent_ruler = {
-							has_landed_title = e_shou_lung_west_governor
+							has_landed_title = e_zakhara_west_governor
 						}
 					}
-					custom_tooltip = { #Borders a shou_lung tributary
-						text = shou_lung_grace_become_tributary_allow_tributary_neighbor_tt
+					custom_tooltip = { #Borders a zakhara tributary
+						text = zakhara_grace_become_tributary_allow_tributary_neighbor_tt
 						any_neighbor_independent_ruler = {
 							suzerain = {
-								has_landed_title = e_shou_lung_west_governor
+								has_landed_title = e_zakhara_west_governor
 							}
 						}
 					}
 					custom_tooltip = { #Borders the eastern edge of the map
-						text = shou_lung_grace_become_tributary_allow_shou_lung_influence_tt
+						text = zakhara_grace_become_tributary_allow_zakhara_influence_tt
 						any_realm_province = {
-							region = custom_shou_lung_invasion_target_region
+							region = custom_zakhara_invasion_target_region
 						}
 					}
-					custom_tooltip = { #Within diplo range of shou_lung and has a port in India
-						text = shou_lung_grace_become_tributary_allow_india_tt
+					custom_tooltip = { #Within diplo range of zakhara and has a port in India
+						text = zakhara_grace_become_tributary_allow_india_tt
 						any_realm_province = { 
 							port = yes 
 							region = mulhorand_region
@@ -4840,41 +4840,41 @@ offmap_decisions = {
 				NOT = { trait = incapable }
 				is_inaccessible_trigger = no
 			}
-			shou_lung = {
-				has_policy = shou_lung_isolationist
+			zakhara = {
+				has_policy = zakhara_isolationist
 			}
-			shou_lung = {
+			zakhara = {
 				custom_tooltip = {
 					text = already_at_war_tt
 					hidden_tooltip = {
 						governor = {
 							NOT = {
 								any_war = {
-									using_cb = force_open_shou_lung_cb
+									using_cb = force_open_zakhara_cb
 								}
 							}
 						}
 					}
 				}
 			}
-			shou_lung_offmap_hostile_decisions_enabled_trigger = yes
+			zakhara_offmap_hostile_decisions_enabled_trigger = yes
 		}
 
 		effect = {
 			save_event_target_as = target_governor
-			hidden_effect = { shou_lung = { set_offmap_tmp_flag = shou_lung_force_open_in_progress } }
+			hidden_effect = { zakhara = { set_offmap_tmp_flag = zakhara_force_open_in_progress } }
 			FROM = { 
 				sound_effect = china_angered_emperor
 				hidden_effect = { 
 					add_character_modifier = { 
-						name = shou_lung_force_open_cooldown
+						name = zakhara_force_open_cooldown
 						years = 15
 						hidden = yes
 					}
 				}
 				ROOT = {
 					show_scope_change = no
-					character_event = { id = JD.60300 tooltip = force_open_shou_lung_start_tt }
+					character_event = { id = JD.60300 tooltip = force_open_zakhara_start_tt }
 				}
 			}
 		}
@@ -4888,7 +4888,7 @@ offmap_decisions = {
 		}
 	}
 
-	shou_lung_tributary_break_free = {
+	zakhara_tributary_break_free = {
 		only_playable = yes
 		button_name = offmap_hostility
 		ai = no
@@ -4901,7 +4901,7 @@ offmap_decisions = {
 		}
 
 		potential = {
-			is_offmap_tag = shou_lung
+			is_offmap_tag = zakhara
 			FROM = {
 				is_tributary = {
 					type = offmap
@@ -4922,12 +4922,12 @@ offmap_decisions = {
 					target = ROOT
 					casus_belli = free_tributary_cb
 				}
-				NOT = { is_decision_allowed = tributary_independence_shou_lung }
+				NOT = { is_decision_allowed = tributary_independence_zakhara }
 				prisoner = no
 				NOT = { trait = incapable }
 				is_inaccessible_trigger = no
 			}
-			shou_lung_offmap_hostile_decisions_enabled_trigger = yes
+			zakhara_offmap_hostile_decisions_enabled_trigger = yes
 		}
 
 		effect = {
@@ -4950,7 +4950,7 @@ offmap_decisions = {
 		}
 	}
 
-	shou_lung_invade_dragon_throne = {
+	zakhara_invade_dragon_throne = {
 		only_playable = yes
 		button_name = offmap_hostility
 		
@@ -4967,7 +4967,7 @@ offmap_decisions = {
 		}
 
 		potential = {
-			is_offmap_tag = shou_lung
+			is_offmap_tag = zakhara
 			NOT = { offmap_ruler = { dynasty = FROM } }
 		}
 
@@ -4985,30 +4985,30 @@ offmap_decisions = {
 				}
 				OR = {
 					custom_tooltip = { #Borders the Western Governate
-						text = shou_lung_grace_become_tributary_allow_governor_neighbor_tt
+						text = zakhara_grace_become_tributary_allow_governor_neighbor_tt
 						any_neighbor_independent_ruler = {
-							has_landed_title = e_shou_lung_west_governor
+							has_landed_title = e_zakhara_west_governor
 						}
 					}
 					custom_tooltip = { #Borders the eastern edge of the map
-						text = shou_lung_invade_dragon_throne_eastern_edge_tt
+						text = zakhara_invade_dragon_throne_eastern_edge_tt
 						any_realm_province = {
 							region = kara_tur_region
 						}
 					}
 				}
 				custom_tooltip = {
-					text = shou_lung_invade_dragon_throne_failed_tt
-					NOT = { has_character_modifier = failed_invasion_of_shou_lung }
+					text = zakhara_invade_dragon_throne_failed_tt
+					NOT = { has_character_modifier = failed_invasion_of_zakhara }
 				}
 				can_use_cb = {
 					target = ROOT
-					casus_belli = invasion_of_shou_lung_cb
+					casus_belli = invasion_of_zakhara_cb
 					only_check_triggers = yes
 				}
 				NOT = { has_raised_levies = THIS }
 				custom_tooltip = {
-					text = shou_lung_invade_dragon_throne_levies_tt
+					text = zakhara_invade_dragon_throne_levies_tt
 					NOT = { any_vassal = { ROOT_FROM = { has_raised_levies = PREV } } }
 				}
 				NOT = { has_truce = ROOT }
@@ -5025,17 +5025,17 @@ offmap_decisions = {
 				NOT = { trait = incapable }
 				is_inaccessible_trigger = no
 			}
-			shou_lung_offmap_hostile_decisions_enabled_trigger = yes
-			shou_lung = {
+			zakhara_offmap_hostile_decisions_enabled_trigger = yes
+			zakhara = {
 				OR = {
-					has_status = shou_lung_stable
-					has_status = shou_lung_golden_age
+					has_status = zakhara_stable
+					has_status = zakhara_golden_age
 				}
 				ROOT = {
 					show_scope_change = no
 					custom_tooltip = {
-						text = shou_lung_invade_dragon_throne_war_tt
-						NOT = { any_war = { using_cb = invasion_of_shou_lung_cb } }
+						text = zakhara_invade_dragon_throne_war_tt
+						NOT = { any_war = { using_cb = invasion_of_zakhara_cb } }
 					}
 				}
 			}
@@ -5048,7 +5048,7 @@ offmap_decisions = {
 				dynasty = ROOT_FROM
 				is_adult = yes
 				NOR = {
-					courtier_from_shou_lung_trigger = yes
+					courtier_from_zakhara_trigger = yes
 					is_landed = yes
 					is_incapable = yes
 					trait = inbred
@@ -5072,74 +5072,74 @@ offmap_decisions = {
 		effect = {
 			hidden_effect = {
 				FROMFROM = { #Stop them from moving, marrying or being diplomatically dealt with
-					set_character_flag = invasion_shou_lung_claimant
+					set_character_flag = invasion_zakhara_claimant
 					set_character_flag = no_court_invites
 					add_trait = cannot_marry
 					diplomatic_immunity = yes
-					save_global_event_target_as = invasion_of_shou_lung_claimant
+					save_global_event_target_as = invasion_of_zakhara_claimant
 				}
 				ROOT = { #Set amount of troops
-					set_offmap_tmp_flag = shou_lung_war_variables_set
+					set_offmap_tmp_flag = zakhara_war_variables_set
 					set_variable = {
-						which = shou_lung_war_troop_quantity
+						which = zakhara_war_troop_quantity
 						value = 15
 						# 15 regiments of ~500 units
 					}
 					set_variable = {
-						which = shou_lung_war_target_match_mult
+						which = zakhara_war_target_match_mult
 						value = 2
 					}
 					set_variable = {
-						which = shou_lung_war_troop_quality
+						which = zakhara_war_troop_quality
 						value = 6
 						# Value between 1-7
 					}
 					set_variable = {
-						which = shou_lung_war_minimum_commander_martial
+						which = zakhara_war_minimum_commander_martial
 						value = 16
 					}
 					set_variable = { #Minimum 80k
-						which = shou_lung_war_troop_quantity_override
+						which = zakhara_war_troop_quantity_override
 						value = 160
 					}
-					save_event_target_as = invasion_of_shou_lung_govenor
+					save_event_target_as = invasion_of_zakhara_govenor
 				}
 			}
 			FROM = {
 				show_scope_change = no
 				sound_effect = china_angered_emperor
-				save_event_target_as = invasion_of_shou_lung_attacker
+				save_event_target_as = invasion_of_zakhara_attacker
 				custom_tooltip = {
-					text = shou_lung_invade_dragon_throne_modifiers_tt
+					text = zakhara_invade_dragon_throne_modifiers_tt
 					hidden_effect = {
-						set_offmap_currency = { offmap = shou_lung value = 0 }
-						remove_character_modifier = peace_deal_with_shou_lung
-						remove_character_modifier = shou_lung_grace_send_gift_timer
-						remove_character_modifier = shou_lung_grace_send_eunuch_timer
-						remove_character_modifier = shou_lung_grace_send_concubine_timer
-						remove_character_modifier = shou_lung_grace_tributary_timer
-						remove_character_modifier = jd_shou_lung_boon_cd
-						remove_character_modifier = shou_lung_force_open_cooldown
-						remove_character_modifier = angered_shou_lung_modifier
-						remove_character_modifier = shou_lung_imperial_trade_contract
+						set_offmap_currency = { offmap = zakhara value = 0 }
+						remove_character_modifier = peace_deal_with_zakhara
+						remove_character_modifier = zakhara_grace_send_gift_timer
+						remove_character_modifier = zakhara_grace_send_eunuch_timer
+						remove_character_modifier = zakhara_grace_send_concubine_timer
+						remove_character_modifier = zakhara_grace_tributary_timer
+						remove_character_modifier = jd_zakhara_boon_cd
+						remove_character_modifier = zakhara_force_open_cooldown
+						remove_character_modifier = angered_zakhara_modifier
+						remove_character_modifier = zakhara_imperial_trade_contract
 					}
 				}
 				hidden_effect = {
 					add_character_modifier = {
-						name = war_with_shou_lung_modifier
+						name = war_with_zakhara_modifier
 						inherit = yes
 						duration = -1
 					}
 					war = {
 						target = ROOT
-						casus_belli = invasion_of_shou_lung_cb
+						casus_belli = invasion_of_zakhara_cb
 					}
 				}
 			}
 			hidden_effect = {
 				any_player = {
 					limit = {
-						has_offmap_news_enabled = shou_lung
+						has_offmap_news_enabled = zakhara
 						is_within_diplo_range = ROOT
 					}
 					narrative_event = { id = JD.60400 }
