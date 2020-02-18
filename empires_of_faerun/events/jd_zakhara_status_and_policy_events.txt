@@ -1,21 +1,21 @@
 ###########################################
 #                                         #
-# shou_lung Status, Policy & News Events	  #
+# zakhara Status, Policy & News Events	  #
 #                                         #
-# ID JD.50000-JD.51000    	              #
+# ID ZA.50000-ZA.51000    	              #
 #                                         #
 ###########################################
 
-namespace = JD
+namespace = ZA
 
 # Written by: 
 # Henrik Fåhraeus
 # Alexander Oltner
 
-# New shou_lung Emperor. Pick a new Policy and send a News Event!
+# New zakhara Emperor. Pick a new Policy and send a News Event!
 # Hidden. Fired from on_offmap_ruler_changed.
 character_event = {
-	id = JD.50000
+	id = ZA.50000
 	offmap = only
 
 	has_dlc = "Jade Dragon"
@@ -23,7 +23,7 @@ character_event = {
 	is_triggered_only = yes
 	hide_window = yes
 
-	trigger = { is_offmap_tag = shou_lung }
+	trigger = { is_offmap_tag = zakhara }
     
 	immediate = {
 		FROMFROM = {
@@ -32,96 +32,96 @@ character_event = {
 				100 = { # OPEN
 					modifier = {
 						factor = 1.5
-						has_status = shou_lung_stable
+						has_status = zakhara_stable
 					}
 					modifier = {
 						factor = 5
-						has_policy = shou_lung_open
+						has_policy = zakhara_open
 						NOT = { days_since_policy_change = 10950 } #30 years
 					}
-					set_policy = shou_lung_open
+					set_policy = zakhara_open
 					log = "-------------------------------------"
-					log = "shou_lung Policy Logging:"
-					log = "shou_lungs new Policy is now OPEN"
+					log = "zakhara Policy Logging:"
+					log = "zakharas new Policy is now OPEN"
 					log = "-------------------------------------"
 				}
 				20 = { # ISOLATIONIST
 					trigger = {
 						OR = {
-							NOT = { has_offmap_tmp_flag = shou_lung_forced_open }
-							had_offmap_tmp_flag = { flag = shou_lung_forced_open years = 50 }
+							NOT = { has_offmap_tmp_flag = zakhara_forced_open }
+							had_offmap_tmp_flag = { flag = zakhara_forced_open years = 50 }
 						}
 					}
 					modifier = {
 						factor = 10
-						has_offmap_flag = shou_lung_isolationist_trend
+						has_offmap_flag = zakhara_isolationist_trend
 					}
 					modifier = { # Hard times... (negative Status)
 						factor = 2
-						shou_lung_is_suffering_trigger = yes
+						zakhara_is_suffering_trigger = yes
 					}
 					modifier = {
 						factor = 0.5
-						has_status = shou_lung_golden_age
+						has_status = zakhara_golden_age
 					}
 					modifier = {
 						factor = 5
-						has_policy = shou_lung_isolationist
+						has_policy = zakhara_isolationist
 						NOT = { days_since_policy_change = 10950 } #30 years
 					}
-					set_policy = shou_lung_isolationist
+					set_policy = zakhara_isolationist
 					log = "-------------------------------------"
-					log = "shou_lung Policy Logging:"
-					log = "shou_lungs new Policy is now ISOLATIONIST"
+					log = "zakhara Policy Logging:"
+					log = "zakharas new Policy is now ISOLATIONIST"
 					log = "-------------------------------------"
-					clr_offmap_flag = shou_lung_isolationist_trend
-					clr_offmap_tmp_flag = shou_lung_forced_open
+					clr_offmap_flag = zakhara_isolationist_trend
+					clr_offmap_tmp_flag = zakhara_forced_open
 				}
 				10 = { # EXPANSIONIST
 					trigger = {
-						NOT = { has_offmap_flag = shou_lung_badly_beaten_3 }
-						NOT = { check_variable = { which = "global_shou_lung_change_to_expansionist_count" value = 6 } }
+						NOT = { has_offmap_flag = zakhara_badly_beaten_3 }
+						NOT = { check_variable = { which = "global_zakhara_change_to_expansionist_count" value = 6 } }
 					}
 					modifier = {
 						factor = 20
-						has_offmap_flag = shou_lung_expansionist_trend
+						has_offmap_flag = zakhara_expansionist_trend
 					}
 					modifier = {
 						factor = 2
-						has_status = shou_lung_golden_age
+						has_status = zakhara_golden_age
 					}
 					modifier = {
 						factor = 0.75
-						has_offmap_flag = shou_lung_badly_beaten_1
+						has_offmap_flag = zakhara_badly_beaten_1
 					}
 					modifier = {
 						factor = 0.5
-						has_offmap_flag = shou_lung_badly_beaten_2
+						has_offmap_flag = zakhara_badly_beaten_2
 					}
 					modifier = {
 						factor = 10
-						has_policy = shou_lung_expansionist
+						has_policy = zakhara_expansionist
 						NOT = { days_since_policy_change = 14600 } #40 years
 					}
 					modifier = {
 						factor = 0.1
-						has_policy = shou_lung_expansionist
+						has_policy = zakhara_expansionist
 						days_since_policy_change = 32850 #90 years
 					}
 					modifier = {
 						factor = 0.2
-						check_variable = { which = "global_shou_lung_change_to_expansionist_count" value = 3 }
+						check_variable = { which = "global_zakhara_change_to_expansionist_count" value = 3 }
 					}
 					if = {
-						limit = { NOT = { has_policy = shou_lung_expansionist } }
-						change_variable = { which = "global_shou_lung_change_to_expansionist_count" value = 1 }
+						limit = { NOT = { has_policy = zakhara_expansionist } }
+						change_variable = { which = "global_zakhara_change_to_expansionist_count" value = 1 }
 					}
-					set_policy = shou_lung_expansionist
+					set_policy = zakhara_expansionist
 					log = "-------------------------------------"
-					log = "shou_lung Policy Logging:"
-					log = "shou_lungs new Policy is now EXPANSIONIST"
+					log = "zakhara Policy Logging:"
+					log = "zakharas new Policy is now EXPANSIONIST"
 					log = "-------------------------------------"
-					clr_offmap_flag = shou_lung_expansionist_trend
+					clr_offmap_flag = zakhara_expansionist_trend
 				}
 			}
 		}
@@ -133,7 +133,7 @@ character_event = {
 					has_offmap_news_enabled = FROMFROM
 					is_within_diplo_range = ROOT
 				}
-				narrative_event = { id = JD.50001 }
+				narrative_event = { id = ZA.50001 }
 			}
 		}
 		
@@ -144,17 +144,17 @@ character_event = {
 	}
 }
 
-# News from shou_lung: A new Emperor
+# News from zakhara: A new Emperor
 narrative_event = {
- 	id = JD.50001
-	title = NEWS_FROM_shou_lung
+ 	id = ZA.50001
+	title = NEWS_FROM_zakhara
 	picture = GFX_evt_china_golden_age
-	portrait = shou_lung
+	portrait = zakhara
 	window = EventWindowOffmap
 	background = GFX_event_window_news_from_china
 	
 	immediate = {
-		shou_lung = {
+		zakhara = {
 			ruler = {
 				save_event_target_as = portrait_target
 			}
@@ -168,16 +168,16 @@ narrative_event = {
 			FROM = {
 				OR = {
 					AND = {
-						prev_policy = shou_lung_open
-						has_policy = shou_lung_open
+						prev_policy = zakhara_open
+						has_policy = zakhara_open
 					}
 					AND = {
-						prev_policy = shou_lung_isolationist
-						has_policy = shou_lung_isolationist
+						prev_policy = zakhara_isolationist
+						has_policy = zakhara_isolationist
 					}
 					AND = {
-						prev_policy = shou_lung_expansionist
-						has_policy = shou_lung_expansionist
+						prev_policy = zakhara_expansionist
+						has_policy = zakhara_expansionist
 					}
 				}
 				FROM = {
@@ -185,23 +185,23 @@ narrative_event = {
 				}
 			}
 		}
-		text = EVTDESC_JD_50001
+		text = EVTDESC_ZA_50001
 	}
 	desc = {
 		trigger = {
 			FROM = {
 				OR = {
 					AND = {
-						prev_policy = shou_lung_open
-						has_policy = shou_lung_open
+						prev_policy = zakhara_open
+						has_policy = zakhara_open
 					}
 					AND = {
-						prev_policy = shou_lung_isolationist
-						has_policy = shou_lung_isolationist
+						prev_policy = zakhara_isolationist
+						has_policy = zakhara_isolationist
 					}
 					AND = {
-						prev_policy = shou_lung_expansionist
-						has_policy = shou_lung_expansionist
+						prev_policy = zakhara_expansionist
+						has_policy = zakhara_expansionist
 					}
 				}
 				FROM = {
@@ -209,23 +209,23 @@ narrative_event = {
 				}
 			}
 		}
-		text = EVTDESC_JD_50001_NEW_DYN
+		text = EVTDESC_ZA_50001_NEW_DYN
 	}
 	desc = {
 		trigger = {
 			FROM = {
 				OR = {
 					AND = {
-						prev_policy = shou_lung_open
-						NOT = { has_policy = shou_lung_open }
+						prev_policy = zakhara_open
+						NOT = { has_policy = zakhara_open }
 					}
 					AND = {
-						prev_policy = shou_lung_isolationist
-						NOT = { has_policy = shou_lung_isolationist }
+						prev_policy = zakhara_isolationist
+						NOT = { has_policy = zakhara_isolationist }
 					}
 					AND = {
-						prev_policy = shou_lung_expansionist
-						NOT = { has_policy = shou_lung_expansionist }
+						prev_policy = zakhara_expansionist
+						NOT = { has_policy = zakhara_expansionist }
 					}
 				}
 				FROM = {
@@ -233,23 +233,23 @@ narrative_event = {
 				}
 			}
 		}
-		text = EVTDESC_JD_50001_NEW_POLICY
+		text = EVTDESC_ZA_50001_NEW_POLICY
 	}
 	desc = {
 		trigger = {
 			FROM = {
 				OR = {
 					AND = {
-						prev_policy = shou_lung_open
-						NOT = { has_policy = shou_lung_open }
+						prev_policy = zakhara_open
+						NOT = { has_policy = zakhara_open }
 					}
 					AND = {
-						prev_policy = shou_lung_isolationist
-						NOT = { has_policy = shou_lung_isolationist }
+						prev_policy = zakhara_isolationist
+						NOT = { has_policy = zakhara_isolationist }
 					}
 					AND = {
-						prev_policy = shou_lung_expansionist
-						NOT = { has_policy = shou_lung_expansionist }
+						prev_policy = zakhara_expansionist
+						NOT = { has_policy = zakhara_expansionist }
 					}
 				}
 				FROM = {
@@ -257,7 +257,7 @@ narrative_event = {
 				}
 			}
 		}
-		text = EVTDESC_JD_50001_NEW_DYN_NEW_POLICY
+		text = EVTDESC_ZA_50001_NEW_DYN_NEW_POLICY
 	}
 
 	has_dlc = "Jade Dragon"
@@ -265,16 +265,16 @@ narrative_event = {
     is_triggered_only = yes
 	
 	option = {
-		name = EVTOPT_JD_50001_OPEN
+		name = EVTOPT_ZA_50001_OPEN
 		trigger = {
-			FROM = { has_policy = shou_lung_open }
+			FROM = { has_policy = zakhara_open }
 			OR = {
-				NOT = { has_character_modifier = peace_deal_with_shou_lung }
+				NOT = { has_character_modifier = peace_deal_with_zakhara }
 				FROM = { FROM = { dynasty = PREV } }
 			}
 		}
 		if = {
-			limit = { has_character_flag = was_tributary_of_shou_lung }
+			limit = { has_character_flag = was_tributary_of_zakhara }
 			tooltip = {
 				FROM = {
 					show_scope_change = no
@@ -283,20 +283,20 @@ narrative_event = {
 					}
 				}
 			}
-			clr_character_flag = was_tributary_of_shou_lung
+			clr_character_flag = was_tributary_of_zakhara
 		}
 	}
 	option = {
-		name = EVTOPT_JD_50001_ISO
+		name = EVTOPT_ZA_50001_ISO
 		trigger = {
-			FROM = { has_policy = shou_lung_isolationist }
+			FROM = { has_policy = zakhara_isolationist }
 			OR = {
-				NOT = { has_character_modifier = peace_deal_with_shou_lung }
+				NOT = { has_character_modifier = peace_deal_with_zakhara }
 				FROM = { FROM = { dynasty = PREV } }
 			}
 		}
 		if = {
-			limit = { has_character_flag = was_tributary_of_shou_lung }
+			limit = { has_character_flag = was_tributary_of_zakhara }
 			tooltip = {
 				FROM = {
 					show_scope_change = no
@@ -305,20 +305,20 @@ narrative_event = {
 					}
 				}
 			}
-			clr_character_flag = was_tributary_of_shou_lung
+			clr_character_flag = was_tributary_of_zakhara
 		}
 	}
 	option = {
-		name = EVTOPT_JD_50001_EXP
+		name = EVTOPT_ZA_50001_EXP
 		trigger = {
-			FROM = { has_policy = shou_lung_expansionist }
+			FROM = { has_policy = zakhara_expansionist }
 			OR = {
-				NOT = { has_character_modifier = peace_deal_with_shou_lung }
+				NOT = { has_character_modifier = peace_deal_with_zakhara }
 				FROM = { FROM = { dynasty = PREV } }
 			}
 		}
 		if = {
-			limit = { has_character_flag = was_tributary_of_shou_lung }
+			limit = { has_character_flag = was_tributary_of_zakhara }
 			tooltip = {
 				FROM = {
 					show_scope_change = no
@@ -327,18 +327,18 @@ narrative_event = {
 					}
 				}
 			}
-			clr_character_flag = was_tributary_of_shou_lung
+			clr_character_flag = was_tributary_of_zakhara
 		}
 	}
 	
 	option = {
-		name = EVTOPT_JD_50302_BROKEN_PEACE_DEAL
+		name = EVTOPT_ZA_50302_BROKEN_PEACE_DEAL
 		trigger = {
-			has_character_modifier = peace_deal_with_shou_lung
+			has_character_modifier = peace_deal_with_zakhara
 			FROM = { FROM = { NOT  = { dynasty = PREV } } }
 		}
 		if = {
-			limit = { has_character_flag = was_tributary_of_shou_lung }
+			limit = { has_character_flag = was_tributary_of_zakhara }
 			tooltip = {
 				FROM = {
 					show_scope_change = no
@@ -347,9 +347,9 @@ narrative_event = {
 					}
 				}
 			}
-			clr_character_flag = was_tributary_of_shou_lung
+			clr_character_flag = was_tributary_of_zakhara
 		}
-		remove_character_modifier = peace_deal_with_shou_lung
+		remove_character_modifier = peace_deal_with_zakhara
 	}
 }
 
@@ -358,7 +358,7 @@ narrative_event = {
 # Root = Governor
 # From = Offmap
 character_event = {
-    id = JD.50020
+    id = ZA.50020
 
     has_dlc = "Jade Dragon"
 
@@ -368,7 +368,7 @@ character_event = {
 	trigger = {
 		FROM = {
 			NOT = { has_offmap_flag = no_policy_news }
-			is_offmap_tag = shou_lung
+			is_offmap_tag = zakhara
 		}
 	}
     
@@ -378,33 +378,33 @@ character_event = {
 				has_offmap_news_enabled = FROM
 				is_within_diplo_range = ROOT
 			}
-			narrative_event = { id = JD.50021 }
+			narrative_event = { id = ZA.50021 }
 		}
 	}
 }
 
-# News from shou_lung: New Policy Picked
+# News from zakhara: New Policy Picked
 narrative_event = {
-	id = JD.50021
-	title = NEWS_FROM_shou_lung
-	portrait = shou_lung
+	id = ZA.50021
+	title = NEWS_FROM_zakhara
+	portrait = zakhara
 	window = EventWindowOffmap
 	background = GFX_event_window_news_from_china
 	
 	desc = {
-		trigger = { FROMFROM = { has_policy = shou_lung_open } }
-		picture = GFX_evt_shou_lung_open
-		text = EVTDESC_JD_50021_OPEN
+		trigger = { FROMFROM = { has_policy = zakhara_open } }
+		picture = GFX_evt_zakhara_open
+		text = EVTDESC_ZA_50021_OPEN
 	}
 	desc = {
-		trigger = { FROMFROM = { has_policy = shou_lung_isolationist } }
-		picture = GFX_evt_shou_lung_isolationist
-		text = EVTDESC_JD_50021_ISO
+		trigger = { FROMFROM = { has_policy = zakhara_isolationist } }
+		picture = GFX_evt_zakhara_isolationist
+		text = EVTDESC_ZA_50021_ISO
 	}
 	desc = {
-		trigger = { FROMFROM = { has_policy = shou_lung_expansionist } }
-		picture = GFX_evt_shou_lung_expansionist
-		text = EVTDESC_JD_50021_EXP
+		trigger = { FROMFROM = { has_policy = zakhara_expansionist } }
+		picture = GFX_evt_zakhara_expansionist
+		text = EVTDESC_ZA_50021_EXP
 	}
 
 	has_dlc = "Jade Dragon"
@@ -412,7 +412,7 @@ narrative_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		shou_lung = {
+		zakhara = {
 			ruler = {
 				save_event_target_as = portrait_target
 			}
@@ -423,38 +423,38 @@ narrative_event = {
 	
 	
 	option = {
-		name = EVTOPT_JD_50001_OPEN
-		trigger = { FROMFROM = { has_policy = shou_lung_open } }
+		name = EVTOPT_ZA_50001_OPEN
+		trigger = { FROMFROM = { has_policy = zakhara_open } }
 	}
 	option = {
-		name = EVTOPT_JD_50021_ISO
-		trigger = { FROMFROM = { has_policy = shou_lung_isolationist } }
+		name = EVTOPT_ZA_50021_ISO
+		trigger = { FROMFROM = { has_policy = zakhara_isolationist } }
 	}
 	option = {
-		name = EVTOPT_JD_50001_EXP
-		trigger = { FROMFROM = { has_policy = shou_lung_expansionist } }
+		name = EVTOPT_ZA_50001_EXP
+		trigger = { FROMFROM = { has_policy = zakhara_expansionist } }
 	}
 }
 
 
-# New shou_lung Status
+# New zakhara Status
 # Hidden. Fired from on_offmap_status_changed.
 # Root = Governor
 # From = Offmap
 character_event = {
-	id = JD.50030
+	id = ZA.50030
 
 	has_dlc = "Jade Dragon"
 
 	is_triggered_only = yes
 	hide_window = yes
 
-	trigger = { FROM = { is_offmap_tag = shou_lung } }
+	trigger = { FROM = { is_offmap_tag = zakhara } }
     
 	immediate = {
 		FROM = {
-			clr_offmap_flag = shou_lung_tu_lung_invasion
-			clr_offmap_flag = shou_lung_tuigan_invasion
+			clr_offmap_flag = zakhara_pantheist_invasion
+			clr_offmap_flag = zakhara_badia_invasion
 		}
 		
 		if = {
@@ -468,59 +468,59 @@ character_event = {
 					has_offmap_news_enabled = FROM
 					is_within_diplo_range = ROOT
 				}
-				narrative_event = { id = JD.50031 }
+				narrative_event = { id = ZA.50031 }
 			}
 		}
 	}
 }
 
-# News from shou_lung: New Status
+# News from zakhara: New Status
 narrative_event = {
-	id = JD.50031
-	title = NEWS_FROM_shou_lung
-	portrait = shou_lung
+	id = ZA.50031
+	title = NEWS_FROM_zakhara
+	portrait = zakhara
 	window = EventWindowOffmap
 	background = GFX_event_window_news_from_china
 	
 	desc = {
-		trigger = { FROMFROM = { has_status = shou_lung_stable } }
+		trigger = { FROMFROM = { has_status = zakhara_stable } }
 		picture = GFX_evt_china_stable
-		text = EVTDESC_JD_50031_STABLE
+		text = EVTDESC_ZA_50031_STABLE
 	}
 	desc = {
-		trigger = { FROMFROM = { has_status = shou_lung_unrest } }
+		trigger = { FROMFROM = { has_status = zakhara_unrest } }
 		picture = GFX_evt_china_unrest
-		text = EVTDESC_JD_50031_UNREST
+		text = EVTDESC_ZA_50031_UNREST
 	}
 	desc = {
-		trigger = { FROMFROM = { has_status = shou_lung_famine } }
+		trigger = { FROMFROM = { has_status = zakhara_famine } }
 		picture = GFX_evt_china_famine
-		text = EVTDESC_JD_50031_FAMINE
+		text = EVTDESC_ZA_50031_FAMINE
 	}
 	desc = {
-		trigger = { FROMFROM = { has_status = shou_lung_plague } }
+		trigger = { FROMFROM = { has_status = zakhara_plague } }
 		picture = GFX_evt_china_devastating_plague
-		text = EVTDESC_JD_50031_PLAGUE
+		text = EVTDESC_ZA_50031_PLAGUE
 	}
 	desc = {
-		trigger = { FROMFROM = { has_status = shou_lung_tu_lung_invasion } }
+		trigger = { FROMFROM = { has_status = zakhara_pantheist_invasion } }
 		picture = GFX_evt_china_mongols_invade
-		text = EVTDESC_JD_50031_tu_lung
+		text = EVTDESC_ZA_50031_tu_lung
 	}
 	desc = {
-		trigger = { FROMFROM = { has_status = shou_lung_tuigan_invasion } }
+		trigger = { FROMFROM = { has_status = zakhara_badia_invasion } }
 		picture = GFX_evt_china_mongols_invade
-		text = EVTDESC_JD_50031_tuigan
+		text = EVTDESC_ZA_50031_tuigan
 	}
 	desc = {
-		trigger = { FROMFROM = { has_status = shou_lung_civil_war } }
+		trigger = { FROMFROM = { has_status = zakhara_civil_war } }
 		picture = GFX_evt_china_civil_war
-		text = EVTDESC_JD_50031_CW
+		text = EVTDESC_ZA_50031_CW
 	}
 	desc = {
-		trigger = { FROMFROM = { has_status = shou_lung_golden_age } }
+		trigger = { FROMFROM = { has_status = zakhara_golden_age } }
 		picture = GFX_evt_china_golden_age
-		text = EVTDESC_JD_50031_GOLDEN
+		text = EVTDESC_ZA_50031_GOLDEN
 	}
 
 	has_dlc = "Jade Dragon"
@@ -528,7 +528,7 @@ narrative_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		shou_lung = {
+		zakhara = {
 			ruler = {
 				save_event_target_as = portrait_target
 			}
@@ -548,7 +548,7 @@ narrative_event = {
 # Root = Governor
 # From = Offmap
 character_event = {
-	id = JD.50100
+	id = ZA.50100
 
 	has_dlc = "Jade Dragon"
 
@@ -557,12 +557,12 @@ character_event = {
 	
 	trigger = {
 		FROM = {
-			is_offmap_tag = shou_lung
+			is_offmap_tag = zakhara
 			NOR = {
-				has_status = shou_lung_stable
-				has_status = shou_lung_tu_lung_invasion # Resolution handled by JD.50160
-				has_status = shou_lung_tuigan_invasion # Resolution handled by JD.50200
-				has_status = shou_lung_civil_war # Resolution handled by JD.50300
+				has_status = zakhara_stable
+				has_status = zakhara_pantheist_invasion # Resolution handled by ZA.50160
+				has_status = zakhara_badia_invasion # Resolution handled by ZA.50200
+				has_status = zakhara_civil_war # Resolution handled by ZA.50300
 			}
 		}
 	}
@@ -572,160 +572,160 @@ character_event = {
 		modifier = { # Unrest last for at least 2 years before becoming Stable/Civil War
 			factor = 0
 			FROM = {
-				has_status = shou_lung_unrest
-				has_offmap_flag = shou_lung_had_unrest
+				has_status = zakhara_unrest
+				has_offmap_flag = zakhara_had_unrest
 				NOT = {
-					had_offmap_tmp_flag = { flag = shou_lung_had_unrest years = 2 }
+					had_offmap_tmp_flag = { flag = zakhara_had_unrest years = 2 }
 				}
 			}
 		}
 		modifier = {
 			factor = 2
 			FROM = {
-				has_status = shou_lung_unrest
-				has_offmap_flag = shou_lung_had_unrest
-				had_offmap_tmp_flag = { flag = shou_lung_had_unrest years = 8 }
+				has_status = zakhara_unrest
+				has_offmap_flag = zakhara_had_unrest
+				had_offmap_tmp_flag = { flag = zakhara_had_unrest years = 8 }
 			}
 		}
 		modifier = {
 			factor = 1.5
 			FROM = {
-				has_status = shou_lung_unrest
-				has_offmap_flag = shou_lung_had_unrest
-				had_offmap_tmp_flag = { flag = shou_lung_had_unrest years = 10 }
+				has_status = zakhara_unrest
+				has_offmap_flag = zakhara_had_unrest
+				had_offmap_tmp_flag = { flag = zakhara_had_unrest years = 10 }
 			}
 		}
 		modifier = {
 			factor = 1.5
 			FROM = {
-				has_status = shou_lung_unrest
-				has_offmap_flag = shou_lung_had_unrest
-				had_offmap_tmp_flag = { flag = shou_lung_had_unrest years = 12 }
+				has_status = zakhara_unrest
+				has_offmap_flag = zakhara_had_unrest
+				had_offmap_tmp_flag = { flag = zakhara_had_unrest years = 12 }
 			}
 		}
 		modifier = {
 			factor = 1.5
 			FROM = {
-				has_status = shou_lung_unrest
-				has_offmap_flag = shou_lung_had_unrest
-				had_offmap_tmp_flag = { flag = shou_lung_had_unrest years = 14 }
+				has_status = zakhara_unrest
+				has_offmap_flag = zakhara_had_unrest
+				had_offmap_tmp_flag = { flag = zakhara_had_unrest years = 14 }
 			}
 		}
 		modifier = {
 			factor = 1.5
 			FROM = {
-				has_status = shou_lung_unrest
-				has_offmap_flag = shou_lung_had_unrest
-				had_offmap_tmp_flag = { flag = shou_lung_had_unrest years = 16 }
+				has_status = zakhara_unrest
+				has_offmap_flag = zakhara_had_unrest
+				had_offmap_tmp_flag = { flag = zakhara_had_unrest years = 16 }
 			}
 		}
 		modifier = { # Famines last for at least 4 years
 			factor = 0
 			FROM = {
-				has_status = shou_lung_famine
-				has_offmap_flag = shou_lung_had_famine
+				has_status = zakhara_famine
+				has_offmap_flag = zakhara_had_famine
 				NOT = {
-					had_offmap_tmp_flag = { flag = shou_lung_had_famine years = 4 }
+					had_offmap_tmp_flag = { flag = zakhara_had_famine years = 4 }
 				}
 			}
 		}
 		modifier = { # Plagues last for at least 2 years
 			factor = 0
 			FROM = {
-				has_status = shou_lung_plague
-				has_offmap_flag = shou_lung_had_plague
+				has_status = zakhara_plague
+				has_offmap_flag = zakhara_had_plague
 				NOT = {
-					had_offmap_tmp_flag = { flag = shou_lung_had_plague years = 2 }
+					had_offmap_tmp_flag = { flag = zakhara_had_plague years = 2 }
 				}
 			}
 		}
 		modifier = {
 			factor = 1.25
 			FROM = {
-				has_status = shou_lung_famine
-				has_offmap_flag = shou_lung_had_famine
-				had_offmap_tmp_flag = { flag = shou_lung_had_famine years = 6 }
+				has_status = zakhara_famine
+				has_offmap_flag = zakhara_had_famine
+				had_offmap_tmp_flag = { flag = zakhara_had_famine years = 6 }
 			}
 		}
 		modifier = {
 			factor = 1.25
 			FROM = {
-				has_status = shou_lung_plague
-				has_offmap_flag = shou_lung_had_plague
-				had_offmap_tmp_flag = { flag = shou_lung_had_plague years = 3 }
+				has_status = zakhara_plague
+				has_offmap_flag = zakhara_had_plague
+				had_offmap_tmp_flag = { flag = zakhara_had_plague years = 3 }
 			}
 		}
 		modifier = {
 			factor = 1.5
 			FROM = {
-				has_status = shou_lung_famine
-				has_offmap_flag = shou_lung_had_famine
-				had_offmap_tmp_flag = { flag = shou_lung_had_famine years = 8 }
+				has_status = zakhara_famine
+				has_offmap_flag = zakhara_had_famine
+				had_offmap_tmp_flag = { flag = zakhara_had_famine years = 8 }
 			}
 		}
 		modifier = {
 			factor = 1.5
 			FROM = {
-				has_status = shou_lung_plague
-				has_offmap_flag = shou_lung_had_plague
-				had_offmap_tmp_flag = { flag = shou_lung_had_plague years = 5 }
+				has_status = zakhara_plague
+				has_offmap_flag = zakhara_had_plague
+				had_offmap_tmp_flag = { flag = zakhara_had_plague years = 5 }
 			}
 		}
 		modifier = {
 			factor = 2
 			FROM = {
-				has_status = shou_lung_famine
-				has_offmap_flag = shou_lung_had_famine
-				had_offmap_tmp_flag = { flag = shou_lung_had_famine years = 10 }
+				has_status = zakhara_famine
+				has_offmap_flag = zakhara_had_famine
+				had_offmap_tmp_flag = { flag = zakhara_had_famine years = 10 }
 			}
 		}
 		modifier = {
 			factor = 2
 			FROM = {
-				has_status = shou_lung_plague
-				has_offmap_flag = shou_lung_had_plague
-				had_offmap_tmp_flag = { flag = shou_lung_had_plague years = 7 }
+				has_status = zakhara_plague
+				has_offmap_flag = zakhara_had_plague
+				had_offmap_tmp_flag = { flag = zakhara_had_plague years = 7 }
 			}
 		}
 		modifier = { # Golden ages last at least 50 years
 			factor = 0
 			FROM = {
-				has_status = shou_lung_golden_age
-				has_offmap_flag = shou_lung_had_golden_age
+				has_status = zakhara_golden_age
+				has_offmap_flag = zakhara_had_golden_age
 				NOT = {
-					had_offmap_tmp_flag = { flag = shou_lung_had_golden_age years = 50 }
+					had_offmap_tmp_flag = { flag = zakhara_had_golden_age years = 50 }
 				}
 			}
 		}
 		modifier = {
 			factor = 1.25
 			FROM = {
-				has_status = shou_lung_golden_age
-				has_offmap_flag = shou_lung_had_golden_age
-				had_offmap_tmp_flag = { flag = shou_lung_had_golden_age years = 60 }
+				has_status = zakhara_golden_age
+				has_offmap_flag = zakhara_had_golden_age
+				had_offmap_tmp_flag = { flag = zakhara_had_golden_age years = 60 }
 			}
 		}
 		modifier = {
 			factor = 1.5
 			FROM = {
-				has_status = shou_lung_golden_age
-				has_offmap_flag = shou_lung_had_golden_age
-				had_offmap_tmp_flag = { flag = shou_lung_had_golden_age years = 70 }
+				has_status = zakhara_golden_age
+				has_offmap_flag = zakhara_had_golden_age
+				had_offmap_tmp_flag = { flag = zakhara_had_golden_age years = 70 }
 			}
 		}
 		modifier = {
 			factor = 2
 			FROM = {
-				has_status = shou_lung_golden_age
-				has_offmap_flag = shou_lung_had_golden_age
-				had_offmap_tmp_flag = { flag = shou_lung_had_golden_age years = 80 }
+				has_status = zakhara_golden_age
+				has_offmap_flag = zakhara_had_golden_age
+				had_offmap_tmp_flag = { flag = zakhara_had_golden_age years = 80 }
 			}
 		}
 	}
     
 	immediate = {
 		FROM = {
-			set_status = shou_lung_stable # Players will be notified by JD.50030
+			set_status = zakhara_stable # Players will be notified by ZA.50030
 		}
 	}
 }
@@ -735,7 +735,7 @@ character_event = {
 # Root = Governor
 # From = Offmap
 character_event = {
-	id = JD.50120
+	id = ZA.50120
 
 	has_dlc = "Jade Dragon"
 
@@ -744,12 +744,12 @@ character_event = {
 	
 	trigger = {
 		FROM = {
-			is_offmap_tag = shou_lung
+			is_offmap_tag = zakhara
 			NOR = {
-				has_status = shou_lung_unrest
-				has_status = shou_lung_tu_lung_invasion # Resolution handled by JD.50160
-				has_status = shou_lung_tuigan_invasion # Resolution handled by JD.50200
-				has_status = shou_lung_civil_war # Resolution handled by JD.50300
+				has_status = zakhara_unrest
+				has_status = zakhara_pantheist_invasion # Resolution handled by ZA.50160
+				has_status = zakhara_badia_invasion # Resolution handled by ZA.50200
+				has_status = zakhara_civil_war # Resolution handled by ZA.50300
 			}
 		}
 	}
@@ -759,34 +759,34 @@ character_event = {
 		modifier = { # Slightly less likely to get unrest if things are fine
 			factor = 0.75
 			FROM = {
-				has_status = shou_lung_stable
+				has_status = zakhara_stable
 			}
 		}
 		modifier = { # Golden ages are very unlikely to end with Unrest
 			factor = 0.01
-			FROM = { has_status = shou_lung_golden_age }
+			FROM = { has_status = zakhara_golden_age }
 		}
 		modifier = { # Famines last for at least 4 years
 			factor = 0
 			FROM = {
-				has_status = shou_lung_famine
-				has_offmap_flag = shou_lung_had_famine
+				has_status = zakhara_famine
+				has_offmap_flag = zakhara_had_famine
 				NOT = {
-					had_offmap_tmp_flag = { flag = shou_lung_had_famine years = 4 }
+					had_offmap_tmp_flag = { flag = zakhara_had_famine years = 4 }
 				}
 			}
 		}
 		modifier = { # Plagues last for at least 2 years
 			factor = 0
 			FROM = {
-				has_status = shou_lung_plague
-				has_offmap_flag = shou_lung_had_plague
+				has_status = zakhara_plague
+				has_offmap_flag = zakhara_had_plague
 				NOT = {
-					had_offmap_tmp_flag = { flag = shou_lung_had_plague years = 2 }
+					had_offmap_tmp_flag = { flag = zakhara_had_plague years = 2 }
 				}
 			}
 		}
-		modifier = { # Slightly more likely to get Unrest if non-shou_lung emperor
+		modifier = { # Slightly more likely to get Unrest if non-zakhara emperor
 			factor = 1.25
 			FROM = {
 				NOT = {
@@ -797,57 +797,57 @@ character_event = {
 		modifier = {
 			factor = 1.25
 			FROM = {
-				has_status = shou_lung_famine
-				has_offmap_flag = shou_lung_had_famine
-				had_offmap_tmp_flag = { flag = shou_lung_had_famine years = 6 }
+				has_status = zakhara_famine
+				has_offmap_flag = zakhara_had_famine
+				had_offmap_tmp_flag = { flag = zakhara_had_famine years = 6 }
 			}
 		}
 		modifier = {
 			factor = 1.25
 			FROM = {
-				has_status = shou_lung_plague
-				has_offmap_flag = shou_lung_had_plague
-				had_offmap_tmp_flag = { flag = shou_lung_had_plague years = 3 }
+				has_status = zakhara_plague
+				has_offmap_flag = zakhara_had_plague
+				had_offmap_tmp_flag = { flag = zakhara_had_plague years = 3 }
 			}
 		}
 		modifier = {
 			factor = 1.5
 			FROM = {
-				has_status = shou_lung_famine
-				has_offmap_flag = shou_lung_had_famine
-				had_offmap_tmp_flag = { flag = shou_lung_had_famine years = 8 }
+				has_status = zakhara_famine
+				has_offmap_flag = zakhara_had_famine
+				had_offmap_tmp_flag = { flag = zakhara_had_famine years = 8 }
 			}
 		}
 		modifier = {
 			factor = 1.5
 			FROM = {
-				has_status = shou_lung_plague
-				has_offmap_flag = shou_lung_had_plague
-				had_offmap_tmp_flag = { flag = shou_lung_had_plague years = 5 }
+				has_status = zakhara_plague
+				has_offmap_flag = zakhara_had_plague
+				had_offmap_tmp_flag = { flag = zakhara_had_plague years = 5 }
 			}
 		}
 		modifier = {
 			factor = 2
 			FROM = {
-				has_status = shou_lung_famine
-				has_offmap_flag = shou_lung_had_famine
-				had_offmap_tmp_flag = { flag = shou_lung_had_famine years = 10 }
+				has_status = zakhara_famine
+				has_offmap_flag = zakhara_had_famine
+				had_offmap_tmp_flag = { flag = zakhara_had_famine years = 10 }
 			}
 		}
 		modifier = {
 			factor = 2
 			FROM = {
-				has_status = shou_lung_plague
-				has_offmap_flag = shou_lung_had_plague
-				had_offmap_tmp_flag = { flag = shou_lung_had_plague years = 7 }
+				has_status = zakhara_plague
+				has_offmap_flag = zakhara_had_plague
+				had_offmap_tmp_flag = { flag = zakhara_had_plague years = 7 }
 			}
 		}
 	}
 	
 	immediate = {
 		FROM = {
-			set_offmap_flag = shou_lung_had_unrest
-			set_status = shou_lung_unrest # Players will be notified by JD.50030
+			set_offmap_flag = zakhara_had_unrest
+			set_status = zakhara_unrest # Players will be notified by ZA.50030
 		}
 	}
 }
@@ -857,7 +857,7 @@ character_event = {
 # Root = Governor
 # From = Offmap
 character_event = {
-	id = JD.50140
+	id = ZA.50140
 
 	has_dlc = "Jade Dragon"
 
@@ -866,15 +866,15 @@ character_event = {
 	
 	trigger = {
 		FROM = {
-			is_offmap_tag = shou_lung
+			is_offmap_tag = zakhara
 			NOR = {
-				has_status = shou_lung_tu_lung_invasion # Resolution handled by JD.50160
-				has_status = shou_lung_tuigan_invasion # Resolution handled by JD.50200
-				has_status = shou_lung_civil_war # Resolution handled by JD.50300
+				has_status = zakhara_pantheist_invasion # Resolution handled by ZA.50160
+				has_status = zakhara_badia_invasion # Resolution handled by ZA.50200
+				has_status = zakhara_civil_war # Resolution handled by ZA.50300
 			}
 			OR = {
-				NOT = { has_offmap_flag = shou_lung_invaded_player_dynasty }
-				had_offmap_tmp_flag = { flag = shou_lung_invaded_player_dynasty years = 200 }
+				NOT = { has_offmap_flag = zakhara_invaded_player_dynasty }
+				had_offmap_tmp_flag = { flag = zakhara_invaded_player_dynasty years = 200 }
 			}
 		}
 	}
@@ -884,93 +884,93 @@ character_event = {
 		modifier = { # Unrest increases the chance of an invasion
 			factor = 3
 			FROM = {
-				has_status = shou_lung_unrest
-				has_offmap_flag = shou_lung_had_unrest
-				had_offmap_tmp_flag = { flag = shou_lung_had_unrest years = 2 }
+				has_status = zakhara_unrest
+				has_offmap_flag = zakhara_had_unrest
+				had_offmap_tmp_flag = { flag = zakhara_had_unrest years = 2 }
 			}
 		}
 		modifier = {
 			factor = 1.5
 			FROM = {
-				has_status = shou_lung_unrest
-				has_offmap_flag = shou_lung_had_unrest
-				had_offmap_tmp_flag = { flag = shou_lung_had_unrest years = 4 }
+				has_status = zakhara_unrest
+				has_offmap_flag = zakhara_had_unrest
+				had_offmap_tmp_flag = { flag = zakhara_had_unrest years = 4 }
 			}
 		}
 		modifier = {
 			factor = 1.5
 			FROM = {
-				has_status = shou_lung_unrest
-				has_offmap_flag = shou_lung_had_unrest
-				had_offmap_tmp_flag = { flag = shou_lung_had_unrest years = 6 }
+				has_status = zakhara_unrest
+				has_offmap_flag = zakhara_had_unrest
+				had_offmap_tmp_flag = { flag = zakhara_had_unrest years = 6 }
 			}
 		}
 		modifier = { # Famines last for at least 4 years
 			factor = 0
 			FROM = {
-				has_status = shou_lung_famine
-				has_offmap_flag = shou_lung_had_famine
+				has_status = zakhara_famine
+				has_offmap_flag = zakhara_had_famine
 				NOT = {
-					had_offmap_tmp_flag = { flag = shou_lung_had_famine years = 4 }
+					had_offmap_tmp_flag = { flag = zakhara_had_famine years = 4 }
 				}
 			}
 		}
 		modifier = { # Plagues last for at least 2 years
 			factor = 0
 			FROM = {
-				has_status = shou_lung_plague
-				has_offmap_flag = shou_lung_had_plague
+				has_status = zakhara_plague
+				has_offmap_flag = zakhara_had_plague
 				NOT = {
-					had_offmap_tmp_flag = { flag = shou_lung_had_plague years = 2 }
+					had_offmap_tmp_flag = { flag = zakhara_had_plague years = 2 }
 				}
 			}
 		}
 		modifier = {
 			factor = 1.25
 			FROM = {
-				has_status = shou_lung_famine
-				has_offmap_flag = shou_lung_had_famine
-				had_offmap_tmp_flag = { flag = shou_lung_had_famine years = 6 }
+				has_status = zakhara_famine
+				has_offmap_flag = zakhara_had_famine
+				had_offmap_tmp_flag = { flag = zakhara_had_famine years = 6 }
 			}
 		}
 		modifier = {
 			factor = 1.25
 			FROM = {
-				has_status = shou_lung_plague
-				has_offmap_flag = shou_lung_had_plague
-				had_offmap_tmp_flag = { flag = shou_lung_had_plague years = 3 }
+				has_status = zakhara_plague
+				has_offmap_flag = zakhara_had_plague
+				had_offmap_tmp_flag = { flag = zakhara_had_plague years = 3 }
 			}
 		}
 		modifier = {
 			factor = 1.5
 			FROM = {
-				has_status = shou_lung_famine
-				has_offmap_flag = shou_lung_had_famine
-				had_offmap_tmp_flag = { flag = shou_lung_had_famine years = 8 }
+				has_status = zakhara_famine
+				has_offmap_flag = zakhara_had_famine
+				had_offmap_tmp_flag = { flag = zakhara_had_famine years = 8 }
 			}
 		}
 		modifier = {
 			factor = 1.5
 			FROM = {
-				has_status = shou_lung_plague
-				has_offmap_flag = shou_lung_had_plague
-				had_offmap_tmp_flag = { flag = shou_lung_had_plague years = 5 }
+				has_status = zakhara_plague
+				has_offmap_flag = zakhara_had_plague
+				had_offmap_tmp_flag = { flag = zakhara_had_plague years = 5 }
 			}
 		}
 		modifier = {
 			factor = 2
 			FROM = {
-				has_status = shou_lung_famine
-				has_offmap_flag = shou_lung_had_famine
-				had_offmap_tmp_flag = { flag = shou_lung_had_famine years = 10 }
+				has_status = zakhara_famine
+				has_offmap_flag = zakhara_had_famine
+				had_offmap_tmp_flag = { flag = zakhara_had_famine years = 10 }
 			}
 		}
 		modifier = {
 			factor = 2
 			FROM = {
-				has_status = shou_lung_plague
-				has_offmap_flag = shou_lung_had_plague
-				had_offmap_tmp_flag = { flag = shou_lung_had_plague years = 7 }
+				has_status = zakhara_plague
+				has_offmap_flag = zakhara_had_plague
+				had_offmap_tmp_flag = { flag = zakhara_had_plague years = 7 }
 			}
 		}
 		modifier = {
@@ -989,27 +989,27 @@ character_event = {
 		}
 		modifier = {
 			factor = 0.5
-			FROM = { has_status = shou_lung_golden_age }
+			FROM = { has_status = zakhara_golden_age }
 		}
 		modifier = {
 			factor = 0.5
-			FROM = { has_offmap_flag = shou_lung_tuigan_won_1 }
+			FROM = { has_offmap_flag = zakhara_tuigan_won_1 }
 		}
 		modifier = {
 			factor = 0.25
-			FROM = { has_offmap_flag = shou_lung_tuigan_won_2 }
+			FROM = { has_offmap_flag = zakhara_tuigan_won_2 }
 		}
 		modifier = {
 			factor = 0.1
-			FROM = { has_offmap_flag = shou_lung_tuigan_won_3 }
+			FROM = { has_offmap_flag = zakhara_tuigan_won_3 }
 		}
 	}
 	
 	immediate = {
 		FROM = {
 			set_offmap_flag = no_status_news
-			set_status = shou_lung_tuigan_invasion
-			set_offmap_flag = shou_lung_tuigan_invasion
+			set_status = zakhara_badia_invasion
+			set_offmap_flag = zakhara_badia_invasion
 			clr_offmap_flag = no_status_news
 		}
 		any_player = {
@@ -1017,17 +1017,17 @@ character_event = {
 				has_offmap_news_enabled = FROM
 				is_within_diplo_range = ROOT
 			}
-			narrative_event = { id = JD.50141 }
+			narrative_event = { id = ZA.50141 }
 		}
 	}
 }
 
-# News from shou_lung: Tuigan Invasion
+# News from zakhara: Tuigan Invasion
 narrative_event = {
-	id = JD.50141
-	title = NEWS_FROM_shou_lung
+	id = ZA.50141
+	title = NEWS_FROM_zakhara
 	picture = GFX_evt_mongols
-	portrait = shou_lung
+	portrait = zakhara
 	window = EventWindowOffmap
 	background = GFX_event_window_news_from_china
 
@@ -1035,34 +1035,34 @@ narrative_event = {
 		trigger = {
 			FROMFROM = {
 				OR = {
-					prev_status = shou_lung_famine
-					prev_status = shou_lung_unrest
-					prev_status = shou_lung_plague
+					prev_status = zakhara_famine
+					prev_status = zakhara_unrest
+					prev_status = zakhara_plague
 				}
 			}
 		}
-		text = EVTDESC_JD_50141_BOOST
+		text = EVTDESC_ZA_50141_BOOST
 	}
 	desc = {
 		trigger = {
 			FROMFROM = {
-				prev_status = shou_lung_golden_age
+				prev_status = zakhara_golden_age
 			}
 		}
-		text = EVTDESC_JD_50141_PENALTY
+		text = EVTDESC_ZA_50141_PENALTY
 	}
 	desc = {
 		trigger = {
 			FROMFROM = {
 				NOR = {
-					prev_status = shou_lung_famine
-					prev_status = shou_lung_unrest
-					prev_status = shou_lung_plague
-					prev_status = shou_lung_golden_age
+					prev_status = zakhara_famine
+					prev_status = zakhara_unrest
+					prev_status = zakhara_plague
+					prev_status = zakhara_golden_age
 				}
 			}
 		}
-		text = EVTDESC_JD_50031_tuigan # Can be the same as the standard status change notification
+		text = EVTDESC_ZA_50031_tuigan # Can be the same as the standard status change notification
 	}
 
 	has_dlc = "Jade Dragon"
@@ -1070,7 +1070,7 @@ narrative_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		shou_lung = {
+		zakhara = {
 			ruler = {
 				save_event_target_as = portrait_target
 			}
@@ -1081,7 +1081,7 @@ narrative_event = {
 	
 	
 	option = {
-		name = EVTOPT_JD_50141
+		name = EVTOPT_ZA_50141
 	}
 }
 
@@ -1090,7 +1090,7 @@ narrative_event = {
 # Root = Governor
 # From = Offmap
 character_event = {
-	id = JD.50160
+	id = ZA.50160
 
 	has_dlc = "Jade Dragon"
 
@@ -1099,8 +1099,8 @@ character_event = {
 	
 	trigger = {
 		FROM = {
-			is_offmap_tag = shou_lung
-			has_status = shou_lung_tuigan_invasion
+			is_offmap_tag = zakhara
+			has_status = zakhara_badia_invasion
 		}
 	}
 	
@@ -1108,50 +1108,50 @@ character_event = {
 		factor = 1
 		modifier = {
 			factor = 2
-			FROM = { had_offmap_tmp_flag = { flag = shou_lung_tuigan_invasion years = 2 } }
+			FROM = { had_offmap_tmp_flag = { flag = zakhara_badia_invasion years = 2 } }
 		}
 		modifier = {
 			factor = 2
-			FROM = { had_offmap_tmp_flag = { flag = shou_lung_tuigan_invasion years = 4 } }
+			FROM = { had_offmap_tmp_flag = { flag = zakhara_badia_invasion years = 4 } }
 		}
 		modifier = {
 			factor = 2
-			FROM = { had_offmap_tmp_flag = { flag = shou_lung_tuigan_invasion years = 8 } }
+			FROM = { had_offmap_tmp_flag = { flag = zakhara_badia_invasion years = 8 } }
 		}
 		modifier = {
 			factor = 5
-			FROM = { had_offmap_tmp_flag = { flag = shou_lung_tuigan_invasion years = 10 } }
+			FROM = { had_offmap_tmp_flag = { flag = zakhara_badia_invasion years = 10 } }
 		}
 	}
 	
 	immediate = {
 		random_list = {
-			100 = { # shou_lung won!
+			100 = { # zakhara won!
 				modifier = {
 					factor = 3
 					FROM = {
-						prev_status = shou_lung_golden_age
+						prev_status = zakhara_golden_age
 					}
 				}
 				
 				FROM = {
 					set_offmap_flag = no_status_news
-					set_status = shou_lung_stable
+					set_status = zakhara_stable
 					clr_offmap_flag = no_status_news
 					
 					if = {
-						limit = { has_offmap_flag = shou_lung_badly_beaten_1 }
-						clr_offmap_flag = shou_lung_badly_beaten_1
+						limit = { has_offmap_flag = zakhara_badly_beaten_1 }
+						clr_offmap_flag = zakhara_badly_beaten_1
 					}
 					if = {
-						limit = { has_offmap_flag = shou_lung_badly_beaten_2 }
-						clr_offmap_flag = shou_lung_badly_beaten_2
-						set_offmap_flag = shou_lung_badly_beaten_1
+						limit = { has_offmap_flag = zakhara_badly_beaten_2 }
+						clr_offmap_flag = zakhara_badly_beaten_2
+						set_offmap_flag = zakhara_badly_beaten_1
 					}
 					if = {
-						limit = { has_offmap_flag = shou_lung_badly_beaten_3 }
-						clr_offmap_flag = shou_lung_badly_beaten_3
-						set_offmap_flag = shou_lung_badly_beaten_2
+						limit = { has_offmap_flag = zakhara_badly_beaten_3 }
+						clr_offmap_flag = zakhara_badly_beaten_3
+						set_offmap_flag = zakhara_badly_beaten_2
 					}
 				}
 				
@@ -1160,7 +1160,7 @@ character_event = {
 						has_offmap_news_enabled = FROM
 						is_within_diplo_range = ROOT
 					}
-					narrative_event = { id = JD.50161 }
+					narrative_event = { id = ZA.50161 }
 				}
 			}
 			100 = { # Tuigan won!
@@ -1168,9 +1168,9 @@ character_event = {
 					factor = 3
 					FROM = {
 						OR = {
-							prev_status = shou_lung_unrest
-							prev_status = shou_lung_famine
-							prev_status = shou_lung_plague
+							prev_status = zakhara_unrest
+							prev_status = zakhara_famine
+							prev_status = zakhara_plague
 						}
 					}
 				}
@@ -1188,40 +1188,40 @@ character_event = {
 				
 				FROM = {
 					set_offmap_flag = no_status_news
-					set_status = shou_lung_unrest
-					set_offmap_flag = shou_lung_had_unrest
+					set_status = zakhara_unrest
+					set_offmap_flag = zakhara_had_unrest
 					clr_offmap_flag = no_status_news
 				
-					set_offmap_flag = shou_lung_expansionist_trend # Likely for the new ruler to pick Expansionist policy
-					clr_offmap_flag = shou_lung_badly_beaten_3
-					clr_offmap_flag = shou_lung_badly_beaten_2
-					clr_offmap_flag = shou_lung_badly_beaten_1
+					set_offmap_flag = zakhara_expansionist_trend # Likely for the new ruler to pick Expansionist policy
+					clr_offmap_flag = zakhara_badly_beaten_3
+					clr_offmap_flag = zakhara_badly_beaten_2
+					clr_offmap_flag = zakhara_badly_beaten_1
 					
 					if = {
 						limit = {
-							has_offmap_flag = shou_lung_tuigan_won_2
+							has_offmap_flag = zakhara_tuigan_won_2
 						}
-						set_offmap_flag = shou_lung_tuigan_won_3
-						clr_offmap_flag = shou_lung_tuigan_won_2
+						set_offmap_flag = zakhara_tuigan_won_3
+						clr_offmap_flag = zakhara_tuigan_won_2
 					}
 					
 					if = {
 						limit = {
-							has_offmap_flag = shou_lung_tuigan_won_1
+							has_offmap_flag = zakhara_tuigan_won_1
 						}
-						set_offmap_flag = shou_lung_tuigan_won_2
-						clr_offmap_flag = shou_lung_tuigan_won_1
+						set_offmap_flag = zakhara_tuigan_won_2
+						clr_offmap_flag = zakhara_tuigan_won_1
 					}
 					
 					if = {
 						limit = {
 							NOR = {
-								has_offmap_flag = shou_lung_tuigan_won_1
-								has_offmap_flag = shou_lung_tuigan_won_2
-								has_offmap_flag = shou_lung_tuigan_won_3
+								has_offmap_flag = zakhara_tuigan_won_1
+								has_offmap_flag = zakhara_tuigan_won_2
+								has_offmap_flag = zakhara_tuigan_won_3
 							}
 						}
-						set_offmap_flag = shou_lung_tuigan_won_1
+						set_offmap_flag = zakhara_tuigan_won_1
 					}
 					
 					set_offmap_flag = no_succession_news
@@ -1244,11 +1244,11 @@ character_event = {
 							has_landed_title = e_yaimunnahar
 							ai = yes
 						}
-						save_event_target_as = tuigan_shou_lung_invader
+						save_event_target_as = tuigan_zakhara_invader
 					}
 				}
 				
-				# A new ruler ascends to the Dragon Throne. The fallout is handled by JD.10005 and JD.50000 (from 'on_offmap_ruler_changed')
+				# A new ruler ascends to the Dragon Throne. The fallout is handled by ZA.10005 and ZA.50000 (from 'on_offmap_ruler_changed')
 				random_list = {
 					100 = {
 						modifier = {
@@ -1260,7 +1260,7 @@ character_event = {
 								NOT = {
 									has_global_flag = borjigin_china
 								}
-								event_target:tuigan_shou_lung_invader = {
+								event_target:tuigan_zakhara_invader = {
 									is_alive = yes
 								}
 							}
@@ -1277,9 +1277,9 @@ character_event = {
 										age = 20
 										random_traits = yes
 										female = yes
-										religion = event_target:tuigan_shou_lung_invader
-										culture = event_target:tuigan_shou_lung_invader
-										dynasty = event_target:tuigan_shou_lung_invader
+										religion = event_target:tuigan_zakhara_invader
+										culture = event_target:tuigan_zakhara_invader
+										dynasty = event_target:tuigan_zakhara_invader
 										trait = brilliant_strategist
 										martial = 10
 									}
@@ -1289,9 +1289,9 @@ character_event = {
 										age = 20
 										random_traits = yes
 										female = no
-										religion = event_target:tuigan_shou_lung_invader
-										culture = event_target:tuigan_shou_lung_invader
-										dynasty = event_target:tuigan_shou_lung_invader
+										religion = event_target:tuigan_zakhara_invader
+										culture = event_target:tuigan_zakhara_invader
+										dynasty = event_target:tuigan_zakhara_invader
 										trait = brilliant_strategist
 										martial = 10
 									}
@@ -1300,51 +1300,51 @@ character_event = {
 							new_character = {
 								if = {
 									limit = {
-										event_target:tuigan_shou_lung_invader = {
+										event_target:tuigan_zakhara_invader = {
 											age = 36
 										}
 									}
-									set_father = event_target:tuigan_shou_lung_invader
+									set_father = event_target:tuigan_zakhara_invader
 								}
 								else_if = {
 									limit = {
-										event_target:tuigan_shou_lung_invader = {
+										event_target:tuigan_zakhara_invader = {
 											NOT = { age = 36 }
 											father_even_if_dead = {
 												age = 36
 											}
 										}
 									}
-									event_target:tuigan_shou_lung_invader = {
+									event_target:tuigan_zakhara_invader = {
 										father_even_if_dead = {
-											save_event_target_as = tuigan_shou_lung_invader_father
+											save_event_target_as = tuigan_zakhara_invader_father
 										}
 									}
-									set_father = event_target:tuigan_shou_lung_invader_father
+									set_father = event_target:tuigan_zakhara_invader_father
 								}
 								else = {
 									create_character = {
 										age = 60
 										random_traits = yes
 										female = no
-										religion = event_target:tuigan_shou_lung_invader
-										culture = event_target:tuigan_shou_lung_invader
-										dynasty = event_target:tuigan_shou_lung_invader
+										religion = event_target:tuigan_zakhara_invader
+										culture = event_target:tuigan_zakhara_invader
+										dynasty = event_target:tuigan_zakhara_invader
 									}
 									new_character = {
-										death = { death_reason = death_in_shou_lung_historic }
-										save_event_target_as = new_shou_lung_ruler_father
+										death = { death_reason = death_in_zakhara_historic }
+										save_event_target_as = new_zakhara_ruler_father
 									}
-									set_father = event_target:new_shou_lung_ruler_father
+									set_father = event_target:new_zakhara_ruler_father
 								}
 								FROM = {
 									set_offmap_holder = PREV
 								}
 							}
-							shou_lung = { # Mongols take all western protectorate lands for themselves
+							zakhara = { # Mongols take all western protectorate lands for themselves
 								governor = {
 									any_vassal = {
-										set_defacto_liege = event_target:tuigan_shou_lung_invader
+										set_defacto_liege = event_target:tuigan_zakhara_invader
 									}
 									any_demesne_title = {
 										limit = {
@@ -1352,20 +1352,20 @@ character_event = {
 												tier = EMPEROR
 											}
 										}
-										grant_title = event_target:tuigan_shou_lung_invader
+										grant_title = event_target:tuigan_zakhara_invader
 									}
 								}
 							}
-							event_target:tuigan_shou_lung_invader = { # The Borjigin who invaded China gets a bunch of Grace, Prestige, Gold, a Peace Deal and a few Siege Engineers when winning
+							event_target:tuigan_zakhara_invader = { # The Borjigin who invaded China gets a bunch of Grace, Prestige, Gold, a Peace Deal and a few Siege Engineers when winning
 								wealth = 1000
 								prestige = 1000
 								add_offmap_currency = {
-									offmap = shou_lung
+									offmap = zakhara
 									value = 5000
 								}
 								add_character_modifier = {
 									inherit = yes
-									name = peace_deal_with_shou_lung
+									name = peace_deal_with_zakhara
 									years = 50
 								}
 								create_random_soldier = {
@@ -1384,9 +1384,9 @@ character_event = {
 									}
 								}
 								new_character = {
-									set_character_flag = originated_from_shou_lung_court
+									set_character_flag = originated_from_zakhara_court
 									set_character_flag = no_court_invites
-									set_character_flag = taught_shou_lung_strategy
+									set_character_flag = taught_zakhara_strategy
 									
 									remove_trait = weak
 									remove_trait = slow
@@ -1412,9 +1412,9 @@ character_event = {
 									}
 								}
 								new_character = {
-									set_character_flag = originated_from_shou_lung_court
+									set_character_flag = originated_from_zakhara_court
 									set_character_flag = no_court_invites
-									set_character_flag = taught_shou_lung_strategy
+									set_character_flag = taught_zakhara_strategy
 									
 									remove_trait = weak
 									remove_trait = slow
@@ -1440,9 +1440,9 @@ character_event = {
 									}
 								}
 								new_character = {
-									set_character_flag = originated_from_shou_lung_court
+									set_character_flag = originated_from_zakhara_court
 									set_character_flag = no_court_invites
-									set_character_flag = taught_shou_lung_strategy
+									set_character_flag = taught_zakhara_strategy
 									
 									remove_trait = weak
 									remove_trait = slow
@@ -1499,10 +1499,10 @@ character_event = {
 									dynasty = THIS
 								}
 								new_character = {
-									death = { death_reason = death_in_shou_lung_historic }
-									save_event_target_as = new_shou_lung_ruler_father
+									death = { death_reason = death_in_zakhara_historic }
+									save_event_target_as = new_zakhara_ruler_father
 								}
-								set_father = event_target:new_shou_lung_ruler_father
+								set_father = event_target:new_zakhara_ruler_father
 								FROM = {
 									set_offmap_holder = PREV
 								}
@@ -1533,7 +1533,7 @@ character_event = {
 						}
 						modifier = {
 							factor = 0
-							event_target:tuigan_shou_lung_invader = {
+							event_target:tuigan_zakhara_invader = {
 								is_alive = yes
 							}
 						}
@@ -1580,10 +1580,10 @@ character_event = {
 								dynasty = THIS
 							}
 							new_character = {
-								death = { death_reason = death_in_shou_lung_historic }
-								save_event_target_as = new_shou_lung_ruler_father
+								death = { death_reason = death_in_zakhara_historic }
+								save_event_target_as = new_zakhara_ruler_father
 							}
-							set_father = event_target:new_shou_lung_ruler_father
+							set_father = event_target:new_zakhara_ruler_father
 							FROM = {
 								set_offmap_holder = PREV
 							}
@@ -1609,7 +1609,7 @@ character_event = {
 					25 = {
 						modifier = {
 							factor = 0
-							event_target:tuigan_shou_lung_invader = {
+							event_target:tuigan_zakhara_invader = {
 								is_alive = yes
 							}
 						}
@@ -1656,10 +1656,10 @@ character_event = {
 								dynasty = THIS
 							}
 							new_character = {
-								death = { death_reason = death_in_shou_lung_historic }
-								save_event_target_as = new_shou_lung_ruler_father
+								death = { death_reason = death_in_zakhara_historic }
+								save_event_target_as = new_zakhara_ruler_father
 							}
-							set_father = event_target:new_shou_lung_ruler_father
+							set_father = event_target:new_zakhara_ruler_father
 							FROM = {
 								set_offmap_holder = PREV
 							}
@@ -1685,7 +1685,7 @@ character_event = {
 					25 = {
 						modifier = {
 							factor = 0
-							event_target:tuigan_shou_lung_invader = {
+							event_target:tuigan_zakhara_invader = {
 								is_alive = yes
 							}
 						}
@@ -1732,10 +1732,10 @@ character_event = {
 								dynasty = THIS
 							}
 							new_character = {
-								death = { death_reason = death_in_shou_lung_historic }
-								save_event_target_as = new_shou_lung_ruler_father
+								death = { death_reason = death_in_zakhara_historic }
+								save_event_target_as = new_zakhara_ruler_father
 							}
-							set_father = event_target:new_shou_lung_ruler_father
+							set_father = event_target:new_zakhara_ruler_father
 							FROM = {
 								set_offmap_holder = PREV
 							}
@@ -1765,7 +1765,7 @@ character_event = {
 						has_offmap_news_enabled = FROM
 						is_within_diplo_range = ROOT
 					}
-					narrative_event = { id = JD.50162 }
+					narrative_event = { id = ZA.50162 }
 				}
 
 				random_list = {
@@ -1773,27 +1773,27 @@ character_event = {
 						modifier = {
 							factor = 0
 							has_game_rule = {
-								name = shou_lung_invasions
+								name = zakhara_invasions
 								value = none
 							}
 						}
-						character_event = { id = JD.10113 days = 15 } #Spawns a Displaced Prince adventurer...
+						character_event = { id = ZA.10113 days = 15 } #Spawns a Displaced Prince adventurer...
 						set_character_flag = spawning_a_displaced_royal
-						log = "shou_lung Logging:"
-						log = "Attempting to spawn a Displaced Prince, as aftermath to event JD.50160 (end of Being Invaded by tu_lungs). Character should spawn in 15 days."
+						log = "zakhara Logging:"
+						log = "Attempting to spawn a Displaced Prince, as aftermath to event ZA.50160 (end of Being Invaded by tu_lungs). Character should spawn in 15 days."
 					}
 					50 = {
 						modifier = {
 							factor = 0
 							has_game_rule = {
-								name = shou_lung_invasions
+								name = zakhara_invasions
 								value = none
 							}
 						}
-						character_event = { id =  JD.10109 days = 15 } #Spawns a tuigan tribe leader...
+						character_event = { id =  ZA.10109 days = 15 } #Spawns a tuigan tribe leader...
 						set_character_flag = spawning_a_tuigan_invader
-						log = "shou_lung Logging:"
-						log = "Attempting to spawn a tuigan Invader, as aftermath to event JD.50160 (end of Being Invaded by tu_lungs). Character should spawn in 15 days."
+						log = "zakhara Logging:"
+						log = "Attempting to spawn a tuigan Invader, as aftermath to event ZA.50160 (end of Being Invaded by tu_lungs). Character should spawn in 15 days."
 					}
 				}
 			}
@@ -1801,13 +1801,13 @@ character_event = {
 	}
 }
 
-# News from shou_lung: tu_lung Invasion Fails
+# News from zakhara: tu_lung Invasion Fails
 narrative_event = {
-	id = JD.50161
-	title = NEWS_FROM_shou_lung
+	id = ZA.50161
+	title = NEWS_FROM_zakhara
 	picture = GFX_evt_china_mongols_invade
-	portrait = shou_lung
-	desc = EVTDESC_JD_50161
+	portrait = zakhara
+	desc = EVTDESC_ZA_50161
 	window = EventWindowOffmap
 	background = GFX_event_window_news_from_china
 
@@ -1816,7 +1816,7 @@ narrative_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		shou_lung = {
+		zakhara = {
 			ruler = {
 				save_event_target_as = portrait_target
 			}
@@ -1827,17 +1827,17 @@ narrative_event = {
 	
 	
 	option = {
-		name = EVTOPT_JD_50161
+		name = EVTOPT_ZA_50161
 	}
 }
 
-# News from shou_lung: tu_lung Invasion Succeeds
+# News from zakhara: tu_lung Invasion Succeeds
 narrative_event = {
-	id = JD.50162
-	title = NEWS_FROM_shou_lung
+	id = ZA.50162
+	title = NEWS_FROM_zakhara
 	picture = GFX_evt_tengri_throneroom_oldgods
-	portrait = shou_lung
-	desc = EVTDESC_JD_50162
+	portrait = zakhara
+	desc = EVTDESC_ZA_50162
 	window = EventWindowOffmap
 	background = GFX_event_window_news_from_china
 
@@ -1846,7 +1846,7 @@ narrative_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		shou_lung = {
+		zakhara = {
 			ruler = {
 				save_event_target_as = portrait_target
 			}
@@ -1858,18 +1858,18 @@ narrative_event = {
 	
 	option = {
 		trigger = {
-			NOT = { has_character_modifier = peace_deal_with_shou_lung }
+			NOT = { has_character_modifier = peace_deal_with_zakhara }
 		}
-		name = EVTOPT_JD_50162
+		name = EVTOPT_ZA_50162
 	}
 	
 	option = {
 		trigger = {
-			has_character_modifier = peace_deal_with_shou_lung
+			has_character_modifier = peace_deal_with_zakhara
 		}
-		name = EVTOPT_JD_50302_BROKEN_PEACE_DEAL
+		name = EVTOPT_ZA_50302_BROKEN_PEACE_DEAL
 		
-		remove_character_modifier = peace_deal_with_shou_lung
+		remove_character_modifier = peace_deal_with_zakhara
 	}
 }
 
@@ -1878,7 +1878,7 @@ narrative_event = {
 # Root = Governor
 # From = Offmap
 character_event = {
-	id = JD.50180
+	id = ZA.50180
 
 	has_dlc = "Jade Dragon"
 
@@ -1887,15 +1887,15 @@ character_event = {
 	
 	trigger = {
 		FROM = {
-			is_offmap_tag = shou_lung
+			is_offmap_tag = zakhara
 			NOR = {
-				has_status = shou_lung_tu_lung_invasion # Resolution handled by JD.50160
-				has_status = shou_lung_tuigan_invasion # Resolution handled by JD.50200
-				has_status = shou_lung_civil_war # Resolution handled by JD.50300
+				has_status = zakhara_pantheist_invasion # Resolution handled by ZA.50160
+				has_status = zakhara_badia_invasion # Resolution handled by ZA.50200
+				has_status = zakhara_civil_war # Resolution handled by ZA.50300
 			}
 			OR = {
-				NOT = { has_offmap_flag = shou_lung_invaded_player_dynasty }
-				had_offmap_tmp_flag = { flag = shou_lung_invaded_player_dynasty years = 200 }
+				NOT = { has_offmap_flag = zakhara_invaded_player_dynasty }
+				had_offmap_tmp_flag = { flag = zakhara_invaded_player_dynasty years = 200 }
 			}
 		}
 	}
@@ -1905,93 +1905,93 @@ character_event = {
 		modifier = { # Unrest increases the chance of an invasion
 			factor = 3
 			FROM = {
-				has_status = shou_lung_unrest
-				has_offmap_flag = shou_lung_had_unrest
-				had_offmap_tmp_flag = { flag = shou_lung_had_unrest years = 2 }
+				has_status = zakhara_unrest
+				has_offmap_flag = zakhara_had_unrest
+				had_offmap_tmp_flag = { flag = zakhara_had_unrest years = 2 }
 			}
 		}
 		modifier = {
 			factor = 1.5
 			FROM = {
-				has_status = shou_lung_unrest
-				has_offmap_flag = shou_lung_had_unrest
-				had_offmap_tmp_flag = { flag = shou_lung_had_unrest years = 4 }
+				has_status = zakhara_unrest
+				has_offmap_flag = zakhara_had_unrest
+				had_offmap_tmp_flag = { flag = zakhara_had_unrest years = 4 }
 			}
 		}
 		modifier = {
 			factor = 1.5
 			FROM = {
-				has_status = shou_lung_unrest
-				has_offmap_flag = shou_lung_had_unrest
-				had_offmap_tmp_flag = { flag = shou_lung_had_unrest years = 6 }
+				has_status = zakhara_unrest
+				has_offmap_flag = zakhara_had_unrest
+				had_offmap_tmp_flag = { flag = zakhara_had_unrest years = 6 }
 			}
 		}
 		modifier = { # Famines last for at least 4 years
 			factor = 0
 			FROM = {
-				has_status = shou_lung_famine
-				has_offmap_flag = shou_lung_had_famine
+				has_status = zakhara_famine
+				has_offmap_flag = zakhara_had_famine
 				NOT = {
-					had_offmap_tmp_flag = { flag = shou_lung_had_famine years = 2 }
+					had_offmap_tmp_flag = { flag = zakhara_had_famine years = 2 }
 				}
 			}
 		}
 		modifier = { # Plagues last for at least 2 years
 			factor = 0
 			FROM = {
-				has_status = shou_lung_plague
-				has_offmap_flag = shou_lung_had_plague
+				has_status = zakhara_plague
+				has_offmap_flag = zakhara_had_plague
 				NOT = {
-					had_offmap_tmp_flag = { flag = shou_lung_had_plague years = 2 }
+					had_offmap_tmp_flag = { flag = zakhara_had_plague years = 2 }
 				}
 			}
 		}
 		modifier = {
 			factor = 1.25
 			FROM = {
-				has_status = shou_lung_famine
-				has_offmap_flag = shou_lung_had_famine
-				had_offmap_tmp_flag = { flag = shou_lung_had_famine years = 6 }
+				has_status = zakhara_famine
+				has_offmap_flag = zakhara_had_famine
+				had_offmap_tmp_flag = { flag = zakhara_had_famine years = 6 }
 			}
 		}
 		modifier = {
 			factor = 1.25
 			FROM = {
-				has_status = shou_lung_plague
-				has_offmap_flag = shou_lung_had_plague
-				had_offmap_tmp_flag = { flag = shou_lung_had_plague years = 3 }
+				has_status = zakhara_plague
+				has_offmap_flag = zakhara_had_plague
+				had_offmap_tmp_flag = { flag = zakhara_had_plague years = 3 }
 			}
 		}
 		modifier = {
 			factor = 1.5
 			FROM = {
-				has_status = shou_lung_famine
-				has_offmap_flag = shou_lung_had_famine
-				had_offmap_tmp_flag = { flag = shou_lung_had_famine years = 8 }
+				has_status = zakhara_famine
+				has_offmap_flag = zakhara_had_famine
+				had_offmap_tmp_flag = { flag = zakhara_had_famine years = 8 }
 			}
 		}
 		modifier = {
 			factor = 1.5
 			FROM = {
-				has_status = shou_lung_plague
-				has_offmap_flag = shou_lung_had_plague
-				had_offmap_tmp_flag = { flag = shou_lung_had_plague years = 5 }
+				has_status = zakhara_plague
+				has_offmap_flag = zakhara_had_plague
+				had_offmap_tmp_flag = { flag = zakhara_had_plague years = 5 }
 			}
 		}
 		modifier = {
 			factor = 2
 			FROM = {
-				has_status = shou_lung_famine
-				has_offmap_flag = shou_lung_had_famine
-				had_offmap_tmp_flag = { flag = shou_lung_had_famine years = 10 }
+				has_status = zakhara_famine
+				has_offmap_flag = zakhara_had_famine
+				had_offmap_tmp_flag = { flag = zakhara_had_famine years = 10 }
 			}
 		}
 		modifier = {
 			factor = 2
 			FROM = {
-				has_status = shou_lung_plague
-				has_offmap_flag = shou_lung_had_plague
-				had_offmap_tmp_flag = { flag = shou_lung_had_plague years = 7 }
+				has_status = zakhara_plague
+				has_offmap_flag = zakhara_had_plague
+				had_offmap_tmp_flag = { flag = zakhara_had_plague years = 7 }
 			}
 		}
 		modifier = {
@@ -2004,27 +2004,27 @@ character_event = {
 		}
 		modifier = {
 			factor = 0.5
-			FROM = { has_status = shou_lung_golden_age }
+			FROM = { has_status = zakhara_golden_age }
 		}
 		modifier = {
 			factor = 0.5
-			FROM = { has_offmap_flag = shou_lung_tu_lungs_won_1 }
+			FROM = { has_offmap_flag = zakhara_tu_lungs_won_1 }
 		}
 		modifier = {
 			factor = 0.25
-			FROM = { has_offmap_flag = shou_lung_tu_lungs_won_2 }
+			FROM = { has_offmap_flag = zakhara_tu_lungs_won_2 }
 		}
 		modifier = {
 			factor = 0.1
-			FROM = { has_offmap_flag = shou_lung_tu_lungs_won_3 }
+			FROM = { has_offmap_flag = zakhara_tu_lungs_won_3 }
 		}
 	}
 	
 	immediate = {
 		FROM = {
 			set_offmap_flag = no_status_news
-			set_status = shou_lung_tuigan_invasion
-			set_offmap_flag = shou_lung_tuigan_invasion
+			set_status = zakhara_badia_invasion
+			set_offmap_flag = zakhara_badia_invasion
 			clr_offmap_flag = no_status_news
 		}
 		any_player = {
@@ -2032,17 +2032,17 @@ character_event = {
 				has_offmap_news_enabled = FROM
 				is_within_diplo_range = ROOT
 			}
-			narrative_event = { id = JD.50181 }
+			narrative_event = { id = ZA.50181 }
 		}
 	}
 }
 
-# News from shou_lung: Tu Lung Invasion
+# News from zakhara: Tu Lung Invasion
 narrative_event = {
-	id = JD.50181
-	title = NEWS_FROM_shou_lung
+	id = ZA.50181
+	title = NEWS_FROM_zakhara
 	picture = GFX_evt_china_mongols_invade
-	portrait = shou_lung
+	portrait = zakhara
 	window = EventWindowOffmap
 	background = GFX_event_window_news_from_china
 
@@ -2050,34 +2050,34 @@ narrative_event = {
 		trigger = {
 			FROMFROM = {
 				OR = {
-					prev_status = shou_lung_famine
-					prev_status = shou_lung_unrest
-					prev_status = shou_lung_plague
+					prev_status = zakhara_famine
+					prev_status = zakhara_unrest
+					prev_status = zakhara_plague
 				}
 			}
 		}
-		text = EVTDESC_JD_50181_BOOST
+		text = EVTDESC_ZA_50181_BOOST
 	}
 	desc = {
 		trigger = {
 			FROMFROM = {
-				prev_status = shou_lung_golden_age
+				prev_status = zakhara_golden_age
 			}
 		}
-		text = EVTDESC_JD_50181_PENALTY
+		text = EVTDESC_ZA_50181_PENALTY
 	}
 	desc = {
 		trigger = {
 			FROMFROM = {
 				NOR = {
-					prev_status = shou_lung_famine
-					prev_status = shou_lung_unrest
-					prev_status = shou_lung_plague
-					prev_status = shou_lung_golden_age
+					prev_status = zakhara_famine
+					prev_status = zakhara_unrest
+					prev_status = zakhara_plague
+					prev_status = zakhara_golden_age
 				}
 			}
 		}
-		text = EVTDESC_JD_50031_tu_lung # Can be the same as the standard status change notification
+		text = EVTDESC_ZA_50031_tu_lung # Can be the same as the standard status change notification
 	}
 
 	has_dlc = "Jade Dragon"
@@ -2085,7 +2085,7 @@ narrative_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		shou_lung = {
+		zakhara = {
 			ruler = {
 				save_event_target_as = portrait_target
 			}
@@ -2095,7 +2095,7 @@ narrative_event = {
 	portrait = event_target:portrait_target
 	
 	option = {
-		name = EVTOPT_JD_50141
+		name = EVTOPT_ZA_50141
 	}
 }
 
@@ -2104,7 +2104,7 @@ narrative_event = {
 # Root = Governor
 # From = Offmap
 character_event = {
-	id = JD.50200
+	id = ZA.50200
 
 	has_dlc = "Jade Dragon"
 
@@ -2113,8 +2113,8 @@ character_event = {
 	
 	trigger = {
 		FROM = {
-			is_offmap_tag = shou_lung
-			has_status = shou_lung_tuigan_invasion
+			is_offmap_tag = zakhara
+			has_status = zakhara_badia_invasion
 		}
 	}
 	
@@ -2122,51 +2122,51 @@ character_event = {
 		factor = 1
 		modifier = {
 			factor = 2
-			FROM = { had_offmap_tmp_flag = { flag = shou_lung_tuigan_invasion years = 2 } }
+			FROM = { had_offmap_tmp_flag = { flag = zakhara_badia_invasion years = 2 } }
 		}
 		modifier = {
 			factor = 2
-			FROM = { had_offmap_tmp_flag = { flag = shou_lung_tuigan_invasion years = 4 } }
+			FROM = { had_offmap_tmp_flag = { flag = zakhara_badia_invasion years = 4 } }
 		}
 		modifier = {
 			factor = 2
-			FROM = { had_offmap_tmp_flag = { flag = shou_lung_tuigan_invasion years = 8 } }
+			FROM = { had_offmap_tmp_flag = { flag = zakhara_badia_invasion years = 8 } }
 		}
 		modifier = {
 			factor = 5
-			FROM = { had_offmap_tmp_flag = { flag = shou_lung_tuigan_invasion years = 10 } }
+			FROM = { had_offmap_tmp_flag = { flag = zakhara_badia_invasion years = 10 } }
 		}
 	}
 	
 	immediate = {
 		random_list = {
-			100 = { # shou_lung won!
+			100 = { # zakhara won!
 				#trigger = { always = no }
 				modifier = {
 					factor = 3
 					FROM = {
-						prev_status = shou_lung_golden_age
+						prev_status = zakhara_golden_age
 					}
 				}
 				
 				FROM = {
 					set_offmap_flag = no_status_news
-					set_status = shou_lung_stable
+					set_status = zakhara_stable
 					clr_offmap_flag = no_status_news
 					
 					if = {
-						limit = { has_offmap_flag = shou_lung_badly_beaten_1 }
-						clr_offmap_flag = shou_lung_badly_beaten_1
+						limit = { has_offmap_flag = zakhara_badly_beaten_1 }
+						clr_offmap_flag = zakhara_badly_beaten_1
 					}
 					if = {
-						limit = { has_offmap_flag = shou_lung_badly_beaten_2 }
-						clr_offmap_flag = shou_lung_badly_beaten_2
-						set_offmap_flag = shou_lung_badly_beaten_1
+						limit = { has_offmap_flag = zakhara_badly_beaten_2 }
+						clr_offmap_flag = zakhara_badly_beaten_2
+						set_offmap_flag = zakhara_badly_beaten_1
 					}
 					if = {
-						limit = { has_offmap_flag = shou_lung_badly_beaten_3 }
-						clr_offmap_flag = shou_lung_badly_beaten_3
-						set_offmap_flag = shou_lung_badly_beaten_2
+						limit = { has_offmap_flag = zakhara_badly_beaten_3 }
+						clr_offmap_flag = zakhara_badly_beaten_3
+						set_offmap_flag = zakhara_badly_beaten_2
 					}
 				}
 				
@@ -2175,7 +2175,7 @@ character_event = {
 						has_offmap_news_enabled = FROM
 						is_within_diplo_range = ROOT
 					}
-					narrative_event = { id = JD.50201 }
+					narrative_event = { id = ZA.50201 }
 				}
 			}
 			100 = { # Tu Lung won!
@@ -2183,54 +2183,54 @@ character_event = {
 					factor = 3
 					FROM = {
 						OR = {
-							prev_status = shou_lung_unrest
-							prev_status = shou_lung_famine
-							prev_status = shou_lung_plague
+							prev_status = zakhara_unrest
+							prev_status = zakhara_famine
+							prev_status = zakhara_plague
 						}
 					}
 				}
 				
 				FROM = {
 					set_offmap_flag = no_status_news
-					set_status = shou_lung_unrest
-					set_offmap_flag = shou_lung_had_unrest
+					set_status = zakhara_unrest
+					set_offmap_flag = zakhara_had_unrest
 					clr_offmap_flag = no_status_news
 				
-					clr_offmap_flag = shou_lung_badly_beaten_3
-					clr_offmap_flag = shou_lung_badly_beaten_2
-					clr_offmap_flag = shou_lung_badly_beaten_1
+					clr_offmap_flag = zakhara_badly_beaten_3
+					clr_offmap_flag = zakhara_badly_beaten_2
+					clr_offmap_flag = zakhara_badly_beaten_1
 					
 					if = {
 						limit = {
-							has_offmap_flag = shou_lung_tuigan_won_2
+							has_offmap_flag = zakhara_tuigan_won_2
 						}
-						set_offmap_flag = shou_lung_tuigan_won_3
-						clr_offmap_flag = shou_lung_tuigan_won_2
+						set_offmap_flag = zakhara_tuigan_won_3
+						clr_offmap_flag = zakhara_tuigan_won_2
 					}
 					
 					if = {
 						limit = {
-							has_offmap_flag = shou_lung_tuigan_won_1
+							has_offmap_flag = zakhara_tuigan_won_1
 						}
-						set_offmap_flag = shou_lung_tuigan_won_2
-						clr_offmap_flag = shou_lung_tuigan_won_1
+						set_offmap_flag = zakhara_tuigan_won_2
+						clr_offmap_flag = zakhara_tuigan_won_1
 					}
 					
 					if = {
 						limit = {
 							NOR = {
-								has_offmap_flag = shou_lung_tuigan_won_1
-								has_offmap_flag = shou_lung_tuigan_won_2
-								has_offmap_flag = shou_lung_tuigan_won_3
+								has_offmap_flag = zakhara_tuigan_won_1
+								has_offmap_flag = zakhara_tuigan_won_2
+								has_offmap_flag = zakhara_tuigan_won_3
 							}
 						}
-						set_offmap_flag = shou_lung_tuigan_won_1
+						set_offmap_flag = zakhara_tuigan_won_1
 					}
 					
 					set_offmap_flag = no_succession_news
 				}
 				
-				# A new ruler ascends to the Dragon Throne. The fallout is handled by JD.10005 and JD.50000 (from 'on_offmap_ruler_changed')
+				# A new ruler ascends to the Dragon Throne. The fallout is handled by ZA.10005 and ZA.50000 (from 'on_offmap_ruler_changed')
 				create_character = { #The father
 					age = 60
 					random_traits = yes
@@ -2241,7 +2241,7 @@ character_event = {
 				}
 				new_character = {
 					PREV = { set_father = PREV }
-					death = { death_reason = death_in_shou_lung_historic }
+					death = { death_reason = death_in_zakhara_historic }
 				}
 				random_list = {
 					0 = {
@@ -2286,10 +2286,10 @@ character_event = {
 						dynasty = THIS
 					}
 					new_character = {
-						death = { death_reason = death_in_shou_lung_historic }
-						save_event_target_as = new_shou_lung_ruler_father
+						death = { death_reason = death_in_zakhara_historic }
+						save_event_target_as = new_zakhara_ruler_father
 					}
-					set_father = event_target:new_shou_lung_ruler_father
+					set_father = event_target:new_zakhara_ruler_father
 					FROM = {
 						set_offmap_holder = PREV
 					}
@@ -2317,7 +2317,7 @@ character_event = {
 						has_offmap_news_enabled = FROM
 						is_within_diplo_range = ROOT
 					}
-					narrative_event = { id = JD.50202 }
+					narrative_event = { id = ZA.50202 }
 				}
 				
 				random_list = {
@@ -2325,27 +2325,27 @@ character_event = {
 						modifier = {
 							factor = 0
 							has_game_rule = {
-								name = shou_lung_invasions
+								name = zakhara_invasions
 								value = none
 							}
 						}
-						character_event = { id = JD.10113 days = 15 } #Spawns a Displaced Prince adventurer...
+						character_event = { id = ZA.10113 days = 15 } #Spawns a Displaced Prince adventurer...
 						set_character_flag = spawning_a_displaced_royal
-						log = "shou_lung Logging:"
-						log = "Attempting to spawn a Displaced Prince, as aftermath to event JD.50200 (end of Being Invaded by tuigans). Character should spawn in 15 days."
+						log = "zakhara Logging:"
+						log = "Attempting to spawn a Displaced Prince, as aftermath to event ZA.50200 (end of Being Invaded by tuigans). Character should spawn in 15 days."
 					}
 					50 = {
 						modifier = {
 							factor = 0
 							has_game_rule = {
-								name = shou_lung_invasions
+								name = zakhara_invasions
 								value = none
 							}
 						}
-						character_event = { id =  JD.10109 days = 15 } #Spawns a tuigan tribe leader...
+						character_event = { id =  ZA.10109 days = 15 } #Spawns a tuigan tribe leader...
 						set_character_flag = spawning_a_tu_lung_invader
-						log = "shou_lung Logging:"
-						log = "Attempting to spawn a Tu Lung Invader, as aftermath to event JD.50200 (end of Being Invaded by tu_lungs). Character should spawn in 15 days."
+						log = "zakhara Logging:"
+						log = "Attempting to spawn a Tu Lung Invader, as aftermath to event ZA.50200 (end of Being Invaded by tu_lungs). Character should spawn in 15 days."
 					}
 				}
 			}
@@ -2353,13 +2353,13 @@ character_event = {
 	}
 }
 
-# News from shou_lung: Tu Lung Invasion Fails
+# News from zakhara: Tu Lung Invasion Fails
 narrative_event = {
-	id = JD.50201
-	title = NEWS_FROM_shou_lung
+	id = ZA.50201
+	title = NEWS_FROM_zakhara
 	picture = GFX_evt_china_mongols_invade
-	portrait = shou_lung
-	desc = EVTDESC_JD_50201
+	portrait = zakhara
+	desc = EVTDESC_ZA_50201
 	window = EventWindowOffmap
 	background = GFX_event_window_news_from_china
 
@@ -2368,7 +2368,7 @@ narrative_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		shou_lung = {
+		zakhara = {
 			ruler = {
 				save_event_target_as = portrait_target
 			}
@@ -2378,17 +2378,17 @@ narrative_event = {
 	portrait = event_target:portrait_target
 	
 	option = {
-		name = EVTOPT_JD_50201
+		name = EVTOPT_ZA_50201
 	}
 }
 
-# News from shou_lung: Tu Lung Invasion Succeeds
+# News from zakhara: Tu Lung Invasion Succeeds
 narrative_event = {
-	id = JD.50202
-	title = NEWS_FROM_shou_lung
+	id = ZA.50202
+	title = NEWS_FROM_zakhara
 	picture = GFX_evt_tengri_throneroom_oldgods
-	portrait = shou_lung
-	desc = EVTDESC_JD_50202
+	portrait = zakhara
+	desc = EVTDESC_ZA_50202
 	window = EventWindowOffmap
 	background = GFX_event_window_news_from_china
 
@@ -2397,7 +2397,7 @@ narrative_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		shou_lung = {
+		zakhara = {
 			ruler = {
 				save_event_target_as = portrait_target
 			}
@@ -2408,18 +2408,18 @@ narrative_event = {
 	
 	option = {
 		trigger = {
-			NOT = { has_character_modifier = peace_deal_with_shou_lung }
+			NOT = { has_character_modifier = peace_deal_with_zakhara }
 		}
-		name = EVTOPT_JD_50202
+		name = EVTOPT_ZA_50202
 	}
 	
 	option = {
 		trigger = {
-			has_character_modifier = peace_deal_with_shou_lung
+			has_character_modifier = peace_deal_with_zakhara
 		}
-		name = EVTOPT_JD_50302_BROKEN_PEACE_DEAL
+		name = EVTOPT_ZA_50302_BROKEN_PEACE_DEAL
 		
-		remove_character_modifier = peace_deal_with_shou_lung
+		remove_character_modifier = peace_deal_with_zakhara
 	}
 }
 
@@ -2428,7 +2428,7 @@ narrative_event = {
 # Root = Governor
 # From = Offmap
 character_event = {
-	id = JD.50220
+	id = ZA.50220
 
 	has_dlc = "Jade Dragon"
 
@@ -2437,12 +2437,12 @@ character_event = {
 	
 	trigger = {
 		FROM = {
-			is_offmap_tag = shou_lung
+			is_offmap_tag = zakhara
 			NOR = {
-				has_status = shou_lung_famine
-				has_status = shou_lung_tu_lung_invasion # Resolution handled by JD.50160
-				has_status = shou_lung_tuigan_invasion # Resolution handled by JD.50200
-				has_status = shou_lung_civil_war # Resolution handled by JD.50300
+				has_status = zakhara_famine
+				has_status = zakhara_pantheist_invasion # Resolution handled by ZA.50160
+				has_status = zakhara_badia_invasion # Resolution handled by ZA.50200
+				has_status = zakhara_civil_war # Resolution handled by ZA.50300
 			}
 		}
 	}
@@ -2452,19 +2452,19 @@ character_event = {
 		modifier = { # Famines don't tend to happen too close to each other
 			factor = 0
 			FROM = {
-				has_offmap_flag = shou_lung_had_famine
+				has_offmap_flag = zakhara_had_famine
 				NOT = {
-					had_offmap_tmp_flag = { flag = shou_lung_had_famine years = 90 }
+					had_offmap_tmp_flag = { flag = zakhara_had_famine years = 90 }
 				}
 			}
 		}
 		modifier = { # Golden Ages tend to not end with a Famine or Plague
 			factor = 0
 			FROM = {
-				has_status = shou_lung_golden_age
-				has_offmap_flag = shou_lung_had_golden_age
+				has_status = zakhara_golden_age
+				has_offmap_flag = zakhara_had_golden_age
 				NOT = {
-					had_offmap_tmp_flag = { flag = shou_lung_had_golden_age years = 50 }
+					had_offmap_tmp_flag = { flag = zakhara_had_golden_age years = 50 }
 				}
 			}
 		}
@@ -2472,8 +2472,8 @@ character_event = {
 			factor = 0.75
 			FROM = {
 				OR = {
-					has_status = shou_lung_stable
-					has_status = shou_lung_golden_age
+					has_status = zakhara_stable
+					has_status = zakhara_golden_age
 				}
 			}
 		}
@@ -2481,8 +2481,8 @@ character_event = {
     
 	immediate = {
 		FROM = {
-			set_offmap_flag = shou_lung_had_famine
-			set_status = shou_lung_famine # Players will be notified by JD.50030
+			set_offmap_flag = zakhara_had_famine
+			set_status = zakhara_famine # Players will be notified by ZA.50030
 		}
 	}
 }
@@ -2492,7 +2492,7 @@ character_event = {
 # Root = Governor
 # From = Offmap
 character_event = {
-	id = JD.50240
+	id = ZA.50240
 
 	has_dlc = "Jade Dragon"
 
@@ -2501,12 +2501,12 @@ character_event = {
 	
 	trigger = {
 		FROM = {
-			is_offmap_tag = shou_lung
+			is_offmap_tag = zakhara
 			NOR = {
-				has_status = shou_lung_plague
-				has_status = shou_lung_tu_lung_invasion # Resolution handled by JD.50160
-				has_status = shou_lung_tuigan_invasion # Resolution handled by JD.50200
-				has_status = shou_lung_civil_war # Resolution handled by JD.50300
+				has_status = zakhara_plague
+				has_status = zakhara_pantheist_invasion # Resolution handled by ZA.50160
+				has_status = zakhara_badia_invasion # Resolution handled by ZA.50200
+				has_status = zakhara_civil_war # Resolution handled by ZA.50300
 			}
 		}
 	}
@@ -2516,19 +2516,19 @@ character_event = {
 		modifier = { # Famines don't tend to happen too close to each other
 			factor = 0
 			FROM = {
-				has_offmap_flag = shou_lung_had_plague
+				has_offmap_flag = zakhara_had_plague
 				NOT = {
-					had_offmap_tmp_flag = { flag = shou_lung_had_plague years = 90 }
+					had_offmap_tmp_flag = { flag = zakhara_had_plague years = 90 }
 				}
 			}
 		}
 		modifier = { # Golden Ages tend to not end with a Famine or Plague
 			factor = 0
 			FROM = {
-				has_status = shou_lung_golden_age
-				has_offmap_flag = shou_lung_had_golden_age
+				has_status = zakhara_golden_age
+				has_offmap_flag = zakhara_had_golden_age
 				NOT = {
-					had_offmap_tmp_flag = { flag = shou_lung_had_golden_age years = 50 }
+					had_offmap_tmp_flag = { flag = zakhara_had_golden_age years = 50 }
 				}
 			}
 		}
@@ -2536,8 +2536,8 @@ character_event = {
 			factor = 0.75
 			FROM = {
 				OR = {
-					has_status = shou_lung_stable
-					has_status = shou_lung_golden_age
+					has_status = zakhara_stable
+					has_status = zakhara_golden_age
 				}
 			}
 		}
@@ -2545,8 +2545,8 @@ character_event = {
     
 	immediate = {
 		FROM = {
-			set_offmap_flag = shou_lung_had_plague
-			set_status = shou_lung_plague # Players will be notified by JD.50030
+			set_offmap_flag = zakhara_had_plague
+			set_status = zakhara_plague # Players will be notified by ZA.50030
 		}
 	}
 }
@@ -2556,7 +2556,7 @@ character_event = {
 # Root = Governor
 # From = Offmap
 character_event = {
-	id = JD.50260
+	id = ZA.50260
 
 	has_dlc = "Jade Dragon"
 
@@ -2565,35 +2565,35 @@ character_event = {
 	
 	trigger = {
 		FROM = {
-			is_offmap_tag = shou_lung
-			has_status = shou_lung_stable
+			is_offmap_tag = zakhara
+			has_status = zakhara_stable
 		}
 	}
 	
 	weight_multiplier = {
 		factor = 1
-		modifier = { # shou_lung tend to not enter Golden Ages frequently
+		modifier = { # zakhara tend to not enter Golden Ages frequently
 			factor = 0
 			FROM = {
-				has_offmap_flag = shou_lung_had_golden_age
+				has_offmap_flag = zakhara_had_golden_age
 				NOT = {
-					had_offmap_tmp_flag = { flag = shou_lung_had_golden_age years = 200 }
+					had_offmap_tmp_flag = { flag = zakhara_had_golden_age years = 200 }
 				}
 			}
 		}
 		modifier = { # But they tend to have one at least every 250 years
 			factor = 2
 			FROM = {
-				has_offmap_flag = shou_lung_had_golden_age
-				had_offmap_tmp_flag = { flag = shou_lung_had_golden_age years = 250 }
+				has_offmap_flag = zakhara_had_golden_age
+				had_offmap_tmp_flag = { flag = zakhara_had_golden_age years = 250 }
 			}
 		}
 	}
 
 	immediate = {
 		FROM = {
-			set_offmap_flag = shou_lung_had_golden_age
-			set_status = shou_lung_golden_age # Players will be notified by JD.50030
+			set_offmap_flag = zakhara_had_golden_age
+			set_status = zakhara_golden_age # Players will be notified by ZA.50030
 		}
 	}
 }
@@ -2603,7 +2603,7 @@ character_event = {
 # Root = Governor
 # From = Offmap
 character_event = {
-	id = JD.50280
+	id = ZA.50280
 
 	has_dlc = "Jade Dragon"
 
@@ -2612,15 +2612,15 @@ character_event = {
 	
 	trigger = {
 		FROM = {
-			is_offmap_tag = shou_lung
+			is_offmap_tag = zakhara
 			NOR = {
-				has_status = shou_lung_tu_lung_invasion # Resolution handled by JD.50160
-				has_status = shou_lung_tuigan_invasion # Resolution handled by JD.50200
-				has_status = shou_lung_civil_war # Resolution handled by JD.50300
+				has_status = zakhara_pantheist_invasion # Resolution handled by ZA.50160
+				has_status = zakhara_badia_invasion # Resolution handled by ZA.50200
+				has_status = zakhara_civil_war # Resolution handled by ZA.50300
 			}
 			OR = {
-				NOT = { has_offmap_flag = shou_lung_invaded_player_dynasty }
-				had_offmap_tmp_flag = { flag = shou_lung_invaded_player_dynasty years = 200 }
+				NOT = { has_offmap_flag = zakhara_invaded_player_dynasty }
+				had_offmap_tmp_flag = { flag = zakhara_invaded_player_dynasty years = 200 }
 			}
 		}
 	}
@@ -2630,32 +2630,32 @@ character_event = {
 		modifier = { # Unrest last for at least 2 years before becoming Stable/Civil War
 			factor = 0
 			FROM = {
-				has_status = shou_lung_unrest
-				has_offmap_flag = shou_lung_had_unrest
+				has_status = zakhara_unrest
+				has_offmap_flag = zakhara_had_unrest
 				NOT = {
-					had_offmap_tmp_flag = { flag = shou_lung_had_unrest years = 2 }
+					had_offmap_tmp_flag = { flag = zakhara_had_unrest years = 2 }
 				}
 			}
 		}
 		modifier = {
 			factor = 0.01
-			FROM = { has_status = shou_lung_golden_age }
+			FROM = { has_status = zakhara_golden_age }
 		}
 		modifier = {
 			factor = 0.1
-			FROM = { has_status = shou_lung_stable }
+			FROM = { has_status = zakhara_stable }
 		}
 		modifier = {
 			factor = 0.1
-			FROM = { NOT = { has_status = shou_lung_unrest } }
+			FROM = { NOT = { has_status = zakhara_unrest } }
 		}
 	}
 	
 	immediate = {
 		FROM = {
 			set_offmap_flag = no_status_news
-			set_status = shou_lung_civil_war
-			set_offmap_flag = shou_lung_civil_war
+			set_status = zakhara_civil_war
+			set_offmap_flag = zakhara_civil_war
 			clr_offmap_flag = no_status_news
 		}
 		any_player = {
@@ -2663,35 +2663,35 @@ character_event = {
 				has_offmap_news_enabled = FROM
 				is_within_diplo_range = ROOT
 			}
-			narrative_event = { id = JD.50281 }
+			narrative_event = { id = ZA.50281 }
 		}
 	}
 }
 
-# News from shou_lung: Civil War
+# News from zakhara: Civil War
 narrative_event = {
-	id = JD.50281
-	title = NEWS_FROM_shou_lung
+	id = ZA.50281
+	title = NEWS_FROM_zakhara
 	picture = GFX_evt_china_civil_war
-	portrait = shou_lung
+	portrait = zakhara
 	window = EventWindowOffmap
 	background = GFX_event_window_news_from_china
 
 	desc = {
 		trigger = {
 			FROMFROM = {
-				prev_status = shou_lung_unrest
+				prev_status = zakhara_unrest
 			}
 		}
-		text = EVTDESC_JD_50281_UNREST
+		text = EVTDESC_ZA_50281_UNREST
 	}
 	desc = {
 		trigger = {
 			FROMFROM = {
-				NOT = { prev_status = shou_lung_unrest }
+				NOT = { prev_status = zakhara_unrest }
 			}
 		}
-		text = EVTDESC_JD_50031_CW # Can use the default description
+		text = EVTDESC_ZA_50031_CW # Can use the default description
 	}
 
 	has_dlc = "Jade Dragon"
@@ -2699,7 +2699,7 @@ narrative_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		shou_lung = {
+		zakhara = {
 			ruler = {
 				save_event_target_as = portrait_target
 			}
@@ -2709,7 +2709,7 @@ narrative_event = {
 	portrait = event_target:portrait_target
 	
 	option = {
-		name = EVTOPT_JD_50281
+		name = EVTOPT_ZA_50281
 	}
 }
 
@@ -2718,7 +2718,7 @@ narrative_event = {
 # Root = Governor
 # From = Offmap
 character_event = {
-	id = JD.50300
+	id = ZA.50300
 
 	has_dlc = "Jade Dragon"
 
@@ -2727,8 +2727,8 @@ character_event = {
 	
 	trigger = {
 		FROM = {
-			is_offmap_tag = shou_lung
-			has_status = shou_lung_civil_war
+			is_offmap_tag = zakhara
+			has_status = zakhara_civil_war
 		}
 	}
 	
@@ -2738,35 +2738,35 @@ character_event = {
 			factor = 0
 			FROM = {
 				NOT = {
-					had_offmap_tmp_flag = { flag = shou_lung_civil_war years = 2 }
+					had_offmap_tmp_flag = { flag = zakhara_civil_war years = 2 }
 				}
 			}
 		}
 		modifier = {
 			factor = 2
-			FROM = { had_offmap_tmp_flag = { flag = shou_lung_civil_war years = 3 } }
+			FROM = { had_offmap_tmp_flag = { flag = zakhara_civil_war years = 3 } }
 		}
 		modifier = {
 			factor = 2
-			FROM = { had_offmap_tmp_flag = { flag = shou_lung_civil_war years = 5 } }
+			FROM = { had_offmap_tmp_flag = { flag = zakhara_civil_war years = 5 } }
 		}
 		modifier = {
 			factor = 2
-			FROM = { had_offmap_tmp_flag = { flag = shou_lung_civil_war years = 8 } }
+			FROM = { had_offmap_tmp_flag = { flag = zakhara_civil_war years = 8 } }
 		}
 		modifier = {
 			factor = 5
-			FROM = { had_offmap_tmp_flag = { flag = shou_lung_civil_war years = 10 } }
+			FROM = { had_offmap_tmp_flag = { flag = zakhara_civil_war years = 10 } }
 		}
 	}
 	
 	immediate = {
-		clr_offmap_flag = shou_lung_civil_war
+		clr_offmap_flag = zakhara_civil_war
 		random_list = {
 			70 = { # The loyalists won!
 				FROM = {
 					set_offmap_flag = no_status_news
-					set_status = shou_lung_stable
+					set_status = zakhara_stable
 					clr_offmap_flag = no_status_news
 				}
 				
@@ -2775,21 +2775,21 @@ character_event = {
 						has_offmap_news_enabled = FROM
 						is_within_diplo_range = ROOT
 					}
-					narrative_event = { id = JD.50301 }
+					narrative_event = { id = ZA.50301 }
 				}
 				random_list = {
 					50 = {
 						modifier = {
 							factor = 0
 							has_game_rule = {
-								name = shou_lung_invasions
+								name = zakhara_invasions
 								value = none
 							}
 						}
-						character_event = { id =  JD.10109 days = 15 } #Spawns a tuigan tribe leader...
+						character_event = { id =  ZA.10109 days = 15 } #Spawns a tuigan tribe leader...
 						set_character_flag = spawning_a_tu_lung_invader
-						log = "shou_lung Logging:"
-						log = "Attempting to spawn a Tu Lung Invader, as aftermath to event JD.50300 (end of Civil War - the loyalists won). Character should spawn in 15 days."
+						log = "zakhara Logging:"
+						log = "Attempting to spawn a Tu Lung Invader, as aftermath to event ZA.50300 (end of Civil War - the loyalists won). Character should spawn in 15 days."
 					}
 					50 = {
 						trigger = {
@@ -2801,14 +2801,14 @@ character_event = {
 						modifier = {
 							factor = 0
 							has_game_rule = {
-								name = shou_lung_invasions
+								name = zakhara_invasions
 								value = none
 							}
 						}
-						character_event = { id = JD.60200 days = 15 } #Spawns a Rebel General
+						character_event = { id = ZA.60200 days = 15 } #Spawns a Rebel General
 						set_character_flag = spawning_a_rebel_general
-						log = "shou_lung Logging:"
-						log = "Attempting to spawn a Rebel General, as aftermath to event JD.50300 (end of Civil War - the loyalists won). Character should spawn in 15 days."
+						log = "zakhara Logging:"
+						log = "Attempting to spawn a Rebel General, as aftermath to event ZA.50300 (end of Civil War - the loyalists won). Character should spawn in 15 days."
 					}
 				}
 			}
@@ -2825,8 +2825,8 @@ character_event = {
 				FROM = {
 					set_offmap_flag = no_status_news
 					random_list = {
-						50 = { set_status = shou_lung_stable }
-						50 = { set_status = shou_lung_unrest set_offmap_flag = shou_lung_had_unrest }
+						50 = { set_status = zakhara_stable }
+						50 = { set_status = zakhara_unrest set_offmap_flag = zakhara_had_unrest }
 					}
 					clr_offmap_flag = no_status_news
 					
@@ -2842,7 +2842,7 @@ character_event = {
 					}
 				}
 				
-				# A new ruler ascends to the Dragon Throne. The fallout is handled by JD.10005 and JD.50000 (from 'on_offmap_ruler_changed')
+				# A new ruler ascends to the Dragon Throne. The fallout is handled by ZA.10005 and ZA.50000 (from 'on_offmap_ruler_changed')
 				random_list = {
 					0 = {
 						additive_modifier = {
@@ -2886,10 +2886,10 @@ character_event = {
 						dynasty = THIS
 					}
 					new_character = {
-						death = { death_reason = death_in_shou_lung_historic }
-						save_event_target_as = new_shou_lung_ruler_father
+						death = { death_reason = death_in_zakhara_historic }
+						save_event_target_as = new_zakhara_ruler_father
 					}
-					set_father = event_target:new_shou_lung_ruler_father
+					set_father = event_target:new_zakhara_ruler_father
 					FROM = {
 						set_offmap_holder = PREV
 					}
@@ -2900,7 +2900,7 @@ character_event = {
 						has_offmap_news_enabled = FROM
 						is_within_diplo_range = ROOT
 					}
-					narrative_event = { id = JD.50302 }
+					narrative_event = { id = ZA.50302 }
 				}
 				
 				FROM = { clr_offmap_flag = foreign_dynasty_ousted }
@@ -2910,27 +2910,27 @@ character_event = {
 						modifier = {
 							factor = 0
 							has_game_rule = {
-								name = shou_lung_invasions
+								name = zakhara_invasions
 								value = none
 							}
 						}
-						character_event = { id = JD.10113 days = 15 } #Spawns a Displaced Prince adventurer...
+						character_event = { id = ZA.10113 days = 15 } #Spawns a Displaced Prince adventurer...
 						set_character_flag = spawning_a_displaced_royal
-						log = "shou_lung Logging:"
-						log = "Attempting to spawn a Displaced Prince, as aftermath to event JD.50300 (end of Civil War - the rebels won). Character should spawn in 15 days."
+						log = "zakhara Logging:"
+						log = "Attempting to spawn a Displaced Prince, as aftermath to event ZA.50300 (end of Civil War - the rebels won). Character should spawn in 15 days."
 					}
 					50 = {
 						modifier = {
 							factor = 0
 							has_game_rule = {
-								name = shou_lung_invasions
+								name = zakhara_invasions
 								value = none
 							}
 						}
-						character_event = { id = JD.10109 days = 15 } #Spawns a tuigan tribe leader...
+						character_event = { id = ZA.10109 days = 15 } #Spawns a tuigan tribe leader...
 						set_character_flag = spawning_a_tuigan_invader
-						log = "shou_lung Logging:"
-						log = "Attempting to spawn a tuigan Invader, as aftermath to event JD.50300 (end of Civil War - the rebels won). Character should spawn in 15 days."
+						log = "zakhara Logging:"
+						log = "Attempting to spawn a tuigan Invader, as aftermath to event ZA.50300 (end of Civil War - the rebels won). Character should spawn in 15 days."
 					}
 				}
 			}
@@ -2946,7 +2946,7 @@ character_event = {
 				
 				FROM = {
 					set_offmap_flag = no_status_news
-					set_status = shou_lung_stable
+					set_status = zakhara_stable
 					clr_offmap_flag = no_status_news
 					
 					set_offmap_flag = no_succession_news
@@ -2962,21 +2962,21 @@ character_event = {
 						has_offmap_news_enabled = FROM
 						is_within_diplo_range = ROOT
 					}
-					narrative_event = { id = JD.50303 days = 1 }
+					narrative_event = { id = ZA.50303 days = 1 }
 				}
 				random_list = {
 					90 = {
 						modifier = {
 							factor = 0
 							has_game_rule = {
-								name = shou_lung_invasions
+								name = zakhara_invasions
 								value = none
 							}
 						}
-						character_event = { id =  JD.10109 days = 15 } #Spawns a tuigan tribe leader...
+						character_event = { id =  ZA.10109 days = 15 } #Spawns a tuigan tribe leader...
 						set_character_flag = spawning_a_tu_lung_invader
-						log = "shou_lung Logging:"
-						log = "Attempting to spawn a Tu Lung Invader, as aftermath to event JD.50300 (end of Civil War - the rebels won (old dynasty pretender)). Character should spawn in 15 days."
+						log = "zakhara Logging:"
+						log = "Attempting to spawn a Tu Lung Invader, as aftermath to event ZA.50300 (end of Civil War - the rebels won (old dynasty pretender)). Character should spawn in 15 days."
 					}
 					10 = {
 						#nothing happens...
@@ -2987,13 +2987,13 @@ character_event = {
 	}
 }
 
-# News from shou_lung: Civil War Ends - Loyalists Win!
+# News from zakhara: Civil War Ends - Loyalists Win!
 narrative_event = {
-	id = JD.50301
-	title = NEWS_FROM_shou_lung
+	id = ZA.50301
+	title = NEWS_FROM_zakhara
 	picture = GFX_evt_china_civil_war
-	portrait = shou_lung
-	desc = EVTDESC_JD_50301
+	portrait = zakhara
+	desc = EVTDESC_ZA_50301
 	window = EventWindowOffmap
 	background = GFX_event_window_news_from_china
 
@@ -3002,7 +3002,7 @@ narrative_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		shou_lung = {
+		zakhara = {
 			ruler = {
 				save_event_target_as = portrait_target
 			}
@@ -3012,16 +3012,16 @@ narrative_event = {
 	portrait = event_target:portrait_target
 	
 	option = {
-		name = EVTOPT_JD_50301
+		name = EVTOPT_ZA_50301
 	}
 }
 
-# News from shou_lung: Civil War Ends - Rebels Win, New Dynasty!
+# News from zakhara: Civil War Ends - Rebels Win, New Dynasty!
 narrative_event = {
-	id = JD.50302
-	title = NEWS_FROM_shou_lung
+	id = ZA.50302
+	title = NEWS_FROM_zakhara
 	picture = GFX_evt_china_civil_war
-	portrait = shou_lung
+	portrait = zakhara
 	window = EventWindowOffmap
 	background = GFX_event_window_news_from_china
 
@@ -3031,7 +3031,7 @@ narrative_event = {
 				has_offmap_flag = foreign_dynasty_ousted
 			}
 		}
-		text = EVTDESC_JD_50302_HAN_DYNASTY
+		text = EVTDESC_ZA_50302_HAN_DYNASTY
 	}
 	desc = {
 		trigger = {
@@ -3039,7 +3039,7 @@ narrative_event = {
 				NOT = { has_offmap_flag = foreign_dynasty_ousted }
 			}
 		}
-		text = EVTDESC_JD_50302_NEW_DYNASTY
+		text = EVTDESC_ZA_50302_NEW_DYNASTY
 	}
 
 	has_dlc = "Jade Dragon"
@@ -3048,7 +3048,7 @@ narrative_event = {
 	hide_new = yes
 	
 	immediate = {
-		shou_lung = {
+		zakhara = {
 			ruler = {
 				save_event_target_as = portrait_target
 			}
@@ -3059,28 +3059,28 @@ narrative_event = {
 	
 	option = {
 		trigger = {
-			NOT = { has_character_modifier = peace_deal_with_shou_lung }
+			NOT = { has_character_modifier = peace_deal_with_zakhara }
 		}
-		name = EVTOPT_JD_50301
+		name = EVTOPT_ZA_50301
 	}
 	
 	option = {
 		trigger = {
-			has_character_modifier = peace_deal_with_shou_lung
+			has_character_modifier = peace_deal_with_zakhara
 		}
-		name = EVTOPT_JD_50302_BROKEN_PEACE_DEAL
+		name = EVTOPT_ZA_50302_BROKEN_PEACE_DEAL
 		
-		remove_character_modifier = peace_deal_with_shou_lung
+		remove_character_modifier = peace_deal_with_zakhara
 	}
 }
 
-# News from shou_lung: Civil War Ends - Rebels Win but Old Dynasty stays in power
+# News from zakhara: Civil War Ends - Rebels Win but Old Dynasty stays in power
 narrative_event = {
-	id = JD.50303
-	title = NEWS_FROM_shou_lung
+	id = ZA.50303
+	title = NEWS_FROM_zakhara
 	picture = GFX_evt_china_civil_war
-	portrait = shou_lung
-	desc = EVTDESC_JD_50303
+	portrait = zakhara
+	desc = EVTDESC_ZA_50303
 	window = EventWindowOffmap
 	background = GFX_event_window_news_from_china
 
@@ -3089,7 +3089,7 @@ narrative_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		shou_lung = {
+		zakhara = {
 			ruler = {
 				save_event_target_as = portrait_target
 			}
@@ -3099,25 +3099,25 @@ narrative_event = {
 	portrait = event_target:portrait_target
 	
 	option = {
-		name = EVTOPT_JD_50301
+		name = EVTOPT_ZA_50301
 	}
 }
 
 character_event = { # Update Silk Road values
-	id = JD.50400
+	id = ZA.50400
 
 	has_dlc = "Jade Dragon"
 
 	is_triggered_only = yes
 	hide_window = yes
 
-	trigger = { FROM = { is_offmap_tag = shou_lung } }
+	trigger = { FROM = { is_offmap_tag = zakhara } }
 	
 	immediate = {
 		FROM = {
 			if = {
 				limit = {
-					has_status = shou_lung_golden_age
+					has_status = zakhara_golden_age
 				}
 				set_trade_route_value_multiplier = {
 					which = silk_road
@@ -3126,7 +3126,7 @@ character_event = { # Update Silk Road values
 			}
 			if = {
 				limit = {
-					has_status = shou_lung_unrest
+					has_status = zakhara_unrest
 				}
 				set_trade_route_value_multiplier = {
 					which = silk_road
@@ -3136,9 +3136,9 @@ character_event = { # Update Silk Road values
 			if = {
 				limit = {
 					OR = {
-						has_status = shou_lung_civil_war
-						has_status = shou_lung_tu_lung_invasion
-						has_status = shou_lung_tuigan_invasion
+						has_status = zakhara_civil_war
+						has_status = zakhara_pantheist_invasion
+						has_status = zakhara_badia_invasion
 					}
 				}
 				set_trade_route_value_multiplier = {
@@ -3148,7 +3148,7 @@ character_event = { # Update Silk Road values
 			}
 			if = {
 				limit = {
-					has_status = shou_lung_famine
+					has_status = zakhara_famine
 				}
 				set_trade_route_value_multiplier = {
 					which = silk_road
@@ -3157,7 +3157,7 @@ character_event = { # Update Silk Road values
 			}
 			if = {
 				limit = {
-					has_status = shou_lung_plague
+					has_status = zakhara_plague
 				}
 				set_trade_route_value_multiplier = {
 					which = silk_road
@@ -3166,7 +3166,7 @@ character_event = { # Update Silk Road values
 			}
 			if = {
 				limit = {
-					has_policy = shou_lung_isolationist
+					has_policy = zakhara_isolationist
 				}
 				set_trade_route_value_multiplier = {
 					which = silk_road
@@ -3176,14 +3176,14 @@ character_event = { # Update Silk Road values
 			if = {
 				limit = {
 					NOR = {
-						has_policy = shou_lung_isolationist
-						has_status = shou_lung_famine
-						has_status = shou_lung_plague
-						has_status = shou_lung_unrest
-						has_status = shou_lung_civil_war
-						has_status = shou_lung_tu_lung_invasion
-						has_status = shou_lung_tuigan_invasion
-						has_status = shou_lung_golden_age
+						has_policy = zakhara_isolationist
+						has_status = zakhara_famine
+						has_status = zakhara_plague
+						has_status = zakhara_unrest
+						has_status = zakhara_civil_war
+						has_status = zakhara_pantheist_invasion
+						has_status = zakhara_badia_invasion
+						has_status = zakhara_golden_age
 					}
 				}
 				set_trade_route_value_multiplier = {
@@ -3196,7 +3196,7 @@ character_event = { # Update Silk Road values
 }
 
 character_event = { # Update Silk Road values on startup
-	id = JD.50401
+	id = ZA.50401
 
 	has_dlc = "Jade Dragon"
 
@@ -3209,10 +3209,10 @@ character_event = { # Update Silk Road values on startup
 	}
 	
 	immediate = {
-		shou_lung = {
+		zakhara = {
 			if = {
 				limit = {
-					has_status = shou_lung_golden_age
+					has_status = zakhara_golden_age
 				}
 				set_trade_route_value_multiplier = {
 					which = silk_road
@@ -3221,7 +3221,7 @@ character_event = { # Update Silk Road values on startup
 			}
 			if = {
 				limit = {
-					has_status = shou_lung_unrest
+					has_status = zakhara_unrest
 				}
 				set_trade_route_value_multiplier = {
 					which = silk_road
@@ -3231,9 +3231,9 @@ character_event = { # Update Silk Road values on startup
 			if = {
 				limit = {
 					OR = {
-						has_status = shou_lung_civil_war
-						has_status = shou_lung_tu_lung_invasion
-						has_status = shou_lung_tuigan_invasion
+						has_status = zakhara_civil_war
+						has_status = zakhara_pantheist_invasion
+						has_status = zakhara_badia_invasion
 					}
 				}
 				set_trade_route_value_multiplier = {
@@ -3243,7 +3243,7 @@ character_event = { # Update Silk Road values on startup
 			}
 			if = {
 				limit = {
-					has_status = shou_lung_famine
+					has_status = zakhara_famine
 				}
 				set_trade_route_value_multiplier = {
 					which = silk_road
@@ -3252,7 +3252,7 @@ character_event = { # Update Silk Road values on startup
 			}
 			if = {
 				limit = {
-					has_status = shou_lung_plague
+					has_status = zakhara_plague
 				}
 				set_trade_route_value_multiplier = {
 					which = silk_road
@@ -3261,7 +3261,7 @@ character_event = { # Update Silk Road values on startup
 			}
 			if = {
 				limit = {
-					has_policy = shou_lung_isolationist
+					has_policy = zakhara_isolationist
 				}
 				set_trade_route_value_multiplier = {
 					which = silk_road
@@ -3271,14 +3271,14 @@ character_event = { # Update Silk Road values on startup
 			if = {
 				limit = {
 					NOR = {
-						has_policy = shou_lung_isolationist
-						has_status = shou_lung_famine
-						has_status = shou_lung_plague
-						has_status = shou_lung_unrest
-						has_status = shou_lung_civil_war
-						has_status = shou_lung_tu_lung_invasion
-						has_status = shou_lung_tuigan_invasion
-						has_status = shou_lung_golden_age
+						has_policy = zakhara_isolationist
+						has_status = zakhara_famine
+						has_status = zakhara_plague
+						has_status = zakhara_unrest
+						has_status = zakhara_civil_war
+						has_status = zakhara_pantheist_invasion
+						has_status = zakhara_badia_invasion
+						has_status = zakhara_golden_age
 					}
 				}
 				set_trade_route_value_multiplier = {
@@ -3291,12 +3291,12 @@ character_event = { # Update Silk Road values on startup
 }
 
 character_event = {
-	id = JD.30500
+	id = ZA.30500
 	
 	hide_window = yes
 	is_triggered_only = yes
 
-	trigger = { FROM = { is_offmap_tag = shou_lung } }
+	trigger = { FROM = { is_offmap_tag = zakhara } }
 	
 	immediate = {
 		change_variable = {
@@ -3311,50 +3311,50 @@ character_event = {
 }
 
 character_event = {
-	id = JD.30501
+	id = ZA.30501
 	
 	hide_window = yes
 	is_triggered_only = yes
 
-	trigger = { FROM = { is_offmap_tag = shou_lung } }
+	trigger = { FROM = { is_offmap_tag = zakhara } }
 	
 	immediate = {
 		FROM = {
-			print_shou_lung_policy_update_effect = yes
+			print_zakhara_policy_update_effect = yes
 		}
 	}
 }
 
 character_event = {
-	id = JD.30502
+	id = ZA.30502
 	
 	hide_window = yes
 	is_triggered_only = yes
 
-	trigger = { FROM = { is_offmap_tag = shou_lung } }
+	trigger = { FROM = { is_offmap_tag = zakhara } }
 	
 	immediate = {
 		FROM = {
-			print_shou_lung_status_update_effect = yes
+			print_zakhara_status_update_effect = yes
 		}
 	}
 }
 
 character_event =  {
-	id = JD.30503
+	id = ZA.30503
 	
 	hide_window = yes
 	is_triggered_only = yes
 
-	trigger = { FROMFROM = { is_offmap_tag = shou_lung } }
+	trigger = { FROMFROM = { is_offmap_tag = zakhara } }
 	
 	immediate = {
-		print_shou_lung_ruler_update_effect = yes
+		print_zakhara_ruler_update_effect = yes
 	}
 }
 
-character_event =  { # Clean up living members of the shou_lung dynasty
-	id = JD.30504
+character_event =  { # Clean up living members of the zakhara dynasty
+	id = ZA.30504
 	
 	hide_window = yes
 	is_triggered_only = yes
@@ -3367,7 +3367,7 @@ character_event =  { # Clean up living members of the shou_lung dynasty
 	}
 	
 	immediate = {
-		shou_lung = {
+		zakhara = {
 			offmap_ruler = {
 				any_dynasty_member = {
 					limit = {
@@ -3378,7 +3378,7 @@ character_event =  { # Clean up living members of the shou_lung dynasty
 							dynasty = 1051210
 						}
 					}
-					death = { death_reason = death_went_back_to_shou_lung }
+					death = { death_reason = death_went_back_to_zakhara }
 				}
 			}
 			offmap_prev_ruler = {
@@ -3391,7 +3391,7 @@ character_event =  { # Clean up living members of the shou_lung dynasty
 							dynasty = 1051210
 						}
 					}
-					death = { death_reason = death_went_back_to_shou_lung }
+					death = { death_reason = death_went_back_to_zakhara }
 				}
 			}
 		}
