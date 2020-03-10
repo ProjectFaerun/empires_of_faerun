@@ -977,14 +977,14 @@ character_event = {
 			factor = 0
 			FROM = {
 				offmap_ruler = {
-					culture = tuigan
+					culture = hadhar
 				}
 			}
 		}
 		modifier = {
 			factor = 0.3
 			NOT = { 
-				has_global_flag = tuigan_empire_arrival
+				has_global_flag = pantheist_empire_arrival
 			}
 		}
 		modifier = {
@@ -993,23 +993,23 @@ character_event = {
 		}
 		modifier = {
 			factor = 0.5
-			FROM = { has_offmap_flag = zakhara_tuigan_won_1 }
+			FROM = { has_offmap_flag = zakhara_pantheist_won_1 }
 		}
 		modifier = {
 			factor = 0.25
-			FROM = { has_offmap_flag = zakhara_tuigan_won_2 }
+			FROM = { has_offmap_flag = zakhara_pantheist_won_2 }
 		}
 		modifier = {
 			factor = 0.1
-			FROM = { has_offmap_flag = zakhara_tuigan_won_3 }
+			FROM = { has_offmap_flag = zakhara_pantheist_won_3 }
 		}
 	}
 	
 	immediate = {
 		FROM = {
 			set_offmap_flag = no_status_news
-			set_status = zakhara_badia_invasion
-			set_offmap_flag = zakhara_badia_invasion
+			set_status = zakhara_pantheist_invasion
+			set_offmap_flag = zakhara_pantheist_invasion
 			clr_offmap_flag = no_status_news
 		}
 		any_player = {
@@ -1100,7 +1100,7 @@ character_event = {
 	trigger = {
 		FROM = {
 			is_offmap_tag = zakhara
-			has_status = zakhara_badia_invasion
+			has_status = zakhara_pantheist_invasion
 		}
 	}
 	
@@ -1108,19 +1108,19 @@ character_event = {
 		factor = 1
 		modifier = {
 			factor = 2
-			FROM = { had_offmap_tmp_flag = { flag = zakhara_badia_invasion years = 2 } }
+			FROM = { had_offmap_tmp_flag = { flag = zakhara_pantheist_invasion years = 2 } }
 		}
 		modifier = {
 			factor = 2
-			FROM = { had_offmap_tmp_flag = { flag = zakhara_badia_invasion years = 4 } }
+			FROM = { had_offmap_tmp_flag = { flag = zakhara_pantheist_invasion years = 4 } }
 		}
 		modifier = {
 			factor = 2
-			FROM = { had_offmap_tmp_flag = { flag = zakhara_badia_invasion years = 8 } }
+			FROM = { had_offmap_tmp_flag = { flag = zakhara_pantheist_invasion years = 8 } }
 		}
 		modifier = {
 			factor = 5
-			FROM = { had_offmap_tmp_flag = { flag = zakhara_badia_invasion years = 10 } }
+			FROM = { had_offmap_tmp_flag = { flag = zakhara_pantheist_invasion years = 10 } }
 		}
 	}
 	
@@ -1174,17 +1174,6 @@ character_event = {
 						}
 					}
 				}
-				modifier = { # The Borjigins are more likely to win
-					factor = 5
-					NOT = {
-						has_global_flag = borjigin_china
-					}
-					any_independent_ruler = {
-						dynasty = 5700
-						has_landed_title = e_yaimunnahar
-						ai = yes
-					}
-				}
 				
 				FROM = {
 					set_offmap_flag = no_status_news
@@ -1199,53 +1188,32 @@ character_event = {
 					
 					if = {
 						limit = {
-							has_offmap_flag = zakhara_tuigan_won_2
+							has_offmap_flag = zakhara_pantheist_won_2
 						}
-						set_offmap_flag = zakhara_tuigan_won_3
-						clr_offmap_flag = zakhara_tuigan_won_2
+						set_offmap_flag = zakhara_pantheist_won_3
+						clr_offmap_flag = zakhara_pantheist_won_2
 					}
 					
 					if = {
 						limit = {
-							has_offmap_flag = zakhara_tuigan_won_1
+							has_offmap_flag = zakhara_pantheist_won_1
 						}
-						set_offmap_flag = zakhara_tuigan_won_2
-						clr_offmap_flag = zakhara_tuigan_won_1
+						set_offmap_flag = zakhara_pantheist_won_2
+						clr_offmap_flag = zakhara_pantheist_won_1
 					}
 					
 					if = {
 						limit = {
 							NOR = {
-								has_offmap_flag = zakhara_tuigan_won_1
-								has_offmap_flag = zakhara_tuigan_won_2
-								has_offmap_flag = zakhara_tuigan_won_3
+								has_offmap_flag = zakhara_pantheist_won_1
+								has_offmap_flag = zakhara_pantheist_won_2
+								has_offmap_flag = zakhara_pantheist_won_3
 							}
 						}
-						set_offmap_flag = zakhara_tuigan_won_1
+						set_offmap_flag = zakhara_pantheist_won_1
 					}
 					
 					set_offmap_flag = no_succession_news
-				}
-				
-				if = { # If the Borjigin's are around, it's guaranteed to be a Borjigin emperor
-					limit = {
-						NOT = {
-							has_global_flag = borjigin_china
-						}
-						any_independent_ruler = {
-							dynasty = 5700
-							has_landed_title = e_yaimunnahar
-							ai = yes
-						}
-					}
-					random_independent_ruler = {
-						limit = {
-							dynasty = 5700
-							has_landed_title = e_yaimunnahar
-							ai = yes
-						}
-						save_event_target_as = tuigan_zakhara_invader
-					}
 				}
 				
 				# A new ruler ascends to the Dragon Throne. The fallout is handled by ZA.10005 and ZA.50000 (from 'on_offmap_ruler_changed')
@@ -1255,207 +1223,7 @@ character_event = {
 							factor = 2
 							year = 1200
 						}
-						if = { # Borjigin Emperor if they are around
-							limit = {
-								NOT = {
-									has_global_flag = borjigin_china
-								}
-								event_target:tuigan_zakhara_invader = {
-									is_alive = yes
-								}
-							}
-							random_list = {
-								0 = {
-									additive_modifier = {
-										value = 50
-										has_game_rule = {
-											name = gender
-											value = all
-										}
-									}
-									create_character = {
-										age = 20
-										random_traits = yes
-										female = yes
-										religion = event_target:tuigan_zakhara_invader
-										culture = event_target:tuigan_zakhara_invader
-										dynasty = event_target:tuigan_zakhara_invader
-										trait = brilliant_strategist
-										martial = 10
-									}
-								}
-								50 = {
-									create_character = {
-										age = 20
-										random_traits = yes
-										female = no
-										religion = event_target:tuigan_zakhara_invader
-										culture = event_target:tuigan_zakhara_invader
-										dynasty = event_target:tuigan_zakhara_invader
-										trait = brilliant_strategist
-										martial = 10
-									}
-								}
-							}
-							new_character = {
-								if = {
-									limit = {
-										event_target:tuigan_zakhara_invader = {
-											age = 36
-										}
-									}
-									set_father = event_target:tuigan_zakhara_invader
-								}
-								else_if = {
-									limit = {
-										event_target:tuigan_zakhara_invader = {
-											NOT = { age = 36 }
-											father_even_if_dead = {
-												age = 36
-											}
-										}
-									}
-									event_target:tuigan_zakhara_invader = {
-										father_even_if_dead = {
-											save_event_target_as = tuigan_zakhara_invader_father
-										}
-									}
-									set_father = event_target:tuigan_zakhara_invader_father
-								}
-								else = {
-									create_character = {
-										age = 60
-										random_traits = yes
-										female = no
-										religion = event_target:tuigan_zakhara_invader
-										culture = event_target:tuigan_zakhara_invader
-										dynasty = event_target:tuigan_zakhara_invader
-									}
-									new_character = {
-										death = { death_reason = death_in_zakhara_historic }
-										save_event_target_as = new_zakhara_ruler_father
-									}
-									set_father = event_target:new_zakhara_ruler_father
-								}
-								FROM = {
-									set_offmap_holder = PREV
-								}
-							}
-							zakhara = { # Mongols take all western protectorate lands for themselves
-								governor = {
-									any_vassal = {
-										set_defacto_liege = event_target:tuigan_zakhara_invader
-									}
-									any_demesne_title = {
-										limit = {
-											NOT = {
-												tier = EMPEROR
-											}
-										}
-										grant_title = event_target:tuigan_zakhara_invader
-									}
-								}
-							}
-							event_target:tuigan_zakhara_invader = { # The Borjigin who invaded China gets a bunch of Grace, Prestige, Gold, a Peace Deal and a few Siege Engineers when winning
-								wealth = 1000
-								prestige = 1000
-								add_offmap_currency = {
-									offmap = zakhara
-									value = 5000
-								}
-								add_character_modifier = {
-									inherit = yes
-									name = peace_deal_with_zakhara
-									years = 50
-								}
-								create_random_soldier = {
-									age = 30
-									dynasty = actually_culture
-									religion = ROOT
-									culture = ROOT
-									female = no
-									random_traits = yes
-									attributes = {
-										diplomacy = 2
-										learning = 2
-										stewardship = 2
-										intrigue = 2
-										martial = 12
-									}
-								}
-								new_character = {
-									set_character_flag = originated_from_zakhara_court
-									set_character_flag = no_court_invites
-									set_character_flag = taught_zakhara_strategy
-									
-									remove_trait = weak
-									remove_trait = slow
-									remove_trait = imbecile
-									remove_trait = dull
-									remove_trait = craven
-									
-									add_trait = sapper
-								}
-								create_random_soldier = {
-									age = 30
-									dynasty = actually_culture
-									religion = ROOT
-									culture = ROOT
-									female = no
-									random_traits = yes
-									attributes = {
-										diplomacy = 2
-										learning = 2
-										stewardship = 2
-										intrigue = 2
-										martial = 12
-									}
-								}
-								new_character = {
-									set_character_flag = originated_from_zakhara_court
-									set_character_flag = no_court_invites
-									set_character_flag = taught_zakhara_strategy
-									
-									remove_trait = weak
-									remove_trait = slow
-									remove_trait = imbecile
-									remove_trait = dull
-									remove_trait = craven
-									
-									add_trait = sapper
-								}
-								create_random_soldier = {
-									age = 30
-									dynasty = actually_culture
-									religion = ROOT
-									culture = ROOT
-									female = no
-									random_traits = yes
-									attributes = {
-										diplomacy = 2
-										learning = 2
-										stewardship = 2
-										intrigue = 2
-										martial = 12
-									}
-								}
-								new_character = {
-									set_character_flag = originated_from_zakhara_court
-									set_character_flag = no_court_invites
-									set_character_flag = taught_zakhara_strategy
-									
-									remove_trait = weak
-									remove_trait = slow
-									remove_trait = imbecile
-									remove_trait = dull
-									remove_trait = craven
-									
-									add_trait = sapper
-								}
-							}
-							set_global_flag = borjigin_china
-						}
-						else = { # If no Borjigins, business as usual
+						if = { # If no Borjigins, business as usual
 							random_list = {
 								0 = {
 									additive_modifier = {
@@ -1469,8 +1237,8 @@ character_event = {
 										age = 35
 										random_traits = yes
 										female = yes
-										religion = tuigan_shamanism # A bit strange, but necessary
-										culture = tuigan
+										religion = pantheist_league # A bit strange, but necessary
+										culture = hadhar
 										dynasty = actually_culture
 										trait = brilliant_strategist
 										martial = 10
@@ -1481,8 +1249,8 @@ character_event = {
 										age = 35
 										random_traits = yes
 										female = no
-										religion = tuigan_shamanism # A bit strange, but necessary
-										culture = tuigan
+										religion = pantheist_league # A bit strange, but necessary
+										culture = hadhar
 										dynasty = actually_culture
 										trait = brilliant_strategist
 										martial = 10
@@ -1511,13 +1279,13 @@ character_event = {
 									
 									}
 									10 = {
-										religion = tuigan_shamanism
+										religion = pantheist_league
 									}
 									10 = {
-										religion = adama
+										religion = qisma
 									}
 									5 = {
-										religion = the_path
+										religion = calishite_faith
 									}
 									5 = {
 										religion = muhjari
@@ -1550,8 +1318,8 @@ character_event = {
 									age = 35
 									random_traits = yes
 									female = yes
-									religion = tuigan_shamanism # A bit strange, but necessary
-									culture = tuigan
+									religion = pantheist_league # A bit strange, but necessary
+									culture = hadhar
 									dynasty = actually_culture
 									trait = brilliant_strategist
 									martial = 10
@@ -1562,8 +1330,8 @@ character_event = {
 									age = 35
 									random_traits = yes
 									female = no
-									religion = tuigan_shamanism # A bit strange, but necessary
-									culture = tuigan
+									religion = pantheist_league # A bit strange, but necessary
+									culture = hadhar
 									dynasty = actually_culture
 									trait = brilliant_strategist
 									martial = 10
