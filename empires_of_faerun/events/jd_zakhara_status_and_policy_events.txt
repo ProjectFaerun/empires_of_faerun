@@ -1301,7 +1301,7 @@ character_event = {
 						}
 						modifier = {
 							factor = 0
-							event_target:tuigan_zakhara_invader = {
+							event_target:pantheist_zakhara_invader = {
 								is_alive = yes
 							}
 						}
@@ -1360,13 +1360,13 @@ character_event = {
 								
 								}
 								10 = {
-									religion = tengri_pagan
+									religion = pantheist_league
 								}
 								10 = {
-									religion = adama
+									religion = qisma
 								}
 								5 = {
-									religion = the_path
+									religion = calishite_faith
 								}
 								5 = {
 									religion = muhjari
@@ -1377,7 +1377,7 @@ character_event = {
 					25 = {
 						modifier = {
 							factor = 0
-							event_target:tuigan_zakhara_invader = {
+							event_target:pantheist_zakhara_invader = {
 								is_alive = yes
 							}
 						}
@@ -1394,8 +1394,8 @@ character_event = {
 									age = 35
 									random_traits = yes
 									female = yes
-									religion = tuigan_shamanism # A bit strange, but necessary
-									culture = tuigan
+									religion = pantheist_league # A bit strange, but necessary
+									culture = hadhar
 									dynasty = actually_culture
 									trait = brilliant_strategist
 									martial = 10
@@ -1406,8 +1406,8 @@ character_event = {
 									age = 35
 									random_traits = yes
 									female = no
-									religion = tuigan_shamanism # A bit strange, but necessary
-									culture = tuigan
+									religion = pantheist_league # A bit strange, but necessary
+									culture = hadhar
 									dynasty = actually_culture
 									trait = brilliant_strategist
 									martial = 10
@@ -1436,13 +1436,13 @@ character_event = {
 								
 								}
 								10 = {
-									religion = tuigan_shamanism
+									religion = pantheist_league
 								}
 								10 = {
-									religion = adama
+									religion = qisma
 								}
 								5 = {
-									religion = the_path
+									religion = calishite_faith
 								}
 								5 = {
 									religion = muhjari
@@ -1453,7 +1453,7 @@ character_event = {
 					25 = {
 						modifier = {
 							factor = 0
-							event_target:tuigan_zakhara_invader = {
+							event_target:pantheist_zakhara_invader = {
 								is_alive = yes
 							}
 						}
@@ -1470,8 +1470,8 @@ character_event = {
 									age = 35
 									random_traits = yes
 									female = yes
-									religion = tuigan_shamanism # A bit strange, but necessary
-									culture = tuigan
+									religion = pantheist_league # A bit strange, but necessary
+									culture = hadhar
 									dynasty = actually_culture
 									trait = brilliant_strategist
 									martial = 10
@@ -1482,8 +1482,8 @@ character_event = {
 									age = 35
 									random_traits = yes
 									female = no
-									religion = tuigan_shamanism # A bit strange, but necessary
-									culture = tuigan
+									religion = pantheist_league # A bit strange, but necessary
+									culture = hadhar
 									dynasty = actually_culture
 									trait = brilliant_strategist
 									martial = 10
@@ -1512,13 +1512,13 @@ character_event = {
 								
 								}
 								10 = {
-									religion = tuigan_shamanism
+									religion = pantheist_league
 								}
 								10 = {
-									religion = adama
+									religion = qisma
 								}
 								5 = {
-									religion = the_path
+									religion = calishite_faith
 								}
 								5 = {
 									religion = muhjari
@@ -2066,7 +2066,7 @@ character_event = {
 						
 						}
 						10 = {
-							religion = tuigan_shamanism
+							religion = pantheist_league
 						}
 						10 = {
 							religion = adama
