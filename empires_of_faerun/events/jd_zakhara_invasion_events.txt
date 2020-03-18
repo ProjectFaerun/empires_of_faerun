@@ -707,8 +707,8 @@ character_event = {
     				OR = {
     					#Can grab Jiuquan (dunuhang, etc)
     					AND = {
-	    					NOT = { completely_controls = d_jiuquan }
-	    					d_taotie = {
+	    					NOT = { completely_controls = d_qudra }
+	    					d_qudra = {
 	    						any_direct_de_jure_vassal_title = {
 		    						holder_scope = {
 										top_liege = {
@@ -736,7 +736,7 @@ character_event = {
 								AND = { # or, if WP is unlanded, an eligble realm by the eastern border of the map...
 									has_offmap_tmp_flag = WP_is_not_on_map
 				    				any_independent_ruler = {
-										capital_scope = { region = custom_eastern_edge_of_map }
+										capital_scope = { region = custom_southern_edge_of_map }
 										is_nomadic = no # Don't subjugate nomads
 										num_of_count_titles_in_realm = 10
 										NOT = { num_of_count_titles_in_realm = 40 }
@@ -762,7 +762,7 @@ character_event = {
 								AND = { # or, if WP is unlanded, an eligble realm by the eastern border of the map...
 									has_offmap_tmp_flag = WP_is_not_on_map
 				    				any_independent_ruler = {
-										capital_scope = { region = custom_eastern_edge_of_map }
+										capital_scope = { region = custom_southern_edge_of_map }
 										is_nomadic = no # Don't subjugate nomads
 										num_of_count_titles_in_realm = 20
 						    			valid_zakhara_target = yes
@@ -808,8 +808,8 @@ character_event = {
 				random_list = {
 					100 = { # Go for Jiuquan (Grab Dunhuang, Anxi, etc - regardless of expansionist or not, on map or not) 
 						trigger = {
-							NOT = { completely_controls = d_taotie }
-	    					d_taotie = {
+							NOT = { completely_controls = d_qudra }
+	    					d_qudra = {
 	    						any_direct_de_jure_vassal_title = {
 		    						holder_scope = {
 										top_liege = {
@@ -821,7 +821,7 @@ character_event = {
 						}
 
 						#The WP will try to grab whatever they can within Jiuquan...
-						d_taotie = {
+						d_qudra = {
 							#add_claim = ROOT #No claim on the duchy title, as then they can grab more land than intended - they can usurp it afterwards instead					
 							any_direct_de_jure_vassal_title = {
 								add_claim = ROOT
@@ -862,7 +862,7 @@ character_event = {
 								AND = { # or, if WP is unlanded, an eligble realm by the eastern border of the map...
 									has_offmap_tmp_flag = WP_is_not_on_map
 				    				any_independent_ruler = {
-										capital_scope = { region = custom_eastern_edge_of_map }
+										capital_scope = { region = custom_southern_edge_of_map }
 										is_nomadic = no # Don't subjugate nomads
 										num_of_count_titles_in_realm = 10
 										NOT = { num_of_count_titles_in_realm = 40 }
@@ -904,7 +904,7 @@ character_event = {
 						if = { limit = { has_offmap_tmp_flag = WP_is_not_on_map }
 							random_independent_ruler = {
 					    		limit = {
-					    			capital_scope = { region = custom_eastern_edge_of_map }
+					    			capital_scope = { region = custom_southern_edge_of_map }
 									is_nomadic = no # Don't subjugate nomads
 									num_of_count_titles_in_realm = 10
 									NOT = { num_of_count_titles_in_realm = 40 }
@@ -933,7 +933,7 @@ character_event = {
 								AND = { # or, if WP is unlanded, an eligble realm by the eastern border of the map...
 									has_offmap_tmp_flag = WP_is_not_on_map
 				    				any_independent_ruler = {
-										capital_scope = { region = custom_eastern_edge_of_map }
+										capital_scope = { region = custom_southern_edge_of_map }
 										is_nomadic = no # Don't subjugate nomads
 										num_of_count_titles_in_realm = 20
 						    			valid_zakhara_target = yes
@@ -1004,7 +1004,7 @@ character_event = {
 						if = { limit = { has_offmap_tmp_flag = WP_is_not_on_map }
 							random_independent_ruler = {
 					    		limit = {
-					    			capital_scope = { region = custom_eastern_edge_of_map }
+					    			capital_scope = { region = custom_southern_edge_of_map }
 									is_nomadic = no # Don't subjugate nomads
 									num_of_count_titles_in_realm = 20
 					    			valid_zakhara_target = yes
@@ -1303,11 +1303,11 @@ character_event = {
 			limit = { has_offmap_tmp_flag = WP_is_not_on_map }
 
 			random_list = {
-				10 = { #Kangste
-					1378 = { save_event_target_as = zakhara_invasion_spawn_point_province }
+				10 = { #Qudra
+					1396 = { save_event_target_as = zakhara_invasion_spawn_point_province }
 				}
-				10 = { #Taotie
-					1382 = { save_event_target_as = zakhara_invasion_spawn_point_province }
+				10 = { #Adhal
+					1398 = { save_event_target_as = zakhara_invasion_spawn_point_province }
 				}
 			}
 		}
@@ -1511,26 +1511,26 @@ character_event = {
 			limit = { has_offmap_tmp_flag = WP_is_not_on_map }
 
 			random_list = {
-				10 = { #Kangste
-					1378 = { save_event_target_as = zakhara_invasion_spawn_point_province }
+				10 = { #Qudra
+					1396 = { save_event_target_as = zakhara_invasion_spawn_point_province }
 				}
-				10 = { #Taotie
-					1382 = { save_event_target_as = zakhara_invasion_spawn_point_province }
+				10 = { #Adhal
+					1398 = { save_event_target_as = zakhara_invasion_spawn_point_province }
 				}
-				10 = { #Zhoman
-					1772 = { save_event_target_as = zakhara_invasion_spawn_point_province } 
+				10 = { #Lahib Island
+					1351 = { save_event_target_as = zakhara_invasion_spawn_point_province } 
 				}
-				10 = { #Shou Kuan
-					1383 = { save_event_target_as = zakhara_invasion_spawn_point_province } 
+				10 = { #Taham
+					1352 = { save_event_target_as = zakhara_invasion_spawn_point_province } 
 				}
-				10 = { #To Ming
-					1363 = { save_event_target_as = zakhara_invasion_spawn_point_province } 
+				10 = { #Krak al-Niraan
+					1347 = { save_event_target_as = zakhara_invasion_spawn_point_province } 
 				}
-				10 = { #White Hills
-					1415 = { save_event_target_as = zakhara_invasion_spawn_point_province } 
+				10 = { #al-Anwahr
+					953 = { save_event_target_as = zakhara_invasion_spawn_point_province } 
 				}
-				10 = { #feifeng
-					1374 = { save_event_target_as = chinese_invasion_spawn_point_province } 
+				10 = { #Narari
+					1390 = { save_event_target_as = zakhara_invasion_spawn_point_province } 
 				}
 			}
 		}
