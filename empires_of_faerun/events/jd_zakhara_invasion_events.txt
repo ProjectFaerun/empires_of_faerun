@@ -2674,7 +2674,7 @@ character_event = {
 	}
 }
 
-#Should adventurer continue to raid?
+#should adventurer continue to raid?
 character_event = {
 	id = ZA.10120
 
@@ -3002,8 +3002,8 @@ character_event = {
 					age = 24
 					random_traits = yes
 					female = yes
-					religion = the_path
-					culture = shou
+					religion = pantheist_league
+					culture = hadhar
 					historical = yes
 				}
 				new_character = {
@@ -3012,8 +3012,8 @@ character_event = {
 						age = 6
 						random_traits = yes
 						female = 50
-						religion = the_path
-						culture = shou
+						religion = pantheist_league
+						culture = hadhar
 						genetic_father = ROOT
 						genetic_mother = PREV
 						historical = yes
@@ -3027,8 +3027,8 @@ character_event = {
 						age = 6
 						random_traits = yes
 						female = 50
-						religion = the_path
-						culture = shou
+						religion = pantheist_league
+						culture = hadhar
 						genetic_father = ROOT
 						genetic_mother = PREV
 						historical = yes
@@ -3045,8 +3045,8 @@ character_event = {
 					age = 32
 					random_traits = yes
 					female = yes
-					religion = the_path
-					culture = shou
+					religion = pantheist_league
+					culture = hadhar
 					historical = yes
 				}
 				new_character = {
@@ -3055,8 +3055,8 @@ character_event = {
 						age = 7
 						random_traits = yes
 						female = 50
-						religion = the_path
-						culture = shou
+						religion = pantheist_league
+						culture = hadhar
 						genetic_father = ROOT
 						genetic_mother = PREV
 						historical = yes
@@ -3070,8 +3070,8 @@ character_event = {
 						age = 10
 						random_traits = yes
 						female = 50
-						religion = the_path
-						culture = shou
+						religion = pantheist_league
+						culture = hadhar
 						genetic_father = ROOT
 						genetic_mother = PREV
 						historical = yes
@@ -3085,8 +3085,8 @@ character_event = {
 						age = 13
 						random_traits = yes
 						female = 50
-						religion = the_path
-						culture = shou
+						religion = pantheist_league
+						culture = hadhar
 						genetic_father = ROOT
 						genetic_mother = PREV
 						historical = yes
@@ -3103,8 +3103,8 @@ character_event = {
 					age = 48
 					random_traits = yes
 					female = yes
-					religion = the_path
-					culture = shou
+					religion = pantheist_league
+					culture = hadhar
 					historical = yes
 				}
 				new_character = {
@@ -3113,8 +3113,8 @@ character_event = {
 						age = 4
 						random_traits = yes
 						female = 50
-						religion = the_path
-						culture = shou
+						religion = pantheist_league
+						culture = hadhar
 						genetic_father = ROOT
 						genetic_mother = PREV
 						historical = yes
@@ -3128,8 +3128,8 @@ character_event = {
 						age = 9
 						random_traits = yes
 						female = 50
-						religion = the_path
-						culture = shou
+						religion = pantheist_league
+						culture = hadhar
 						genetic_father = ROOT
 						genetic_mother = PREV
 						historical = yes
@@ -3143,8 +3143,8 @@ character_event = {
 						age = 14
 						random_traits = yes
 						female = 50
-						religion = the_path
-						culture = shou
+						religion = pantheist_league
+						culture = hadhar
 						genetic_father = ROOT
 						genetic_mother = PREV
 						historical = yes
@@ -3158,8 +3158,8 @@ character_event = {
 						age = 18
 						random_traits = yes
 						female = 50
-						religion = the_path
-						culture = shou
+						religion = pantheist_league
+						culture = hadhar
 						genetic_father = ROOT
 						genetic_mother = PREV
 						historical = yes
@@ -3173,8 +3173,8 @@ character_event = {
 						age = 21
 						random_traits = yes
 						female = 50
-						religion = the_path
-						culture = shou
+						religion = pantheist_league
+						culture = hadhar
 						genetic_father = ROOT
 						genetic_mother = PREV
 						historical = yes
@@ -3339,7 +3339,7 @@ character_event = {
 	immediate = {
 		if = { #zakhara Imperial but not zakhara/Altaic, let convert culture
 			limit = { 
-				has_character_flag = celestial_government_preserve
+				has_character_flag = zakhara_government_preserve
 			}
 			repeat_event = { id = ZA.60212 days = 1 }
 			break = yes
@@ -3902,7 +3902,7 @@ character_event = {
 
 	immediate = {
 		if = { 
-			limit = { government = celestial_government }
+			limit = { government = zakhara_government }
 			primary_title = {
 				trigger_switch = { #Ensure naming convention 
 					on_trigger = has_title_flag
@@ -3965,7 +3965,7 @@ character_event = {
 			}
 		}
 		any_playable_ruler = {
-			limit = { government = celestial_government }
+			limit = { government = zakhara_government }
 			primary_title = {
 				trigger_switch = {
 					on_trigger = has_title_flag
@@ -4039,7 +4039,7 @@ character_event = {
 
 	immediate = {
 		if = {
-			limit = { government = celestial_government }
+			limit = { government = zakhara_government }
 			primary_title = {
 				trigger_switch = {
 					on_trigger = has_title_flag
@@ -4095,7 +4095,7 @@ character_event = {
 			}
 		}
 		any_playable_ruler = {
-			limit = { government = celestial_government }
+			limit = { government = zakhara_government }
 			primary_title = {
 				trigger_switch = {
 					on_trigger = has_title_flag
@@ -4286,10 +4286,10 @@ character_event = {
     has_dlc = "Jade Dragon"
 
 	trigger = {
-		government = celestial_government
+		government = zakhara_government
 		current_heir = { 
 			NOR = {
-				culture_group = kara_turan_group
+				culture_group = zakharan_group
 				culture = pantheist
 			}
 		}
@@ -4356,7 +4356,7 @@ character_event = {
 					}
 				}
 				current_heir = { 
-					set_character_flag = celestial_government_preserve
+					set_character_flag = zakhara_government_preserve
 				}
 			}
 			else = { #Else rename Empire and lose government type
@@ -4412,7 +4412,7 @@ character_event = {
 	option = { #Convert culture
 		name = EVT_OPTA_ZA_60212
 		culture = FROMFROM
-		clr_character_flag = celestial_government_preserve
+		clr_character_flag = zakhara_government_preserve
 		repeat_event = { id = ZA.60204 }
 	}
 	option = { #Do not, let the Empire die
@@ -4427,7 +4427,7 @@ character_event = {
 		}
 		if = {
 			limit = {
-				religion_group = muslim
+				is_muslim_trigger = yes
 			}
 			set_government_type = muslim_government
 		}
@@ -4439,7 +4439,7 @@ character_event = {
 					culture = tabotan
 					culture = gugari
 					AND = {
-						culture = shou
+						culture = hadhar
 						religion = padhran
 					}
 				}
@@ -4450,7 +4450,7 @@ character_event = {
 		else = {
 			set_government_type = feudal_government
 		}
-		clr_character_flag = celestial_government_preserve
+		clr_character_flag = zakhara_government_preserve
 	}
 }
 
