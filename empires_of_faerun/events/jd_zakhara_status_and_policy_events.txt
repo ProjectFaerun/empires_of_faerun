@@ -2636,8 +2636,8 @@ character_event = {
 							age = 30
 							random_traits = yes
 							female = no
-							religion = the_path # A bit strange, but necessary
-							culture = shou
+							religion = pantheist_league # A bit strange, but necessary
+							culture = hadhar
 							dynasty = actually_culture
 							trait = brilliant_strategist
 							martial = 10
@@ -2707,7 +2707,7 @@ character_event = {
 					factor = 0.5
 					FROM = {
 						holder_scope = {
-							NOT = { culture_group = kara_turan_group }
+							NOT = { culture_group = zakharan_group }
 						}
 					}
 				}
@@ -3142,8 +3142,6 @@ character_event =  { # Clean up living members of the zakhara dynasty
 						NOR = {
 							is_offmap_ruler = yes
 							is_ruler = yes
-							dynasty = 11100
-							dynasty = 1051210
 						}
 					}
 					death = { death_reason = death_went_back_to_zakhara }
@@ -3155,8 +3153,6 @@ character_event =  { # Clean up living members of the zakhara dynasty
 						NOR = {
 							is_offmap_ruler = yes
 							is_ruler = yes
-							dynasty = 11100
-							dynasty = 1051210
 						}
 					}
 					death = { death_reason = death_went_back_to_zakhara }
