@@ -1766,7 +1766,7 @@ character_event = {
 			factor = 0
 			FROM = {
 				offmap_ruler = {
-					culture = shou
+					culture = hadhar
 				}
 			}
 		}
@@ -1776,15 +1776,15 @@ character_event = {
 		}
 		modifier = {
 			factor = 0.5
-			FROM = { has_offmap_flag = zakhara_tu_lungs_won_1 }
+			FROM = { has_offmap_flag = zakhara_badia_won_1 }
 		}
 		modifier = {
 			factor = 0.25
-			FROM = { has_offmap_flag = zakhara_tu_lungs_won_2 }
+			FROM = { has_offmap_flag = zakhara_badia_won_2 }
 		}
 		modifier = {
 			factor = 0.1
-			FROM = { has_offmap_flag = zakhara_tu_lungs_won_3 }
+			FROM = { has_offmap_flag = zakhara_badia_won_3 }
 		}
 	}
 	
@@ -1970,29 +1970,29 @@ character_event = {
 					
 					if = {
 						limit = {
-							has_offmap_flag = zakhara_tuigan_won_2
+							has_offmap_flag = zakhara_badia_won_2
 						}
-						set_offmap_flag = zakhara_tuigan_won_3
-						clr_offmap_flag = zakhara_tuigan_won_2
+						set_offmap_flag = zakhara_badia_won_3
+						clr_offmap_flag = zakhara_badia_won_2
 					}
 					
 					if = {
 						limit = {
-							has_offmap_flag = zakhara_tuigan_won_1
+							has_offmap_flag = zakhara_badia_won_1
 						}
-						set_offmap_flag = zakhara_tuigan_won_2
-						clr_offmap_flag = zakhara_tuigan_won_1
+						set_offmap_flag = zakhara_badia_won_2
+						clr_offmap_flag = zakhara_badia_won_1
 					}
 					
 					if = {
 						limit = {
 							NOR = {
-								has_offmap_flag = zakhara_tuigan_won_1
-								has_offmap_flag = zakhara_tuigan_won_2
-								has_offmap_flag = zakhara_tuigan_won_3
+								has_offmap_flag = zakhara_badia_won_1
+								has_offmap_flag = zakhara_badia_won_2
+								has_offmap_flag = zakhara_badia_won_3
 							}
 						}
-						set_offmap_flag = zakhara_tuigan_won_1
+						set_offmap_flag = zakhara_badia_won_1
 					}
 					
 					set_offmap_flag = no_succession_news
@@ -2024,8 +2024,8 @@ character_event = {
 							age = 30
 							random_traits = yes
 							female = yes
-							religion = the_path # A bit strange, but necessary
-							culture = shou
+							religion = qisma # A bit strange, but necessary
+							culture = badia
 							dynasty = actually_culture
 							trait = brilliant_strategist
 							martial = 10
@@ -2036,8 +2036,8 @@ character_event = {
 							age = 30
 							random_traits = yes
 							female = no
-							religion = the_path # A bit strange, but necessary
-							culture = shou
+							religion = qisma # A bit strange, but necessary
+							culture = badia
 							dynasty = actually_culture
 							trait = brilliant_strategist
 							martial = 10
@@ -2063,16 +2063,16 @@ character_event = {
 					}
 					random_list = {
 						100 = {
-						
+								
 						}
 						10 = {
 							religion = pantheist_league
 						}
 						10 = {
-							religion = adama
+							religion = qisma
 						}
 						5 = {
-							religion = the_path
+							religion = calishite_faith
 						}
 						5 = {
 							religion = muhjari
@@ -2585,7 +2585,7 @@ character_event = {
 					factor = 2.5
 					FROM = {
 						holder_scope = {
-							NOT = { culture_group = kara_turan_group } # A foreign dynasty is more likely to be ousted
+							NOT = { culture_group = zakharan_group } # A foreign dynasty is more likely to be ousted
 						}
 					}
 				}
@@ -2603,7 +2603,7 @@ character_event = {
 					if = {
 						limit = {
 							holder_scope = {
-								NOT = { culture_group = kara_turan_group }
+								NOT = { culture_group = zakharan_group }
 							}
 						}
 						set_offmap_flag = foreign_dynasty_ousted
@@ -2624,8 +2624,8 @@ character_event = {
 							age = 30
 							random_traits = yes
 							female = yes
-							religion = the_path # A bit strange, but necessary
-							culture = shou
+							religion = pantheist_league # A bit strange, but necessary
+							culture = hadhar
 							dynasty = actually_culture
 							trait = brilliant_strategist
 							martial = 10
