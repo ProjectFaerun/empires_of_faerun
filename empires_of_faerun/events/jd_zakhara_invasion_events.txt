@@ -1868,7 +1868,7 @@ character_event = {
     }
 }
 
-###### Fallback gating event (to handle Displaced Princes, tuigan Invacers, and Rebel Generals)	#########
+###### Fallback gating event (to handle Displaced Princes, pantheist Invacers, and Rebel Generals)	#########
 ###### ... in case the old Protector General left some paper-work behind when they abandoned office #########
 ###### (Fires for the current governor, from offmap_monthly_pulse) 									#########
 character_event = {
@@ -1883,7 +1883,7 @@ character_event = {
 			is_offmap_tag = zakhara 
 			OR = {
 				has_offmap_flag = waiting_to_spawn_a_displaced_royal
-				has_offmap_flag = waiting_to_spawn_a_tuigan_invader
+				has_offmap_flag = waiting_to_spawn_a_pantheist_invader
 				has_offmap_flag = waiting_to_spawn_a_rebel_general
 			}
 		}
@@ -1900,12 +1900,12 @@ character_event = {
 					log = "zakhara Logging:"
 					log = "Attempting to spawn a Displaced Royal, via monthly pulse fallback event (since the old governor left office). Character should spawn in 15 days."
 				}
-				waiting_to_spawn_a_tuigan_invader = {
+				waiting_to_spawn_a_pantheist_invader = {
 					governor = {
-						character_event = { id =  ZA.10109 days = 15 } #Spawns a tuigan tribe leader...
+						character_event = { id =  ZA.10109 days = 15 } #Spawns a pantheist tribe leader...
 					}
 					log = "zakhara Logging:"
-					log = "Attempting to spawn a tuigan Invader, via monthly pulse fallback event (since the old governor left office). Character should spawn in 15 days."
+					log = "Attempting to spawn a pantheist Invader, via monthly pulse fallback event (since the old governor left office). Character should spawn in 15 days."
 				}
 				waiting_to_spawn_a_rebel_general = {
 					governor = {
@@ -1916,14 +1916,14 @@ character_event = {
 				}
 			}
 			clr_offmap_flag = waiting_to_spawn_a_displaced_royal
-			clr_offmap_flag = waiting_to_spawn_a_tuigan_invader
+			clr_offmap_flag = waiting_to_spawn_a_pantheist_invader
 			clr_offmap_flag = waiting_to_spawn_a_rebel_general
 		}
     }
 }
 
 ############################################################################################################################
-#News event for tuigan tribe/Displaced prince invasion/adventurer (stand-alone, fired further down, from ZA.10109)
+#News event for pantheist tribe/Displaced prince invasion/adventurer (stand-alone, fired further down, from ZA.10109)
 ############################################################################################################################
 narrative_event = {
     id = ZA.10108
@@ -1936,9 +1936,9 @@ narrative_event = {
     is_triggered_only = yes
 
     desc = {
-    	text = EVTDESC_ZA_10108_tuigan
+    	text = EVTDESC_ZA_10108_pantheist
     	trigger = {
-			event_target:the_zakhara_invader = { has_character_flag = is_tuigan_invader }
+			event_target:the_zakhara_invader = { has_character_flag = is_pantheist_invader }
     	}
     }
     desc = {
@@ -1983,7 +1983,7 @@ character_event = {
 
     immediate = {
 		clr_character_flag = spawning_a_displaced_royal
-    	clr_character_flag = spawning_a_tuigan_invader
+    	clr_character_flag = spawning_a_pantheist_invader
     	clr_character_flag = spawning_a_rebel_general
 
     	save_event_target_as = the_protector_general
@@ -1992,8 +1992,8 @@ character_event = {
 			50 = {
 				create_character = {
 					random_traits = yes
-					religion = the_path
-					culture = tuigan
+					religion = pantheist_league
+					culture = hadhar
 					dynasty = actually_culture
 					female = no
 					age = 30
@@ -2004,19 +2004,19 @@ character_event = {
 					add_trait = ambitious
 					remove_trait = content
 					remove_trait = craven
-					set_character_flag = is_tuigan_invader
-					save_event_target_as = tuigan_invader
+					set_character_flag = is_pantheist_invader
+					save_event_target_as = pantheist_invader
 					save_event_target_as = the_zakhara_invader #loc based on what flag this target has
 					character_event = { id = ZA.10110 }
 					log = "zakhara Logging:"
-					log = "[This.GetFullName] ID [This.GetID] is the tuigan Invader"
+					log = "[This.GetFullName] ID [This.GetID] is the pantheist Invader"
 				}
 			}
 			50 = {
 				create_character = {
 					random_traits = yes
-					religion = tuigan_shamanism
-					culture = tuigan
+					religion = pantheist_league
+					culture = hadhar
 					dynasty = actually_culture
 					female = no
 					age = 30
@@ -2027,12 +2027,12 @@ character_event = {
 					add_trait = ambitious
 					remove_trait = content
 					remove_trait = craven
-					set_character_flag = is_tuigan_invader
-					save_event_target_as = tuigan_invader
+					set_character_flag = is_pantheist_invader
+					save_event_target_as = pantheist_invader
 					save_event_target_as = the_zakhara_invader #loc based on what flag this target has
 					character_event = { id = ZA.10110 }
 					log = "zakhara Logging:"
-					log = "[This.GetFullName] ID [This.GetID] is the tuigan Invader"
+					log = "[This.GetFullName] ID [This.GetID] is the pantheist Invader"
 				}
 			}
 		}
@@ -2064,7 +2064,7 @@ character_event = {
 
     immediate = {
     	clr_character_flag = spawning_a_displaced_royal
-    	clr_character_flag = spawning_a_tuigan_invader
+    	clr_character_flag = spawning_a_pantheist_invader
     	clr_character_flag = spawning_a_rebel_general
 
     	save_event_target_as = the_protector_general
@@ -2077,7 +2077,7 @@ character_event = {
 
     	create_character = {
 			random_traits = yes
-			religion = the_path
+			religion = pantheist_league
 			culture = event_target:previousEmperor 
 			dynasty = event_target:previousEmperor
 			female = no
@@ -2206,7 +2206,7 @@ character_event = {
 }
 
 #########################################################################################################
-# An ambitious tuigan General/Displaced Prince begins to plan an adventure for a foreign title
+# An ambitious pantheist General/Displaced Prince begins to plan an adventure for a foreign title
 #########################################################################################################
 character_event = {
 	id = ZA.10110
@@ -2243,15 +2243,15 @@ character_event = {
 		}
 
 		if = {
-			limit = { has_character_flag = is_tuigan_invader }
+			limit = { has_character_flag = is_pantheist_invader }
 			set_character_flag = raiding_adventurer_nomad
 		}
 
 		set_character_flag = raiding_adventurer
-		change_variable = { which = global_raiding_adventurer_spawn_by_tuigan_invasion value = 1 }
+		change_variable = { which = global_raiding_adventurer_spawn_by_pantheist_invasion value = 1 }
 
 		if = {
-			limit = { has_character_flag = is_tuigan_invader }
+			limit = { has_character_flag = is_pantheist_invader }
 			1378 = { #Kangste
 				save_event_target_as = target_province
 			}
@@ -2324,7 +2324,7 @@ character_event = {
 			}
 		}
 
-		if = { limit = { has_character_flag = is_tuigan_invader } 
+		if = { limit = { has_character_flag = is_pantheist_invader } 
 			random_list = {
 				30 = {
 					spawn_unit = {
@@ -2769,7 +2769,7 @@ character_event = {
 
     immediate = {
     	clr_character_flag = spawning_a_displaced_royal
-    	clr_character_flag = spawning_a_tuigan_invader
+    	clr_character_flag = spawning_a_pantheist_invader
     	clr_character_flag = spawning_a_rebel_general
 
     	save_event_target_as = the_protector_general
@@ -2781,8 +2781,8 @@ character_event = {
 					age = 27
 					random_traits = yes
 					female = no
-					religion = the_path
-					culture = shou
+					religion = pantheist_league
+					culture = hadhar
 					dynasty = actually_culture
 					trait = brilliant_strategist
 					martial = 8
@@ -2795,8 +2795,8 @@ character_event = {
 					age = 36
 					random_traits = yes
 					female = no
-					religion = the_path
-					culture = shou
+					religion = pantheist_league
+					culture = hadhar
 					dynasty = actually_culture
 					trait = brilliant_strategist
 					martial = 10
@@ -2809,8 +2809,8 @@ character_event = {
 					age = 52
 					random_traits = yes
 					female = no
-					religion = the_path
-					culture = shou
+					religion = pantheist_league
+					culture = hadhar
 					dynasty = actually_culture
 					trait = brilliant_strategist
 					martial = 12
@@ -2862,7 +2862,7 @@ character_event = {
 			character_event = { id = ZA.60201 } #Create title and pick target to notify
 		}
 
-		#News event, tuigan and Prince add triggered desc for General
+		#News event, pantheist and Prince add triggered desc for General
 		any_player = {
 			limit = {
 				has_offmap_news_enabled = zakhara
@@ -4290,7 +4290,7 @@ character_event = {
 		current_heir = { 
 			NOR = {
 				culture_group = kara_turan_group
-				culture = tuigan
+				culture = pantheist
 			}
 		}
 	}
