@@ -4306,14 +4306,10 @@ character_event = {
         name = EVT_OPTB_ZA_60301
         trigger = {
             any_realm_province = {
-                OR = {
-                    province_id = 1513 #Jiuquan
-                    province_id = 1505 #Markam
-                    province_id = 1114 #Mahoyadapuram
-                }
+                province_id = 2315
             }
             trade_route_control = {
-                trade_route = silk_road
+                trade_route = golden_waters
                 value >= 0.25
                 type = wealth
                 indirectly_owned = yes
@@ -4896,7 +4892,7 @@ letter_event = {
             force_open_zakhara_demands_trade_post = {
                 random_trade_post = {
                     limit = {
-                        trade_route = silk_road
+                        trade_route = golden_waters
                     }
                     destroy_tradepost = THIS
                 }
