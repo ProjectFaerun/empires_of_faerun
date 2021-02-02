@@ -1,52 +1,52 @@
-zakhara = {
-	name = zakhara_zakhara
+seros = {
+	name = seros_seros
 	window_name = domestic_offmaps_window
-	button_name = icon_offmaps_entry3
+	button_name = icon_offmaps_entry2
 	currency_name = TXT_GRACE
 	currency_gain = monthly_grace
 	currency_reset_on_dynasty_change = yes
-	holder_title = title_zakhara_grand_caliph	
-	governor_title = e_zakhara_west_governor
+	holder_title = title_celestial_emperor	
+	governor_title = e_seros_west_governor
 	tier = emperor
-	non_aggression_modifier = peace_deal_with_zakhara
-	government = zakharan_bureaucracy
+	non_aggression_modifier = peace_deal_with_seros
+	government = confucian_bureaucracy
 	beginning_of_history = 1.1.1
 	sound = china_interaction_interface	
 	#display_trigger = {
 	#	has_dlc = "Jade Dragon"
 	#}
 	policies = {
-		zakhara_open
-		zakhara_isolationist
-		zakhara_expansionist
+		seros_open
+		seros_isolationist
+		seros_expansionist
 	}
 	statuses = {
-		zakhara_stable
-		zakhara_unrest
-		zakhara_civil_war
-		zakhara_pantheist_invasion
-		zakhara_badia_invasion
-		zakhara_famine
-		zakhara_plague
-		zakhara_golden_age
+		seros_stable
+		seros_unrest
+		seros_civil_war
+		seros_sahuagin_invasion
+		seros_merrow_invasion
+		seros_famine
+		seros_plague
+		seros_golden_age
 	}
 	buttons = {
 		offmap_gifts = {
 			is_active_trigger = {
-				zakhara_offmap_tribute_decisions_enabled_trigger = yes
+				seros_offmap_tribute_decisions_enabled_trigger = yes
 			}
 		}
 		offmap_boons = {
 			is_active_trigger = {
-				zakhara_offmap_boon_decisions_enabled_trigger = yes
+				seros_offmap_boon_decisions_enabled_trigger = yes
 			}
 		}
 		offmap_hostility = {
 			is_active_trigger = {
-				zakhara_offmap_hostile_decisions_enabled_trigger = yes
+				seros_offmap_hostile_decisions_enabled_trigger = yes
 			}
 			display_trigger = {
-				NOT = { zakhara = { offmap_ruler = { dynasty = FROM } } }
+				NOT = { seros = { offmap_ruler = { dynasty = FROM } } }
 			}
 		}
 		offmap_hostility2 = {
@@ -59,99 +59,99 @@ zakhara = {
 	#These conditions only effect the appearance of the button, it does not actually disable them from being clickable. The same triggers are used in all tribute/boon decisions respectively
 	
 	icon_triggers = {
-		zakhara_physician_cd = {
+		seros_physician_cd = {
 			frame = 9
 			trigger = {
 				hidden_tooltip = {
-					has_character_flag = zakhara_grace_physician_sent
+					has_character_flag = seros_grace_physician_sent
 				}
 			}
 		}
-		zakhara_raid_cd = {
+		seros_raid_cd = {
 			frame = 8
 			right = yes	
 			trigger = {
 				hidden_tooltip = {
-					has_character_modifier = zakhara_raid_grace_cd
+					has_character_modifier = seros_raid_grace_cd
 				}
 			}
 		}
-		zakhara_famine_cd = {
+		seros_famine_cd = {
 			frame = 7
 			trigger = {
 				hidden_tooltip = {
-					has_character_modifier = zakhara_send_relief
+					has_character_modifier = seros_send_relief
 				}
 			}
 		}
-		zakhara_tributary_cd = {
+		seros_tributary_cd = {
 			frame = 6
 			trigger = {
 				hidden_tooltip = {
-					has_character_modifier = zakhara_grace_tributary_timer
+					has_character_modifier = seros_grace_tributary_timer
 				}
 			}
 		}
-		zakhara_boon_cd = {
+		seros_boon_cd = {
 			frame = 5
 			right = yes	
 			trigger = {
 				hidden_tooltip = {
-					has_character_modifier = jd_zakhara_boon_cd
+					has_character_modifier = jd_seros_boon_cd
 				}
 			}
 		}
-		zakhara_commander_cd = {
+		seros_commander_cd = {
 			frame = 4
 			trigger = {
 				hidden_tooltip = {
-					has_character_modifier = zakhara_grace_send_commander_timer
+					has_character_modifier = seros_grace_send_commander_timer
 				}
 			}
 		}
-		zakhara_eunuch_cd = {
+		seros_eunuch_cd = {
 			frame = 3
 			trigger = {
 				hidden_tooltip = {
-					has_character_modifier = zakhara_grace_send_eunuch_timer
+					has_character_modifier = seros_grace_send_eunuch_timer
 				}
 			}
 		}
-		zakhara_concubine_cd = {
+		seros_concubine_cd = {
 			frame = 2
 			trigger = {
 				hidden_tooltip = {
-					has_character_modifier = zakhara_grace_send_concubine_timer
+					has_character_modifier = seros_grace_send_concubine_timer
 				}
 			}
 		}
-		zakhara_gift_cd = {
+		seros_gift_cd = {
 			frame = 1
 			trigger = {
 				hidden_tooltip = {
-					has_character_modifier = zakhara_grace_send_gift_timer
+					has_character_modifier = seros_grace_send_gift_timer
 				}
 			}
 		}
 	}
 	
 	monthly_currency_gain = {
-		zakhara_same_dynasty = {
+		offmap_same_dynasty = {
 			value = 10
-			zakhara = { offmap_ruler = { dynasty = FROM } }
+			seros = { offmap_ruler = { dynasty = FROM } }
 		}
-		zakhara_war_with_me = {
+		offmap_war_with_me = {
 			value = -10
 			war_with = FROM
 		}
-		zakhara_likes_me = {
+		offmap_likes_me = {
 			value = 1
-			FROM = { is_liked_by_zakhara_trigger = yes }
+			FROM = { is_liked_by_seros_trigger = yes }
 			is_within_diplo_range = FROM
 		}
-		zakhara_zakhara_likes_tributaries = {
+		offmap_likes_tributaries = {
 			value = 2
-			zakhara = {			
+			seros = {			
 				offmap_has_like = likes_tributaries
 			}
 			FROM = {
@@ -164,7 +164,7 @@ zakhara = {
 			value = 2
 			FROM = {
 				liege = {
-					has_landed_title = e_zakhara_west_governor
+					has_landed_title = e_seros_west_governor
 				}
 			}
 		}
@@ -180,8 +180,28 @@ zakhara = {
 	
 	temple_names = {
 		{ # Founder names
+			Ivellion
+			Zhuirentalon
+			Caelynnon
+			Edraelen
+			Gelmalgaldon
+			Erwedhenen
+			Lysanderen
+			Jehastran
 		}
 		{ # Successor names
+			Perwraekon
+			Nacaciaen
+			Sheh'Streken
+			Zocrixen
+			Hilazieon
+			Gokekuen
+			Aggezzenon
+			Aekteshon
+			Drazrosen
+			Thaalison
+			Noktiten
+			Sheshon
 		}
 	}
 	holder_succession = {
@@ -196,7 +216,7 @@ zakhara = {
 			}
 		}
 		culture = {
-			hadhar = { # default culture for new emperor
+			sea_elf = { # default culture for new emperor
 				value = 99 # if any other value reaches 100, it will be picked instead
 			}
 			FROM = { # default culture for new emperor
@@ -204,7 +224,7 @@ zakhara = {
 				value = 0
 				additive_modifier = { #the new emperor will keep current culture if things are great
 					value = 100
-					#zakhara_is_fine_trigger = yes
+					#seros_is_fine_trigger = yes
 					FROM = { culture_scope = { always = yes } } # Essentially a check that the previous emperor actually exists
 				}
 			}
@@ -217,14 +237,14 @@ zakhara = {
 		}
 
 		religion = {
-			the_path = { # default religion for new emperor
+			asathalfinare = { # default religion for new emperor
 				value = 99 # if any other value reaches 100, it will be picked instead (unless equal, then it will randomize)
 			}
 			FROM = {
 				value = 0
 				additive_modifier = { # the new emperor will keep current religion if things are great
 					value = 100
-					#zakhara_is_fine_trigger = yes
+					#seros_is_fine_trigger = yes
 					FROM = { religion_scope = { always = yes } } # Essentially a check that the previous emperor actually exists
 				}
 			}
@@ -240,7 +260,7 @@ zakhara = {
 					value = 100
 					NOT = { FROM = { character = yes } }
 				}
-				additive_modifier = { #Fix for simulating zakhara history on old save boot-up
+				additive_modifier = { #Fix for simulating seros history on old save boot-up
 					value = 100
 					random < 12
 					has_game_started = no
@@ -272,19 +292,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = chondathan_group
-							is_within_diplo_range = shou_lung
-						}
-					}
-				}
-			}
-			likes_coldlander_group = {
-				value = 100
-				modifier = {
-					factor = 0
-					NOT = {
-						any_province = {
-							culture_group = coldlander_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -296,7 +304,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = dwarf_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -308,7 +316,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = elf_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -320,7 +328,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = gnome_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -332,7 +340,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = halfling_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -344,7 +352,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = illuskan_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -356,7 +364,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = imaskari_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -368,7 +376,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = kara_turan_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -380,7 +388,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = katashakan_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -392,7 +400,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = lapal_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -404,7 +412,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = maztican_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -416,19 +424,19 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = mulan_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
 			}
-			likes_narfelli_group = {
+			likes_damaran_group = {
 				value = 100
 				modifier = {
 					factor = 0
 					NOT = {
 						any_province = {
-							culture_group = narfelli_group
-							is_within_diplo_range = shou_lung
+							culture_group = damaran_group
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -440,7 +448,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = netherese_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -452,7 +460,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = orc_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -467,7 +475,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = raum_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -479,7 +487,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = shaaran_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -491,7 +499,19 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = tethyrian_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
+						}
+					}
+				}
+			}
+			likes_calishite_group = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							culture_group = calishite_group
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -503,7 +523,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = taan_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -515,7 +535,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = turami_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -527,7 +547,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = uluik_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -539,7 +559,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = zakharan_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -551,7 +571,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							religion_group = good_human_pantheon_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -567,7 +587,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							religion_group = evil_human_pantheon_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -583,7 +603,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							religion_group = zakharan_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -599,7 +619,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							religion_group = karaturan_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -615,7 +635,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							religion_group = elven_pantheon_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -631,7 +651,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							religion_group = drow_pantheon
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -647,7 +667,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							religion_group = dwarven_pantheon_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -663,7 +683,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							religion_group = giant_pantheon_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -679,7 +699,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							religion_group = goblin_pantheon_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -695,7 +715,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							religion_group = orc_pantheon_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -711,7 +731,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							religion_group = monster_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -727,7 +747,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							religion_group = draconic_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -743,7 +763,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							religion_group = pagan_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -763,10 +783,10 @@ zakhara = {
 				}
 			}
 			likes_eunuchs = {
-				value = 300
+				value = 100
 			}
 			likes_wealth = {
-				value = 300
+				value = 100
 			}
 			likes_tributaries = {
 				value = 100
@@ -778,19 +798,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = chondathan_group
-							is_within_diplo_range = shou_lung
-						}
-					}
-				}
-			}
-			likes_coldlander_group = {
-				value = 100
-				modifier = {
-					factor = 0
-					NOT = {
-						any_province = {
-							culture_group = coldlander_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -802,7 +810,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = dwarf_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -814,7 +822,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = elf_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -826,7 +834,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = gnome_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -838,7 +846,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = halfling_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -850,7 +858,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = illuskan_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -862,7 +870,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = imaskari_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -874,7 +882,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = kara_turan_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -886,7 +894,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = katashakan_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -898,7 +906,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = lapal_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -910,7 +918,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = maztican_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -922,19 +930,19 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = mulan_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
 			}
-			likes_narfelli_group = {
+			likes_damaran_group = {
 				value = 100
 				modifier = {
 					factor = 0
 					NOT = {
 						any_province = {
-							culture_group = narfelli_group
-							is_within_diplo_range = shou_lung
+							culture_group = damaran_group
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -946,7 +954,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = netherese_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -958,7 +966,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = orc_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -973,7 +981,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = raum_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -985,7 +993,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = shaaran_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -997,7 +1005,19 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = tethyrian_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
+						}
+					}
+				}
+			}
+			likes_calishite_group = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							culture_group = calishite_group
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1009,7 +1029,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = taan_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1021,7 +1041,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = turami_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1033,7 +1053,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = uluik_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1045,7 +1065,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							culture_group = zakharan_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1057,7 +1077,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							religion_group = good_human_pantheon_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1073,7 +1093,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							religion_group = evil_human_pantheon_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1089,7 +1109,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							religion_group = zakharan_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1105,7 +1125,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							religion_group = karaturan_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1121,7 +1141,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							religion_group = elven_pantheon_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1137,7 +1157,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							religion_group = drow_pantheon
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1153,7 +1173,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							religion_group = dwarven_pantheon_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1169,7 +1189,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							religion_group = giant_pantheon_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1185,7 +1205,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							religion_group = goblin_pantheon_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1201,7 +1221,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							religion_group = orc_pantheon_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1217,7 +1237,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							religion_group = monster_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1233,7 +1253,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							religion_group = draconic_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1249,7 +1269,7 @@ zakhara = {
 					NOT = {
 						any_province = {
 							religion_group = pagan_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1261,62 +1281,62 @@ zakhara = {
 		}
 	}
 	
-    diplomatic_range = { #Already includes the western governor's "normal" diplo range
-        OR = {
-            has_game_rule = {
-                name = zakhara_interactions
-                value = all
-            }
-            AND = {
-                has_game_rule = {
-                    name = zakhara_interactions
-                    value = within_range
-                }
-                OR = {
-                    top_liege = {
-                        suzerain = {
-                            has_landed_title = e_zakhara_west_governor
-                        }
-                    }
-                    any_neighbor_independent_ruler = {
-                        OR = {
-                            has_landed_title = e_zakhara_west_governor
-                            suzerain = {
-                                has_landed_title = e_zakhara_west_governor
-                            }
-                        }
-                    }
-                    any_realm_province = { #Is within reach of the silk road
-                        OR = {
-                            trade_route = golden_waters
-                            region = great_sea_region
-                            region = kara_tur_region
-                        }
-                    }
-                }
-            }
-            AND = {
-                has_game_rule = {
-                    name = zakhara_interactions
-                    value = restricted
-                }
-                OR = {
-                    top_liege = {
-                        suzerain = {
-                            has_landed_title = e_zakhara_west_governor
-                        }
-                    }
-                    any_neighbor_independent_ruler = {
-                        has_landed_title = e_zakhara_west_governor
-                    }
-                    any_realm_province = { #Is within the Chinese region of influence
-                        OR = {
-                            region = great_sea_region
-                            region = kara_tur_region
-                        }
-                    }
-                }              
-            }
-        }
-    }
+	diplomatic_range = { #Already includes the western governor's "normal" diplo range
+		OR = {
+			has_game_rule = {
+				name = seros_interactions
+				value = all
+			}
+			AND = {
+				has_game_rule = {
+					name = seros_interactions
+					value = within_range
+				}
+				OR = {
+					top_liege = {
+						suzerain = {
+							has_landed_title = e_seros_west_governor
+						}
+					}
+					any_neighbor_independent_ruler = {
+						OR = {
+							has_landed_title = e_seros_west_governor
+							suzerain = {
+								has_landed_title = e_seros_west_governor
+							}
+						}
+					}
+					any_realm_province = { #Is within reach of the silk road
+						OR = {
+							trade_route = silk_road
+							region = mulhorand_region
+							region = kara_tur_region
+						}
+					}
+				}
+			}
+			AND = {
+				has_game_rule = {
+					name = seros_interactions
+					value = restricted
+				}
+				OR = {
+					top_liege = {
+						suzerain = {
+							has_landed_title = e_seros_west_governor
+						}
+					}
+					any_neighbor_independent_ruler = {
+						has_landed_title = e_seros_west_governor
+					}
+					any_realm_province = { #Is within the Chinese region of influence
+						OR = {
+							region = mulhorand_region
+							region = kara_tur_region
+						}
+					}
+				}			  
+			}
+		}
+	}
 }
