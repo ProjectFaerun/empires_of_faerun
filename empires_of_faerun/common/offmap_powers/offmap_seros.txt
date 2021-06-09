@@ -1822,7 +1822,6 @@ seros = {
 					}
 					any_realm_province = { #Is within reach of the silk road
 						OR = {
-							trade_route = silk_road
 							region = mulhorand_region
 							region = kara_tur_region
 						}
