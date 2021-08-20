@@ -1,122 +1,122 @@
 #Grace effects
-zakhara_add_grace_trivial_effect = {
+seros_add_grace_trivial_effect = {
 	add_offmap_currency = {
-		offmap = zakhara
+		offmap = seros
 		value = 100
 	}
 }
 
-zakhara_add_grace_minor_effect = {
+seros_add_grace_minor_effect = {
 	add_offmap_currency = {
-		offmap = zakhara
+		offmap = seros
 		value = 200
 	}
 }
 
-zakhara_add_grace_medium_effect = {
+seros_add_grace_medium_effect = {
 	add_offmap_currency = {
-		offmap = zakhara
+		offmap = seros
 		value = 300
 	}	
 }
 
-zakhara_add_grace_major_effect = {
+seros_add_grace_major_effect = {
 	add_offmap_currency = {
-		offmap = zakhara
+		offmap = seros
 		value = 500
 	}
 }
 
-zakhara_add_grace_massive_effect = {
+seros_add_grace_massive_effect = {
 	add_offmap_currency = {
-		offmap = zakhara
+		offmap = seros
 		value = 1000
 	}
 }
 
-zakhara_add_grace_super_huge_effect = {
+seros_add_grace_super_huge_effect = {
 	add_offmap_currency = {
-		offmap = zakhara
+		offmap = seros
 		value = 2000
 	}
 }
 
-zakhara_detract_grace_trivial_effect = {
+seros_detract_grace_trivial_effect = {
 	add_offmap_currency = {
-		offmap = zakhara
+		offmap = seros
 		value = -100
 	}
 }
 
-zakhara_detract_grace_minor_effect = {
+seros_detract_grace_minor_effect = {
 	add_offmap_currency = {
-		offmap = zakhara
+		offmap = seros
 		value = -200
 	}
 }
 
-zakhara_detract_grace_medium_effect = {
+seros_detract_grace_medium_effect = {
 	add_offmap_currency = {
-		offmap = zakhara
+		offmap = seros
 		value = -300
 	}
 }
 
-zakhara_detract_grace_major_effect = {
+seros_detract_grace_major_effect = {
 	add_offmap_currency = {
-		offmap = zakhara
+		offmap = seros
 		value = -500
 	}
 }
 
-zakhara_detract_grace_massive_effect = {
+seros_detract_grace_massive_effect = {
 	add_offmap_currency = {
-		offmap = zakhara
+		offmap = seros
 		value = -1000
 	}
 }
 
-zakhara_detract_grace_super_huge_effect = {
+seros_detract_grace_super_huge_effect = {
 	add_offmap_currency = {
-		offmap = zakhara
+		offmap = seros
 		value = -2000
 	}
 }
 
-set_zakhara_boon_cd_effect = {  #added via tribute to zakhara decisions... Always one year.
+set_seros_boon_cd_effect = {  #added via tribute to seros decisions... Always one year.
 	add_character_modifier = {
 		hidden = yes
-		name = jd_zakhara_boon_cd
-		days = 365 #If this is changed, edit  zakhara_offmap_boon_decisions_enabled_trigger_cd_tt
+		name = jd_seros_boon_cd
+		days = 365 #If this is changed, edit  seros_offmap_boon_decisions_enabled_trigger_cd_tt
 	}
 }
 
-set_zakhara_tribute_cd_effect = { #added via tribute to zakhara decisions... Always one year.
+set_seros_tribute_cd_effect = { #added via tribute to seros decisions... Always one year.
 	add_character_modifier = {
 		hidden = yes
-		name = jd_zakhara_tribute_cd
+		name = jd_seros_tribute_cd
 		days = 365
 	}
 }
 
-leave_court_for_zakhara_effect = { # NOTE: this does not set a "killer", meaning if you want them to be ORDERED to go to zakhara, a killer needs to be set (eg: "killer = ROOT")
+leave_court_for_seros_effect = { # NOTE: this does not set a "killer", meaning if you want them to be ORDERED to go to seros, a killer needs to be set (eg: "killer = ROOT")
 	custom_tooltip = {
-		text = will_leave_for_zakhara_tt
+		text = will_leave_for_seros_tt
 	}
 	set_character_flag = ignore_refund
-	hidden_effect = { death = { death_reason = death_went_to_zakhara } }
+	hidden_effect = { death = { death_reason = death_went_to_seros } }
 }
 
-return_to_zakhara_effect = { # NOTE: this does not set a "killer", meaning if you want them to be ORDERED to go to zakhara, a killer needs to be set (eg: "killer = ROOT")
+return_to_seros_effect = { # NOTE: this does not set a "killer", meaning if you want them to be ORDERED to go to seros, a killer needs to be set (eg: "killer = ROOT")
 	custom_tooltip = {
-		text = will_return_to_zakhara_tt
+		text = will_return_to_seros_tt
 	}
 	set_character_flag = ignore_refund
-	hidden_effect = { death = { death_reason = death_went_back_to_zakhara } }
+	hidden_effect = { death = { death_reason = death_went_back_to_seros } }
 }
 
-# Utilizes zakhara_war_minimum_commander_martial variable on the current scope to spawn characters with at least that amount of martial skill.
-zakhara_spawn_commander_effect = {
+# Utilizes seros_war_minimum_commander_martial variable on the current scope to spawn characters with at least that amount of martial skill.
+seros_spawn_commander_effect = {
 	create_random_soldier = {
 		random_traits = yes
 		religion = liege
@@ -129,7 +129,7 @@ zakhara_spawn_commander_effect = {
 		unsafe_give_minor_title = title_commander
 		
 		set_variable = {
-			which = zakhara_war_minimum_commander_martial
+			which = seros_war_minimum_commander_martial
 			which = PREV
 		}
 		if = {
@@ -176,7 +176,7 @@ zakhara_spawn_commander_effect = {
 		while = { # Increase the martial skill with base or martial traits until the minimum is reached
 			limit = {
 				NOT = {
-					martial = zakhara_war_minimum_commander_martial
+					martial = seros_war_minimum_commander_martial
 				}
 			}
 			random_list = {
@@ -413,20 +413,20 @@ zakhara_spawn_commander_effect = {
 	}
 }
 
-zakhara_war_spawn_troops_effect = {
+seros_war_spawn_troops_effect = {
 	# Requires the current things to function properly:
 	# event_target:spawn_province
-	# variable: zakhara_war_troop_quality
-	# variable: zakhara_war_troop_quantity
+	# variable: seros_war_troop_quality
+	# variable: seros_war_troop_quantity
 	while = {
 		limit = {
 			check_variable = {
-				which = zakhara_war_troop_quantity
+				which = seros_war_troop_quantity
 				value = 1
 			}
 		}
 		change_variable = {	
-			which = zakhara_war_troop_quantity
+			which = seros_war_troop_quantity
 			value = -1
 		}
 		
@@ -435,7 +435,7 @@ zakhara_war_spawn_troops_effect = {
 				trigger = {
 					NOT = {
 						check_variable = {
-							which = zakhara_war_troop_quality
+							which = seros_war_troop_quality
 							value = 2
 						}
 					}
@@ -460,12 +460,12 @@ zakhara_war_spawn_troops_effect = {
 			10 = {
 				trigger = {
 					check_variable = {
-						which = zakhara_war_troop_quality
+						which = seros_war_troop_quality
 						value = 2
 					}
 					NOT = {
 						check_variable = {
-							which = zakhara_war_troop_quality
+							which = seros_war_troop_quality
 							value = 3
 						}
 					}
@@ -490,12 +490,12 @@ zakhara_war_spawn_troops_effect = {
 			10 = {
 				trigger = {
 					check_variable = {
-						which = zakhara_war_troop_quality
+						which = seros_war_troop_quality
 						value = 3
 					}
 					NOT = {
 						check_variable = {
-							which = zakhara_war_troop_quality
+							which = seros_war_troop_quality
 							value = 4
 						}
 					}
@@ -520,12 +520,12 @@ zakhara_war_spawn_troops_effect = {
 			10 = {
 				trigger = {
 					check_variable = {
-						which = zakhara_war_troop_quality
+						which = seros_war_troop_quality
 						value = 4
 					}
 					NOT = {
 						check_variable = {
-							which = zakhara_war_troop_quality
+							which = seros_war_troop_quality
 							value = 5
 						}
 					}
@@ -550,12 +550,12 @@ zakhara_war_spawn_troops_effect = {
 			10 = {
 				trigger = {
 					check_variable = {
-						which = zakhara_war_troop_quality
+						which = seros_war_troop_quality
 						value = 5
 					}
 					NOT = {
 						check_variable = {
-							which = zakhara_war_troop_quality
+							which = seros_war_troop_quality
 							value = 6
 						}
 					}
@@ -580,12 +580,12 @@ zakhara_war_spawn_troops_effect = {
 			10 = {
 				trigger = {
 					check_variable = {
-						which = zakhara_war_troop_quality
+						which = seros_war_troop_quality
 						value = 6
 					}
 					NOT = {
 						check_variable = {
-							which = zakhara_war_troop_quality
+							which = seros_war_troop_quality
 							value = 7
 						}
 					}
@@ -610,7 +610,7 @@ zakhara_war_spawn_troops_effect = {
 			10 = {
 				trigger = {
 					check_variable = {
-						which = zakhara_war_troop_quality
+						which = seros_war_troop_quality
 						value = 7
 					}
 				}
@@ -635,20 +635,20 @@ zakhara_war_spawn_troops_effect = {
 	}
 }
 
-zakhara_war_spawn_troops_no_disband_effect = {
+seros_war_spawn_troops_no_disband_effect = {
 	# Requires the current things to function properly:
 	# event_target:spawn_province
-	# variable: zakhara_war_troop_quality
-	# variable: zakhara_war_troop_quantity
+	# variable: seros_war_troop_quality
+	# variable: seros_war_troop_quantity
 	while = {
 		limit = {
 			check_variable = {
-				which = zakhara_war_troop_quantity
+				which = seros_war_troop_quantity
 				value = 1
 			}
 		}
 		change_variable = {	
-			which = zakhara_war_troop_quantity
+			which = seros_war_troop_quantity
 			value = -1
 		}
 		
@@ -657,7 +657,7 @@ zakhara_war_spawn_troops_no_disband_effect = {
 				trigger = {
 					NOT = {
 						check_variable = {
-							which = zakhara_war_troop_quality
+							which = seros_war_troop_quality
 							value = 2
 						}
 					}
@@ -682,12 +682,12 @@ zakhara_war_spawn_troops_no_disband_effect = {
 			10 = {
 				trigger = {
 					check_variable = {
-						which = zakhara_war_troop_quality
+						which = seros_war_troop_quality
 						value = 2
 					}
 					NOT = {
 						check_variable = {
-							which = zakhara_war_troop_quality
+							which = seros_war_troop_quality
 							value = 3
 						}
 					}
@@ -712,12 +712,12 @@ zakhara_war_spawn_troops_no_disband_effect = {
 			10 = {
 				trigger = {
 					check_variable = {
-						which = zakhara_war_troop_quality
+						which = seros_war_troop_quality
 						value = 3
 					}
 					NOT = {
 						check_variable = {
-							which = zakhara_war_troop_quality
+							which = seros_war_troop_quality
 							value = 4
 						}
 					}
@@ -742,12 +742,12 @@ zakhara_war_spawn_troops_no_disband_effect = {
 			10 = {
 				trigger = {
 					check_variable = {
-						which = zakhara_war_troop_quality
+						which = seros_war_troop_quality
 						value = 4
 					}
 					NOT = {
 						check_variable = {
-							which = zakhara_war_troop_quality
+							which = seros_war_troop_quality
 							value = 5
 						}
 					}
@@ -772,12 +772,12 @@ zakhara_war_spawn_troops_no_disband_effect = {
 			10 = {
 				trigger = {
 					check_variable = {
-						which = zakhara_war_troop_quality
+						which = seros_war_troop_quality
 						value = 5
 					}
 					NOT = {
 						check_variable = {
-							which = zakhara_war_troop_quality
+							which = seros_war_troop_quality
 							value = 6
 						}
 					}
@@ -802,12 +802,12 @@ zakhara_war_spawn_troops_no_disband_effect = {
 			10 = {
 				trigger = {
 					check_variable = {
-						which = zakhara_war_troop_quality
+						which = seros_war_troop_quality
 						value = 6
 					}
 					NOT = {
 						check_variable = {
-							which = zakhara_war_troop_quality
+							which = seros_war_troop_quality
 							value = 7
 						}
 					}
@@ -832,7 +832,7 @@ zakhara_war_spawn_troops_no_disband_effect = {
 			10 = {
 				trigger = {
 					check_variable = {
-						which = zakhara_war_troop_quality
+						which = seros_war_troop_quality
 						value = 7
 					}
 				}
@@ -857,85 +857,85 @@ zakhara_war_spawn_troops_no_disband_effect = {
 	}
 }
 
-zakhara_war_modify_variables_by_status_effect = {
-	# variable: zakhara_war_troop_quality
-	# variable: zakhara_war_troop_quantity
-	# variable: zakhara_war_minimum_commander_martial
-	# variable: zakhara_war_target_match_mult
+seros_war_modify_variables_by_status_effect = {
+	# variable: seros_war_troop_quality
+	# variable: seros_war_troop_quantity
+	# variable: seros_war_minimum_commander_martial
+	# variable: seros_war_target_match_mult
 	
 	random_list = {
 		1 = {
 			trigger = {
-				zakhara = { has_status = zakhara_stable }
+				seros = { has_status = seros_stable }
 			}
-			change_variable = { which = zakhara_war_troop_quality value = 1 }
-			change_variable = { which = zakhara_war_minimum_commander_martial value = 3 }
+			change_variable = { which = seros_war_troop_quality value = 1 }
+			change_variable = { which = seros_war_minimum_commander_martial value = 3 }
 		}
 		1 = {
 			trigger = {
-				zakhara = { has_status = zakhara_unrest }
+				seros = { has_status = seros_unrest }
 			}
-			change_variable = { which = zakhara_war_troop_quantity value = -6 }
-			change_variable = { which = zakhara_war_target_match_mult value = -0.15 }
+			change_variable = { which = seros_war_troop_quantity value = -6 }
+			change_variable = { which = seros_war_target_match_mult value = -0.15 }
 		}
 		1 = {
 			trigger = {
-				zakhara = { has_status = zakhara_civil_war }
+				seros = { has_status = seros_civil_war }
 			}
-			change_variable = { which = zakhara_war_troop_quantity value = -6 }
-			change_variable = { which = zakhara_war_target_match_mult value = -0.25 }
-			change_variable = { which = zakhara_war_troop_quality value = -1 }
-			change_variable = { which = zakhara_war_minimum_commander_martial value = -6 }
+			change_variable = { which = seros_war_troop_quantity value = -6 }
+			change_variable = { which = seros_war_target_match_mult value = -0.25 }
+			change_variable = { which = seros_war_troop_quality value = -1 }
+			change_variable = { which = seros_war_minimum_commander_martial value = -6 }
 		}
 		1 = {
 			trigger = {
 				OR = {
-					zakhara = { has_status = zakhara_pantheist_invasion }
-					zakhara = { has_status = zakhara_badia_invasion }
+					seros = { has_status = seros_pantheist_invasion }
+					seros = { has_status = seros_badia_invasion }
 				}
 			}
-			change_variable = { which = zakhara_war_troop_quantity value = -7 }
-			change_variable = { which = zakhara_war_target_match_mult value = -0.4 }
-			change_variable = { which = zakhara_war_troop_quality value = -1 }
-			change_variable = { which = zakhara_war_minimum_commander_martial value = -2 }
+			change_variable = { which = seros_war_troop_quantity value = -7 }
+			change_variable = { which = seros_war_target_match_mult value = -0.4 }
+			change_variable = { which = seros_war_troop_quality value = -1 }
+			change_variable = { which = seros_war_minimum_commander_martial value = -2 }
 		}
 		1 = {
 			trigger = {
-				zakhara = { has_status = zakhara_famine }
+				seros = { has_status = seros_famine }
 			}
-			change_variable = { which = zakhara_war_troop_quantity value = -4 }
-			change_variable = { which = zakhara_war_target_match_mult value = -0.30 }
-			change_variable = { which = zakhara_war_troop_quality value = -2 }
-			change_variable = { which = zakhara_war_minimum_commander_martial value = -2 }
+			change_variable = { which = seros_war_troop_quantity value = -4 }
+			change_variable = { which = seros_war_target_match_mult value = -0.30 }
+			change_variable = { which = seros_war_troop_quality value = -2 }
+			change_variable = { which = seros_war_minimum_commander_martial value = -2 }
 		}
 		1 = {
 			trigger = {
-				zakhara = { has_status = zakhara_plague }
+				seros = { has_status = seros_plague }
 			}
-			change_variable = { which = zakhara_war_troop_quantity value = -6 }
-			change_variable = { which = zakhara_war_target_match_mult value = -0.35 }
-			change_variable = { which = zakhara_war_troop_quality value = -1 }
-			change_variable = { which = zakhara_war_minimum_commander_martial value = -4 }
+			change_variable = { which = seros_war_troop_quantity value = -6 }
+			change_variable = { which = seros_war_target_match_mult value = -0.35 }
+			change_variable = { which = seros_war_troop_quality value = -1 }
+			change_variable = { which = seros_war_minimum_commander_martial value = -4 }
 		}
 		1 = {
 			trigger = {
-				zakhara = { has_status = zakhara_golden_age }
+				seros = { has_status = seros_golden_age }
 			}
-			change_variable = { which = zakhara_war_target_match_mult value = 0.65 }
-			change_variable = { which = zakhara_war_troop_quality value = 2 }
-			change_variable = { which = zakhara_war_minimum_commander_martial value = 5 }
+			change_variable = { which = seros_war_target_match_mult value = 0.65 }
+			change_variable = { which = seros_war_troop_quality value = 2 }
+			change_variable = { which = seros_war_minimum_commander_martial value = 5 }
 		}
 	}
 }
 
 
 #Checks whether the Emperor likes target and shows tooltips (used in event JD.10010)
-zakhara_check_likes_or_dislikes_THIS_effect = {
+seros_check_likes_or_dislikes_THIS_effect = {
  	if = {  #If the current Emperor LIKES target
         limit = {
-            is_liked_by_zakhara_trigger = yes
+            is_liked_by_seros_trigger = yes
         }
-        zakhara = {
+        seros = {
 			show_scope_change = no
             custom_tooltip = { text = emperor_likes_THIS_tt }
         }
@@ -943,9 +943,9 @@ zakhara_check_likes_or_dislikes_THIS_effect = {
 
     if = { #If the current Emperor DISLIKES target
         limit = {
-           is_disliked_by_zakhara_trigger = yes
+           is_disliked_by_seros_trigger = yes
         }
-        zakhara = {
+        seros = {
 			show_scope_change = no
 			custom_tooltip = { text = emperor_dislikes_THIS_tt }
         }
@@ -953,20 +953,20 @@ zakhara_check_likes_or_dislikes_THIS_effect = {
 
     if = { #If the current Emperor LIKES *and* DISLIKES target
         limit = {
-            is_liked_and_disliked_by_zakhara = yes
+            is_liked_and_disliked_by_seros = yes
         }
-        zakhara = {
+        seros = {
 			show_scope_change = no
             custom_tooltip = { text = emperor_has_ambiguous_feelings_of_THIS_tt }
         }
     }
 }
 
-print_zakhara_status_update_effect = {
+print_seros_status_update_effect = {
 	log = "----------------"
-	log = "zakhara Logging:"
-	log = "zakhara's status of [This.GetPrevStatus] ended after [global_temp_status_years.GetValue] years."
-	log = "zakhara's new status is [This.GetStatus]."
+	log = "seros Logging:"
+	log = "seros's status of [This.GetPrevStatus] ended after [global_temp_status_years.GetValue] years."
+	log = "seros's new status is [This.GetStatus]."
 	log = "----------------"
 	set_variable = {
 		which = global_temp_status_years
@@ -975,95 +975,95 @@ print_zakhara_status_update_effect = {
 	random_list = {
 		10 = {
 			trigger = {
-				has_status = zakhara_stable
+				has_status = seros_stable
 			}
 			change_variable = {
-				which = global_amount_of_times_zakhara_stable
+				which = global_amount_of_times_seros_stable
 				value = 1
 			}
 		}
 		10 = {
 			trigger = {
-				has_status = zakhara_unrest
+				has_status = seros_unrest
 			}
 			change_variable = {
-				which = global_amount_of_times_zakhara_unrest
+				which = global_amount_of_times_seros_unrest
 				value = 1
 			}
 		}
 		10 = {
 			trigger = {
-				has_status = zakhara_civil_war
+				has_status = seros_civil_war
 			}
 			change_variable = {
-				which = global_amount_of_times_zakhara_civil_war
+				which = global_amount_of_times_seros_civil_war
 				value = 1
 			}
 		}
 		10 = {
 			trigger = {
-				has_status = zakhara_badia_invasion
+				has_status = seros_badia_invasion
 			}
 			change_variable = {
-				which = global_amount_of_times_zakhara_tuigan_invasion
+				which = global_amount_of_times_seros_tuigan_invasion
 				value = 1
 			}
 		}
 		10 = {
 			trigger = {
-				has_status = zakhara_pantheist_invasion
+				has_status = seros_pantheist_invasion
 			}
 			change_variable = {
-				which = global_amount_of_times_zakhara_tu_lung_invasion
+				which = global_amount_of_times_seros_tu_lung_invasion
 				value = 1
 			}
 		}
 		10 = {
 			trigger = {
-				has_status = zakhara_famine
+				has_status = seros_famine
 			}
 			change_variable = {
-				which = global_amount_of_times_zakhara_famine
+				which = global_amount_of_times_seros_famine
 				value = 1
 			}
 		}
 		10 = {
 			trigger = {
-				has_status = zakhara_plague
+				has_status = seros_plague
 			}
 			change_variable = {
-				which = global_amount_of_times_zakhara_plague
+				which = global_amount_of_times_seros_plague
 				value = 1
 			}
 		}
 		10 = {
 			trigger = {
-				has_status = zakhara_golden_age
-				NOT = { has_policy = zakhara_expansionist }
+				has_status = seros_golden_age
+				NOT = { has_policy = seros_expansionist }
 			}
 			change_variable = {
-				which = global_amount_of_times_zakhara_golden_age
+				which = global_amount_of_times_seros_golden_age
 				value = 1
 			}
 		}
 		10 = {
 			trigger = {
-				has_status = zakhara_golden_age
-				has_policy = zakhara_expansionist
+				has_status = seros_golden_age
+				has_policy = seros_expansionist
 			}
 			change_variable = {
-				which = global_amount_of_times_zakhara_golden_age_expansionist
+				which = global_amount_of_times_seros_golden_age_expansionist
 				value = 1
 			}
 		}
 	}
 }
 
-print_zakhara_policy_update_effect = {
+print_seros_policy_update_effect = {
 	log = "----------------"
-	log = "zakhara Logging:"
-	log = "zakhara's policy of [This.GetPrevPolicy] ended after [global_temp_policy_years.GetValue] years."
-	log = "zakhara's new policy is [This.GetPolicy]."
+	log = "seros Logging:"
+	log = "seros's policy of [This.GetPrevPolicy] ended after [global_temp_policy_years.GetValue] years."
+	log = "seros's new policy is [This.GetPolicy]."
 	log = "----------------"
 	set_variable = {
 		which = global_temp_policy_years
@@ -1072,24 +1072,24 @@ print_zakhara_policy_update_effect = {
 	random_list = {
 		10 = {
 			trigger = {
-				has_policy = zakhara_open
+				has_policy = seros_open
 			}
 		}
 		10 = {
 			trigger = {
-				has_policy = zakhara_isolationist
+				has_policy = seros_isolationist
 			}
 			change_variable = {
-				which = global_amount_of_times_zakhara_isolationist_policy
+				which = global_amount_of_times_seros_isolationist_policy
 				value = 1
 			}
 		}
 		10 = {
 			trigger = {
-				has_policy = zakhara_expansionist
+				has_policy = seros_expansionist
 			}
 			change_variable = {
-				which = global_amount_of_times_zakhara_expansionist_policy
+				which = global_amount_of_times_seros_expansionist_policy
 				value = 1
 			}
 		}
@@ -1097,7 +1097,7 @@ print_zakhara_policy_update_effect = {
 }
 
 
-zakhara_war_modify_variables_by_century_effect = {
+seros_war_modify_variables_by_century_effect = {
 	random_list = {
 		10 = {
 			trigger = {
@@ -1111,7 +1111,7 @@ zakhara_war_modify_variables_by_century_effect = {
 				NOT = { year = 900 }
 			}
 			change_variable = {
-				which = zakhara_war_troop_quantity
+				which = seros_war_troop_quantity
 				value = 2
 			}
 		}
@@ -1121,7 +1121,7 @@ zakhara_war_modify_variables_by_century_effect = {
 				NOT = { year = 1000 }
 			}
 			change_variable = {
-				which = zakhara_war_troop_quantity
+				which = seros_war_troop_quantity
 				value = 3
 			}
 		}
@@ -1131,7 +1131,7 @@ zakhara_war_modify_variables_by_century_effect = {
 				NOT = { year = 1100 }
 			}
 			change_variable = {
-				which = zakhara_war_troop_quantity
+				which = seros_war_troop_quantity
 				value = 4
 			}
 		}
@@ -1141,11 +1141,11 @@ zakhara_war_modify_variables_by_century_effect = {
 				NOT = { year = 1200 }
 			}
 			change_variable = {
-				which = zakhara_war_troop_quantity
+				which = seros_war_troop_quantity
 				value = 5
 			}
 			change_variable = {
-				which = zakhara_war_target_match_mult
+				which = seros_war_target_match_mult
 				value = 0.05
 			}
 		}
@@ -1155,15 +1155,15 @@ zakhara_war_modify_variables_by_century_effect = {
 				NOT = { year = 1300 }
 			}
 			change_variable = {
-				which = zakhara_war_troop_quantity
+				which = seros_war_troop_quantity
 				value = 7
 			}
 			change_variable = {
-				which = zakhara_war_target_match_mult
+				which = seros_war_target_match_mult
 				value = 0.05
 			}
 			change_variable = {
-				which = zakhara_war_troop_quality
+				which = seros_war_troop_quality
 				value = 1
 			}
 		}
@@ -1172,29 +1172,29 @@ zakhara_war_modify_variables_by_century_effect = {
 				year = 1300
 			}
 			change_variable = {
-				which = zakhara_war_troop_quantity
+				which = seros_war_troop_quantity
 				value = 8
 			}
 			change_variable = {
-				which = zakhara_war_target_match_mult
+				which = seros_war_target_match_mult
 				value = 0.05
 			}
 			change_variable = {
-				which = zakhara_war_troop_quality
+				which = seros_war_troop_quality
 				value = 1
 			}
 		}
 	}
 }
 
-print_zakhara_ruler_update_effect = {
+print_seros_ruler_update_effect = {
 	log = "----------------"
-	log = "Ruler of zakhara died at the age of [From.GetAgeYears]."
-	log = "New Ruler of zakhara is [Root.GetBestName] ([From.GetCulture], From.GetReligion])."
+	log = "Ruler of seros died at the age of [From.GetAgeYears]."
+	log = "New Ruler of seros is [Root.GetBestName] ([From.GetCulture], From.GetReligion])."
 	log = "----------------"
 }
 
-zakhara_abort_kow_tow_effect = {
+seros_abort_kow_tow_effect = {
 	if = {
 		limit = {
 			NOT = { has_character_flag = kow_tow_hide_abort_notification }
@@ -1211,11 +1211,11 @@ zakhara_abort_kow_tow_effect = {
 	clean_up_after_kow_tow_effect = yes
 }
 
-zakhara_return_to_travel_tombola_effect = {
+seros_return_to_travel_tombola_effect = {
 	hidden_effect = {
 		event_target:kow_tow_traveler = {
 			subtract_variable = {
-				which = zakhara_kow_tow_travel_events
+				which = seros_kow_tow_travel_events
 				value = 1
 			}
 			character_event = {
@@ -1227,11 +1227,11 @@ zakhara_return_to_travel_tombola_effect = {
 	}
 }
 
-return_to_zakhara_tombola_effect = {
+return_to_seros_tombola_effect = {
 	hidden_effect = {
 		event_target:kow_tow_traveler = {
 			subtract_variable = {
-				which = zakhara_kow_tow_travel_events
+				which = seros_kow_tow_travel_events
 				value = 1
 			}
 			character_event = {
@@ -1243,7 +1243,7 @@ return_to_zakhara_tombola_effect = {
 	}
 }
 
-zakhara_clean_up_after_kow_tow_effect = {
+seros_clean_up_after_kow_tow_effect = {
 	remove_trait = kow_tow_travels
 	clr_character_flag = do_not_disturb
 	
@@ -1259,105 +1259,105 @@ zakhara_clean_up_after_kow_tow_effect = {
 	clr_character_flag = kow_tow_visited_temple
 }
 
-add_zakhara_artifact_effect = { #Used in event JD.15016 (possible to use elsewhere!)
+add_seros_artifact_effect = { #Used in event JD.15016 (possible to use elsewhere!)
 	hidden_effect = {
 		random_list = {
 			10 = {
-				trigger = { ROOT = { NOT = { has_artifact = zakhara_artwork } } }
-				add_artifact = zakhara_artwork
+				trigger = { ROOT = { NOT = { has_artifact = seros_artwork } } }
+				add_artifact = seros_artwork
 				new_artifact = {
-					set_name = zakhara_artwork_name
+					set_name = seros_artwork_name
 				}
 			}
 			10 = {
-				trigger = { ROOT = { NOT = { has_artifact = zakhara_calligraphy } } }
-				add_artifact = zakhara_calligraphy
+				trigger = { ROOT = { NOT = { has_artifact = seros_calligraphy } } }
+				add_artifact = seros_calligraphy
 				new_artifact = {
-					set_name = zakhara_calligraphy_name
+					set_name = seros_calligraphy_name
 				}
 			}
 			10 = {
-				trigger = { ROOT = { NOT = { has_artifact = zakhara_sculpture } } }
-				add_artifact = zakhara_sculpture
+				trigger = { ROOT = { NOT = { has_artifact = seros_sculpture } } }
+				add_artifact = seros_sculpture
 				new_artifact = {
-					set_name = zakhara_sculpture_name
+					set_name = seros_sculpture_name
 				}
 			}
 			10 = {
-				trigger = { ROOT = { NOT = { has_artifact = zakhara_ceremonial_robes } } }
-				add_artifact = zakhara_ceremonial_robes
+				trigger = { ROOT = { NOT = { has_artifact = seros_ceremonial_robes } } }
+				add_artifact = seros_ceremonial_robes
 			}
 			10 = {
-				zakhara = {
+				seros = {
 					offmap_prev_ruler = {
 						save_event_target_as = prev_emperor
 					}
 				}
-				add_artifact = zakhara_prev_emperor_sculpture
+				add_artifact = seros_prev_emperor_sculpture
 				new_artifact = {
-					set_name = zakhara_figurine_name
+					set_name = seros_figurine_name
 				}
 			}
 			10 = {
-				trigger = { ROOT = { NOT = { has_artifact = zakhara_arm_protector } } }
-				add_artifact = zakhara_arm_protector
+				trigger = { ROOT = { NOT = { has_artifact = seros_arm_protector } } }
+				add_artifact = seros_arm_protector
 				new_artifact = {
-					set_name = zakhara_arm_protector_name
+					set_name = seros_arm_protector_name
 				}
 			}
 			10 = {
-				trigger = { ROOT = { NOT = { has_artifact = zakhara_serpent_spear } } }
-				add_artifact = zakhara_serpent_spear
+				trigger = { ROOT = { NOT = { has_artifact = seros_serpent_spear } } }
+				add_artifact = seros_serpent_spear
 			}
 			10 = {
-				trigger = { ROOT = { NOT = { has_artifact = zakhara_ji } } }
-				add_artifact = zakhara_ji
+				trigger = { ROOT = { NOT = { has_artifact = seros_ji } } }
+				add_artifact = seros_ji
 			}
 			10 = {
-				trigger = { ROOT = { NOT = { has_artifact = zakhara_crossbow } } }
-				add_artifact = zakhara_crossbow
+				trigger = { ROOT = { NOT = { has_artifact = seros_crossbow } } }
+				add_artifact = seros_crossbow
 			}
 			10 = {
-				trigger = { ROOT = { NOT = { has_artifact = zakhara_bronze_sculpture } } }
-				add_artifact = zakhara_bronze_sculpture
+				trigger = { ROOT = { NOT = { has_artifact = seros_bronze_sculpture } } }
+				add_artifact = seros_bronze_sculpture
 				new_artifact = {
-					set_name = zakhara_bronze_sculpture_name 
+					set_name = seros_bronze_sculpture_name 
 				}
 			}
 			10 = {
-				trigger = { ROOT = { NOT = { has_artifact = zakhara_book_health } } }
-				add_artifact = zakhara_book_health
+				trigger = { ROOT = { NOT = { has_artifact = seros_book_health } } }
+				add_artifact = seros_book_health
 				new_artifact = {
-					set_name = zakhara_book_health_name
+					set_name = seros_book_health_name
 				}
 			}
 			10 = {
-				trigger = { ROOT = { NOT = { has_artifact = zakhara_book_law } } }
-				add_artifact = zakhara_book_law
+				trigger = { ROOT = { NOT = { has_artifact = seros_book_law } } }
+				add_artifact = seros_book_law
 				new_artifact = {
-					set_name = zakhara_book_law_name
+					set_name = seros_book_law_name
 				}
 			}
 			10 = {
-				trigger = { ROOT = { NOT = { has_artifact = zakhara_book_history } } }
-				add_artifact = zakhara_book_history
+				trigger = { ROOT = { NOT = { has_artifact = seros_book_history } } }
+				add_artifact = seros_book_history
 				new_artifact = {
-					set_name = zakhara_book_history_name
+					set_name = seros_book_history_name
 				}
 			}
 			10 = {
-				trigger = { ROOT = { NOT = { has_artifact = zakhara_book_economy } } }
-				add_artifact = zakhara_book_economy
+				trigger = { ROOT = { NOT = { has_artifact = seros_book_economy } } }
+				add_artifact = seros_book_economy
 				new_artifact = {
-					set_name = zakhara_book_economy_name
+					set_name = seros_book_economy_name
 				}
 			}
 			1 = {
-				trigger = { ROOT = { NOT = { has_artifact = zakhara_painting_of_glitterhoof } } }
-				add_artifact = zakhara_painting_of_glitterhoof
+				trigger = { ROOT = { NOT = { has_artifact = seros_painting_of_glitterhoof } } }
+				add_artifact = seros_painting_of_glitterhoof
 			}
 			10 = {
-				trigger = { ROOT = { NOT = { has_artifact = zakhara_tapestry } } }
+				trigger = { ROOT = { NOT = { has_artifact = seros_tapestry } } }
 				random_independent_ruler = {
 					limit = {
 						any_realm_province = {
@@ -1371,22 +1371,22 @@ add_zakhara_artifact_effect = { #Used in event JD.15016 (possible to use elsewhe
 						save_event_target_as = tapestry_target
 					}
 				}
-				add_artifact = zakhara_tapestry
+				add_artifact = seros_tapestry
 				new_artifact = {
-					set_name = zakhara_tapestry_name
+					set_name = seros_tapestry_name
 				}
 			}
 			10 = {
-				trigger = { ROOT = { NOT = { has_artifact = zakhara_tapestry_grand } } }
-				add_artifact = zakhara_tapestry_grand
+				trigger = { ROOT = { NOT = { has_artifact = seros_tapestry_grand } } }
+				add_artifact = seros_tapestry_grand
 				new_artifact = {
-					set_name = zakhara_tapestry_grand_name
+					set_name = seros_tapestry_grand_name
 				}
-				trigger = { ROOT = { NOT = { has_artifact = zakhara_tapestry_grand } } }
+				trigger = { ROOT = { NOT = { has_artifact = seros_tapestry_grand } } }
 			}
 		}
 		new_artifact = {
-			save_event_target_as = zakhara_artifact
+			save_event_target_as = seros_artifact
 		}
 	}
 }

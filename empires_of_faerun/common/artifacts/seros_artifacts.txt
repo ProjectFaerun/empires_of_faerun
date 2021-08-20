@@ -1,80 +1,80 @@
-zakhara_jade_dragon = {
+seros_jade_dragon = {
 	monthly_character_prestige = 1
 	global_tax_modifier = 0.1
 	diplomacy = 2
 	quality = 5
-	flags = { zakhara statue rare }
+	flags = { seros statue rare }
 	picture = "GFX_jade_dragon"
 	stacking = no
 }
-zakhara_dragon_amulet = {
+seros_dragon_amulet = {
 	monthly_character_prestige = 0.75
 	vassal_opinion = 5
 	stewardship = 1
 	build_cost_modifier = -0.1
 	quality = 4
-	flags = { zakhara necklace jewelry }
+	flags = { seros necklace jewelry }
 	picture = "GFX_dragon_amulet"
 	stacking = no
 	slot = neck
 }
-zakhara_artwork = {
+seros_artwork = {
 	monthly_character_prestige = 0.35
 	monthly_character_piety = 0.1
 	quality = 2
-	flags = { zakhara art decor }
+	flags = { seros art decor }
 	picture = "GFX_chinese_artwork"
 	stacking = no
 }
-zakhara_calligraphy = {
+seros_calligraphy = {
 	monthly_character_prestige = 0.35
 	town_opinion = 2
 	quality = 2
-	flags = { zakhara art decor }
+	flags = { seros art decor }
 	picture = "GFX_chinese_calligraphy"
 	stacking = no
 }
-zakhara_sculpture = {
+seros_sculpture = {
 	monthly_character_prestige = 0.35
 	build_time_modifier = -0.05
 	quality = 2
-	flags = { zakhara sculpture decor }
+	flags = { seros sculpture decor }
 	picture = "GFX_chinese_sculpture"
 	stacking = no
 }
-zakhara_ceremonial_robes = {
+seros_ceremonial_robes = {
 	quality = 3
 	monthly_character_prestige = 0.5
 	diplomacy = 1
 	active = {
 		is_adult = yes
 	}
-	flags = { zakhara clothing }
+	flags = { seros clothing }
 	picture = "GFX_chinese_robe"
 	stacking = no
 	slot = ceremonial_torso
 }
-zakhara_silk_shroud = {
+seros_silk_shroud = {
 	quality = 3
 	monthly_character_prestige = 0.6
 	intrigue = 2
 	active = {
 		is_adult = yes
 	}
-	flags = { zakhara textile clothing }
+	flags = { seros textile clothing }
 	picture = "GFX_silk_shroud"
 	stacking = no
 	slot = ceremonial_torso
 }
-zakhara_water_clock = {
+seros_water_clock = {
 	quality = 4
 	monthly_character_piety = 0.5
 	learning = 2
-	flags = { zakhara clock }
+	flags = { seros clock }
 	picture = "GFX_water_clock"
 	stacking = no
 }
-zakhara_jian_sword = {
+seros_jian_sword = {
 	quality = 4
 	monthly_character_prestige = 1
 	martial = 2
@@ -87,29 +87,29 @@ zakhara_jian_sword = {
 	active = {
 		is_adult = yes
 	}
-	flags = { zakhara sword }
+	flags = { seros sword }
 	stacking = no
 	picture = "GFX_jian_sword"
 	slot = weapon
 }
-zakhara_prev_emperor_sculpture = {
+seros_prev_emperor_sculpture = {
 	monthly_character_prestige = 0.15
 	quality = 1
-	flags = { zakhara sculpture decor }
+	flags = { seros sculpture decor }
 	picture = "GFX_small_chinese_figurine"
 	#stacking = no
 }
-zakhara_arm_protector = {
+seros_arm_protector = {
 	quality = 2
 	monthly_character_prestige = 0.4
 	sex_appeal_opinion = 10
-	flags = { zakhara bracelet }
+	flags = { seros bracelet }
 	stacking = no
 	picture = "GFX_chinese_arm_protector"
 	
 	slot = wrist
 }
-zakhara_serpent_spear = {
+seros_serpent_spear = {
 	monthly_character_prestige = 0.4
 	martial = 1
 	combat_rating = 7
@@ -122,12 +122,12 @@ zakhara_serpent_spear = {
 	active = {
 		is_adult = yes
 	}
-	flags = { zakhara combat_weapon lance spear }
+	flags = { seros combat_weapon lance spear }
 	stacking = no
 	picture = "GFX_serpent_spear"
 	slot = weapon
 }
-zakhara_ji = {
+seros_ji = {
 	monthly_character_prestige = 0.65
 	martial = 2
 	combat_rating = 8
@@ -140,12 +140,12 @@ zakhara_ji = {
 	active = {
 		is_adult = yes
 	}
-	flags = { zakhara combat_weapon lance spear }
+	flags = { seros combat_weapon lance spear }
 	stacking = no
 	picture = "GFX_ji"
 	slot = weapon
 }
-zakhara_crossbow = {
+seros_crossbow = {
 	monthly_character_prestige = 0.25
 	martial = 2
 	combat_rating = 8
@@ -157,41 +157,41 @@ zakhara_crossbow = {
 	active = {
 		is_adult = yes
 	}
-	flags = { zakhara combat_weapon crossbow ranged_weapon }
+	flags = { seros combat_weapon crossbow ranged_weapon }
 	stacking = no
 	picture = "GFX_relic_box_simple"
 	slot = weapon
 }
-zakhara_bronze_sculpture = {
+seros_bronze_sculpture = {
 	monthly_character_prestige = 0.1
 	stewardship = 1
 	quality = 3
-	flags = { zakhara art decor }
+	flags = { seros art decor }
 	picture = "GFX_chinese_bronze_statue"
 	stacking = no
 }
 
-zakhara_painting_of_glitterhoof = {
+seros_painting_of_glitterhoof = {
 	quality = 1
 	monthly_character_prestige = 0.1
 	monthly_character_piety = 0.1
-	flags = { zakhara art decor }
+	flags = { seros art decor }
 	picture = "GFX_painting_of_shanguang_ti"
 	stacking = no
 }
-zakhara_tapestry = {
+seros_tapestry = {
 	monthly_character_prestige = 0.1
 	build_cost_modifier = -0.02
 	quality = 2
-	flags = { zakhara art decor }
+	flags = { seros art decor }
 	picture = "GFX_chinese_tapestry"
 	stacking = no
 }
-zakhara_tapestry_grand = {
+seros_tapestry_grand = {
 	monthly_character_prestige = 0.3
 	short_reign_length = -2
 	quality = 3
-	flags = { zakhara art decor }
+	flags = { seros art decor }
 	picture = "GFX_chinese_tapestry"
 	stacking = no
 }
@@ -199,7 +199,7 @@ art_of_war = {
 	quality = 5
 	monthly_character_prestige = 1
 	martial = 5
-	flags = { zakhara book very_rare }
+	flags = { seros book very_rare }
 	picture = "GFX_art_of_war"
 	stacking = no
 	slot = library
@@ -208,54 +208,54 @@ classic_of_poetry = {
 	quality = 5
 	monthly_character_piety = 0.5
 	learning = 3
-	flags = { zakhara book }
+	flags = { seros book }
 	picture = "GFX_classic_of_poetry"
 	stacking = no
 	slot = library
 }
-zakhara_book_health = {
+seros_book_health = {
 	quality = 3
 	active = {
 		learning = 6
 	}
 	health = 0.5
 	fertility = 0.15
-	flags = { zakhara book }
+	flags = { seros book }
 	picture = "GFX_chinese_compendium_of_medicine"
 	stacking = no
 	slot = library
 }
-zakhara_book_law = {
+seros_book_law = {
 	quality = 3
 	active = {
 		learning = 6
 	}
 	vassal_opinion = 5
-	flags = { zakhara book }
+	flags = { seros book }
 	picture = "GFX_chinese_treatise_on_law"
 	stacking = no
 	slot = library
 }
-zakhara_book_history = {
+seros_book_history = {
 	quality = 1
 	active = {
 		learning = 6
 	}
 	monthly_character_prestige = 0.1
 	fertility = 0.05
-	flags = { zakhara book }
+	flags = { seros book }
 	picture = "GFX_chinese_history_book"
 	#stacking = no
 	slot = library
 }
-zakhara_book_economy = {
+seros_book_economy = {
 	quality = 3
 	active = {
 		learning = 6
 	}
 	stewardship = 1
 	monthly_character_wealth = 1
-	flags = { zakhara book }
+	flags = { seros book }
 	picture = "GFX_chinese_economic_chronicle"
 	stacking = no
 	slot = library

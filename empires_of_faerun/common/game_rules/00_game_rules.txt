@@ -15,6 +15,76 @@
 #	}
 # }
 
+tutorials = {
+	name = "RULE_TUTORIALS"
+	group = "RULE_GROUP_FAERUN"
+	option = {
+		name = on
+		text = "ON"
+		desc = "RULE_TUTORIALS_ON_DESC"
+	}
+	option = {
+		name = off
+		text = "OFF"
+		desc = "RULE_TUTORIALS_OFF_DESC"
+	}
+}
+
+major_story_events = {
+	name = "RULE_MAJOR_STORY_EVENTS"
+	group = "RULE_GROUP_FAERUN"
+	option = {
+		name = on
+		text = "ON"
+		desc = "RULE_MAJOR_STORY_ON_DESC"
+	}
+	option = {
+		name = off
+		text = "OFF"
+		desc = "RULE_MAJOR_STORY_OFF_DESC"
+	}
+}
+
+minor_story_events = {
+	name = "RULE_MINOR_STORY_EVENTS"
+	group = "RULE_GROUP_FAERUN"
+	option = {
+		name = on
+		text = "ON"
+		desc = "RULE_MINOR_STORY_ON_DESC"
+	}
+	option = {
+		name = dangerous
+		text = "Dangerous"
+		desc = "RULE_MINOR_STORY_DANGEROUS_DESC"
+	}
+	option = {
+		name = lethal
+		text = "Lethal"
+		desc = "RULE_MINOR_STORY_LETHAL_DESC"
+	}
+	option = {
+		name = off
+		text = "OFF"
+		desc = "RULE_MINOR_STORY_OFF_DESC"
+	}
+}
+
+dynamic_hordes = {
+	name = "RULE_DYNAMIC_HORDES"
+	group = "RULE_GROUP_FAERUN"
+	option = {
+		name = on
+		text = "ON"
+		desc = "RULE_DYNAMIC_HORDES_ON_DESC"
+	}
+	option = {
+		name = off
+		text = "OFF"
+		desc = "RULE_DYNAMIC_HORDES_OFF_DESC"
+	}
+}
+
 epidemics = {
 	name = "RULE_EPIDEMICS"
 	dlc = "The Reaper's Due"
@@ -59,60 +129,6 @@ minor_epidemics = {
 		name = fewer
 		text = "RULE_OPTION_FEWER"
 		desc = "RULE_EPIDEMICS_FEWER_DESC"
-	}
-}
-
-mongol_invasion = {
-	name = "RULE_MONGOL_INVASION"
-	group = "RULE_GROUP_RAILROADING"
-	alt_start_default = off
-	option = {
-		name = historical
-		text = "RULE_OPTION_HISTORICAL"
-		desc = "RULE_MONGOL_INVASION_HISTORICAL_DESC"
-	}
-	option = {
-		name = random
-		text = "RULE_OPTION_RANDOM"
-		desc = "RULE_MONGOL_INVASION_RANDOM_DESC"
-	}
-	option = {
-		name = delayed_random
-		text = "RULE_OPTION_DELAYED_RANDOM"
-		desc = "RULE_MONGOL_INVASION_DELAYED_RANDOM_DESC"
-	}
-	option = {
-		name = off
-		achievements = no
-		text = "RULE_OPTION_OFF"
-		desc = "RULE_MONGOL_INVASION_OFF_DESC"
-	}
-}
-
-aztec_invasion = {
-	name = "RULE_AZTEC_INVASION"
-	dlc = "Sunset Invasion"
-	group = "RULE_GROUP_RAILROADING"
-	alt_start_default = off
-	option = {
-		name = historical
-		text = "RULE_AZTEC_13TH"
-		desc = "RULE_AZTEC_INVASION_HISTORICAL_DESC"
-	}
-	option = {
-		name = random
-		text = "RULE_OPTION_RANDOM"
-		desc = "RULE_AZTEC_INVASION_RANDOM_DESC"
-	}
-	option = {
-		name = delayed_random
-		text = "RULE_OPTION_DELAYED_RANDOM"
-		desc = "RULE_AZTEC_INVASION_DELAYED_RANDOM_DESC"
-	}
-	option = {
-		name = off
-		text = "RULE_OPTION_OFF"
-		desc = "RULE_AZTEC_INVASION_OFF_DESC"
 	}
 }
 
@@ -227,8 +243,8 @@ shou_lung_interactions = {
 	}
 }
 
-zakhara_invasions = {
-	name = "RULE_zakhara_INVASIONS"
+seros_invasions = {
+	name = "RULE_SEROS_INVASIONS"
 	dlc = "Jade Dragon"
 	group = "RULE_GROUP_VARIOUS"
 	group = "RULE_GROUP_JD"
@@ -236,7 +252,7 @@ zakhara_invasions = {
 	option = {
 		name = default
 		text = "RULE_OPTION_ALL"
-		desc = "RULE_zakhara_INVASIONS_ALL_DESC"
+		desc = "RULE_SEROS_INVASIONS_ALL_DESC"
 	}
 	option = {
 		name = adventurers_only
@@ -253,12 +269,12 @@ zakhara_invasions = {
 		name = none
 		achievements = no
 		text = "RULE_OPTION_NONE"
-		desc = "RULE_zakhara_INVASIONS_NONE_DESC"
+		desc = "RULE_SEROS_INVASIONS_NONE_DESC"
 	}
 }
 
-zakhara_interactions = {
-	name = "RULE_zakhara_INTERACTIONS"
+seros_interactions = {
+	name = "RULE_SEROS_INTERACTIONS"
 	dlc = "Jade Dragon"
 	group = "RULE_GROUP_VARIOUS"
 	group = "RULE_GROUP_JD"
@@ -342,28 +358,6 @@ secret_cults = {
 		name = none
 		text = "RULE_OPTION_NONE"
 		desc = "RULE_SECRET_CULTS_NONE_DESC"
-	}
-}
-
-turkic_invasions = {
-	name = "RULE_TURKIC_INVASIONS"
-	group = "RULE_GROUP_RAILROADING"
-	alt_start_default = off
-	option = {
-		name = historical
-		text = "RULE_OPTION_HISTORICAL"
-		desc = "RULE_TURKIC_INVASIONS_HISTORICAL_DESC"
-	}
-	option = {
-		name = random
-		text = "RULE_OPTION_RANDOM"
-		desc = "RULE_TURKIC_INVASIONS_RANDOM_DESC"
-	}
-	option = {
-		name = off
-		achievements = no
-		text = "RULE_OPTION_OFF"
-		desc = "RULE_TURKIC_INVASIONS_OFF_DESC"
 	}
 }
 
@@ -767,23 +761,6 @@ dynamic_realms = {
 		name = off
 		text = "RULE_OPTION_OFF"
 		desc = "RULE_DYNAMIC_REALMS_OFF_DESC"
-	}
-}
-
-charlemagne_story = {
-	name = "RULE_CHARLEMAGNE_STORY"
-	dlc = "Charlemagne"
-	group = "RULE_GROUP_RAILROADING"
-	alt_start_default = off
-	option = {
-		name = on
-		text = "RULE_OPTION_ON"
-		desc = "RULE_CHARLEMAGNE_STORY_ON_DESC"
-	}
-	option = {
-		name = off
-		text = "RULE_OPTION_OFF"
-		desc = "RULE_CHARLEMAGNE_STORY_OFF_DESC"
 	}
 }
 
@@ -1243,110 +1220,25 @@ conclave_education_focuses = {
 	}
 }
 
-dynamic_crusader_states = {
-	name = "RULE_CRUSADER_STATES"
-	group = "RULE_GROUP_CRUSADE"
-	option = {
-		name = default
-		text = "RULE_OPTION_DEFAULT"
-		desc = "RULE_DYNAMIC_CRUSADER_STATES_ON"
-	}
-	option = {
-		name = limited
-		text = "RULE_OPTION_LIMITED"
-		desc = "RULE_DYNAMIC_CRUSADER_STATES_LIMITED"
-	}
-	option = {
-		name = off
-		text = "RULE_OPTION_OFF"
-		desc = "RULE_DYNAMIC_CRUSADER_STATES_OFF"
-	}
-}
-
-shepherds_crusade = {
-	name = "RULE_SHEPHERDS_CRUSADE"
-	dlc = "Sons of Abraham"
-	group = "RULE_GROUP_CRUSADE"
-	option = {
-		name = on
-		text = "RULE_OPTION_ON"
-		desc = "RULE_SHEPHERDS_CRUSADE_ON"
-	}
-	option = {
-		name = off
-		text = "RULE_OPTION_OFF"
-		desc = "RULE_SHEPHERDS_CRUSADE_OFF"
-	}
-}
-
-fourth_crusade = {
-	name = "RULE_FOURTH_CRUSADE"
-	dlc = "Holy Fury"
-	group = "RULE_GROUP_CRUSADE"
-	option = {
-		name = on
-		text = "RULE_OPTION_ON"
-		desc = "RULE_FOURTH_CRUSADE_ON"
-	}
-	option = {
-		name = off
-		text = "RULE_OPTION_OFF"
-		desc = "RULE_FOURTH_CRUSADE_OFF"
-	}
-}
-
-childrens_crusade = {
-	name = "RULE_CHILDRENS_CRUSADE"
-	dlc = "Holy Fury"
-	group = "RULE_GROUP_CRUSADE"
-	option = {
-		name = on
-		text = "RULE_OPTION_ON"
-		desc = "RULE_CHILDRENS_CRUSADE_ON"
-	}
-	option = {
-		name = off
-		text = "RULE_OPTION_OFF"
-		desc = "RULE_CHILDRENS_CRUSADE_OFF"
-	}
-}
-
-northern_crusade = {
-	name = "RULE_NORTHERN_CRUSADE"
-	dlc = "Holy Fury"
-	group = "RULE_GROUP_CRUSADE"
-	option = {
-		name = on
-		text = "RULE_OPTION_ON"
-		desc = "RULE_NORTHERN_CRUSADE_ON"
-	}
-	option = {
-		name = off
-		text = "RULE_OPTION_OFF"
-		desc = "RULE_NORTHERN_CRUSADE_OFF"
-	}
-}
-
-reconquista = {
-	name = "RULE_RECONQUISTA"
-	dlc = "Holy Fury"
-	group = "RULE_GROUP_CRUSADE"
-	option = {
-		name = on
-		text = "RULE_OPTION_ON"
-		desc = "RULE_RECONQUISTA_ON"
-	}
-	option = {
-		name = limited
-		text = "RULE_OPTION_LIMITED"
-		desc = "RULE_RECONQUISTA_LIMITED"
-	}
-	option = {
-		name = off
-		text = "RULE_OPTION_OFF"
-		desc = "RULE_RECONQUISTA_OFF"
-	}
-}
+#dynamic_crusader_states = {
+#	name = "RULE_CRUSADER_STATES"
+#	group = "RULE_GROUP_CRUSADE"
+#	option = {
+#		name = default
+#		text = "RULE_OPTION_DEFAULT"
+#		desc = "RULE_DYNAMIC_CRUSADER_STATES_ON"
+#	}
+#	option = {
+#		name = limited
+#		text = "RULE_OPTION_LIMITED"
+#		desc = "RULE_DYNAMIC_CRUSADER_STATES_LIMITED"
+#	}
+#	option = {
+#		name = off
+#		text = "RULE_OPTION_OFF"
+#		desc = "RULE_DYNAMIC_CRUSADER_STATES_OFF"
+#	}
+#}
 
 child_of_destiny = {
 	name = "RULE_CHILD_OF_DESTINY"
@@ -1425,20 +1317,6 @@ blood_splatter_rule = {
 		name = off
 		text = "RULE_OPTION_OFF"
 		desc = "RULE_BLOOD_SPLATTER_OFF"
-	}
-}
-hellenism_rule = {
-	name = "RULE_HELLENISM"
-	group = "RULE_GROUP_RELIGION"
-	option = {
-		name = on
-		text = "RULE_OPTION_ON"
-		desc = "RULE_HELLENISM_ON"
-	}
-	option = {
-		name = off
-		text = "RULE_OPTION_OFF"
-		desc = "RULE_HELLENISM_OFF"
 	}
 }
 

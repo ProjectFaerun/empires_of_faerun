@@ -1,0 +1,251 @@
+###seros TRIGGERS###
+
+#Grace triggers
+has_seros_grace_trivial_trigger = {
+	has_offmap_currency = { offmap = seros value = 10 }
+}
+has_seros_grace_minor_trigger = {
+	has_offmap_currency = { offmap = seros value = 50 }
+}
+has_seros_grace_medium_trigger = {
+	has_offmap_currency = { offmap = seros value = 150 }
+}
+has_seros_grace_major_trigger = {
+	has_offmap_currency = { offmap = seros value = 500 }
+}
+has_seros_grace_massive_trigger = { 
+	has_offmap_currency = { offmap = seros value = 1000 }
+}
+
+
+#Always put this at the end of your triggers!
+seros_diplo_interaction_trigger = { 
+	seros = {
+		governor = { 
+			NOT = { war_with = PREVPREV } 
+			is_within_diplo_range = PREVPREV
+		}
+		NOT = { has_policy = seros_isolationist }
+	}
+	conditional_tooltip = { 
+		trigger = { government = seros_government }
+		custom_tooltip = { 
+			text = seros_offmap_decisions_pretender_emperor_tt
+			always = no
+		}
+	}
+}
+
+seros_is_suffering_trigger = {
+	seros = {
+		OR = {
+			has_status = seros_unrest
+			has_status = seros_civil_war
+			has_status = seros_famine
+			has_status = seros_plague
+			has_status = seros_sahuagin_invasion
+			has_status = seros_merrow_invasion
+		}
+	}
+}
+
+seros_is_fine_trigger = { #"fine", read like "fiii-iine", i.e. seros is currently treating the world as their oyster
+	seros = {
+		OR = {
+			has_status = seros_golden_age
+			has_status = seros_stable
+		}
+		OR = {
+			has_policy = seros_open
+			has_policy = seros_expansionist
+		}
+	}
+}
+
+seros_is_stable_open_trigger = {
+	seros = {
+		has_status = seros_stable
+		has_policy = seros_open
+	}
+}
+seros_is_stable_expansionist_trigger = {
+	seros = {
+		has_status = seros_stable
+		has_policy = seros_expansionist
+	}
+}
+seros_is_golden_age_open_trigger = {
+	seros = {
+		has_status = seros_golden_age
+		has_policy = seros_open
+	}
+}
+seros_is_golden_age_expansionist_trigger = {
+	seros = {
+		has_status = seros_golden_age
+		has_policy = seros_expansionist
+	}
+}
+
+
+#Found in the 00_offmap_powers file... and the conditions for the decisions
+seros_offmap_boon_decisions_enabled_trigger = {
+	seros_offmap_decisions_enabled_trigger = yes
+	custom_tooltip = {
+		text = seros_offmap_boon_decisions_enabled_trigger_cd_tt #From is player character
+		FROM = { NOT = { has_character_modifier = jd_seros_boon_cd } } #boon cooldown, which is set in each decision (one year!)...
+	}
+}
+
+#Found in the 00_offmap_powers file... and the conditions for the decisions, use custom tooltip for that decisions cooldown modifier
+seros_offmap_tribute_decisions_enabled_trigger = {
+	seros_offmap_decisions_enabled_trigger = yes
+}
+
+#What goes into the two triggers above...
+seros_offmap_decisions_enabled_trigger = { 
+	seros = {
+		NOT = { has_policy = seros_isolationist }
+		custom_tooltip = {
+			text = seros_offmap_decisions_enabled_trigger_war_tt #"Is at peace with §Y[From.GetTitledFirstName]§!"
+			NOT = { governor = { war_with = FROM } }
+		}
+		governor = {
+			show_scope_change = no
+			is_within_diplo_range = FROM
+			hidden_trigger  = { NOT = { character = FROM } } #Governor cannot use boon/tributes decisions
+		}
+	}
+	custom_tooltip = {
+		text = seros_offmap_boon_decisions_enabled_trigger_raiding_tt
+		FROM = {
+			NOR = {
+				has_character_modifier = seros_raid_active
+				has_character_modifier = seros_raid_grace_cd
+			}
+		}
+	}
+	hidden_trigger = { has_dlc = "Jade Dragon" }
+	conditional_tooltip = { 
+		trigger = { FROM = { primary_title = { has_title_flag = rebel_general_title } } }
+		custom_tooltip = { 
+			text = seros_offmap_decisions_pretender_emperor_tt
+			always = no
+		}
+	}
+	conditional_tooltip = { 
+		trigger = { FROM = { has_character_modifier = failed_invasion_of_seros } }
+		custom_tooltip = { 
+			text = seros_offmap_decisions_failed_invasion_tt
+			always = no
+		}
+	}
+}
+
+#Found in the 00_offmap_powers file... and the conditions for the force open seros decision
+seros_offmap_hostile_decisions_enabled_trigger = {
+	seros = {
+		custom_tooltip = {
+			text = seros_offmap_decisions_enabled_trigger_war_tt #"Is at peace with §Y[From.GetTitledFirstName]§!"
+			NOT = { governor = { war_with = FROM } }
+		}
+		governor = {
+			show_scope_change = no
+			is_within_diplo_range = FROM
+			hidden_trigger  = { NOT = { character = FROM } } #Governor cannot use boon/tributes decisions
+		}
+		offmap_ruler = {
+			NOT = { dynasty = FROM }
+		}
+	}
+	hidden_trigger = { has_dlc = "Jade Dragon" }
+}
+
+# For checking the seros Emperor's likes & dislikes
+is_liked_by_seros_trigger = {
+	liked_by_offmap = {
+        type = seros
+    }
+    NOT = {
+        disliked_by_offmap = {
+            type = seros
+        }
+    }
+    seros = {
+        show_scope_change = no
+        custom_tooltip = { text = emperor_likes_THIS_tt }
+    }
+}
+
+is_disliked_by_seros_trigger = {
+	disliked_by_offmap = {
+        type = seros
+    }
+    NOT = {
+		liked_by_offmap = {
+            type = seros
+        }
+    }
+    seros = {
+        show_scope_change = no
+        custom_tooltip = { text = emperor_dislikes_THIS_tt }
+    }
+}
+
+is_liked_and_disliked_by_seros = {
+    disliked_by_offmap = {
+        type = seros
+    }
+    liked_by_offmap = {
+        type = seros
+    }
+    seros = {
+        show_scope_change = no
+        custom_tooltip = { text = emperor_has_ambiguous_feelings_of_THIS_tt }
+    }
+}
+
+#Used in the invasion script...
+valid_seros_target = {
+	NOT = { character = ROOT }
+	NOT = { has_character_modifier = peace_deal_with_seros }
+	NOT = { has_character_flag = defeated_seros }
+	NOT = {	is_tributary = { suzerain = ROOT } }
+	in_revolt = no
+	is_within_diplo_range = ROOT
+	is_landed = yes
+	higher_tier_than = BARON
+	NOT = { primary_title = { has_title_flag = rebel_general_title } } #uses special cb to target
+	NOT = { seros = { offmap_ruler = { dynasty = PREVPREV } } }
+}
+
+valid_seros_target_location = {
+	OR = {
+		any_realm_province = { region = custom_seros_invasion_target_region }
+		any_neighbor_independent_ruler = {
+			has_landed_title = e_seros_west_governor
+		}
+	}
+}
+
+valid_seros_target_location_tributary_chain = {
+	OR = {
+		#any_realm_province = { region = custom_seros_invasion_target_region }
+		any_neighbor_independent_ruler = {
+			has_landed_title = e_seros_west_governor
+		}
+		any_neighbor_independent_ruler = {
+			is_tributary = yes
+			suzerain = {
+				has_landed_title = e_seros_west_governor
+			}
+		}
+	}
+}
+
+courtier_from_seros_trigger = {
+	custom_tooltip = {
+		text = courtier_from_seros_trigger_tt
+		has_character_flag = originated_from_seros_court
+	}
+}

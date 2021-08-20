@@ -1,4 +1,4 @@
-e_zakhara_west_governor = { #placeholder for the Chinese Empire Western Governor
+e_seros_west_governor = { #placeholder for the Chinese Empire Western Governor
 	color={ 245 240 10 }
 	color2={ 220 220 0 }
 	
