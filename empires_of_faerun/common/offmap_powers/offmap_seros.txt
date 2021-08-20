@@ -1821,10 +1821,7 @@ seros = {
 						}
 					}
 					any_realm_province = { #Is within reach of the silk road
-						OR = {
-							region = mulhorand_region
-							region = kara_tur_region
-						}
+						region = seros_region
 					}
 				}
 			}
@@ -1843,10 +1840,7 @@ seros = {
 						has_landed_title = e_seros_west_governor
 					}
 					any_realm_province = { #Is within the Chinese region of influence
-						OR = {
-							region = mulhorand_region
-							region = kara_tur_region
-						}
+						region = seros_region
 					}
 				}			  
 			}
