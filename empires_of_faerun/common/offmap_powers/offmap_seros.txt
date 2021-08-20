@@ -292,7 +292,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = gnome_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -304,7 +304,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = dwarf_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -316,7 +316,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = elf_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -328,7 +328,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = halfling_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -340,7 +340,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = giant_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -352,7 +352,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = nafili_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -364,7 +364,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = katashakan_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -376,7 +376,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = damaran_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -388,7 +388,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = illuskan_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -400,7 +400,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = imaskari_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -412,7 +412,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = chondathan_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -424,7 +424,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = kara_turan_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -436,7 +436,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = lapal_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -448,7 +448,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = maztican_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -460,7 +460,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = mulan_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -472,7 +472,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = netherese_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -484,7 +484,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = raum_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -496,7 +496,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = shaaran_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -508,7 +508,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = tethyrian_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -520,7 +520,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = taan_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -532,7 +532,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = turami_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -544,7 +544,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = zakharan_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -556,7 +556,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = calishite_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -568,7 +568,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = abeiran_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -580,7 +580,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = goblinoid_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -592,7 +592,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = beholder_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -604,7 +604,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = undead_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -616,7 +616,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = minotaur_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -628,7 +628,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = gnoll_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -640,7 +640,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = fish_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -652,7 +652,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = scaly_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -664,7 +664,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = draconic_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -676,7 +676,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = centaur_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -688,7 +688,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = avian_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -700,7 +700,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = illithid_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -712,7 +712,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = celestial_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -724,7 +724,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = fiendish_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -736,7 +736,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = gith_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -748,7 +748,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = fey_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -760,7 +760,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = planetouched_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -772,7 +772,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = genie_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -784,7 +784,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = outworlder_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -796,7 +796,7 @@ seros = {
 					NOT = {
 						any_province = {
 							religion_group = good_human_pantheon_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -812,7 +812,7 @@ seros = {
 					NOT = {
 						any_province = {
 							religion_group = wild_human_pantheon_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -828,7 +828,7 @@ seros = {
 					NOT = {
 						any_province = {
 							religion_group = evil_human_pantheon_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -844,7 +844,7 @@ seros = {
 					NOT = {
 						any_province = {
 							religion_group = zakharan_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -860,7 +860,7 @@ seros = {
 					NOT = {
 						any_province = {
 							religion_group = karaturan_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -876,7 +876,7 @@ seros = {
 					NOT = {
 						any_province = {
 							religion_group = elven_pantheon_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -892,7 +892,7 @@ seros = {
 					NOT = {
 						any_province = {
 							religion_group = drow_pantheon
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -908,7 +908,7 @@ seros = {
 					NOT = {
 						any_province = {
 							religion_group = dwarven_pantheon_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -924,7 +924,7 @@ seros = {
 					NOT = {
 						any_province = {
 							religion_group = giant_pantheon_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -940,7 +940,7 @@ seros = {
 					NOT = {
 						any_province = {
 							religion_group = goblin_pantheon_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -956,7 +956,7 @@ seros = {
 					NOT = {
 						any_province = {
 							religion_group = orc_pantheon_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -972,7 +972,7 @@ seros = {
 					NOT = {
 						any_province = {
 							religion_group = draconic_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -988,7 +988,7 @@ seros = {
 					NOT = {
 						any_province = {
 							religion_group = pagan_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1004,7 +1004,7 @@ seros = {
 					NOT = {
 						any_province = {
 							religion_group = atheist_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1020,7 +1020,7 @@ seros = {
 					NOT = {
 						any_province = {
 							religion_group = aberration_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1055,7 +1055,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = gnome_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1067,7 +1067,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = dwarf_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1079,7 +1079,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = elf_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1091,7 +1091,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = halfling_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1103,7 +1103,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = giant_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1115,7 +1115,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = nafili_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1127,7 +1127,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = katashakan_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1139,7 +1139,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = damaran_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1151,7 +1151,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = illuskan_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1163,7 +1163,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = imaskari_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1175,7 +1175,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = chondathan_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1187,7 +1187,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = kara_turan_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1199,7 +1199,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = lapal_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1211,7 +1211,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = maztican_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1223,7 +1223,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = mulan_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1235,7 +1235,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = netherese_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1247,7 +1247,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = raum_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1259,7 +1259,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = shaaran_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1271,7 +1271,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = tethyrian_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1283,7 +1283,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = taan_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1295,7 +1295,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = turami_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1307,7 +1307,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = zakharan_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1319,7 +1319,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = calishite_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1331,7 +1331,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = abeiran_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1343,7 +1343,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = goblinoid_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1355,7 +1355,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = beholder_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1367,7 +1367,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = undead_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1379,7 +1379,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = minotaur_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1391,7 +1391,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = gnoll_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1403,7 +1403,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = fish_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1415,7 +1415,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = scaly_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1427,7 +1427,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = draconic_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1439,7 +1439,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = centaur_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1451,7 +1451,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = avian_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1463,7 +1463,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = illithid_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1475,7 +1475,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = celestial_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1487,7 +1487,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = fiendish_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1499,7 +1499,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = gith_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1511,7 +1511,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = fey_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1523,7 +1523,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = planetouched_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1535,7 +1535,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = genie_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1547,7 +1547,7 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = outworlder_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1559,7 +1559,7 @@ seros = {
 					NOT = {
 						any_province = {
 							religion_group = good_human_pantheon_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1575,7 +1575,7 @@ seros = {
 					NOT = {
 						any_province = {
 							religion_group = wild_human_pantheon_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1591,7 +1591,7 @@ seros = {
 					NOT = {
 						any_province = {
 							religion_group = evil_human_pantheon_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1607,7 +1607,7 @@ seros = {
 					NOT = {
 						any_province = {
 							religion_group = zakharan_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1623,7 +1623,7 @@ seros = {
 					NOT = {
 						any_province = {
 							religion_group = karaturan_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1639,7 +1639,7 @@ seros = {
 					NOT = {
 						any_province = {
 							religion_group = elven_pantheon_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1655,7 +1655,7 @@ seros = {
 					NOT = {
 						any_province = {
 							religion_group = drow_pantheon
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1671,7 +1671,7 @@ seros = {
 					NOT = {
 						any_province = {
 							religion_group = dwarven_pantheon_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1687,7 +1687,7 @@ seros = {
 					NOT = {
 						any_province = {
 							religion_group = giant_pantheon_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1703,7 +1703,7 @@ seros = {
 					NOT = {
 						any_province = {
 							religion_group = goblin_pantheon_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1719,7 +1719,7 @@ seros = {
 					NOT = {
 						any_province = {
 							religion_group = orc_pantheon_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1735,7 +1735,7 @@ seros = {
 					NOT = {
 						any_province = {
 							religion_group = draconic_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1751,7 +1751,7 @@ seros = {
 					NOT = {
 						any_province = {
 							religion_group = pagan_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1767,7 +1767,7 @@ seros = {
 					NOT = {
 						any_province = {
 							religion_group = atheist_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
@@ -1783,7 +1783,7 @@ seros = {
 					NOT = {
 						any_province = {
 							religion_group = aberration_group
-							is_within_diplo_range = shou_lung
+							is_within_diplo_range = seros
 						}
 					}
 				}
