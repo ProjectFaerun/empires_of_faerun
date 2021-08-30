@@ -1840,7 +1840,7 @@ seros = {
 						has_landed_title = e_seros_west_governor
 					}
 					any_realm_province = { #Is within the Chinese region of influence
-						region = seros_region
+						region = custom_center_access
 					}
 				}			  
 			}

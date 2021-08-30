@@ -24,7 +24,7 @@ employing_jd_administrator_golden_age = {
 	build_cost_modifier = -0.3
 }	
 
-peace_deal_with_zakhara = {
+peace_deal_with_seros = {
 	icon = 95
 	monthly_character_prestige = 1
 }
@@ -114,16 +114,16 @@ strengthen_religion_ambition = {
 	icon = 9
 }
 
-jd_zakhara_honor_guard_timer = { icon = 1 }
+jd_seros_honor_guard_timer = { icon = 1 }
 
-jd_zakhara_regiment_timer = { icon = 1 }
+jd_seros_regiment_timer = { icon = 1 }
 
-zakhara_imperial_trade_contract = {
+seros_imperial_trade_contract = {
 	multiplicative_trade_post_income_modifier = 1.0
 	icon = 99
 }
 
-zakhara_favored_in_trade = {
+seros_favored_in_trade = {
 	multiplicative_trade_post_income_modifier = 1.0
 	icon = 99
 }
@@ -172,32 +172,32 @@ school_shangqing = {
 	stewardship = -2
 }
 
-zakhara_send_relief = {
+seros_send_relief = {
 	icon = 60
 	global_tax_modifier = -0.1
 	levy_reinforce_rate = -0.3
 }
 
-angered_zakhara_modifier = { #Scripter! Update angered_zakhara_tt if values change here.
+angered_seros_modifier = { #Scripter! Update angered_seros_tt if values change here.
 	icon = 110
 	monthly_character_prestige = -0.5
 	monthly_grace = -2
 }
 
-war_with_zakhara_modifier = {
+war_with_seros_modifier = {
 	icon = 110
 	levy_reinforce_rate = -0.75
 }
 
-failed_invasion_of_zakhara = { icon = 1}
+failed_invasion_of_seros = { icon = 1}
 
-zakhara_supply_horses = {
+seros_supply_horses = {
 	manpower_growth = -0.15
 	monthly_grace = 2
 	icon = 56
 }
 
-zakhara_raid_active = {
+seros_raid_active = {
 	manpower_growth = -0.15
 	levy_reinforce_rate = -0.15
 	global_levy_size = -0.10
@@ -206,7 +206,7 @@ zakhara_raid_active = {
 	icon = 105
 }
 
-zakhara_raid_grace_cd = {
+seros_raid_grace_cd = {
 	icon = 1
 }
 
@@ -282,18 +282,18 @@ recently_invited_ascetic = {
 	icon = 8
 }
 
-zakhara_grace_send_gift_timer = { icon = 1 }
+seros_grace_send_gift_timer = { icon = 1 }
 
-zakhara_grace_send_eunuch_timer = { icon = 1 }
+seros_grace_send_eunuch_timer = { icon = 1 }
 
-zakhara_grace_send_commander_timer = { icon = 1 }
+seros_grace_send_commander_timer = { icon = 1 }
 
-zakhara_grace_send_concubine_timer = { icon = 1 }
+seros_grace_send_concubine_timer = { icon = 1 }
 
-zakhara_grace_tributary_timer = { icon = 1 }
+seros_grace_tributary_timer = { icon = 1 }
 
-jd_zakhara_boon_cd = { icon = 1 }
+jd_seros_boon_cd = { icon = 1 }
 
-jd_zakhara_tribute_cd = { icon = 1 } # not used anymore
+jd_seros_tribute_cd = { icon = 1 } # not used anymore
 
-zakhara_force_open_cooldown = { icon = 1 }
+seros_force_open_cooldown = { icon = 1 }

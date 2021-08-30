@@ -1,5 +1,5 @@
 feudal_governments = {
-	zakhara_government = {
+	seros_government = {
 		preferred_holdings = { CASTLE CITY }
 		allowed_holdings = {
 			CASTLE
@@ -24,10 +24,10 @@ feudal_governments = {
 		frame_suffix = "_chineseimperial"
 		potential = {
 			tier = EMPEROR
-			primary_title = { has_title_flag = pretender_zakhara_empire }
+			primary_title = { has_title_flag = pretender_seros_empire }
 			OR = {
-				culture_group = zakharan_group
-				has_character_flag = zakhara_government_preserve #keeps government when player is given culture change opton
+				culture_group = fish_group
+				has_character_flag = seros_government_preserve #keeps government when player is given culture change opton
 			}
 			is_patrician = no
 		}
@@ -65,8 +65,8 @@ feudal_governments = {
 	
 	
 republic_governments = {
-	zakhara_bureaucracy = {
-		offmap_power = zakhara
+	seros_bureaucracy = {
+		offmap_power = seros
 		preferred_holdings = { CASTLE CITY }
 		allowed_holdings = {
 			CASTLE
@@ -94,7 +94,7 @@ republic_governments = {
 		}
 		frame_suffix = "_confucian"
 		potential = {
-			is_offmap_tag = zakhara
+			is_offmap_tag = seros
 		}
 		
 		color = { 94 187 185 }

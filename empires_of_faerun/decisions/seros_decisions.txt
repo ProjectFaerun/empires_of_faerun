@@ -7,15 +7,15 @@
 
 decisions = {
 
-	adopt_zakhara_imperialism = {
+	adopt_seros_imperialism = {
 		only_independent = yes
 		is_high_prio = yes
 		ai_check_interval = 60
 		potential = {
-			culture_group = zakharan_group
+			culture_group = fish_group
 			is_nomadic = no
 			is_feudal = yes
-			NOT = { government = zakhara_government }
+			NOT = { government = seros_government }
 			has_dlc = "Jade Dragon"
 			holy_order = no
 			OR = {
@@ -50,7 +50,7 @@ decisions = {
 				wealth = 1000
 			}
 
-			zakhara = {
+			seros = {
 				show_scope_change = no
 				offmap_ruler = { NOT = { dynasty = ROOT } }
 			}
@@ -75,7 +75,7 @@ decisions = {
 				character_event = { id = HF.24240 tooltip = tooltip_evt_hf_24240 }
 			}
 			custom_tooltip = {
-				text = adopt_zakhara_imperialism_tt
+				text = adopt_seros_imperialism_tt
 				hidden_effect = {
 					create_title = {
 						tier = EMPEROR
@@ -90,8 +90,8 @@ decisions = {
 					}
 					new_title = {
 						set_title_flag = uses_temple_names_by_script #Titles with this flag give their heirs a temple name via on_death event
-						set_title_flag = pretender_zakhara_empire #Blocks all grace interactions
-						adjective = e_zakhara_west_governor_adj #Use WP adj as it is "zakhara" but also gives the right one in different languages
+						set_title_flag = pretender_seros_empire #Blocks all grace interactions
+						adjective = e_seros_west_governor_adj #Use WP adj as it is "zakhara" but also gives the right one in different languages
 						random_list = { #Random Empire name that zakhara doesn't have
 							1 = { 
 								trigger = { NOT = { zakhara = { has_offmap_name = tang_zakhara } } }

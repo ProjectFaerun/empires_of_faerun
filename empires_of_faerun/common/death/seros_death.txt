@@ -1,0 +1,36 @@
+death_executed_by_seros_emperor = {
+	can_nokiller = yes
+	long_desc = "DEATH_EXECUTED_BY_SEROS_EMPEROR"
+	icon = 1
+	killer_icon = 1
+	sound = no
+}
+
+#seros
+#Update the death_in_seros_trigger with new death reasons
+death_went_to_seros = {
+	can_nokiller = yes
+	long_desc = "DEATH_WENT_TO_SEROS"
+	death_date_desc = "DEATH_DATE_SEROS"
+	icon = 2
+	killer_icon = 1
+	sound = no
+}
+
+# This needs to exist if you have offmap powers! Anyone who dies to this is assumed to have been an offmap ruler
+
+death_went_back_to_seros = {
+	can_nokiller = yes
+	long_desc = "DEATH_WENT_BACK_TO_SEROS"
+	death_date_desc = "DEATH_DATE_SEROS_RETURN"
+	icon = 2
+	killer_icon = 1
+	sound = no
+}
+
+death_in_seros_historic = { #Use this for characters who ARE NOT THE EMPEROR that historically died in seros, it will display as died in seros but not give them the portrait frames automatically
+	can_nokiller = yes
+	long_desc = "DEATH_IN_SEROS"
+	icon = 1
+	killer_icon = 1
+}
