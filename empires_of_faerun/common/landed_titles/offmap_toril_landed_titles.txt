@@ -2,7 +2,7 @@ e_seros_west_governor = { #placeholder for the Chinese Empire Western Governor
 	color={ 245 240 10 }
 	color2={ 220 220 0 }
 	
-	capital = 1396
+	capital = 1135 # Whamite Isles
 	
 	assimilate = no # Duchies cannot de jure drift IN or OUT of this title
 	

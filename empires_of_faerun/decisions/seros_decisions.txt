@@ -603,7 +603,7 @@ decisions = {
 					years = 30
 				}
 			}
-			hidden_effect = { seros = { governor = { character_event = { id = JD.60010 } } } }
+			hidden_effect = { seros = { governor = { character_event = { id = SE.60010 } } } }
 		}
 		ai_will_do = {
 			factor = 1
@@ -819,13 +819,13 @@ decisions = {
 						}
 					}
 				}
-				1513 = { # Jiuquan
+				1135 = { # Whamite Isle
 					save_event_target_as = spawn_province
 				}
 			}
 			else = {
 				seros = { set_offmap_flag = troop_spawn_india_temp }
-				1318 = { # Samatata
+				1146 = { # The Wayrock
 					save_event_target_as = spawn_province
 				}
 				set_variable = {
@@ -848,7 +848,7 @@ decisions = {
 						value = -1
 					}
 					spawn_fleet = {
-						province = 1411 # ganges delta
+						province = 2014 # sea of fallen stars
 						owner = ROOT
 						disband_on_peace = yes
 						troops =
@@ -861,7 +861,7 @@ decisions = {
 			}
 			
 			event_target:enemy = {
-				character_event = { id = JD.30047 }
+				character_event = { id = SE.30047 }
 			}
 			
 			seros_war_spawn_troops_effect = yes
