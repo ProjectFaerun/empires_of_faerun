@@ -182,9 +182,76 @@ seros_offmap_submission = {
 									set_name = "Gelmalgaldon Empire"
 									set_title_flag = seros_name_Gelmalgaldon
 								}
-								#names to be added later
-			#Erwedhenen Lysanderen Jehastran Perwraekon Nacaciaen Sheh'Streken Zocrixen 
-			#Hilazieon Gokekuen Aggezzenon Aekteshon Drazrosen Thaalison Noktiten Sheshon
+								1 = { 
+									trigger = { NOT = { seros = { has_offmap_name = erwedhenen_seros } } }
+									set_name = "Erwedhenen Empire"
+									set_title_flag = seros_name_Erwedhenen
+								}
+								1 = { 
+									trigger = { NOT = { seros = { has_offmap_name = lysanderen_seros } } }
+									set_name = "Lysanderen Empire"
+									set_title_flag = seros_name_Lysanderen
+								}
+								1 = { 
+									trigger = { NOT = { seros = { has_offmap_name = jehastran_seros } } }
+									set_name = "Jehastran Empire"
+									set_title_flag = seros_name_Jehastran
+								}
+								1 = { 
+									trigger = { NOT = { seros = { has_offmap_name = perwraekon_seros } } }
+									set_name = "Perwraekon Empire"
+									set_title_flag = seros_name_Perwraekon
+								}
+								1 = { 
+									trigger = { NOT = { seros = { has_offmap_name = nacaciaen_seros } } }
+									set_name = "Nacaciaen Empire"
+									set_title_flag = seros_name_Nacaciaen
+								}
+								1 = { 
+									trigger = { NOT = { seros = { has_offmap_name = shehstreken_seros } } }
+									set_name = "ShehStreken Empire"
+									set_title_flag = seros_name_ShehStreken
+								}
+								1 = { 
+									trigger = { NOT = { seros = { has_offmap_name = zocrixen_seros } } }
+									set_name = "Zocrixen Empire"
+									set_title_flag = seros_name_Zocrixen
+								}
+								1 = { 
+									trigger = { NOT = { seros = { has_offmap_name = hilazieon_seros } } }
+									set_name = "Hilazieon Empire"
+									set_title_flag = seros_name_Hilazieon
+								}
+								1 = { 
+									trigger = { NOT = { seros = { has_offmap_name = gokekuen_seros } } }
+									set_name = "Gokekuen Empire"
+									set_title_flag = seros_name_Gokekuen
+								}
+								1 = { 
+									trigger = { NOT = { seros = { has_offmap_name = aggezzenon_seros } } }
+									set_name = "Aggezzenon Empire"
+									set_title_flag = seros_name_Aggezzenon
+								}
+								1 = { 
+									trigger = { NOT = { seros = { has_offmap_name = aekteshon_seros } } }
+									set_name = "Aekteshon Empire"
+									set_title_flag = seros_name_Aekteshon
+								}
+								1 = { 
+									trigger = { NOT = { seros = { has_offmap_name = drazrosen_seros } } }
+									set_name = "Drazrosen Empire"
+									set_title_flag = seros_name_Drazrosen
+								}
+								1 = { 
+									trigger = { NOT = { seros = { has_offmap_name = thaalison_seros } } }
+									set_name = "Thaalison Empire"
+									set_title_flag = seros_name_Thaalison
+								}
+								1 = { 
+									trigger = { NOT = { seros = { has_offmap_name = sheshon_seros } } }
+									set_name = "Sheshon Empire"
+									set_title_flag = seros_name_Sheshon
+								}
 							}
 							add_law = {
 								law = succ_primogeniture
@@ -1093,30 +1160,24 @@ invasion_of_seros_cb = {
 								primary_title = {
 									trigger_switch = {
 										on_trigger = has_title_flag
-										seros_name_Tang = { seros = { set_offmap_name = "tang_seros" } }
-										seros_name_Jin = { seros = { set_offmap_name = "jin_seros" } }
-										seros_name_Wei = { seros = { set_offmap_name = "wei_seros" } }
-										seros_name_Qi = { seros = { set_offmap_name = "qi_seros" } }
-										seros_name_Zhou = { seros = { set_offmap_name = "zhou_seros" } }
-										seros_name_Han = { seros = { set_offmap_name = "han_seros" } }
-										seros_name_Qin = { seros = { set_offmap_name = "qin_seros" } }
-										seros_name_Yan = { seros = { set_offmap_name = "yan_seros" } }
-										seros_name_Zhao = { seros = { set_offmap_name = "zhao_seros" } }
-										seros_name_Liao = { seros = { set_offmap_name = "liao_seros" } }
-										seros_name_Yuan = { seros = { set_offmap_name = "yuan_seros" } }
-										seros_name_Xia = { seros = { set_offmap_name = "xia_seros" } }
-										seros_name_Qing = { seros = { set_offmap_name = "qing_seros" } }
-										seros_name_Dai = { seros = { set_offmap_name = "dai_seros" } }
-										seros_name_Cheng = { seros = { set_offmap_name = "cheng_seros" } }
-										seros_name_Liang = { seros = { set_offmap_name = "liang_seros" } }
-										seros_name_Song = { seros = { set_offmap_name = "song_seros" } }
-										seros_name_Ming = { seros = { set_offmap_name = "ming_seros" } }
-										seros_name_Shu = { seros = { set_offmap_name = "shu_seros" } }
-										seros_name_Wu = { seros = { set_offmap_name = "wu_seros" } }
-										seros_name_Chu = { seros = { set_offmap_name = "chu_seros" } }
-										seros_name_Yue = { seros = { set_offmap_name = "yue_seros" } }
-										seros_name_Yin = { seros = { set_offmap_name = "yin_seros" } }
-										seros_name_Shun = { seros = { set_offmap_name = "shun_seros" } }
+										seros_name_Ivellion = { seros = { set_offmap_name = "ivellion_seros" } }
+										seros_name_Zhuirentalon = { seros = { set_offmap_name = "zhuirentalon_seros" } }
+										seros_name_Caelynnon = { seros = { set_offmap_name = "caelynnon_seros" } }
+										seros_name_Edraelen = { seros = { set_offmap_name = "edraelen_seros" } }
+										seros_name_Gelmalgaldon = { seros = { set_offmap_name = "gelmalgaldon_seros" } }
+										seros_name_Erwedhenen = { seros = { set_offmap_name = "erwedhenen_seros" } }
+										seros_name_Lysanderen = { seros = { set_offmap_name = "lysanderen_seros" } }
+										seros_name_Jehastran = { seros = { set_offmap_name = "jehastran_seros" } }
+										seros_name_Perwraekon = { seros = { set_offmap_name = "perwraekon_seros" } }
+										seros_name_Nacaciaen = { seros = { set_offmap_name = "nacaciaen_seros" } }
+										seros_name_ShehStreken = { seros = { set_offmap_name = "shehstreken_seros" } }
+										seros_name_Zocrixen = { seros = { set_offmap_name = "zocrixen_seros" } }
+										seros_name_Hilazieon = { seros = { set_offmap_name = "hilazieon_seros" } }
+										seros_name_Gokekuen = { seros = { set_offmap_name = "gokekuen_seros" } }
+										seros_name_Aggezzenon = { seros = { set_offmap_name = "aggezzenon_seros" } }
+										seros_name_Drazrosen = { seros = { set_offmap_name = "drazrosen_seros" } }
+										seros_name_Thaalison = { seros = { set_offmap_name = "thaalison_seros" } }
+										seros_name_Sheshon = { seros = { set_offmap_name = "sheshon_seros" } }
 									}
 									clr_title_flag = pretender_seros_empire
 									clr_title_flag = uses_temple_names_by_script

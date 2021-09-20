@@ -91,127 +91,102 @@ decisions = {
 					new_title = {
 						set_title_flag = uses_temple_names_by_script #Titles with this flag give their heirs a temple name via on_death event
 						set_title_flag = pretender_seros_empire #Blocks all grace interactions
-						adjective = e_seros_west_governor_adj #Use WP adj as it is "zakhara" but also gives the right one in different languages
-						random_list = { #Random Empire name that zakhara doesn't have
+						adjective = e_seros_west_governor_adj #Use WP adj as it is "seros" but also gives the right one in different languages
+						random_list = { #Random Empire name that seros doesn't have
 							1 = { 
-								trigger = { NOT = { zakhara = { has_offmap_name = tang_zakhara } } }
-								set_name = "Tang Empire"
-								set_title_flag = zakhara_name_Tang
+								trigger = { NOT = { seros = { has_offmap_name = ivellion_seros } } }
+								set_name = "Ivellion Empire"
+								set_title_flag = seros_name_Ivellion
 							}
 							1 = { 
-								trigger = { NOT = { zakhara = { has_offmap_name = jin_zakhara } } }
-								set_name = "Jin Empire"
-								set_title_flag = zakhara_name_Jin
+								trigger = { NOT = { seros = { has_offmap_name = zhuirentalon_seros } } }
+								set_name = "Zhuirentalon Empire"
+								set_title_flag = seros_name_Zhuirentalon
 							}
 							1 = { 
-								trigger = { NOT = { zakhara = { has_offmap_name = wei_zakhara } } }
-								set_name = "Wei Empire"
-								set_title_flag = zakhara_name_Wei
+								trigger = { NOT = { seros = { has_offmap_name = caelynnon_seros } } }
+								set_name = "Caelynnon Empire"
+								set_title_flag = seros_name_Caelynnon
 							}
 							1 = { 
-								trigger = { NOT = { zakhara = { has_offmap_name = qi_zakhara } } }
-								set_name = "Qi Empire"
-								set_title_flag = zakhara_name_Qi
+								trigger = { NOT = { seros = { has_offmap_name = edraelen_seros } } }
+								set_name = "Edraelen Empire"
+								set_title_flag = seros_name_Edraelen
 							}
 							1 = { 
-								trigger = { NOT = { zakhara = { has_offmap_name = zhou_zakhara } } }
-								set_name = "Zhou Empire"
-								set_title_flag = zakhara_name_Zhou
+								trigger = { NOT = { seros = { has_offmap_name = gelmalgaldon_seros } } }
+								set_name = "Gelmalgaldon Empire"
+								set_title_flag = seros_name_Gelmalgaldon
 							}
 							1 = { 
-								trigger = { NOT = { zakhara = { has_offmap_name = han_zakhara } } }
-								set_name = "Han Empire"
-								set_title_flag = zakhara_name_Han
+								trigger = { NOT = { seros = { has_offmap_name = erwedhenen_seros } } }
+								set_name = "Erwedhenen Empire"
+								set_title_flag = seros_name_Erwedhenen
 							}
 							1 = { 
-								trigger = { NOT = { zakhara = { has_offmap_name = qin_zakhara } } }
-								set_name = "Qin Empire"
-								set_title_flag = zakhara_name_Qin
+								trigger = { NOT = { seros = { has_offmap_name = lysanderen_seros } } }
+								set_name = "Lysanderen Empire"
+								set_title_flag = seros_name_Lysanderen
 							}
 							1 = { 
-								trigger = { NOT = { zakhara = { has_offmap_name = yan_zakhara } } }
-								set_name = "Yan Empire"
-								set_title_flag = zakhara_name_Yan
+								trigger = { NOT = { seros = { has_offmap_name = jehastran_seros } } }
+								set_name = "Jehastran Empire"
+								set_title_flag = seros_name_Jehastran
 							}
 							1 = { 
-								trigger = { NOT = { zakhara = { has_offmap_name = zhao_zakhara } } }
-								set_name = "Zhao Empire"
-								set_title_flag = zakhara_name_Zhao
+								trigger = { NOT = { seros = { has_offmap_name = perwraekon_seros } } }
+								set_name = "Perwraekon Empire"
+								set_title_flag = seros_name_Perwraekon
 							}
 							1 = { 
-								trigger = { NOT = { zakhara = { has_offmap_name = liao_zakhara } } }
-								set_name = "Liao Empire"
-								set_title_flag = zakhara_name_Liao
+								trigger = { NOT = { seros = { has_offmap_name = nacaciaen_seros } } }
+								set_name = "Nacaciaen Empire"
+								set_title_flag = seros_name_Nacaciaen
 							}
 							1 = { 
-								trigger = { NOT = { zakhara = { has_offmap_name = yuan_zakhara } } }
-								set_name = "Yuan Empire"
-								set_title_flag = zakhara_name_Yuan
+								trigger = { NOT = { seros = { has_offmap_name = shehstreken_seros } } }
+								set_name = "ShehStreken Empire"
+								set_title_flag = seros_name_ShehStreken
 							}
 							1 = { 
-								trigger = { NOT = { zakhara = { has_offmap_name = xia_zakhara } } }
-								set_name = "Xia Empire"
-								set_title_flag = zakhara_name_Xia
+								trigger = { NOT = { seros = { has_offmap_name = zocrixen_seros } } }
+								set_name = "Zocrixen Empire"
+								set_title_flag = seros_name_Zocrixen
 							}
 							1 = { 
-								trigger = { NOT = { zakhara = { has_offmap_name = qing_zakhara } } }
-								set_name = "Qing Empire"
-								set_title_flag = zakhara_name_Qing
+								trigger = { NOT = { seros = { has_offmap_name = hilazieon_seros } } }
+								set_name = "Hilazieon Empire"
+								set_title_flag = seros_name_Hilazieon
 							}
 							1 = { 
-								trigger = { NOT = { zakhara = { has_offmap_name = dai_zakhara } } }
-								set_name = "Dai Empire"
-								set_title_flag = zakhara_name_Dai
+								trigger = { NOT = { seros = { has_offmap_name = gokekuen_seros } } }
+								set_name = "Gokekuen Empire"
+								set_title_flag = seros_name_Gokekuen
 							}
 							1 = { 
-								trigger = { NOT = { zakhara = { has_offmap_name = cheng_zakhara } } }
-								set_name = "Cheng Empire"
-								set_title_flag = zakhara_name_Cheng
+								trigger = { NOT = { seros = { has_offmap_name = aggezzenon_seros } } }
+								set_name = "Aggezzenon Empire"
+								set_title_flag = seros_name_Aggezzenon
 							}
 							1 = { 
-								trigger = { NOT = { zakhara = { has_offmap_name = liang_zakhara } } }
-								set_name = "Liang Empire"
-								set_title_flag = zakhara_name_Liang
+								trigger = { NOT = { seros = { has_offmap_name = aekteshon_seros } } }
+								set_name = "Aekteshon Empire"
+								set_title_flag = seros_name_Aekteshon
 							}
 							1 = { 
-								trigger = { NOT = { zakhara = { has_offmap_name = song_zakhara } } }
-								set_name = "Song Empire"
-								set_title_flag = zakhara_name_Song
+								trigger = { NOT = { seros = { has_offmap_name = drazrosen_seros } } }
+								set_name = "Drazrosen Empire"
+								set_title_flag = seros_name_Drazrosen
 							}
 							1 = { 
-								trigger = { NOT = { zakhara = { has_offmap_name = ming_zakhara } } }
-								set_name = "Ming Empire"
-								set_title_flag = zakhara_name_Ming
+								trigger = { NOT = { seros = { has_offmap_name = thaalison_seros } } }
+								set_name = "Thaalison Empire"
+								set_title_flag = seros_name_Thaalison
 							}
 							1 = { 
-								trigger = { NOT = { zakhara = { has_offmap_name = shu_zakhara } } }
-								set_name = "Shu Empire"
-								set_title_flag = zakhara_name_Shu
-							}
-							1 = { 
-								trigger = { NOT = { zakhara = { has_offmap_name = wu_zakhara } } }
-								set_name = "Wu Empire"
-								set_title_flag = zakhara_name_Wu
-							}
-							1 = { 
-								trigger = { NOT = { zakhara = { has_offmap_name = chu_zakhara } } }
-								set_name = "Chu Empire"
-								set_title_flag = zakhara_name_Chu
-							}
-							1 = { 
-								trigger = { NOT = { zakhara = { has_offmap_name = yue_zakhara } } }
-								set_name = "Yue Empire"
-								set_title_flag = zakhara_name_Yue
-							}
-							1 = { 
-								trigger = { NOT = { zakhara = { has_offmap_name = yin_zakhara } } }
-								set_name = "Yin Empire"
-								set_title_flag = zakhara_name_Yin
-							}
-							1 = { 
-								trigger = { NOT = { zakhara = { has_offmap_name = shun_zakhara } } }
-								set_name = "Shun Empire"
-								set_title_flag = zakhara_name_Shun
+								trigger = { NOT = { seros = { has_offmap_name = sheshon_seros } } }
+								set_name = "Sheshon Empire"
+								set_title_flag = seros_name_Sheshon
 							}
 						}
 						add_law = {
@@ -225,31 +200,31 @@ decisions = {
 			any_demesne_title = {
 				limit = { 
 					tier = EMPEROR
-					NOT = { has_title_flag = pretender_zakhara_empire }
+					NOT = { has_title_flag = pretender_seros_empire }
 				}
 				destroy_landed_title = THIS
 			}
-			set_government_type = zakhara_imperial_government
-			custom_tooltip = { text = adopt_zakhara_imperialism_gov_tt }
+			set_government_type = seros_imperial_government
+			custom_tooltip = { text = adopt_seros_imperialism_gov_tt }
 		}
 	}
 	
-	raise_zakhara_honor_guard = {
+	raise_seros_honor_guard = {
 		only_playable = yes
 		is_high_prio = yes
 		is_mercenary = yes
 		potential = {
 			is_landed = yes
 			OR = {
-				any_spouse = { has_character_flag = zakhara_honor_guard } #Need to be married to zakhara prince/princess
-				any_consort = { has_character_flag = zakhara_honor_guard } #Need to be married to zakhara prince/princess
+				any_spouse = { has_character_flag = seros_honor_guard } #Need to be married to seros prince/princess
+				any_consort = { has_character_flag = seros_honor_guard } #Need to be married to seros prince/princess
 				any_courtier = {
 					is_landed = no
 					liege = { character = ROOT }
 					dynasty = ROOT
 					OR = {
-						any_spouse = { has_character_flag = zakhara_honor_guard }
-						any_consort = { has_character_flag = zakhara_honor_guard }
+						any_spouse = { has_character_flag = seros_honor_guard }
+						any_consort = { has_character_flag = seros_honor_guard }
 					}
 				}
 			}
@@ -296,14 +271,14 @@ decisions = {
 				}
 			}
 			custom_tooltip = {
-				text = raise_zakhara_honor_guard_TT
-				NOT = { has_character_modifier = jd_zakhara_honor_guard_timer }
+				text = raise_seros_honor_guard_TT
+				NOT = { has_character_modifier = jd_seros_honor_guard_timer }
 			}
 		}
 		effect = {
 			hidden_effect = {
 				add_character_modifier = { #Can't use it too often
-					name = jd_zakhara_honor_guard_timer
+					name = jd_seros_honor_guard_timer
 					hidden = yes
 					years = 1
 				}
@@ -405,7 +380,7 @@ decisions = {
 		}
 	}
 	
-	raise_zakhara_regiment = {
+	raise_seros_regiment = {
 		only_playable = yes
 		is_high_prio = yes
 		is_mercenary = yes
@@ -443,28 +418,28 @@ decisions = {
 			custom_tooltip = {
 				text = already_raised_TT
 				NOT = {
-					has_earmarked_regiments = zakhara_regiment
+					has_earmarked_regiments = seros_regiment
 				}
 			}
 			custom_tooltip = {
-				text = raise_zakhara_regiment_TT
-				NOT = { has_character_modifier = jd_zakhara_regiment_timer }
+				text = raise_seros_regiment_TT
+				NOT = { has_character_modifier = jd_seros_regiment_timer }
 			}
-			zakhara = {
+			seros = {
 				NOR = {
-					has_status = zakhara_unrest
-					has_status = zakhara_plague
-					has_status = zakhara_famine
-					has_status = zakhara_civil_war
-					has_status = zakhara_badia_invasion
-					has_status = zakhara_pantheist_invasion
+					has_status = seros_unrest
+					has_status = seros_plague
+					has_status = seros_famine
+					has_status = seros_civil_war
+					has_status = seros_sahuagin_invasion
+					has_status = seros_merrow_invasion
 				}
 			}
 		}
 		effect = {
 			hidden_effect = {
 				add_character_modifier = { #Can't use it too often
-					name = jd_zakhara_regiment_timer
+					name = jd_seros_regiment_timer
 					hidden = yes
 					duration = 365
 				}
@@ -500,7 +475,7 @@ decisions = {
 							attrition = 1.0
 							disband_on_peace = yes
 							maintenance_multiplier = 0.25
-							earmark = zakhara_regiment
+							earmark = seros_regiment
 						}
 					}
 					else_if = {
@@ -529,7 +504,7 @@ decisions = {
 							attrition = 1.0
 							disband_on_peace = yes
 							maintenance_multiplier = 0.25
-							earmark = zakhara_regiment
+							earmark = seros_regiment
 						}
 					}
 					else_if = {
@@ -561,7 +536,7 @@ decisions = {
 							attrition = 1.0
 							disband_on_peace = yes
 							maintenance_multiplier = 0.25
-							earmark = zakhara_regiment
+							earmark = seros_regiment
 						}
 					}
 					else = {
@@ -579,7 +554,7 @@ decisions = {
 							attrition = 1.0
 							disband_on_peace = yes
 							maintenance_multiplier = 0.25
-							earmark = zakhara_regiment
+							earmark = seros_regiment
 						}
 					}
 				}
@@ -591,7 +566,7 @@ decisions = {
 		}
 	}
 			
-	tributary_independence_zakhara = {
+	tributary_independence_seros = {
 		only_playable = yes
 		is_high_prio = yes
 		ai_check_interval = 24
@@ -601,11 +576,11 @@ decisions = {
 			}
 		}
 		allow = {
-			zakhara = {
+			seros = {
 				OR = {
-					has_status = zakhara_civil_war
-					has_status = zakhara_badia_invasion
-					has_status = zakhara_pantheist_invasion
+					has_status = seros_civil_war
+					has_status = seros_sahuagin_invasion
+					has_status = seros_merrow_invasion
 				}
 			}
 		}
@@ -615,20 +590,20 @@ decisions = {
 			}
 			if = {
 				limit = { 
-				    zakhara = { offmap_has_like = zakhara_likes_tributaries }
+				    seros = { offmap_has_like = seros_likes_tributaries }
 				}
 				detract_grace_massive_effect = yes
 			}
 			else = { detract_grace_major_effect = yes }
 			custom_tooltip = {
-				text = tributary_independence_zakhara_tt
+				text = tributary_independence_seros_tt
 				add_character_modifier = {
 					hidden = yes
-					name = zakhara_grace_tributary_timer
+					name = seros_grace_tributary_timer
 					years = 30
 				}
 			}
-			hidden_effect = { zakhara = { governor = { character_event = { id = JD.60010 } } } }
+			hidden_effect = { seros = { governor = { character_event = { id = JD.60010 } } } }
 		}
 		ai_will_do = {
 			factor = 1
@@ -648,42 +623,42 @@ decisions = {
 		}
 	}
 
-	zakhara_sends_reinforcements = {
+	seros_sends_reinforcements = {
 		ai_check_interval = 2
 		only_independent = yes
 		potential = {
 			ai = yes
 			war = yes
-			zakhara = {
+			seros = {
 				governor = {
 					character = ROOT
 				}
 				# Don't spawn reinforcements immediately
 				had_offmap_tmp_flag = {
-					flag = zakhara_entered_war
+					flag = seros_entered_war
 					years = 3
 				}
 				OR = {
 					NOT = {
 						# Only spawn reinforcements once
-						has_offmap_flag = zakhara_sent_war_reinforcements
+						has_offmap_flag = seros_sent_war_reinforcements
 						# Exception: Really long wars
 					}
 					had_offmap_tmp_flag = {
-						flag = zakhara_sent_war_reinforcements
+						flag = seros_sent_war_reinforcements
 						years = 30
 					}
 				}
-				# Don't spawn reinforcements for the following statuses in zakhara.
+				# Don't spawn reinforcements for the following statuses in seros.
 				NOR = {
-					has_status = zakhara_famine
-					has_status = zakhara_civil_war
-					has_status = zakhara_badia_invasion
-					has_status = zakhara_pantheist_invasion
-					has_status = zakhara_plague
+					has_status = seros_famine
+					has_status = seros_civil_war
+					has_status = seros_sahuagin_invasion
+					has_status = seros_merrow_invasion
+					has_status = seros_plague
 				}
 			}
-			# Only if zakhara is losing a war by 50 war score.
+			# Only if seros is losing a war by 50 war score.
 			any_war = {
 				OR = {
 					AND = {
@@ -704,37 +679,37 @@ decisions = {
 		allow = {
 		}
 		effect = {
-			zakhara = {
-				clr_offmap_flag = zakhara_sent_war_reinforcements
-				set_offmap_flag = zakhara_sent_war_reinforcements
+			seros = {
+				clr_offmap_flag = seros_sent_war_reinforcements
+				set_offmap_flag = seros_sent_war_reinforcements
 			}
 			
-			### To manipulate the troop spawning for specific situations modify the parameter valiables (zakhara_war_troop_quantity, zakhara_war_troop_quality, zakhara_war_target_match_mult, and zakhara_war_minimum_commander_martial) after the following block.
+			### To manipulate the troop spawning for specific situations modify the parameter valiables (seros_war_troop_quantity, seros_war_troop_quality, seros_war_target_match_mult, and seros_war_minimum_commander_martial) after the following block.
 			set_variable = {
-				which = zakhara_war_troop_quantity
+				which = seros_war_troop_quantity
 				value = 8
 				# 8 regiments of ~500 units
 			}
 			set_variable = {
-				which = zakhara_war_troop_quality
+				which = seros_war_troop_quality
 				value = 4
 				# Value between 1-7 [A value less than 1 or higher than 7 will be evaluated as 1 and 7 respectively]
 			}
 			set_variable = {
-				which = zakhara_war_target_match_mult
+				which = seros_war_target_match_mult
 				value = 0.75
 			}
 			set_variable = {
-				which = zakhara_war_minimum_commander_martial
+				which = seros_war_minimum_commander_martial
 				value = 14
 			}
 			###
 			
 			
-			# Manipulate the parameter variables dependent on the current status in zakhara.
-			zakhara_war_modify_variables_by_status_effect = yes
+			# Manipulate the parameter variables dependent on the current status in seros.
+			seros_war_modify_variables_by_status_effect = yes
 			# Manipulate the parameter variables dependent on the current century.
-			zakhara_war_modify_variables_by_century_effect = yes
+			seros_war_modify_variables_by_century_effect = yes
 			
 			### Match mult calculation against war enemies and sending notification events to enemy war leaders.
 			any_war = {
@@ -755,24 +730,24 @@ decisions = {
 								ROOT = {
 									# Match mult the variable against the opponents troops.
 									export_to_variable = {
-										which = zakhara_temp_troop_calc
+										which = seros_temp_troop_calc
 										value = realm_levies
 										who = event_target:temp_war_ally_calc
 									}
 									
 									divide_variable = {
-										which = zakhara_temp_troop_calc
+										which = seros_temp_troop_calc
 										value = 500
 									}
 									
 									multiply_variable = {
-										which = zakhara_temp_troop_calc
-										which = zakhara_war_target_match_mult
+										which = seros_temp_troop_calc
+										which = seros_war_target_match_mult
 									}
 									
 									change_variable = {
-										which = zakhara_war_troop_quantity
-										which = zakhara_temp_troop_calc
+										which = seros_war_troop_quantity
+										which = seros_temp_troop_calc
 									}
 								}
 							}
@@ -796,24 +771,24 @@ decisions = {
 								ROOT = {
 									# Match mult the variable against the opponents troops.
 									export_to_variable = {
-										which = zakhara_temp_troop_calc
+										which = seros_temp_troop_calc
 										value = realm_levies_plus_allies
 										who = event_target:temp_war_ally_calc
 									}
 									
 									divide_variable = {
-										which = zakhara_temp_troop_calc
+										which = seros_temp_troop_calc
 										value = 500
 									}
 									
 									multiply_variable = {
-										which = zakhara_temp_troop_calc
-										which = zakhara_war_target_match_mult
+										which = seros_temp_troop_calc
+										which = seros_war_target_match_mult
 									}
 									
 									change_variable = {
-										which = zakhara_war_troop_quantity
-										which = zakhara_temp_troop_calc
+										which = seros_war_troop_quantity
+										which = seros_temp_troop_calc
 									}
 								}
 							}
@@ -826,12 +801,12 @@ decisions = {
 			if = {
 				limit = {	
 					check_variable = {
-						which = zakhara_war_troop_quantity
+						which = seros_war_troop_quantity
 						value > 100
 					}
 				}
 				set_variable = {
-					which = zakhara_war_troop_quantity
+					which = seros_war_troop_quantity
 					value = 100
 				}
 			}
@@ -849,13 +824,13 @@ decisions = {
 				}
 			}
 			else = {
-				zakhara = { set_offmap_flag = troop_spawn_india_temp }
+				seros = { set_offmap_flag = troop_spawn_india_temp }
 				1318 = { # Samatata
 					save_event_target_as = spawn_province
 				}
 				set_variable = {
 					which = boat_spawns
-					which = zakhara_war_troop_quantity
+					which = seros_war_troop_quantity
 				}
 				multiply_variable = {
 					which = boat_spawns
@@ -889,11 +864,11 @@ decisions = {
 				character_event = { id = JD.30047 }
 			}
 			
-			zakhara_war_spawn_troops_effect = yes
+			seros_war_spawn_troops_effect = yes
 			# Requires the current things to function properly:
 			# event_target:spawn_province
-			# variable: zakhara_war_troop_quality
-			# variable: zakhara_war_troop_quantity
+			# variable: seros_war_troop_quality
+			# variable: seros_war_troop_quantity
 		}
 		revoke_allowed = {
 			always = no
