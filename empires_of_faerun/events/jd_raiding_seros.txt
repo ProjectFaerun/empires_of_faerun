@@ -1,5 +1,5 @@
 
-namespace = ZA
+namespace = SE
 
 character_event = { # Yearly event for Raiding SEkhara
     id = SE.4000
@@ -87,7 +87,7 @@ character_event = { # Yearly event for Raiding SEkhara
 character_event = { # No longer allowed to raid
     id = SE.4001
 	has_dlc = "Jade Dragon"
-    desc = EVTDESC_ZA_4001
+    desc = EVTDESC_SE_4001
 	
     picture = GFX_evt_china_stable
 	border = GFX_event_normal_frame_war
@@ -97,7 +97,7 @@ character_event = { # No longer allowed to raid
 	notification = yes
 	
 	option = {     
-        name = EVTOPTA_ZA_4001
+        name = EVTOPTA_SE_4001
     }
 }
 
@@ -111,49 +111,49 @@ character_event = { # Normal Outcome
     is_triggered_only = yes
 	
 	desc = {
-		text = EVTDESC_ZA_4020_normal_raid_outcome
+		text = EVTDESC_SE_4020_normal_raid_outcome
 		trigger = {
 			has_character_flag = normal_raid_outcome
 		}
 	}
 	desc = {
-		text = EVTDESC_ZA_4020_normal_raid_outcome_artifact
+		text = EVTDESC_SE_4020_normal_raid_outcome_artifact
 		trigger = {
 			has_character_flag = normal_raid_outcome_artifact
 		}
 	}
 	desc = {
-		text = EVTDESC_ZA_4020_normal_raid_outcome_character
+		text = EVTDESC_SE_4020_normal_raid_outcome_character
 		trigger = {
 			has_character_flag = normal_raid_outcome_character
 		}
 	}
 	desc = {
-		text = EVTDESC_ZA_4020_normal_raid_outcome_siege_engineer
+		text = EVTDESC_SE_4020_normal_raid_outcome_siege_engineer
 		trigger = {
 			has_character_flag = normal_raid_outcome_siege_engineer
 		}
 	}
 	desc = {
-		text = EVTDESC_ZA_4020_normal_raid_outcome_extra
+		text = EVTDESC_SE_4020_normal_raid_outcome_extra
 		trigger = {
 			has_character_flag = normal_raid_outcome_extra
 		}
 	}
 	desc = {
-		text = EVTDESC_ZA_4020_normal_raid_outcome_extra_plus
+		text = EVTDESC_SE_4020_normal_raid_outcome_extra_plus
 		trigger = {
 			has_character_flag = normal_raid_outcome_extra_plus
 		}
 	}
 	desc = {
-		text = EVTDESC_ZA_4020_normal_raid_outcome_bad
+		text = EVTDESC_SE_4020_normal_raid_outcome_bad
 		trigger = {
 			has_character_flag = normal_raid_outcome_bad
 		}
 	}
 	desc = {
-		text = EVTDESC_ZA_4020_normal_raid_outcome_panda
+		text = EVTDESC_SE_4020_normal_raid_outcome_panda
 		trigger = {
 			has_character_flag = normal_raid_outcome_panda
 		}
@@ -171,8 +171,8 @@ character_event = { # Normal Outcome
 				create_character = {
 					age = 20
 					dynasty = actually_culture
-					religion = pantheist_league
-					culture = hadhar
+					religion = asathalfinare
+					culture = sea_elf
 					female = no
 					health = 6
 					random_traits = yes
@@ -185,8 +185,8 @@ character_event = { # Normal Outcome
 				create_character = {
 					age = 20
 					dynasty = actually_culture
-					religion = pantheist_league
-					culture = hadhar
+					religion = asathalfinare
+					culture = sea_elf
 					female = yes
 					health = 6
 					random_traits = yes
@@ -222,8 +222,8 @@ character_event = { # Normal Outcome
 			create_character = {
 				age = 32
 				dynasty = actually_culture
-				religion = pantheist_league
-				culture = hadhar
+				religion = vaprak
+				culture = merrow
 				female = no
 				health = 6
 				random_traits = yes
@@ -313,7 +313,7 @@ character_event = { # Normal Outcome
 	}
 	
 	option = {
-        name = EVTOPT_ZA_4020_normal_raid_outcome
+        name = EVTOPT_SE_4020_normal_raid_outcome
 		
 		trigger = {
 			has_character_flag = normal_raid_outcome
@@ -336,7 +336,7 @@ character_event = { # Normal Outcome
     }
 	
 	option = {
-        name = EVTOPT_ZA_4020_normal_raid_outcome_artifact
+        name = EVTOPT_SE_4020_normal_raid_outcome_artifact
 		
 		trigger = {
 			has_character_flag = normal_raid_outcome_artifact
@@ -561,7 +561,7 @@ character_event = { # Normal Outcome
     }
 	
 	option = {
-        name = EVTOPT_ZA_4020_normal_raid_outcome_character
+        name = EVTOPT_SE_4020_normal_raid_outcome_character
 		
 		trigger = {
 			has_character_flag = normal_raid_outcome_character
@@ -592,7 +592,7 @@ character_event = { # Normal Outcome
     }
 	
 	option = {
-        name = EVTOPT_ZA_4020_normal_raid_outcome_character_b
+        name = EVTOPT_SE_4020_normal_raid_outcome_character_b
 		
 		trigger = {
 			has_character_flag = normal_raid_outcome_character
@@ -647,7 +647,7 @@ character_event = { # Normal Outcome
     }
 	
 	option = {
-        name = EVTOPT_ZA_4020_normal_raid_outcome_siege_engineer
+        name = EVTOPT_SE_4020_normal_raid_outcome_siege_engineer
 		
 		trigger = {
 			has_character_flag = normal_raid_outcome_siege_engineer
@@ -678,7 +678,7 @@ character_event = { # Normal Outcome
     }
 	
 	option = {
-        name = EVTOPT_ZA_4020_normal_raid_outcome_siege_engineer_b
+        name = EVTOPT_SE_4020_normal_raid_outcome_siege_engineer_b
 		
 		trigger = {
 			has_character_flag = normal_raid_outcome_siege_engineer
@@ -816,7 +816,7 @@ character_event = { # Normal Outcome
     }
 	
 	option = {
-        name = EVTOPT_ZA_4020_normal_raid_outcome_extra
+        name = EVTOPT_SE_4020_normal_raid_outcome_extra
 		
 		trigger = {
 			has_character_flag = normal_raid_outcome_extra
@@ -839,7 +839,7 @@ character_event = { # Normal Outcome
     }
 	
 	option = {
-        name = EVTOPT_ZA_4020_normal_raid_outcome_extra_plus
+        name = EVTOPT_SE_4020_normal_raid_outcome_extra_plus
 		
 		trigger = {
 			has_character_flag = normal_raid_outcome_extra_plus
@@ -862,7 +862,7 @@ character_event = { # Normal Outcome
     }
 	
 	option = {
-        name = EVTOPT_ZA_4020_normal_raid_outcome_bad
+        name = EVTOPT_SE_4020_normal_raid_outcome_bad
 		
 		trigger = {
 			has_character_flag = normal_raid_outcome_bad
@@ -872,7 +872,7 @@ character_event = { # Normal Outcome
     }
 	
 	option = {
-        name = EVTOPT_ZA_4020_normal_raid_outcome_panda
+        name = EVTOPT_SE_4020_normal_raid_outcome_panda
 		
 		trigger = {
 			has_character_flag = normal_raid_outcome_panda
@@ -904,7 +904,7 @@ character_event = { # Normal Outcome
 character_event = {
 	id = SE.4030
 	has_dlc = "Jade Dragon"
-	desc = EVTDESC_ZA_4030
+	desc = EVTDESC_SE_4030
 	picture = GFX_evt_bad_news
 	border = GFX_event_normal_frame_religion
 
@@ -915,12 +915,12 @@ character_event = {
 	}
 	
 	option = { # I will miss it
-		name = EVTOPTA_ZA_4030
+		name = EVTOPTA_SE_4030
 		remove_character_modifier = panda_pet
 		prestige = 5
 	}
 	option = { # Give in to despair
-		name = EVTOPTB_ZA_4030
+		name = EVTOPTB_SE_4030
 		remove_character_modifier = panda_pet
 		if = {
 			limit = {
