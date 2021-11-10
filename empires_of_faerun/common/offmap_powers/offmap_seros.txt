@@ -309,6 +309,18 @@ seros = {
 					}
 				}
 			}
+			likes_dark_elf_group = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							culture_group = dark_elf_group
+							is_within_diplo_range = seros
+						}
+					}
+				}
+			}
 			likes_elf_group = {
 				value = 100
 				modifier = {
@@ -333,6 +345,18 @@ seros = {
 					}
 				}
 			}
+			likes_orc_group = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							culture_group = orc_group
+							is_within_diplo_range = seros
+						}
+					}
+				}
+			}
 			likes_giant_group = {
 				value = 100
 				modifier = {
@@ -345,6 +369,18 @@ seros = {
 					}
 				}
 			}
+			likes_giantkin_group = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							culture_group = giantkin_group
+							is_within_diplo_range = seros
+						}
+					}
+				}
+			}
 			likes_nafili_group = {
 				value = 100
 				modifier = {
@@ -352,6 +388,66 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = nafili_group
+							is_within_diplo_range = seros
+						}
+					}
+				}
+			}
+			likes_mordrin_group = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							culture_group = mordrin_group
+							is_within_diplo_range = seros
+						}
+					}
+				}
+			}
+			likes_celestial_sea_group = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							culture_group = celestial_sea_group
+							is_within_diplo_range = seros
+						}
+					}
+				}
+			}
+			likes_malatran_group = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							culture_group = malatran_group
+							is_within_diplo_range = seros
+						}
+					}
+				}
+			}
+			likes_shou_group = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							culture_group = shou_group
+							is_within_diplo_range = seros
+						}
+					}
+				}
+			}
+			likes_ulutiun_group = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							culture_group = ulutiun_group
 							is_within_diplo_range = seros
 						}
 					}
@@ -417,13 +513,25 @@ seros = {
 					}
 				}
 			}
-			likes_kara_turan_group = {
+			likes_katakoro_group = {
 				value = 100
 				modifier = {
 					factor = 0
 					NOT = {
 						any_province = {
-							culture_group = kara_turan_group
+							culture_group = katakoro_group
+							is_within_diplo_range = seros
+						}
+					}
+				}
+			}
+			likes_amaese_group = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							culture_group = amaese_group
 							is_within_diplo_range = seros
 						}
 					}
@@ -489,18 +597,6 @@ seros = {
 					}
 				}
 			}
-			likes_shaaran_group = {
-				value = 100
-				modifier = {
-					factor = 0
-					NOT = {
-						any_province = {
-							culture_group = shaaran_group
-							is_within_diplo_range = seros
-						}
-					}
-				}
-			}
 			likes_tethyrian_group = {
 				value = 100
 				modifier = {
@@ -525,19 +621,7 @@ seros = {
 					}
 				}
 			}
-			likes_turami_group = {
-				value = 100
-				modifier = {
-					factor = 0
-					NOT = {
-						any_province = {
-							culture_group = turami_group
-							is_within_diplo_range = seros
-						}
-					}
-				}
-			}
-			likes_zakharan_culture_group = {
+			likes_zakharan_group = {
 				value = 100
 				modifier = {
 					factor = 0
@@ -585,18 +669,6 @@ seros = {
 					}
 				}
 			}
-			likes_beholder_group = {
-				value = 100
-				modifier = {
-					factor = 0
-					NOT = {
-						any_province = {
-							culture_group = beholder_group
-							is_within_diplo_range = seros
-						}
-					}
-				}
-			}
 			likes_undead_group = {
 				value = 100
 				modifier = {
@@ -621,13 +693,13 @@ seros = {
 					}
 				}
 			}
-			likes_gnoll_group = {
+			likes_beastfolk_group = {
 				value = 100
 				modifier = {
 					factor = 0
 					NOT = {
 						any_province = {
-							culture_group = gnoll_group
+							culture_group = beastfolk_group
 							is_within_diplo_range = seros
 						}
 					}
@@ -663,7 +735,7 @@ seros = {
 					factor = 0
 					NOT = {
 						any_province = {
-							culture_group = draconic_group
+							culture_group = draconic_culture_group
 							is_within_diplo_range = seros
 						}
 					}
@@ -693,13 +765,25 @@ seros = {
 					}
 				}
 			}
-			likes_illithid_group = {
+			likes_aberration_culture_group = {
 				value = 100
 				modifier = {
 					factor = 0
 					NOT = {
 						any_province = {
-							culture_group = illithid_group
+							culture_group = aberration_culture_group
+							is_within_diplo_range = seros
+						}
+					}
+				}
+			}
+			likes_construct_group = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							culture_group = construct_group
 							is_within_diplo_range = seros
 						}
 					}
@@ -837,20 +921,20 @@ seros = {
 					FROMFROM = { religion_group = evil_human_pantheon_group }
 				}
 			}
-			likes_zakharan_group = {
+			likes_qismaite_group = {
 				value = 100
 				modifier = {
 					factor = 0
 					NOT = {
 						any_province = {
-							religion_group = zakharan_group
+							religion_group = qismaite_group
 							is_within_diplo_range = seros
 						}
 					}
 				}
 				modifier = {
 					factor = 0.5
-					FROMFROM = { religion_group = zakharan_group }
+					FROMFROM = { religion_group = qismaite_group }
 				}
 			}
 			likes_karaturan_group = {
@@ -931,38 +1015,6 @@ seros = {
 				modifier = {
 					factor = 0.5
 					FROMFROM = { religion_group = giant_pantheon_group }
-				}
-			}
-			likes_goblin_pantheon_group = {
-				value = 100
-				modifier = {
-					factor = 0
-					NOT = {
-						any_province = {
-							religion_group = goblin_pantheon_group
-							is_within_diplo_range = seros
-						}
-					}
-				}
-				modifier = {
-					factor = 0.5
-					FROMFROM = { religion_group = goblin_pantheon_group }
-				}
-			}
-			likes_orc_pantheon_group = {
-				value = 100
-				modifier = {
-					factor = 0
-					NOT = {
-						any_province = {
-							religion_group = orc_pantheon_group
-							is_within_diplo_range = seros
-						}
-					}
-				}
-				modifier = {
-					factor = 0.5
-					FROMFROM = { religion_group = orc_pantheon_group }
 				}
 			}
 			likes_draconic_group = {
@@ -1072,6 +1124,18 @@ seros = {
 					}
 				}
 			}
+			likes_dark_elf_group = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							culture_group = dark_elf_group
+							is_within_diplo_range = seros
+						}
+					}
+				}
+			}
 			likes_elf_group = {
 				value = 100
 				modifier = {
@@ -1096,6 +1160,18 @@ seros = {
 					}
 				}
 			}
+			likes_orc_group = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							culture_group = orc_group
+							is_within_diplo_range = seros
+						}
+					}
+				}
+			}
 			likes_giant_group = {
 				value = 100
 				modifier = {
@@ -1108,6 +1184,18 @@ seros = {
 					}
 				}
 			}
+			likes_giantkin_group = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							culture_group = giantkin_group
+							is_within_diplo_range = seros
+						}
+					}
+				}
+			}
 			likes_nafili_group = {
 				value = 100
 				modifier = {
@@ -1115,6 +1203,66 @@ seros = {
 					NOT = {
 						any_province = {
 							culture_group = nafili_group
+							is_within_diplo_range = seros
+						}
+					}
+				}
+			}
+			likes_mordrin_group = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							culture_group = mordrin_group
+							is_within_diplo_range = seros
+						}
+					}
+				}
+			}
+			likes_celestial_sea_group = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							culture_group = celestial_sea_group
+							is_within_diplo_range = seros
+						}
+					}
+				}
+			}
+			likes_malatran_group = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							culture_group = malatran_group
+							is_within_diplo_range = seros
+						}
+					}
+				}
+			}
+			likes_shou_group = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							culture_group = shou_group
+							is_within_diplo_range = seros
+						}
+					}
+				}
+			}
+			likes_ulutiun_group = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							culture_group = ulutiun_group
 							is_within_diplo_range = seros
 						}
 					}
@@ -1180,13 +1328,25 @@ seros = {
 					}
 				}
 			}
-			likes_kara_turan_group = {
+			likes_katakoro_group = {
 				value = 100
 				modifier = {
 					factor = 0
 					NOT = {
 						any_province = {
-							culture_group = kara_turan_group
+							culture_group = katakoro_group
+							is_within_diplo_range = seros
+						}
+					}
+				}
+			}
+			likes_amaese_group = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							culture_group = amaese_group
 							is_within_diplo_range = seros
 						}
 					}
@@ -1252,18 +1412,6 @@ seros = {
 					}
 				}
 			}
-			likes_shaaran_group = {
-				value = 100
-				modifier = {
-					factor = 0
-					NOT = {
-						any_province = {
-							culture_group = shaaran_group
-							is_within_diplo_range = seros
-						}
-					}
-				}
-			}
 			likes_tethyrian_group = {
 				value = 100
 				modifier = {
@@ -1288,19 +1436,7 @@ seros = {
 					}
 				}
 			}
-			likes_turami_group = {
-				value = 100
-				modifier = {
-					factor = 0
-					NOT = {
-						any_province = {
-							culture_group = turami_group
-							is_within_diplo_range = seros
-						}
-					}
-				}
-			}
-			likes_zakharan_culture_group = {
+			likes_zakharan_group = {
 				value = 100
 				modifier = {
 					factor = 0
@@ -1348,18 +1484,6 @@ seros = {
 					}
 				}
 			}
-			likes_beholder_group = {
-				value = 100
-				modifier = {
-					factor = 0
-					NOT = {
-						any_province = {
-							culture_group = beholder_group
-							is_within_diplo_range = seros
-						}
-					}
-				}
-			}
 			likes_undead_group = {
 				value = 100
 				modifier = {
@@ -1384,13 +1508,13 @@ seros = {
 					}
 				}
 			}
-			likes_gnoll_group = {
+			likes_beastfolk_group = {
 				value = 100
 				modifier = {
 					factor = 0
 					NOT = {
 						any_province = {
-							culture_group = gnoll_group
+							culture_group = beastfolk_group
 							is_within_diplo_range = seros
 						}
 					}
@@ -1426,7 +1550,7 @@ seros = {
 					factor = 0
 					NOT = {
 						any_province = {
-							culture_group = draconic_group
+							culture_group = draconic_culture_group
 							is_within_diplo_range = seros
 						}
 					}
@@ -1456,13 +1580,25 @@ seros = {
 					}
 				}
 			}
-			likes_illithid_group = {
+			likes_aberration_culture_group = {
 				value = 100
 				modifier = {
 					factor = 0
 					NOT = {
 						any_province = {
-							culture_group = illithid_group
+							culture_group = aberration_culture_group
+							is_within_diplo_range = seros
+						}
+					}
+				}
+			}
+			likes_construct_group = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							culture_group = construct_group
 							is_within_diplo_range = seros
 						}
 					}
@@ -1600,20 +1736,20 @@ seros = {
 					FROMFROM = { religion_group = evil_human_pantheon_group }
 				}
 			}
-			likes_zakharan_group = {
+			likes_qismaite_group = {
 				value = 100
 				modifier = {
 					factor = 0
 					NOT = {
 						any_province = {
-							religion_group = zakharan_group
+							religion_group = qismaite_group
 							is_within_diplo_range = seros
 						}
 					}
 				}
 				modifier = {
 					factor = 0.5
-					FROMFROM = { religion_group = zakharan_group }
+					FROMFROM = { religion_group = qismaite_group }
 				}
 			}
 			likes_karaturan_group = {
@@ -1694,38 +1830,6 @@ seros = {
 				modifier = {
 					factor = 0.5
 					FROMFROM = { religion_group = giant_pantheon_group }
-				}
-			}
-			likes_goblin_pantheon_group = {
-				value = 100
-				modifier = {
-					factor = 0
-					NOT = {
-						any_province = {
-							religion_group = goblin_pantheon_group
-							is_within_diplo_range = seros
-						}
-					}
-				}
-				modifier = {
-					factor = 0.5
-					FROMFROM = { religion_group = goblin_pantheon_group }
-				}
-			}
-			likes_orc_pantheon_group = {
-				value = 100
-				modifier = {
-					factor = 0
-					NOT = {
-						any_province = {
-							religion_group = orc_pantheon_group
-							is_within_diplo_range = seros
-						}
-					}
-				}
-				modifier = {
-					factor = 0.5
-					FROMFROM = { religion_group = orc_pantheon_group }
 				}
 			}
 			likes_draconic_group = {
