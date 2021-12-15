@@ -1491,25 +1491,7 @@ character_event = {
 
 			random_list = {
 				10 = { #Qudra
-					1396 = { save_event_target_as = seros_invasion_spawn_point_province }
-				}
-				10 = { #Adhal
-					1398 = { save_event_target_as = seros_invasion_spawn_point_province }
-				}
-				10 = { #Lahib Island
-					1351 = { save_event_target_as = seros_invasion_spawn_point_province } 
-				}
-				10 = { #Taham
-					1352 = { save_event_target_as = seros_invasion_spawn_point_province } 
-				}
-				10 = { #Krak al-Niraan
-					1347 = { save_event_target_as = seros_invasion_spawn_point_province } 
-				}
-				10 = { #al-Anwahr
-					953 = { save_event_target_as = seros_invasion_spawn_point_province } 
-				}
-				10 = { #Narari
-					1390 = { save_event_target_as = seros_invasion_spawn_point_province } 
+					1146 = { save_event_target_as = seros_invasion_spawn_point_province }
 				}
 			}
 		}
@@ -1862,7 +1844,7 @@ character_event = {
 			is_offmap_tag = seros 
 			OR = {
 				has_offmap_flag = waiting_to_spawn_a_displaced_royal
-				has_offmap_flag = waiting_to_spawn_a_pantheist_invader
+				has_offmap_flag = waiting_to_spawn_a_merrow_invader
 				has_offmap_flag = waiting_to_spawn_a_rebel_general
 			}
 		}
@@ -1879,12 +1861,12 @@ character_event = {
 					log = "seros Logging:"
 					log = "Attempting to spawn a Displaced Royal, via monthly pulse fallback event (since the old governor left office). Character should spawn in 15 days."
 				}
-				waiting_to_spawn_a_pantheist_invader = {
+				waiting_to_spawn_a_merrow_invader = {
 					governor = {
-						character_event = { id =  SE.10109 days = 15 } #Spawns a pantheist tribe leader...
+						character_event = { id =  SE.10109 days = 15 } #Spawns a merrow tribe leader...
 					}
 					log = "seros Logging:"
-					log = "Attempting to spawn a pantheist Invader, via monthly pulse fallback event (since the old governor left office). Character should spawn in 15 days."
+					log = "Attempting to spawn a merrow Invader, via monthly pulse fallback event (since the old governor left office). Character should spawn in 15 days."
 				}
 				waiting_to_spawn_a_rebel_general = {
 					governor = {
@@ -1895,14 +1877,14 @@ character_event = {
 				}
 			}
 			clr_offmap_flag = waiting_to_spawn_a_displaced_royal
-			clr_offmap_flag = waiting_to_spawn_a_pantheist_invader
+			clr_offmap_flag = waiting_to_spawn_a_merrow_invader
 			clr_offmap_flag = waiting_to_spawn_a_rebel_general
 		}
     }
 }
 
 ############################################################################################################################
-#News event for pantheist tribe/Displaced prince invasion/adventurer (stand-alone, fired further down, from SE.10109)
+#News event for merrow tribe/Displaced prince invasion/adventurer (stand-alone, fired further down, from SE.10109)
 ############################################################################################################################
 narrative_event = {
     id = SE.10108
@@ -1915,9 +1897,9 @@ narrative_event = {
     is_triggered_only = yes
 
     desc = {
-    	text = EVTDESC_SE_10108_pantheist
+    	text = EVTDESC_SE_10108_MERROW
     	trigger = {
-			event_target:the_seros_invader = { has_character_flag = is_pantheist_invader }
+			event_target:the_seros_invader = { has_character_flag = is_merrow_invader }
     	}
     }
     desc = {
@@ -1962,7 +1944,7 @@ character_event = {
 
     immediate = {
 		clr_character_flag = spawning_a_displaced_royal
-    	clr_character_flag = spawning_a_pantheist_invader
+    	clr_character_flag = spawning_a_merrow_invader
     	clr_character_flag = spawning_a_rebel_general
 
     	save_event_target_as = the_protector_general
@@ -1971,8 +1953,8 @@ character_event = {
 			50 = {
 				create_character = {
 					random_traits = yes
-					religion = pantheist_league
-					culture = hadhar
+					religion = asathalfinare
+					culture = sea_elf
 					dynasty = actually_culture
 					female = no
 					age = 30
@@ -1983,19 +1965,19 @@ character_event = {
 					add_trait = ambitious
 					remove_trait = content
 					remove_trait = craven
-					set_character_flag = is_pantheist_invader
-					save_event_target_as = pantheist_invader
+					set_character_flag = is_merrow_invader
+					save_event_target_as = merrow_invader
 					save_event_target_as = the_seros_invader #loc based on what flag this target has
 					character_event = { id = SE.10110 }
 					log = "seros Logging:"
-					log = "[This.GetFullName] ID [This.GetID] is the pantheist Invader"
+					log = "[This.GetFullName] ID [This.GetID] is the merrow Invader"
 				}
 			}
 			50 = {
 				create_character = {
 					random_traits = yes
-					religion = pantheist_league
-					culture = hadhar
+					religion = asathalfinare
+					culture = sea_elf
 					dynasty = actually_culture
 					female = no
 					age = 30
@@ -2006,12 +1988,12 @@ character_event = {
 					add_trait = ambitious
 					remove_trait = content
 					remove_trait = craven
-					set_character_flag = is_pantheist_invader
-					save_event_target_as = pantheist_invader
+					set_character_flag = is_merrow_invader
+					save_event_target_as = merrow_invader
 					save_event_target_as = the_seros_invader #loc based on what flag this target has
 					character_event = { id = SE.10110 }
 					log = "seros Logging:"
-					log = "[This.GetFullName] ID [This.GetID] is the pantheist Invader"
+					log = "[This.GetFullName] ID [This.GetID] is the merrow Invader"
 				}
 			}
 		}
@@ -2043,7 +2025,7 @@ character_event = {
 
     immediate = {
     	clr_character_flag = spawning_a_displaced_royal
-    	clr_character_flag = spawning_a_pantheist_invader
+    	clr_character_flag = spawning_a_merrow_invader
     	clr_character_flag = spawning_a_rebel_general
 
     	save_event_target_as = the_protector_general
@@ -2056,7 +2038,7 @@ character_event = {
 
     	create_character = {
 			random_traits = yes
-			religion = pantheist_league
+			religion = asathalfinare
 			culture = event_target:previousEmperor 
 			dynasty = event_target:previousEmperor
 			female = no
@@ -2222,7 +2204,7 @@ character_event = {
 		}
 
 		if = {
-			limit = { has_character_flag = is_pantheist_invader }
+			limit = { has_character_flag = is_merrow_invader }
 			set_character_flag = raiding_adventurer_nomad
 		}
 
@@ -2230,7 +2212,7 @@ character_event = {
 		change_variable = { which = global_raiding_adventurer_spawn_by_pantheist_invasion value = 1 }
 
 		if = {
-			limit = { has_character_flag = is_pantheist_invader }
+			limit = { has_character_flag = is_merrow_invader }
 			1378 = { #Kangste
 				save_event_target_as = target_province
 			}
@@ -2303,7 +2285,7 @@ character_event = {
 			}
 		}
 
-		if = { limit = { has_character_flag = is_pantheist_invader } 
+		if = { limit = { has_character_flag = is_merrow_invader } 
 			random_list = {
 				30 = {
 					spawn_unit = {
@@ -2748,7 +2730,7 @@ character_event = {
 
     immediate = {
     	clr_character_flag = spawning_a_displaced_royal
-    	clr_character_flag = spawning_a_pantheist_invader
+    	clr_character_flag = spawning_a_merrow_invader
     	clr_character_flag = spawning_a_rebel_general
 
     	save_event_target_as = the_protector_general
@@ -2760,8 +2742,8 @@ character_event = {
 					age = 27
 					random_traits = yes
 					female = no
-					religion = pantheist_league
-					culture = hadhar
+					religion = asathalfinare
+					culture = sea_elf
 					dynasty = actually_culture
 					trait = brilliant_strategist
 					martial = 8
@@ -2774,8 +2756,8 @@ character_event = {
 					age = 36
 					random_traits = yes
 					female = no
-					religion = pantheist_league
-					culture = hadhar
+					religion = asathalfinare
+					culture = sea_elf
 					dynasty = actually_culture
 					trait = brilliant_strategist
 					martial = 10
@@ -2788,8 +2770,8 @@ character_event = {
 					age = 52
 					random_traits = yes
 					female = no
-					religion = pantheist_league
-					culture = hadhar
+					religion = asathalfinare
+					culture = sea_elf
 					dynasty = actually_culture
 					trait = brilliant_strategist
 					martial = 12
@@ -2981,8 +2963,8 @@ character_event = {
 					age = 24
 					random_traits = yes
 					female = yes
-					religion = pantheist_league
-					culture = hadhar
+					religion = asathalfinare
+					culture = sea_elf
 					historical = yes
 				}
 				new_character = {
@@ -2991,8 +2973,8 @@ character_event = {
 						age = 6
 						random_traits = yes
 						female = 50
-						religion = pantheist_league
-						culture = hadhar
+						religion = asathalfinare
+						culture = sea_elf
 						genetic_father = ROOT
 						genetic_mother = PREV
 						historical = yes
@@ -3006,8 +2988,8 @@ character_event = {
 						age = 6
 						random_traits = yes
 						female = 50
-						religion = pantheist_league
-						culture = hadhar
+						religion = asathalfinare
+						culture = sea_elf
 						genetic_father = ROOT
 						genetic_mother = PREV
 						historical = yes
@@ -3024,8 +3006,8 @@ character_event = {
 					age = 32
 					random_traits = yes
 					female = yes
-					religion = pantheist_league
-					culture = hadhar
+					religion = asathalfinare
+					culture = sea_elf
 					historical = yes
 				}
 				new_character = {
@@ -3034,8 +3016,8 @@ character_event = {
 						age = 7
 						random_traits = yes
 						female = 50
-						religion = pantheist_league
-						culture = hadhar
+						religion = asathalfinare
+						culture = sea_elf
 						genetic_father = ROOT
 						genetic_mother = PREV
 						historical = yes
@@ -3049,8 +3031,8 @@ character_event = {
 						age = 10
 						random_traits = yes
 						female = 50
-						religion = pantheist_league
-						culture = hadhar
+						religion = asathalfinare
+						culture = sea_elf
 						genetic_father = ROOT
 						genetic_mother = PREV
 						historical = yes
@@ -3064,8 +3046,8 @@ character_event = {
 						age = 13
 						random_traits = yes
 						female = 50
-						religion = pantheist_league
-						culture = hadhar
+						religion = asathalfinare
+						culture = sea_elf
 						genetic_father = ROOT
 						genetic_mother = PREV
 						historical = yes
@@ -3082,8 +3064,8 @@ character_event = {
 					age = 48
 					random_traits = yes
 					female = yes
-					religion = pantheist_league
-					culture = hadhar
+					religion = asathalfinare
+					culture = sea_elf
 					historical = yes
 				}
 				new_character = {
@@ -3092,8 +3074,8 @@ character_event = {
 						age = 4
 						random_traits = yes
 						female = 50
-						religion = pantheist_league
-						culture = hadhar
+						religion = asathalfinare
+						culture = sea_elf
 						genetic_father = ROOT
 						genetic_mother = PREV
 						historical = yes
@@ -3107,8 +3089,8 @@ character_event = {
 						age = 9
 						random_traits = yes
 						female = 50
-						religion = pantheist_league
-						culture = hadhar
+						religion = asathalfinare
+						culture = sea_elf
 						genetic_father = ROOT
 						genetic_mother = PREV
 						historical = yes
@@ -3122,8 +3104,8 @@ character_event = {
 						age = 14
 						random_traits = yes
 						female = 50
-						religion = pantheist_league
-						culture = hadhar
+						religion = asathalfinare
+						culture = sea_elf
 						genetic_father = ROOT
 						genetic_mother = PREV
 						historical = yes
@@ -3137,8 +3119,8 @@ character_event = {
 						age = 18
 						random_traits = yes
 						female = 50
-						religion = pantheist_league
-						culture = hadhar
+						religion = asathalfinare
+						culture = sea_elf
 						genetic_father = ROOT
 						genetic_mother = PREV
 						historical = yes
@@ -3152,8 +3134,8 @@ character_event = {
 						age = 21
 						random_traits = yes
 						female = 50
-						religion = pantheist_league
-						culture = hadhar
+						religion = asathalfinare
+						culture = sea_elf
 						genetic_father = ROOT
 						genetic_mother = PREV
 						historical = yes
@@ -3468,62 +3450,26 @@ character_event = {
 		if = { #We somehow used every single one of the 56 temple names... clear them out then continue
 			limit = { 
 				event_target:temple_name_title = {
-					has_title_flag = temple_name_Zhenzong
-					has_title_flag = temple_name_Renzong
-					has_title_flag = temple_name_Zhongzong
-					has_title_flag = temple_name_Yingzong
-					has_title_flag = temple_name_Shenzong
-					has_title_flag = temple_name_Zhezhong
-					has_title_flag = temple_name_Huizong
-					has_title_flag = temple_name_Qinzong
-					has_title_flag = temple_name_Xiaozong
-					has_title_flag = temple_name_Guangzong
-					has_title_flag = temple_name_Ningzong
-					has_title_flag = temple_name_Lizong
-					has_title_flag = temple_name_Duzong
-					has_title_flag = temple_name_Duanzong
-					has_title_flag = temple_name_Xuanzong
-					has_title_flag = temple_name_Suzong
-					has_title_flag = temple_name_Daizong
-					has_title_flag = temple_name_Muzong
-					has_title_flag = temple_name_Jingzong
-					has_title_flag = temple_name_Wenzong
-					has_title_flag = temple_name_Wuzong
-					has_title_flag = temple_name_Zhaozong
-					has_title_flag = temple_name_Xizong
-					has_title_flag = temple_name_Xuanzong
-					has_title_flag = temple_name_Shizong
-					has_title_flag = temple_name_Zhangzong
-					has_title_flag = temple_name_Ruizong
-					has_title_flag = temple_name_Dingzong
-					has_title_flag = temple_name_Xianzong
-					has_title_flag = temple_name_Chengzong
-					has_title_flag = temple_name_Mingzong
-					has_title_flag = temple_name_Jinzong
-					has_title_flag = temple_name_Yizong
-					has_title_flag = temple_name_Xiangzong
-					has_title_flag = temple_name_Huanzong
-					has_title_flag = temple_name_Chongzong
-					has_title_flag = temple_name_Daozong
-					has_title_flag = temple_name_Liezong
-					has_title_flag = temple_name_Aizong
-					has_title_flag = temple_name_Zhangzong
-					has_title_flag = temple_name_Dezong
-					has_title_flag = temple_name_Shengzong
-					has_title_flag = temple_name_Xingzong
-					has_title_flag = temple_name_Kangzong
-					has_title_flag = temple_name_Zhuangzong
-					has_title_flag = temple_name_Pingzong
-					has_title_flag = temple_name_Sizong
-					has_title_flag = temple_name_Anzong
-					has_title_flag = temple_name_Yangzong
-					has_title_flag = temple_name_Shangzong
-					has_title_flag = temple_name_Shunzong
-					has_title_flag = temple_name_Zhizong
-					has_title_flag = temple_name_Chuangzong
-					has_title_flag = temple_name_Shaozong
-					has_title_flag = temple_name_Gongzong
-					has_title_flag = temple_name_Yingzong
+					has_title_flag = temple_name_Ivellion
+					has_title_flag = temple_name_Zhuirentalon
+					has_title_flag = temple_name_Caelynnon
+					has_title_flag = temple_name_Edraelen
+					has_title_flag = temple_name_Gelmalgaldon
+					has_title_flag = temple_name_Erwedhenen
+					has_title_flag = temple_name_Lysanderen
+					has_title_flag = temple_name_Jehastran
+					has_title_flag = temple_name_Perwraekon
+					has_title_flag = temple_name_Nacaciaen
+					has_title_flag = temple_name_Sheh'Streken
+					has_title_flag = temple_name_Zocrixen
+					has_title_flag = temple_name_Hilazieon
+					has_title_flag = temple_name_Gokekuen
+					has_title_flag = temple_name_Aggezzenon
+					has_title_flag = temple_name_Aekteshon
+					has_title_flag = temple_name_Drazrosen
+					has_title_flag = temple_name_Thaalison
+					has_title_flag = temple_name_Noktiten
+					has_title_flag = temple_name_Sheshon
 				}
 			}
 			event_target:temple_name_title = {
@@ -3535,336 +3481,6 @@ character_event = {
 				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Zhenzong } } }
 				set_name = "Zhenzong"
 				event_target:temple_name_title = { set_title_flag = temple_name_Zhenzong }
-				set_character_flag = given_temple_name_by_script
-			}
-			1 = {
-				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Renzong } } }
-				set_name = "Renzong"
-				event_target:temple_name_title = { set_title_flag = temple_name_Renzong }
-				set_character_flag = given_temple_name_by_script
-			}
-			1 = {
-				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Zhongzong } } }
-				set_name = "Zhongzong"
-				event_target:temple_name_title = { set_title_flag = temple_name_Zhongzong }
-				set_character_flag = given_temple_name_by_script
-			}
-			1 = {
-				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Yingzong } } }
-				set_name = "Yingzong"
-				event_target:temple_name_title = { set_title_flag = temple_name_Yingzong }
-				set_character_flag = given_temple_name_by_script
-			}
-			1 = {
-				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Shenzong } } }
-				set_name = "Shenzong"
-				event_target:temple_name_title = { set_title_flag = temple_name_Shenzong }
-				set_character_flag = given_temple_name_by_script
-			}
-			1 = {
-				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Zhezhong } } }
-				set_name = "Zhezhong"
-				event_target:temple_name_title = { set_title_flag = temple_name_Zhezhong }
-				set_character_flag = given_temple_name_by_script
-			}
-			1 = {
-				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Huizong } } }
-				set_name = "Huizong"
-				event_target:temple_name_title = { set_title_flag = temple_name_Huizong }
-				set_character_flag = given_temple_name_by_script
-			}
-			1 = {
-				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Qinzong } } }
-				set_name = "Qinzong"
-				event_target:temple_name_title = { set_title_flag = temple_name_Qinzong }
-				set_character_flag = given_temple_name_by_script
-			}
-			1 = {
-				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Xiaozong } } }
-				set_name = "Xiaozong"
-				event_target:temple_name_title = { set_title_flag = temple_name_Xiaozong }
-				set_character_flag = given_temple_name_by_script
-			}
-			1 = {
-				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Guangzong } } }
-				set_name = "Guangzong"
-				event_target:temple_name_title = { set_title_flag = temple_name_Guangzong }
-				set_character_flag = given_temple_name_by_script
-			}
-			1 = {
-				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Ningzong } } }
-				set_name = "Ningzong"
-				event_target:temple_name_title = { set_title_flag = temple_name_Ningzong }
-				set_character_flag = given_temple_name_by_script
-			}
-			1 = {
-				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Lizong } } }
-				set_name = "Lizong"
-				event_target:temple_name_title = { set_title_flag = temple_name_Lizong }
-				set_character_flag = given_temple_name_by_script
-			}
-			1 = {
-				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Duzong } } }
-				set_name = "Duzong"
-				event_target:temple_name_title = { set_title_flag = temple_name_Duzong }
-				set_character_flag = given_temple_name_by_script
-			}
-			1 = {
-				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Duanzong } } }
-				set_name = "Duanzong"
-				event_target:temple_name_title = { set_title_flag = temple_name_Duanzong }
-				set_character_flag = given_temple_name_by_script
-			}
-			1 = {
-				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Xuanzong } } }
-				set_name = "Xuanzong"
-				event_target:temple_name_title = { set_title_flag = temple_name_Xuanzong }
-				set_character_flag = given_temple_name_by_script
-			}
-			1 = {
-				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Suzong } } }
-				set_name = "Suzong"
-				event_target:temple_name_title = { set_title_flag = temple_name_Suzong }
-				set_character_flag = given_temple_name_by_script
-			}
-			1 = {
-				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Daizong } } }
-				set_name = "Daizong"
-				event_target:temple_name_title = { set_title_flag = temple_name_Daizong }
-				set_character_flag = given_temple_name_by_script
-			}
-			1 = {
-				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Muzong } } }
-				set_name = "Muzong"
-				event_target:temple_name_title = { set_title_flag = temple_name_Muzong }
-				set_character_flag = given_temple_name_by_script
-			}
-			1 = {
-				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Jingzong } } }
-				set_name = "Jingzong"
-				event_target:temple_name_title = { set_title_flag = temple_name_Jingzong }
-				set_character_flag = given_temple_name_by_script
-			}
-			1 = {
-				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Wenzong } } }
-				set_name = "Wenzong"
-				event_target:temple_name_title = { set_title_flag = temple_name_Wenzong }
-				set_character_flag = given_temple_name_by_script
-			}
-			1 = {
-				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Wuzong } } }
-				set_name = "Wuzong"
-				event_target:temple_name_title = { set_title_flag = temple_name_Wuzong }
-				set_character_flag = given_temple_name_by_script
-			}
-			1 = {
-				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Zhaozong } } }
-				set_name = "Zhaozong"
-				event_target:temple_name_title = { set_title_flag = temple_name_Zhaozong }
-				set_character_flag = given_temple_name_by_script
-			}
-			1 = {
-				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Xizong } } }
-				set_name = "Xizong"
-				event_target:temple_name_title = { set_title_flag = temple_name_Xizong }
-				set_character_flag = given_temple_name_by_script
-			}
-			1 = {
-				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Xuanzong } } }
-				set_name = "Xuanzong"
-				event_target:temple_name_title = { set_title_flag = temple_name_Xuanzong }
-				set_character_flag = given_temple_name_by_script
-			}
-			1 = {
-				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Shizong } } }
-				set_name = "Shizong"
-				event_target:temple_name_title = { set_title_flag = temple_name_Shizong }
-				set_character_flag = given_temple_name_by_script
-			}
-			1 = {
-				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Zhangzong } } }
-				set_name = "Zhangzong"
-				event_target:temple_name_title = { set_title_flag = temple_name_Zhangzong }
-				set_character_flag = given_temple_name_by_script
-			}
-			1 = {
-				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Ruizong } } }
-				set_name = "Ruizong"
-				event_target:temple_name_title = { set_title_flag = temple_name_Ruizong }
-				set_character_flag = given_temple_name_by_script
-			}
-			1 = {
-				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Dingzong } } }
-				set_name = "Dingzong"
-				event_target:temple_name_title = { set_title_flag = temple_name_Dingzong }
-				set_character_flag = given_temple_name_by_script
-			}
-			1 = {
-				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Xianzong } } }
-				set_name = "Xianzong"
-				event_target:temple_name_title = { set_title_flag = temple_name_Xianzong }
-				set_character_flag = given_temple_name_by_script
-			}
-			1 = {
-				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Chengzong } } }
-				set_name = "Chengzong"
-				event_target:temple_name_title = { set_title_flag = temple_name_Chengzong }
-				set_character_flag = given_temple_name_by_script
-			}
-			1 = {
-				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Mingzong } } }
-				set_name = "Mingzong"
-				event_target:temple_name_title = { set_title_flag = temple_name_Mingzong }
-				set_character_flag = given_temple_name_by_script
-			}
-			1 = {
-				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Jinzong } } }
-				set_name = "Jinzong"
-				event_target:temple_name_title = { set_title_flag = temple_name_Jinzong }
-				set_character_flag = given_temple_name_by_script
-			}
-			1 = {
-				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Yizong } } }
-				set_name = "Yizong"
-				event_target:temple_name_title = { set_title_flag = temple_name_Yizong }
-				set_character_flag = given_temple_name_by_script
-			}
-			1 = {
-				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Xiangzong } } }
-				set_name = "Xiangzong"
-				event_target:temple_name_title = { set_title_flag = temple_name_Xiangzong }
-				set_character_flag = given_temple_name_by_script
-			}
-			1 = {
-				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Huanzong } } }
-				set_name = "Huanzong"
-				event_target:temple_name_title = { set_title_flag = temple_name_Huanzong }
-				set_character_flag = given_temple_name_by_script
-			}
-			1 = {
-				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Chongzong } } }
-				set_name = "Chongzong"
-				event_target:temple_name_title = { set_title_flag = temple_name_Chongzong }
-				set_character_flag = given_temple_name_by_script
-			}
-			1 = {
-				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Daozong } } }
-				set_name = "Daozong"
-				event_target:temple_name_title = { set_title_flag = temple_name_Daozong }
-				set_character_flag = given_temple_name_by_script
-			}
-			1 = {
-				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Liezong } } }
-				set_name = "Liezong"
-				event_target:temple_name_title = { set_title_flag = temple_name_Liezong }
-				set_character_flag = given_temple_name_by_script
-			}
-			1 = {
-				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Aizong } } }
-				set_name = "Aizong"
-				event_target:temple_name_title = { set_title_flag = temple_name_Aizong }
-				set_character_flag = given_temple_name_by_script
-			}
-			1 = {
-				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Zhangzong } } }
-				set_name = "Zhangzong"
-				event_target:temple_name_title = { set_title_flag = temple_name_Zhangzong }
-				set_character_flag = given_temple_name_by_script
-			}
-			1 = {
-				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Dezong } } }
-				set_name = "Dezong"
-				event_target:temple_name_title = { set_title_flag = temple_name_Dezong }
-				set_character_flag = given_temple_name_by_script
-			}
-			1 = {
-				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Shengzong } } }
-				set_name = "Shengzong"
-				event_target:temple_name_title = { set_title_flag = temple_name_Shengzong }
-				set_character_flag = given_temple_name_by_script
-			}
-			1 = {
-				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Xingzong } } }
-				set_name = "Xingzong"
-				event_target:temple_name_title = { set_title_flag = temple_name_Xingzong }
-				set_character_flag = given_temple_name_by_script
-			}
-			1 = {
-				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Kangzong } } }
-				set_name = "Kangzong"
-				event_target:temple_name_title = { set_title_flag = temple_name_Kangzong }
-				set_character_flag = given_temple_name_by_script
-			}
-			1 = {
-				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Zhuangzong } } }
-				set_name = "Zhuangzong"
-				event_target:temple_name_title = { set_title_flag = temple_name_Zhuangzong }
-				set_character_flag = given_temple_name_by_script
-			}
-			1 = {
-				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Pingzong } } }
-				set_name = "Pingzong"
-				event_target:temple_name_title = { set_title_flag = temple_name_Pingzong }
-				set_character_flag = given_temple_name_by_script
-			}
-			1 = {
-				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Sizong } } }
-				set_name = "Sizong"
-				event_target:temple_name_title = { set_title_flag = temple_name_Sizong }
-				set_character_flag = given_temple_name_by_script
-			}
-			1 = {
-				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Anzong } } }
-				set_name = "Anzong"
-				event_target:temple_name_title = { set_title_flag = temple_name_Anzong }
-				set_character_flag = given_temple_name_by_script
-			}
-			1 = {
-				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Yangzong } } }
-				set_name = "Yangzong"
-				event_target:temple_name_title = { set_title_flag = temple_name_Yangzong }
-				set_character_flag = given_temple_name_by_script
-			}
-			1 = {
-				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Shangzong } } }
-				set_name = "Shangzong"
-				event_target:temple_name_title = { set_title_flag = temple_name_Shangzong }
-				set_character_flag = given_temple_name_by_script
-			}
-			1 = {
-				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Shunzong } } }
-				set_name = "Shunzong"
-				event_target:temple_name_title = { set_title_flag = temple_name_Shunzong }
-				set_character_flag = given_temple_name_by_script
-			}
-			1 = {
-				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Zhizong } } }
-				set_name = "Zhizong"
-				event_target:temple_name_title = { set_title_flag = temple_name_Zhizong }
-				set_character_flag = given_temple_name_by_script
-			}
-			1 = {
-				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Chuangzong } } }
-				set_name = "Chuangzong"
-				event_target:temple_name_title = { set_title_flag = temple_name_Chuangzong }
-				set_character_flag = given_temple_name_by_script
-			}
-			1 = {
-				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Shaozong } } }
-				set_name = "Shaozong"
-				event_target:temple_name_title = { set_title_flag = temple_name_Shaozong }
-				set_character_flag = given_temple_name_by_script
-			}
-			1 = {
-				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Gongzong } } }
-				set_name = "Gongzong"
-				event_target:temple_name_title = { set_title_flag = temple_name_Gongzong }
-				set_character_flag = given_temple_name_by_script
-			}
-			1 = {
-				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Yingzong } } }
-				set_name = "Yingzong"
-				event_target:temple_name_title = { set_title_flag = temple_name_Yingzong }
 				set_character_flag = given_temple_name_by_script
 			}
 		}
@@ -4418,7 +4034,7 @@ character_event = {
 					culture = tabotan
 					culture = gugari
 					AND = {
-						culture = hadhar
+						culture = sea_elf
 						religion = padhran
 					}
 				}

@@ -2,15 +2,15 @@
 # however they are not applied to a character but to the offmap_power
 # they can also have flags that can be tested from the offmap_power scope
 
-zakhara_open = {
+seros_open = {
 	frame = 1
 }
 
-zakhara_isolationist = {
+seros_isolationist = {
 	flags = { disallow_interactions disallow_troops }
 	frame = 2
 }
 
-zakhara_expansionist = {
+seros_expansionist = {
 	frame = 3
 }
