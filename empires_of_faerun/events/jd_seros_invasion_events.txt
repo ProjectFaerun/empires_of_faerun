@@ -3478,9 +3478,123 @@ character_event = {
 		}
 		random_list = { #Now continue with successor names
 			1 = {
-				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Zhenzong } } }
-				set_name = "Zhenzong"
-				event_target:temple_name_title = { set_title_flag = temple_name_Zhenzong }
+				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Ivellion } } }
+				set_name = "Ivellion"
+				event_target:temple_name_title = { set_title_flag = temple_name_Ivellion }
+				set_character_flag = given_temple_name_by_script
+			}
+			1 = {
+				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Zhuirentalon } } }
+				set_name = "Zhuirentalon"
+				event_target:temple_name_title = { set_title_flag = temple_name_Zhuirentalon }
+				set_character_flag = given_temple_name_by_script
+			}
+			1 = {
+				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Caelynnon } } }
+				set_name = "Caelynnon"
+				event_target:temple_name_title = { set_title_flag = temple_name_Caelynnon }
+				set_character_flag = given_temple_name_by_script
+			}
+			1 = {
+				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Edraelen } } }
+				set_name = "Edraelen"
+				event_target:temple_name_title = { set_title_flag = temple_name_Edraelen }
+				set_character_flag = given_temple_name_by_script
+			}
+			1 = {
+				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Gelmalgaldon } } }
+				set_name = "Gelmalgaldon"
+				event_target:temple_name_title = { set_title_flag = temple_name_Gelmalgaldon }
+				set_character_flag = given_temple_name_by_script
+			}
+			1 = {
+				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Erwedhenen } } }
+				set_name = "Erwedhenen"
+				event_target:temple_name_title = { set_title_flag = temple_name_Erwedhenen }
+				set_character_flag = given_temple_name_by_script
+			}
+			1 = {
+				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Lysanderen } } }
+				set_name = "Lysanderen"
+				event_target:temple_name_title = { set_title_flag = temple_name_Lysanderen }
+				set_character_flag = given_temple_name_by_script
+			}
+			1 = {
+				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Jehastran } } }
+				set_name = "Jehastran"
+				event_target:temple_name_title = { set_title_flag = temple_name_Jehastran }
+				set_character_flag = given_temple_name_by_script
+			}
+			1 = {
+				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Perwraekon } } }
+				set_name = "Perwraekon"
+				event_target:temple_name_title = { set_title_flag = temple_name_Perwraekon }
+				set_character_flag = given_temple_name_by_script
+			}
+			1 = {
+				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Nacaciaen } } }
+				set_name = "Nacaciaen"
+				event_target:temple_name_title = { set_title_flag = temple_name_Nacaciaen }
+				set_character_flag = given_temple_name_by_script
+			}
+			1 = {
+				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Sheh'Streken } } }
+				set_name = "Sheh'Streken"
+				event_target:temple_name_title = { set_title_flag = temple_name_Sheh'Streken }
+				set_character_flag = given_temple_name_by_script
+			}
+			1 = {
+				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Zocrixen } } }
+				set_name = "Zocrixen"
+				event_target:temple_name_title = { set_title_flag = temple_name_Zocrixen }
+				set_character_flag = given_temple_name_by_script
+			}
+			1 = {
+				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Hilazieon } } }
+				set_name = "Hilazieon"
+				event_target:temple_name_title = { set_title_flag = temple_name_Hilazieon }
+				set_character_flag = given_temple_name_by_script
+			}
+			1 = {
+				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Gokekuen } } }
+				set_name = "Gokekuen"
+				event_target:temple_name_title = { set_title_flag = temple_name_Gokekuen }
+				set_character_flag = given_temple_name_by_script
+			}
+			1 = {
+				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Aggezzenon } } }
+				set_name = "Aggezzenon"
+				event_target:temple_name_title = { set_title_flag = temple_name_Aggezzenon }
+				set_character_flag = given_temple_name_by_script
+			}
+			1 = {
+				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Aekteshon } } }
+				set_name = "Aekteshon"
+				event_target:temple_name_title = { set_title_flag = temple_name_Aekteshon }
+				set_character_flag = given_temple_name_by_script
+			}
+			1 = {
+				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Drazrosen } } }
+				set_name = "Drazrosen"
+				event_target:temple_name_title = { set_title_flag = temple_name_Drazrosen }
+				set_character_flag = given_temple_name_by_script
+			}
+			1 = {
+				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Thaalison } } }
+				set_name = "Thaalison"
+				event_target:temple_name_title = { set_title_flag = temple_name_Thaalison }
+				set_character_flag = given_temple_name_by_script
+			}
+			1 = {
+				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Noktiten } } }
+				set_name = "Noktiten"
+				event_target:temple_name_title = { set_title_flag = temple_name_Noktiten }
+				set_character_flag = given_temple_name_by_script
+			}
+			1 = {
+				trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Sheshon } } }
+				set_name = "Sheshon"
+				event_target:temple_name_title = { set_title_flag = temple_name_Sheshon }
 				set_character_flag = given_temple_name_by_script
 			}
 		}
