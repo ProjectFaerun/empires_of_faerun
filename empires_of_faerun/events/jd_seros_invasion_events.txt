@@ -3616,29 +3616,6 @@ character_event = {
 				trigger_switch = { #Ensure naming convention 
 					on_trigger = has_title_flag
 					seros_name_Tang = { set_name = "Tang" }
-					seros_name_Jin = { set_name = "Jin" }
-					seros_name_Wei = { set_name = "Wei" }
-					seros_name_Qi = { set_name = "Qi" }
-					seros_name_Zhou = { set_name = "Zhou" }
-					seros_name_Han = { set_name = "Han" }
-					seros_name_Qin = { set_name = "Qin" }
-					seros_name_Yan = { set_name = "Yan" }
-					seros_name_Zhao = { set_name = "Zhao" }
-					seros_name_Liao = { set_name = "Liao" }
-					seros_name_Yuan = { set_name = "Yuan" }
-					seros_name_Xia = { set_name = "Xia" }
-					seros_name_Qing = { set_name = "Qing" }
-					seros_name_Dai = { set_name = "Dai" }
-					seros_name_Cheng = { set_name = "Cheng" }
-					seros_name_Liang = { set_name = "Liang" }
-					seros_name_Song = { set_name = "Song" }
-					seros_name_Ming = { set_name = "Ming" }
-					seros_name_Shu = { set_name = "Shu" }
-					seros_name_Wu = { set_name = "Wu" }
-					seros_name_Chu = { set_name = "Chu" }
-					seros_name_Yue = { set_name = "Yue" }
-					seros_name_Yin = { set_name = "Yin" }
-					seros_name_Shun = { set_name = "Shun" }
 				}
 				if = { #Ensure will be an Emperor level government
 					limit = { 
@@ -3679,29 +3656,6 @@ character_event = {
 				trigger_switch = {
 					on_trigger = has_title_flag
 					seros_name_Tang = { set_name = "Tang" }
-					seros_name_Jin = { set_name = "Jin" }
-					seros_name_Wei = { set_name = "Wei" }
-					seros_name_Qi = { set_name = "Qi" }
-					seros_name_Zhou = { set_name = "Zhou" }
-					seros_name_Han = { set_name = "Han" }
-					seros_name_Qin = { set_name = "Qin" }
-					seros_name_Yan = { set_name = "Yan" }
-					seros_name_Zhao = { set_name = "Zhao" }
-					seros_name_Liao = { set_name = "Liao" }
-					seros_name_Yuan = { set_name = "Yuan" }
-					seros_name_Xia = { set_name = "Xia" }
-					seros_name_Qing = { set_name = "Qing" }
-					seros_name_Dai = { set_name = "Dai" }
-					seros_name_Cheng = { set_name = "Cheng" }
-					seros_name_Liang = { set_name = "Liang" }
-					seros_name_Song = { set_name = "Song" }
-					seros_name_Ming = { set_name = "Ming" }
-					seros_name_Shu = { set_name = "Shu" }
-					seros_name_Wu = { set_name = "Wu" }
-					seros_name_Chu = { set_name = "Chu" }
-					seros_name_Yue = { set_name = "Yue" }
-					seros_name_Yin = { set_name = "Yin" }
-					seros_name_Shun = { set_name = "Shun" }
 				}
 				if = {
 					limit = { 
@@ -3753,29 +3707,6 @@ character_event = {
 				trigger_switch = {
 					on_trigger = has_title_flag
 					seros_name_Tang = { set_name = "Tang Empire" }
-				#	seros_name_Jin = { set_name = "Jin Empire" }
-				#	seros_name_Wei = { set_name = "Wei Empire" }
-				#	seros_name_Qi = { set_name = "Qi Empire" }
-				#	seros_name_Zhou = { set_name = "Zhou Empire" }
-				#	seros_name_Han = { set_name = "Han Empire" }
-				#	seros_name_Qin = { set_name = "Qin Empire" }
-				#	seros_name_Yan = { set_name = "Yan Empire" }
-				#	seros_name_Zhao = { set_name = "Zhao Empire" }
-				#	seros_name_Liao = { set_name = "Liao Empire" }
-				#	seros_name_Yuan = { set_name = "Yuan Empire" }
-				#	seros_name_Xia = { set_name = "Xia Empire" }
-				#	seros_name_Qing = { set_name = "Qing Empire" }
-				#	seros_name_Dai = { set_name = "Dai Empire" }
-				#	seros_name_Cheng = { set_name = "Cheng Empire" }
-				#	seros_name_Liang = { set_name = "Liang Empire" }
-				#	seros_name_Song = { set_name = "Song Empire" }
-				#	seros_name_Ming = { set_name = "Ming Empire" }
-				#	seros_name_Shu = { set_name = "Shu Empire" }
-				#	seros_name_Wu = { set_name = "Wu Empire" }
-				#	seros_name_Chu = { set_name = "Chu Empire" }
-				#	seros_name_Yue = { set_name = "Yue Empire" }
-				#	seros_name_Yin = { set_name = "Yin Empire" }
-				#	seros_name_Shun = { set_name = "Shun Empire" }
 				}
 				trigger_switch = {
 					on_trigger = has_title_flag
@@ -3808,30 +3739,7 @@ character_event = {
 			primary_title = {
 				trigger_switch = {
 					on_trigger = has_title_flag
-				#	seros_name_Tang = { set_name = "Tang Empire" }
-				#	seros_name_Jin = { set_name = "Jin Empire" }
-				#	seros_name_Wei = { set_name = "Wei Empire" }
-				#	seros_name_Qi = { set_name = "Qi Empire" }
-				#	seros_name_Zhou = { set_name = "Zhou Empire" }
-				#	seros_name_Han = { set_name = "Han Empire" }
-				#	seros_name_Qin = { set_name = "Qin Empire" }
-				#	seros_name_Yan = { set_name = "Yan Empire" }
-				#	seros_name_Zhao = { set_name = "Zhao Empire" }
-				#	seros_name_Liao = { set_name = "Liao Empire" }
-				#	seros_name_Yuan = { set_name = "Yuan Empire" }
-				#	seros_name_Xia = { set_name = "Xia Empire" }
-				#	seros_name_Qing = { set_name = "Qing Empire" }
-				#	seros_name_Dai = { set_name = "Dai Empire" }
-				#	seros_name_Cheng = { set_name = "Cheng Empire" }
-				#	seros_name_Liang = { set_name = "Liang Empire" }
-				#	seros_name_Song = { set_name = "Song Empire" }
-				#	seros_name_Ming = { set_name = "Ming Empire" }
-				#	seros_name_Shu = { set_name = "Shu Empire" }
-				#	seros_name_Wu = { set_name = "Wu Empire" }
-				#	seros_name_Chu = { set_name = "Chu Empire" }
-				#	seros_name_Yue = { set_name = "Yue Empire" }
-				#	seros_name_Yin = { set_name = "Yin Empire" }
-					seros_name_Shun = { set_name = "Shun Empire" }
+					seros_name_Tang = { set_name = "Tang Empire" }
 				}
 				trigger_switch = {
 					on_trigger = has_title_flag
@@ -3997,9 +3905,12 @@ character_event = {
 	trigger = {
 		government = seros_government
 		current_heir = { 
-			NOR = {
-				culture_group = serosn_group
-				culture = pantheist
+			OR = {
+				NOT = { culture_group = fish_group }
+				NOR = {
+					controls_religion = no
+					has_religion_feature = religion_temporal_head
+				}
 			}
 		}
 	}

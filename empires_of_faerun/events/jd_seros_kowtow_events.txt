@@ -1,13 +1,13 @@
-### Event chain for zakhara Kow Tow ###
+### Event chain for seros Kow Tow ###
 
-namespace = ZA
+namespace = SE
 
 character_event = {	#I begin my journey...
-	id = ZA.32000
-	desc = EVTDESC_ZA_32000
+	id = SE.32000
+	desc = EVTDESC_SE_32000
 	has_dlc = "Jade Dragon"
 	
-	title = EVTTITLE_ZA_KOWTOW
+	title = EVTTITLE_SE_KOWTOW
 	
 	picture = GFX_evt_china_open
     border = GFX_event_normal_frame_diplomacy
@@ -15,17 +15,17 @@ character_event = {	#I begin my journey...
 	is_triggered_only = yes
 	
 	option = {
-		name = EVTOPTA_ZA_32000
+		name = EVTOPTA_SE_32000
 		add_trait = kow_tow_travels
 		
 		hidden_tooltip = {
-			character_event = { id = ZA.32001 }
+			character_event = { id = SE.32001 }
 		}
 	}
 }
 
 character_event = { #Hidden set-up event!
-	id = ZA.32001
+	id = SE.32001
 	has_dlc = "Jade Dragon"
 	hide_window = yes
 
@@ -43,13 +43,13 @@ character_event = { #Hidden set-up event!
 			if = { # Near the far east
 				limit = {
 					distance = {
-						where = 1396
+						where = 1146 # Wayrock
 						value < 500
 					}
 				}
 				ROOT = {
 					set_variable = {
-						which = zakhara_kow_tow_travel_events
+						which = seros_kow_tow_travel_events
 						value = 1
 					}
 				}
@@ -57,13 +57,13 @@ character_event = { #Hidden set-up event!
 			else_if = { # Still on the eastern side of the map
 				limit = {
 					distance = {
-						where = 1396
+						where = 1146
 						value < 900
 					}
 				}
 				ROOT = {
 					set_variable = {
-						which = zakhara_kow_tow_travel_events
+						which = seros_kow_tow_travel_events
 						value = 2
 					}
 				}
@@ -77,7 +77,7 @@ character_event = { #Hidden set-up event!
 				#}
 				ROOT = {
 					set_variable = {
-						which = zakhara_kow_tow_travel_events
+						which = seros_kow_tow_travel_events
 						value = 3
 					}
 				}
@@ -85,14 +85,14 @@ character_event = { #Hidden set-up event!
 			#else = { # In or around the Middle East and beyond
 			#	ROOT = {
 			#		set_variable = {
-			#			which = zakhara_kow_tow_travel_events
+			#			which = seros_kow_tow_travel_events
 			#			value = 4
 			#		}
 			#	}
 			#}
 		}
 		character_event = {
-			id = ZA.32005 # random travel event tombola
+			id = SE.32005 # random travel event tombola
 			days = 110
 			random = 30
 		}
@@ -100,7 +100,7 @@ character_event = { #Hidden set-up event!
 }
 
 character_event = { # Travel Tombola
-	id = ZA.32005
+	id = SE.32005
 	has_dlc = "Jade Dragon"
 	hide_window = yes
 
@@ -115,13 +115,13 @@ character_event = { # Travel Tombola
 			limit = {
 				NOT = {
 					check_variable = {
-						which = zakhara_kow_tow_travel_events
+						which = seros_kow_tow_travel_events
 						value = 1
 					}
 				}
 			} 
-			### No more travel events - Move on to entering zakhara
-			character_event = { id = ZA.32200 days = 50 random = 30 }
+			### No more travel events - Move on to entering seros
+			character_event = { id = SE.32200 days = 50 random = 30 }
 			break = yes
 		}
 		
@@ -133,25 +133,25 @@ character_event = { # Travel Tombola
 					OR = {
 						father_even_if_dead = {
 							NOT = { is_alive = yes }
-							death_in_zakhara_trigger = no
+							death_in_seros_trigger = no
 						}
 						mother_even_if_dead = {
 							NOT = { is_alive = yes }
-							death_in_zakhara_trigger = no
+							death_in_seros_trigger = no
 						}
 						any_sibling_even_if_dead = {
 							NOT = { is_alive = yes }
-							death_in_zakhara_trigger = no
+							death_in_seros_trigger = no
 						}
 					}
 				}
 				character_event = {
-					id = ZA.32100
+					id = SE.32100
 				}
 				break = yes
 			}
 			50 = {
-				character_event = { id = ZA.15010 }  # Homesick (I really miss <person>)
+				character_event = { id = SE.15010 }  # Homesick (I really miss <person>)
 				trigger = {
 					NOT = { has_character_flag = missed_loved_one }
 					any_courtier_or_vassal = {
@@ -191,13 +191,13 @@ character_event = { # Travel Tombola
 				break = yes
 			}
 			50 = {
-				character_event = { id = ZA.15017 }  # Meet traveling merchant
+				character_event = { id = SE.15017 }  # Meet traveling merchant
 				trigger = {
 					NOT = { has_character_flag = met_traveling_merchant }
 					NOT = {
 						any_artifact = {
 							count = 15
-							has_artifact_flag = zakhara
+							has_artifact_flag = seros
 						}
 					}
 				}
@@ -210,7 +210,7 @@ character_event = { # Travel Tombola
 						AND = {
 							NOT = {
 								check_variable = {
-									which = zakhara_kow_tow_travel_events
+									which = seros_kow_tow_travel_events
 									value = 2
 								}
 							}
@@ -224,7 +224,7 @@ character_event = { # Travel Tombola
 						AND = {
 							NOT = {
 								check_variable = {
-									which = zakhara_kow_tow_travel_events
+									which = seros_kow_tow_travel_events
 									value = 3
 								}
 							}
@@ -252,12 +252,12 @@ character_event = { # Travel Tombola
 					}
 				}
 				character_event = {
-					id = ZA.32110
+					id = SE.32110
 				}
 				break = yes
 			}
 			50 = {
-				character_event = { id = ZA.15000 }  # Mercenary encounter (1/3)
+				character_event = { id = SE.15000 }  # Mercenary encounter (1/3)
 				trigger = {
 					NOT = { has_character_flag = met_mercenaries }
 					 any_independent_ruler = {
@@ -266,11 +266,11 @@ character_event = { # Travel Tombola
 		                OR = {
 		                	culture = shou
 		                	AND = {
-		                		zakhara = { has_status = zakhara_pantheist_invasion }
+		                		seros = { has_status = seros_pantheist_invasion }
 		                		culture = hadhar
 		                	}
 		                	AND = {
-		                		zakhara = { has_status = zakhara_badia_invasion }
+		                		seros = { has_status = seros_badia_invasion }
 		                		culture = badia
 		                	}
 		                }
@@ -283,18 +283,18 @@ character_event = { # Travel Tombola
 			}
 		}
 		
-		### No more possible travel events - Continue to zakhara anyway with extra delay
-		character_event = { id = ZA.32200 days = 150 random = 60 }
+		### No more possible travel events - Continue to seros anyway with extra delay
+		character_event = { id = SE.32200 days = 150 random = 60 }
 	}
 }
 
 character_event = {  # Unusually heavy rain, think of late parents.
-	id = ZA.32100
+	id = SE.32100
 	has_dlc = "Jade Dragon"
 	
-	title = EVTTITLE_ZA_KOWTOW
+	title = EVTTITLE_SE_KOWTOW
 	
-	desc = EVTDESC_ZA_32100
+	desc = EVTDESC_SE_32100
 	picture = GFX_evt_carriage_default
     border = GFX_event_normal_frame_diplomacy
 
@@ -315,7 +315,7 @@ character_event = {  # Unusually heavy rain, think of late parents.
 					trigger = {
 						father_even_if_dead = {
 							NOT = { is_alive = yes }
-							death_in_zakhara_trigger = no
+							death_in_seros_trigger = no
 						}
 					}
 					father_even_if_dead = {
@@ -326,7 +326,7 @@ character_event = {  # Unusually heavy rain, think of late parents.
 					trigger = {
 						mother_even_if_dead = {
 							NOT = { is_alive = yes }
-							death_in_zakhara_trigger = no
+							death_in_seros_trigger = no
 						}
 					}
 					mother_even_if_dead = {
@@ -337,13 +337,13 @@ character_event = {  # Unusually heavy rain, think of late parents.
 					trigger = {
 						any_sibling_even_if_dead = {
 							NOT = { is_alive = yes }
-							death_in_zakhara_trigger = no
+							death_in_seros_trigger = no
 						}
 					}
 					random_sibling_even_if_dead = {
 						limit = {
 							NOT = { is_alive = yes }
-							death_in_zakhara_trigger = no
+							death_in_seros_trigger = no
 						}
 						save_event_target_as = target_relative
 					}
@@ -355,7 +355,7 @@ character_event = {  # Unusually heavy rain, think of late parents.
 	option = {
 		# <Name> was such a X person
 		name = {
-			text = EVTOPTA_ZA_32100_young
+			text = EVTOPTA_SE_32100_young
 			trigger = {
 				event_target:target_relative = {	
 					NOT = { is_adult = yes }
@@ -363,7 +363,7 @@ character_event = {  # Unusually heavy rain, think of late parents.
 			}
 		}
 		name = {
-			text = EVTOPTA_ZA_32100_pious
+			text = EVTOPTA_SE_32100_pious
 			trigger = {
 				event_target:target_relative = {
 					is_pious_trigger = yes
@@ -371,7 +371,7 @@ character_event = {  # Unusually heavy rain, think of late parents.
 			}
 		}
 		name = {
-			text = EVTOPTA_ZA_32100_genius
+			text = EVTOPTA_SE_32100_genius
 			trigger = {
 				event_target:target_relative = {
 					trait = genius
@@ -379,7 +379,7 @@ character_event = {  # Unusually heavy rain, think of late parents.
 			}
 		}
 		name = {
-			text = EVTOPTA_ZA_32100_mystic
+			text = EVTOPTA_SE_32100_mystic
 			trigger = {
 				event_target:target_relative = {
 					trait = mystic
@@ -387,7 +387,7 @@ character_event = {  # Unusually heavy rain, think of late parents.
 			}
 		}
 		name = {
-			text = EVTOPTA_ZA_32100_brave
+			text = EVTOPTA_SE_32100_brave
 			trigger = {
 				event_target:target_relative = {
 					OR = {
@@ -406,7 +406,7 @@ character_event = {  # Unusually heavy rain, think of late parents.
 			}
 		}
 		name = {
-			text = EVTOPTA_ZA_32100_charming
+			text = EVTOPTA_SE_32100_charming
 			trigger = {
 				event_target:target_relative = {
 					is_attractive_trigger = yes
@@ -414,7 +414,7 @@ character_event = {  # Unusually heavy rain, think of late parents.
 			}
 		}
 		name = {
-			text = EVTOPTA_ZA_32100_just
+			text = EVTOPTA_SE_32100_just
 			trigger = {
 				event_target:target_relative = {
 					trait = just
@@ -422,7 +422,7 @@ character_event = {  # Unusually heavy rain, think of late parents.
 			}
 		}
 		name = {
-			text = EVTOPTA_ZA_32100_kind
+			text = EVTOPTA_SE_32100_kind
 			trigger = {
 				event_target:target_relative = {
 					has_benevolent_trait_trigger = yes
@@ -430,7 +430,7 @@ character_event = {  # Unusually heavy rain, think of late parents.
 			}
 		}
 		name = {
-			text = EVTOPTA_ZA_32100_cruel
+			text = EVTOPTA_SE_32100_cruel
 			trigger = {
 				event_target:target_relative = {
 					OR = {
@@ -446,7 +446,7 @@ character_event = {  # Unusually heavy rain, think of late parents.
 			}
 		}
 		name = {
-			text = EVTOPTA_ZA_32100_learned
+			text = EVTOPTA_SE_32100_learned
 			trigger = {
 				event_target:target_relative = {
 					is_learned_trigger = yes
@@ -454,7 +454,7 @@ character_event = {  # Unusually heavy rain, think of late parents.
 			}
 		}
 		name = {
-			text = EVTOPTA_ZA_32100_good ### Fallback
+			text = EVTOPTA_SE_32100_good ### Fallback
 			trigger = {
 				always = yes
 			}
@@ -465,7 +465,7 @@ character_event = {  # Unusually heavy rain, think of late parents.
 		#show_portrait = event_target:target_relative
 		###
 		custom_tooltip = {
-			text = EVTTOOLTIPA_ZA_32100
+			text = EVTTOOLTIPA_SE_32100
 		}
 		add_character_modifier = {
 			name = honoring_the_dead
@@ -474,7 +474,7 @@ character_event = {  # Unusually heavy rain, think of late parents.
 	}
 	
 	option = {
-		name = EVTOPTB_ZA_32100 # I need to focus on the journey
+		name = EVTOPTB_SE_32100 # I need to focus on the journey
 		
 		add_character_modifier = {
 			name = carrying_on
@@ -488,12 +488,12 @@ character_event = {  # Unusually heavy rain, think of late parents.
 }
 
 character_event = { # Messenger invites you to the Lords keep, travel time > 2
-	id = ZA.32110
+	id = SE.32110
 	has_dlc = "Jade Dragon"
 	
-	title = EVTTITLE_ZA_KOWTOW
+	title = EVTTITLE_SE_KOWTOW
 	
-	desc = EVTDESC_ZA_32110
+	desc = EVTDESC_SE_32110
 	picture = GFX_evt_courier
     border = GFX_event_normal_frame_diplomacy
 
@@ -545,7 +545,7 @@ character_event = { # Messenger invites you to the Lords keep, travel time > 2
 	}
 	
 	option = { # An opportunity to get even
-		name = EVTOPTA_ZA_32110
+		name = EVTOPTA_SE_32110
 		tooltip_info = schemer
 		
 		trigger = {
@@ -555,11 +555,11 @@ character_event = { # Messenger invites you to the Lords keep, travel time > 2
 			}
 		}
 		custom_tooltip = {
-			text = EVTTTOOLTIPA_ZA_32110
+			text = EVTTTOOLTIPA_SE_32110
 		}
 		
 		character_event = {
-			id = ZA.32113
+			id = SE.32113
 			days = 7
 			random = 4
 		}
@@ -567,7 +567,7 @@ character_event = { # Messenger invites you to the Lords keep, travel time > 2
 	
 	option = { # I'll accept the invitation
 		name = {
-			text = EVTOPTB_ZA_32110
+			text = EVTOPTB_SE_32110
 			trigger = {
 				NOT = {
 					event_target:target_host = {
@@ -577,7 +577,7 @@ character_event = { # Messenger invites you to the Lords keep, travel time > 2
 			}
 		}
 		name = {
-			text = EVTOPTB_ZA_32110_RIVAL
+			text = EVTOPTB_SE_32110_RIVAL
 			trigger = {
 				event_target:target_host = {
 					is_rival = ROOT
@@ -586,17 +586,17 @@ character_event = { # Messenger invites you to the Lords keep, travel time > 2
 		}
 		
 		custom_tooltip = {
-			text = EVTTTOOLTIPB_ZA_32110
+			text = EVTTTOOLTIPB_SE_32110
 		}
 		character_event = {
-			id = ZA.32111
+			id = SE.32111
 			days = 7
 			random = 4
 		}
 	}
 	
 	option = { # My tent does fine
-		name = EVTOPTC_ZA_32110
+		name = EVTOPTC_SE_32110
 		
 		random_list = {
 			25 = {
@@ -617,13 +617,13 @@ character_event = { # Messenger invites you to the Lords keep, travel time > 2
 }
 
 character_event = { #Follow up from accepting the invitation
-	id = ZA.32111
+	id = SE.32111
 	has_dlc = "Jade Dragon"
 	
-	title = EVTTITLE_ZA_KOWTOW
+	title = EVTTITLE_SE_KOWTOW
 	
 	desc = { # Normal outcome
-		text = EVTDESCA_ZA_32111
+		text = EVTDESCA_SE_32111
 		trigger = {
 			NOR = {
 				has_character_flag = possible_friendship
@@ -632,13 +632,13 @@ character_event = { #Follow up from accepting the invitation
 		}
 	}
 	desc = { # Friendship outcome
-		text = EVTDESCB_ZA_32111
+		text = EVTDESCB_SE_32111
 		trigger = {
 			has_character_flag = possible_friendship
 		}
 	}
 	desc = { # Murder attempt outcome
-		text = EVTDESCC_ZA_32111
+		text = EVTDESCC_SE_32111
 		trigger = {
 			has_character_flag = possible_murder
 		}
@@ -691,7 +691,7 @@ character_event = { #Follow up from accepting the invitation
 	}
 	
 	option = {
-		name = EVTOPTA_ZA_32111 # Normal outcome
+		name = EVTOPTA_SE_32111 # Normal outcome
 		
 		trigger = {
 			NOR = {
@@ -713,7 +713,7 @@ character_event = { #Follow up from accepting the invitation
 	}
 	
 	option = {
-		name = EVTOPTB_ZA_32111 # Friendship outcome
+		name = EVTOPTB_SE_32111 # Friendship outcome
 		
 		trigger = {
 			has_character_flag = possible_friendship
@@ -727,7 +727,7 @@ character_event = { #Follow up from accepting the invitation
 	}
 	
 	option = {
-		name = EVTOPTC_ZA_32111 # Friendship deny
+		name = EVTOPTC_SE_32111 # Friendship deny
 		
 		trigger = {
 			has_character_flag = possible_friendship
@@ -740,7 +740,7 @@ character_event = { #Follow up from accepting the invitation
 	}
 	
 	option = {
-		name = EVTOPTD_ZA_32111
+		name = EVTOPTD_SE_32111
 		
 		trigger = {
 			has_character_flag = possible_murder
@@ -755,9 +755,9 @@ character_event = { #Follow up from accepting the invitation
 			}
 			50 = {
 				custom_tooltip = {
-					text = EVTTOOLTIPD_ZA_32111
+					text = EVTTOOLTIPD_SE_32111
 				}
-				character_event = { id = ZA.32112 }
+				character_event = { id = SE.32112 }
 			}
 		}
 	}
@@ -770,12 +770,12 @@ character_event = { #Follow up from accepting the invitation
 }
 
 character_event = { #Follow up from option D
-	id = ZA.32112
+	id = SE.32112
 	has_dlc = "Jade Dragon"
 	
-	title = EVTTITLE_ZA_KOWTOW
+	title = EVTTITLE_SE_KOWTOW
 	
-	desc = EVTDESC_ZA_32112
+	desc = EVTDESC_SE_32112
 	picture = GFX_evt_drunk
     border = GFX_event_normal_frame_diplomacy
 	
@@ -789,13 +789,13 @@ character_event = { #Follow up from option D
 	}
 	
 	option = {
-		name = EVTOPTA_ZA_32112
+		name = EVTOPTA_SE_32112
 		if = {
 			limit = {
 				has_dlc = "Reapers"
 			}
 			give_food_poisoning_effect = yes
-			custom_tooltip = { text = EVTTTOOLTIPA_ZA_32112 }
+			custom_tooltip = { text = EVTTTOOLTIPA_SE_32112 }
 		}
 		else = {
 			add_character_modifier = {
@@ -807,24 +807,24 @@ character_event = { #Follow up from option D
 }
 
 narrative_event = { #Follow up from option A
-	id = ZA.32113
+	id = SE.32113
 	has_dlc = "Jade Dragon"
 	
-	title = EVTTITLE_ZA_32113
+	title = EVTTITLE_SE_32113
 	desc = {
-		text = EVTDESCA_ZA_32113
+		text = EVTDESCA_SE_32113
 		trigger = {
 			has_character_flag = successful_murder
 		}
 	}
 	desc = {
-		text = EVTDESCB_ZA_32113
+		text = EVTDESCB_SE_32113
 		trigger = {
 			has_character_flag = successful_murder_but_caught
 		}
 	}
 	desc = {
-		text = EVTDESCC_ZA_32113
+		text = EVTDESCC_SE_32113
 		trigger = {
 			NOR = { 
 				has_character_flag = successful_murder
@@ -889,7 +889,7 @@ narrative_event = { #Follow up from option A
 	}
 	
 	option = {
-		name = EVTOPTA_ZA_32113
+		name = EVTOPTA_SE_32113
 		trigger = {
 			has_character_flag = successful_murder
 		}
@@ -904,7 +904,7 @@ narrative_event = { #Follow up from option A
 		return_to_travel_tombola_effect = yes
 	}
 	option = {
-		name = EVTOPTB_ZA_32113
+		name = EVTOPTB_SE_32113
 		trigger = {
 			has_character_flag = successful_murder_but_caught
 		}
@@ -921,7 +921,7 @@ narrative_event = { #Follow up from option A
 		}
 	}
 	option = {
-		name = EVTOPTC_ZA_32113
+		name = EVTOPTC_SE_32113
 		trigger = {
 			NOR = {
 				has_character_flag = successful_murder
@@ -941,12 +941,12 @@ narrative_event = { #Follow up from option A
 	}
 }
 
-character_event = { # Enter zakhara, choose path
-	id = ZA.32200
+character_event = { # Enter seros, choose path
+	id = SE.32200
 	has_dlc = "Jade Dragon"
 	
-	title = EVTTITLE_ZA_KOWTOW
-	desc = EVTDESC_ZA_32200
+	title = EVTTITLE_SE_KOWTOW
+	desc = EVTDESC_SE_32200
 	
 	picture = GFX_evt_china_open
     border = GFX_event_normal_frame_diplomacy
@@ -963,10 +963,10 @@ character_event = { # Enter zakhara, choose path
 	}
 	
 	option = { # Kow Tow before the Emperor
-		name = EVTOPTA_ZA_32200
+		name = EVTOPTA_SE_32200
 		# Actually Kow Tow
 		custom_tooltip = {
-			text = EVTTOOLTIPA_ZA_32200
+			text = EVTTOOLTIPA_SE_32200
 			#set_character_flag = kow_tow_actually
 		}
 	}
@@ -974,11 +974,11 @@ character_event = { # Enter zakhara, choose path
 	after = {
 		hidden_tooltip = {
 			set_variable = {
-				which = zakhara_kow_tow_travel_events
+				which = seros_kow_tow_travel_events
 				value = 2
 			}
 			character_event = {
-				id = ZA.32210
+				id = SE.32210
 				days = 40
 				random = 25
 			}
@@ -986,8 +986,8 @@ character_event = { # Enter zakhara, choose path
 	}
 }
 
-character_event = { # Within zakhara Tombola
-	id = ZA.32210
+character_event = { # Within seros Tombola
+	id = SE.32210
 	has_dlc = "Jade Dragon"
 	hide_window = yes
 	
@@ -1003,13 +1003,13 @@ character_event = { # Within zakhara Tombola
 			limit = {
 				NOT = {
 					check_variable = {
-						which = zakhara_kow_tow_travel_events
+						which = seros_kow_tow_travel_events
 						value = 1
 					}
 				}
 			} 
-			### No more travel events - Move on to zakhara conclusion
-			character_event = { id = ZA.32290 days = 50 random = 30 }
+			### No more travel events - Move on to seros conclusion
+			character_event = { id = SE.32290 days = 50 random = 30 }
 			break = yes
 		}
 		
@@ -1020,7 +1020,7 @@ character_event = { # Within zakhara Tombola
 					NOT = { has_character_flag = kow_tow_visited_temple }
 				}
 				character_event = {
-					id = ZA.32216
+					id = SE.32216
 				}
 				break = yes
 			}
@@ -1033,12 +1033,12 @@ character_event = { # Within zakhara Tombola
 					trait = gamer
 				}
 				character_event = {
-					id = ZA.32211
+					id = SE.32211
 				}
 				break = yes
 			}
 			50 = { # Discuss the Writings of Master Guan
-				character_event = { id = ZA.15015 }
+				character_event = { id = SE.15015 }
 				trigger = {
 					#has_character_flag = kow_tow_actually
 					NOT = { has_character_flag = read_the_guanzi }
@@ -1046,7 +1046,7 @@ character_event = { # Within zakhara Tombola
 			}
 			50 = {  # Visit the markets
 				trigger = { NOT = { has_character_flag = visited_market } }
-				character_event = { id = ZA.15016 }
+				character_event = { id = SE.15016 }
 			}
 		}
 	}
@@ -1054,11 +1054,11 @@ character_event = { # Within zakhara Tombola
 
 # You spot a group of people playing GO in the park
 character_event = {
-	id = ZA.32211
+	id = SE.32211
 	has_dlc = "Jade Dragon"
 	
-	title = EVTTITLE_ZA_KOWTOW
-	desc = EVTDESC_ZA_32211
+	title = EVTTITLE_SE_KOWTOW
+	desc = EVTDESC_SE_32211
 	
 	picture = GFX_evt_garden
     border = GFX_event_normal_frame_diplomacy
@@ -1075,7 +1075,7 @@ character_event = {
 	}
 	
 	option = { # Let me show you how it's done
-		name = EVTOPTA_ZA_32211
+		name = EVTOPTA_SE_32211
 		trigger = {
 			trait = gamer
 		}
@@ -1089,7 +1089,7 @@ character_event = {
 			add_trait = proud
 		}
 		custom_tooltip = {
-			text = EVTTOOLTIP_ZA_GOOD_INFLUENCE_ON_EMPEROR_EVALUATION
+			text = EVTTOOLTIP_SE_GOOD_INFLUENCE_ON_EMPEROR_EVALUATION
 			hidden_effect = {
 				change_variable = {
 					which = kow_tow_emperor_impression_evaluation
@@ -1100,7 +1100,7 @@ character_event = {
 	}
 	
 	option = { # Let me try that
-		name = EVTOPTB_ZA_32211
+		name = EVTOPTB_SE_32211
 		trigger = {
 			NOT = {
 				trait = gamer
@@ -1116,7 +1116,7 @@ character_event = {
 			}
 		}
 		custom_tooltip = {
-			text = EVTTOOLTIP_ZA_GOOD_INFLUENCE_ON_EMPEROR_EVALUATION
+			text = EVTTOOLTIP_SE_GOOD_INFLUENCE_ON_EMPEROR_EVALUATION
 			hidden_effect = {
 				change_variable = {
 					which = kow_tow_emperor_impression_evaluation
@@ -1127,7 +1127,7 @@ character_event = {
 	}
 	
 	option = {
-		name = EVTOPTC_ZA_32211 # I'll just enjoy the park instead
+		name = EVTOPTC_SE_32211 # I'll just enjoy the park instead
 		
 		random_list = {
 			50 = {
@@ -1140,17 +1140,17 @@ character_event = {
 	}
 	
 	after = {
-		return_to_zakhara_tombola_effect = yes
+		return_to_seros_tombola_effect = yes
 	}
 }
 
 # You visit a local temple
 character_event = {
-	id = ZA.32216
+	id = SE.32216
 	has_dlc = "Jade Dragon"
 	
-	title = EVTTITLE_ZA_KOWTOW
-	desc = EVTDESC_ZA_32216
+	title = EVTTITLE_SE_KOWTOW
+	desc = EVTDESC_SE_32216
 	
 	picture = GFX_evt_china_diplomatic_incident
     border = GFX_event_normal_frame_diplomacy
@@ -1167,7 +1167,7 @@ character_event = {
 	}
 	
 	# option = { # Study their rituals
-		# name = EVTOPTA_ZA_32216
+		# name = EVTOPTA_SE_32216
 		# trigger = {
 			# NOR = {
 				# trait = zealous
@@ -1178,7 +1178,7 @@ character_event = {
 	# }
 	
 	# option = { # Join in the ceremony
-		# name = EVTOPTB_ZA_32216
+		# name = EVTOPTB_SE_32216
 		
 		# if = {
 			# limit = {
@@ -1192,7 +1192,7 @@ character_event = {
 			# add_trait = content
 		# }
 		# custom_tooltip = {
-			# text = EVTTOOLTIP_ZA_GOOD_INFLUENCE_ON_EMPEROR_EVALUATION
+			# text = EVTTOOLTIP_SE_GOOD_INFLUENCE_ON_EMPEROR_EVALUATION
 			# hidden_effect = {
 				# change_variable = {
 					# which = kow_tow_emperor_impression_evaluation
@@ -1203,7 +1203,7 @@ character_event = {
 	# }
 	
 	# option = { # Loudly criticize their heathen ways
-		# name = EVTOPTC_ZA_32216
+		# name = EVTOPTC_SE_32216
 		# trigger = {
 			# trait = zealous
 			# NOT = { religion_group = indian_group } # Eastern religion group 
@@ -1211,7 +1211,7 @@ character_event = {
 		
 		# piety = 30
 		# custom_tooltip = {
-			# text = EVTTOOLTIP_ZA_BAD_INFLUENCE_ON_EMPEROR_EVALUATION
+			# text = EVTTOOLTIP_SE_BAD_INFLUENCE_ON_EMPEROR_EVALUATION
 			# hidden_effect = {
 				# subtract_variable = {
 					# which = kow_tow_emperor_impression_evaluation
@@ -1222,7 +1222,7 @@ character_event = {
 	# }
 	
 	option = { # Study the symbolism used in their texts.
-		name = EVTOPTD_ZA_32216
+		name = EVTOPTD_SE_32216
 		random = {
 			chance = 15
 			change_learning = 1
@@ -1230,31 +1230,31 @@ character_event = {
 	}
 	
 	after = {
-		return_to_zakhara_tombola_effect = yes
+		return_to_seros_tombola_effect = yes
 	}
 }
 
 character_event = { # audience w/ the Emperor
-	id = ZA.32290
+	id = SE.32290
 	has_dlc = "Jade Dragon"
 	
-	title = EVTTITLE_ZA_KOWTOW
+	title = EVTTITLE_SE_KOWTOW
 	desc = {
-		text = EVTDESCA_ZA_32290 # Bad outcome
+		text = EVTDESCA_SE_32290 # Bad outcome
 		picture = GFX_evt_chinese_bureaucrat
 		trigger = {
 			has_character_flag = kow_tow_bad_outcome
 		}
 	}
 	desc = {
-		text = EVTDESCB_ZA_32290 # Okay outcome
+		text = EVTDESCB_SE_32290 # Okay outcome
 		picture = GFX_evt_china_golden_age
 		trigger = {
 			has_character_flag = kow_tow_okay_outcome
 		}
 	}
 	desc = {
-		text = EVTDESCC_ZA_32290 # Great outcome
+		text = EVTDESCC_SE_32290 # Great outcome
 		picture = GFX_evt_china_golden_age
 		trigger = {
 			has_character_flag = kow_tow_great_outcome
@@ -1310,7 +1310,7 @@ character_event = { # audience w/ the Emperor
 		if = {
 			limit = {
 				disliked_by_offmap = {
-					type = zakhara
+					type = seros
 				}
 			}
 			subtract_variable = {
@@ -1321,7 +1321,7 @@ character_event = { # audience w/ the Emperor
 		else_if = {
 			limit = {
 				liked_by_offmap = {
-					type = zakhara
+					type = seros
 				}
 			}
 			change_variable = {
@@ -1505,13 +1505,13 @@ character_event = { # audience w/ the Emperor
 	}
 	
 	option = {
-		name = EVTOPTA_ZA_32290 # Perform kow-tow before the Emperor
+		name = EVTOPTA_SE_32290 # Perform kow-tow before the Emperor
 		trigger = {
 			has_character_flag = kow_tow_bad_outcome
 		}
 		add_trait = kow_tow_completed_tier_1
 		add_offmap_currency = {
-			offmap = zakhara
+			offmap = seros
 			value = 100
 		}
 		if = {
@@ -1531,20 +1531,20 @@ character_event = { # audience w/ the Emperor
 	}
 	
 	option = {
-		name = EVTOPTB_ZA_32290 # Refuse the humiliation
+		name = EVTOPTB_SE_32290 # Refuse the humiliation
 		trigger = {
 			has_character_flag = kow_tow_bad_outcome
 		}
 	}
 	
 	option = {
-		name = EVTOPTC_ZA_32290 # Perform kow-tow before the Emperor
+		name = EVTOPTC_SE_32290 # Perform kow-tow before the Emperor
 		trigger = {
 			has_character_flag = kow_tow_okay_outcome
 		}
 		add_trait = kow_tow_completed_tier_2
 		add_offmap_currency = {
-			offmap = zakhara
+			offmap = seros
 			value = 100
 		}
 		if = {
@@ -1564,13 +1564,13 @@ character_event = { # audience w/ the Emperor
 	}
 	
 	option = {
-		name = EVTOPTD_ZA_32290 # Perform kow-tow before the Emperor
+		name = EVTOPTD_SE_32290 # Perform kow-tow before the Emperor
 		trigger = {
 			has_character_flag = kow_tow_great_outcome
 		}
 		add_trait = kow_tow_completed_tier_3
 		add_offmap_currency = {
-			offmap = zakhara
+			offmap = seros
 			value = 100
 		}
 		if = {
@@ -1599,12 +1599,12 @@ character_event = { # audience w/ the Emperor
 
 
 
-#Kow-Tow traveling event: You encounter Mercenaries (how? Depends on the status of zakhara)
+#Kow-Tow traveling event: You encounter Mercenaries (how? Depends on the status of seros)
 character_event = {
-    id = ZA.15000
+    id = SE.15000
 	has_dlc = "Jade Dragon"
 	
-	title = EVTTITLE_ZA_KOWTOW
+	title = EVTTITLE_SE_KOWTOW
     border = GFX_event_normal_frame_diplomacy
     is_triggered_only = yes
 
@@ -1625,11 +1625,11 @@ character_event = {
                 OR = {
                 	culture = shou
                 	AND = {
-                		zakhara = { has_status = zakhara_pantheist_invasion }
+                		seros = { has_status = seros_pantheist_invasion }
                 		culture = hadhar
                 	}
                 	AND = {
-                		zakhara = { has_status = zakhara_badia_invasion }
+                		seros = { has_status = seros_badia_invasion }
                 		culture = badia
                 	}
                 }
@@ -1640,28 +1640,28 @@ character_event = {
             save_event_target_as = other_ruler
         }
         
-        zakhara = {
+        seros = {
             trigger_switch = {
                 on_trigger = has_status
-                zakhara_stable = { ROOT = { set_character_flag = zakhara_stable } }
-                zakhara_unrest = { ROOT = { set_character_flag = zakhara_unrest } }
-                zakhara_civil_war = { ROOT = { set_character_flag = zakhara_civil_war } }
-                zakhara_badia_invasion = { ROOT = { set_character_flag = zakhara_badia_invasion } }
-                zakhara_pantheist_invasion = { ROOT = { set_character_flag = zakhara_pantheist_invasion } }
-                zakhara_famine = { ROOT = { set_character_flag = zakhara_famine } }
-                zakhara_plague = { ROOT = { set_character_flag = zakhara_plague } }
-                zakhara_golden_age = { ROOT = { set_character_flag = zakhara_golden_age } }
+                seros_stable = { ROOT = { set_character_flag = seros_stable } }
+                seros_unrest = { ROOT = { set_character_flag = seros_unrest } }
+                seros_civil_war = { ROOT = { set_character_flag = seros_civil_war } }
+                seros_badia_invasion = { ROOT = { set_character_flag = seros_badia_invasion } }
+                seros_pantheist_invasion = { ROOT = { set_character_flag = seros_pantheist_invasion } }
+                seros_famine = { ROOT = { set_character_flag = seros_famine } }
+                seros_plague = { ROOT = { set_character_flag = seros_plague } }
+                seros_golden_age = { ROOT = { set_character_flag = seros_golden_age } }
             }
         }
 
         event_target:other_ruler = {
-            character_event = { id = ZA.15001 }
+            character_event = { id = SE.15001 }
         }
     }
 }
 
 character_event = { #PING EVENT for the Mercenary leader...
-    id = ZA.15001
+    id = SE.15001
 	has_dlc = "Jade Dragon"
     hide_window = yes
     is_triggered_only = yes
@@ -1670,32 +1670,32 @@ character_event = { #PING EVENT for the Mercenary leader...
     	FROM = {
     		random_list = {
     			10 = {
-    				character_event = { id = ZA.15002 } #Mercenaries wants root to pay a "bridge fee"...
+    				character_event = { id = SE.15002 } #Mercenaries wants root to pay a "bridge fee"...
     				trigger = {
 						OR = {
-				    		has_character_flag = zakhara_unrest
-				    		has_character_flag = zakhara_civil_war
-				    		has_character_flag = zakhara_badia_invasion
-				    		has_character_flag = zakhara_pantheist_invasion
+				    		has_character_flag = seros_unrest
+				    		has_character_flag = seros_civil_war
+				    		has_character_flag = seros_badia_invasion
+				    		has_character_flag = seros_pantheist_invasion
 			    		}
     				}
     			}
     			10 = {
-    				character_event = { id = ZA.15003 } #Mercenaries are here to escort root...
+    				character_event = { id = SE.15003 } #Mercenaries are here to escort root...
     				trigger = {
 						OR = {
-				    		has_character_flag = zakhara_stable
-				    		has_character_flag = zakhara_golden_age
-				    		has_character_flag = zakhara_unrest
+				    		has_character_flag = seros_stable
+				    		has_character_flag = seros_golden_age
+				    		has_character_flag = seros_unrest
 			    		}
     				}
     			}
     			10 = {
-    				character_event = { id = ZA.15004 } #Meet a starving mercenary band...
+    				character_event = { id = SE.15004 } #Meet a starving mercenary band...
     				trigger = {
 						OR = {
-				    		has_character_flag = zakhara_famine
-				    		has_character_flag = zakhara_plague
+				    		has_character_flag = seros_famine
+				    		has_character_flag = seros_plague
 			    		}
     				}
     			}
@@ -1705,11 +1705,11 @@ character_event = { #PING EVENT for the Mercenary leader...
 }
 
 character_event = { #Mercenaries wants root to pay a "bridge fee"...
-    id = ZA.15002
+    id = SE.15002
 	has_dlc = "Jade Dragon"
 	
-	title = EVTTITLE_ZA_KOWTOW
-    desc = EVTDESC_ZA_15002
+	title = EVTTITLE_SE_KOWTOW
+    desc = EVTDESC_SE_15002
     picture = GFX_evt_china_diplomatic_success
     border = GFX_event_normal_frame_diplomacy
     is_triggered_only = yes
@@ -1719,7 +1719,7 @@ character_event = { #Mercenaries wants root to pay a "bridge fee"...
 	}
 
     option = { # Pay the fee to the bridge guards...
-    	name = EVTOPTA_ZA_15002
+    	name = EVTOPTA_SE_15002
 
     	transfer_scaled_wealth = {
 			to = FROM
@@ -1730,14 +1730,14 @@ character_event = { #Mercenaries wants root to pay a "bridge fee"...
 		prestige = -100
 
     	custom_tooltip = {
-    		text = EVTOPTA_ZA_15002_tt
+    		text = EVTOPTA_SE_15002_tt
     	}
     }
     option = { # Kill him (IMPALER ONLY)
-    	name = EVTOPTC_ZA_15002
+    	name = EVTOPTC_SE_15002
     	tooltip_info = impaler
        	custom_tooltip = {
-    		text = EVTOPTC_ZA_15002_tt
+    		text = EVTOPTC_SE_15002_tt
     	}
 
     	FROM = { death = { death_reason = death_murder_butchered killer = FROM } }
@@ -1747,7 +1747,7 @@ character_event = { #Mercenaries wants root to pay a "bridge fee"...
     }
 
     option = {
-    	name = EVTOPTB_ZA_15002
+    	name = EVTOPTB_SE_15002
 
     	random_list = {
     		50 = {
@@ -1777,24 +1777,24 @@ character_event = { #Mercenaries wants root to pay a "bridge fee"...
    	}
 
     after = {
-        clr_character_flag = zakhara_stable
-        clr_character_flag = zakhara_unrest
-        clr_character_flag = zakhara_civil_war
-        clr_character_flag = zakhara_badia_invasion
-        clr_character_flag = zakhara_pantheist_invasion
-        clr_character_flag = zakhara_famine
-        clr_character_flag = zakhara_plague
-        clr_character_flag = zakhara_golden_age
+        clr_character_flag = seros_stable
+        clr_character_flag = seros_unrest
+        clr_character_flag = seros_civil_war
+        clr_character_flag = seros_badia_invasion
+        clr_character_flag = seros_pantheist_invasion
+        clr_character_flag = seros_famine
+        clr_character_flag = seros_plague
+        clr_character_flag = seros_golden_age
         return_to_travel_tombola_effect = yes
     }
 }
 
 character_event = { #Mercenaries: "We're here to escort you!"
-    id = ZA.15003
+    id = SE.15003
 	has_dlc = "Jade Dragon"
 	
-	title = EVTTITLE_ZA_KOWTOW
-    desc = EVTDESC_ZA_15003 
+	title = EVTTITLE_SE_KOWTOW
+    desc = EVTDESC_SE_15003 
     picture = GFX_evt_china_rebel_general
     border = GFX_event_normal_frame_diplomacy
     is_triggered_only = yes
@@ -1804,9 +1804,9 @@ character_event = { #Mercenaries: "We're here to escort you!"
 	}
 
     option = { # Er, change of plans! (Hire bodygaurds)
-    	name = EVTOPTA_ZA_15003
+    	name = EVTOPTA_SE_15003
     	custom_tooltip = {
-    		text = EVTOPTA_ZA_15003_tt
+    		text = EVTOPTA_SE_15003_tt
     	}
     	transfer_scaled_wealth = {
 			to = FROM
@@ -1819,31 +1819,31 @@ character_event = { #Mercenaries: "We're here to escort you!"
 		}
     }
     option = { #I think you have me confused with someone else...
-    	name = EVTOPTB_ZA_15003
+    	name = EVTOPTB_SE_15003
     	custom_tooltip = {
-    		text = EVTOPTB_ZA_15003_tt
+    		text = EVTOPTB_SE_15003_tt
     	}    	
     }
 
     after = {
-        clr_character_flag = zakhara_stable
-        clr_character_flag = zakhara_unrest
-        clr_character_flag = zakhara_civil_war
-        clr_character_flag = zakhara_badia_invasion
-        clr_character_flag = zakhara_pantheist_invasion
-        clr_character_flag = zakhara_famine
-        clr_character_flag = zakhara_plague
-        clr_character_flag = zakhara_golden_age
+        clr_character_flag = seros_stable
+        clr_character_flag = seros_unrest
+        clr_character_flag = seros_civil_war
+        clr_character_flag = seros_badia_invasion
+        clr_character_flag = seros_pantheist_invasion
+        clr_character_flag = seros_famine
+        clr_character_flag = seros_plague
+        clr_character_flag = seros_golden_age
 		return_to_travel_tombola_effect = yes
     }
 }
 
 character_event = { #We see starving people...
-    id = ZA.15004
+    id = SE.15004
 	has_dlc = "Jade Dragon"
 	
-	title = EVTTITLE_ZA_KOWTOW
-    desc = EVTDESC_ZA_15004
+	title = EVTTITLE_SE_KOWTOW
+    desc = EVTDESC_SE_15004
     picture = GFX_evt_china_famine
     border = GFX_event_normal_frame_diplomacy
     is_triggered_only = yes
@@ -1859,8 +1859,8 @@ character_event = { #We see starving people...
     }
     
     option = { #Let's eat together, yes.
-    	name = EVTOPTA_ZA_15004
-    	custom_tooltip = { text = EVTOPTA_ZA_15004_tt }
+    	name = EVTOPTA_SE_15004
+    	custom_tooltip = { text = EVTOPTA_SE_15004_tt }
 		
 		scaled_wealth = { value = -0.2 min = -25 }
 
@@ -1887,8 +1887,8 @@ character_event = { #We see starving people...
 		}
     }
     option = {
-        name = EVTOPTB_ZA_15004 #Come work for me! You, in particular!
-        custom_tooltip = { text = EVTOPTB_ZA_15004_tt }
+        name = EVTOPTB_SE_15004 #Come work for me! You, in particular!
+        custom_tooltip = { text = EVTOPTB_SE_15004_tt }
 
     	scaled_wealth = { value = -0.05 min = -5 }
 
@@ -1911,30 +1911,30 @@ character_event = { #We see starving people...
 		}
     }
     option = { #We can't afford to take pity on strangers...!
-        name = EVTOPTC_ZA_15004
-        custom_tooltip = { text = EVTOPTC_ZA_15004_tt }
+        name = EVTOPTC_SE_15004
+        custom_tooltip = { text = EVTOPTC_SE_15004_tt }
     }
 	
 	after = {
-        clr_character_flag = zakhara_stable
-        clr_character_flag = zakhara_unrest
-        clr_character_flag = zakhara_civil_war
-        clr_character_flag = zakhara_badia_invasion
-        clr_character_flag = zakhara_pantheist_invasion
-        clr_character_flag = zakhara_famine
-        clr_character_flag = zakhara_plague
-        clr_character_flag = zakhara_golden_age
+        clr_character_flag = seros_stable
+        clr_character_flag = seros_unrest
+        clr_character_flag = seros_civil_war
+        clr_character_flag = seros_badia_invasion
+        clr_character_flag = seros_pantheist_invasion
+        clr_character_flag = seros_famine
+        clr_character_flag = seros_plague
+        clr_character_flag = seros_golden_age
         return_to_travel_tombola_effect = yes
     }
 }
 	
 #You feel homesick...
 character_event = {
-    id = ZA.15010 #I really miss X.
+    id = SE.15010 #I really miss X.
 	has_dlc = "Jade Dragon"
 	
-	title = EVTTITLE_ZA_KOWTOW
-    desc = EVTDESC_ZA_15010
+	title = EVTTITLE_SE_KOWTOW
+    desc = EVTDESC_SE_15010
     picture = GFX_evt_carriage_default
     border = GFX_event_normal_frame_diplomacy
     is_triggered_only = yes
@@ -1988,7 +1988,7 @@ character_event = {
     }
 
     option = { #I will write a letter to my lover...
-        name = EVTOPTA_ZA_15010        
+        name = EVTOPTA_SE_15010        
         custom_tooltip = { text = will_receive_a_letter }
         event_target:person_missed = { set_character_flag = is_lover } #for follow up event
 
@@ -2009,7 +2009,7 @@ character_event = {
 		}
     }
     option = { #I will write a letter to my friend...
-        name = EVTOPTB_ZA_15010    
+        name = EVTOPTB_SE_15010    
 		custom_tooltip = { text = will_receive_a_letter }
 		event_target:person_missed = { set_character_flag = is_friend } #for follow up event
 
@@ -2037,7 +2037,7 @@ character_event = {
 		}
     }
     option = { #I will write a letter to my spouse...!
-        name = EVTOPTC_ZA_15010
+        name = EVTOPTC_SE_15010
         custom_tooltip = { text = will_receive_a_letter }
         event_target:person_missed = { set_character_flag = is_spouse } #for follow up event
 
@@ -2059,7 +2059,7 @@ character_event = {
 		}
     }
     option = { #I will write a letter to my parent...
-        name = EVTOPTD_ZA_15010
+        name = EVTOPTD_SE_15010
         custom_tooltip = { text = will_receive_a_letter }
         event_target:person_missed = { set_character_flag = is_parent } #for follow up event
 
@@ -2086,7 +2086,7 @@ character_event = {
 		}
     }
     option = { #I will write a letter to my child...
-        name = EVTOPTE_ZA_15010
+        name = EVTOPTE_SE_15010
         custom_tooltip = { text = will_receive_a_letter }
         event_target:person_missed = { set_character_flag = is_child } #for follow up event
 
@@ -2114,13 +2114,13 @@ character_event = {
 		}
     }
     option = { #No! Time is of the essence...!
-        name = EVTOPTF_ZA_15010
+        name = EVTOPTF_SE_15010
         hidden_effect = { set_character_flag = do_nothing }
     }
 
     after = {
     	if = { limit = { NOT = { has_character_flag = do_nothing } }
-    		event_target:person_missed = { character_event = { id = ZA.15011 } }
+    		event_target:person_missed = { character_event = { id = SE.15011 } }
     	}
     	else = {
     		clr_character_flag = do_nothing
@@ -2130,22 +2130,22 @@ character_event = {
 }
 
 character_event = { # Selected target receives letter from you...!
-    id = ZA.15011
+    id = SE.15011
 	has_dlc = "Jade Dragon"
 	
-	title = EVTTITLE_ZA_KOWTOW
+	title = EVTTITLE_SE_KOWTOW
     picture = GFX_evt_recieve_letter
     border = GFX_event_normal_frame_diplomacy
     is_triggered_only = yes
 
     desc = {
-    	text = EVTDESC_ZA_15011_A
+    	text = EVTDESC_SE_15011_A
     	trigger = {
     		NOT = { is_child_of = FROM }
     	}
     }
     desc = {
-    	text = EVTDESC_ZA_15011_B
+    	text = EVTDESC_SE_15011_B
     	trigger = {
     		is_child_of = FROM
     	}
@@ -2153,11 +2153,11 @@ character_event = { # Selected target receives letter from you...!
 
     option = {
         name = {
-        	text = EVTOPTA_ZA_15011_A
+        	text = EVTOPTA_SE_15011_A
         	trigger = { NOT = { is_child_of = FROM } }
         }
         name = {
-        	text = EVTOPTA_ZA_15011_B
+        	text = EVTOPTA_SE_15011_B
         	trigger = { is_child_of = FROM }
         }
 
@@ -2200,11 +2200,11 @@ character_event = { # Selected target receives letter from you...!
 }
 
 character_event = { #Learn about political philosophy or attempt to impress pretty [man/woman]
-    id = ZA.15015
+    id = SE.15015
 	has_dlc = "Jade Dragon"
 	
-	title = EVTTITLE_ZA_KOWTOW
-    desc = EVTDESC_ZA_15015
+	title = EVTTITLE_SE_KOWTOW
+    desc = EVTDESC_SE_15015
     picture = GFX_evt_chinese_bureaucrat
     border = GFX_event_normal_frame_diplomacy
     is_triggered_only = yes
@@ -2218,10 +2218,10 @@ character_event = { #Learn about political philosophy or attempt to impress pret
     }
 
     option = { #I would love to hear more about political philosophy!
-        name = EVTOPTA_ZA_15015
-        custom_tooltip = { text = EVTOPTA_ZA_15015_TT } #They like your enthusiasm!
+        name = EVTOPTA_SE_15015
+        custom_tooltip = { text = EVTOPTA_SE_15015_TT } #They like your enthusiasm!
         custom_tooltip = {
-			text = EVTTOOLTIP_ZA_GOOD_INFLUENCE_ON_EMPEROR_EVALUATION
+			text = EVTTOOLTIP_SE_GOOD_INFLUENCE_ON_EMPEROR_EVALUATION
 			hidden_effect = {
 				change_variable = {
 					which = kow_tow_emperor_impression_evaluation
@@ -2231,11 +2231,11 @@ character_event = { #Learn about political philosophy or attempt to impress pret
 		}
     }
     option = { #Actually, I'm already well familiar with 'the Guanzi', my lords (poet)
-        name = EVTOPTB_ZA_15015
-        custom_tooltip = { text = EVTOPTB_ZA_15015_TT } #They are impressed...!
+        name = EVTOPTB_SE_15015
+        custom_tooltip = { text = EVTOPTB_SE_15015_TT } #They are impressed...!
         prestige = 50
         custom_tooltip = {
-			text = EVTTOOLTIP_ZA_GOOD_INFLUENCE_ON_EMPEROR_EVALUATION
+			text = EVTTOOLTIP_SE_GOOD_INFLUENCE_ON_EMPEROR_EVALUATION
 			hidden_effect = {
 				change_variable = {
 					which = kow_tow_emperor_impression_evaluation
@@ -2250,12 +2250,12 @@ character_event = { #Learn about political philosophy or attempt to impress pret
 		}
     }
     option = { #Actually, I'm already well familiar with 'the Guanzi', my lords. (scholar)
-        name = EVTOPTB_ZA_15015
-        custom_tooltip = { text = EVTOPTB_ZA_15015_TT } #They are impressed..!
+        name = EVTOPTB_SE_15015
+        custom_tooltip = { text = EVTOPTB_SE_15015_TT } #They are impressed..!
         prestige = 100
         
         custom_tooltip = {
-			text = EVTTOOLTIP_ZA_GOOD_INFLUENCE_ON_EMPEROR_EVALUATION
+			text = EVTTOOLTIP_SE_GOOD_INFLUENCE_ON_EMPEROR_EVALUATION
 			hidden_effect = {
 				change_variable = {
 					which = kow_tow_emperor_impression_evaluation
@@ -2267,8 +2267,8 @@ character_event = { #Learn about political philosophy or attempt to impress pret
 		trigger = { trait = scholar }
     }
     option = { #I'd rather see the palace...
-        name = EVTOPTC_ZA_15015
-        custom_tooltip = { text = EVTOPTC_ZA_15015_TT } #They make sure you are accompanied...
+        name = EVTOPTC_SE_15015
+        custom_tooltip = { text = EVTOPTC_SE_15015_TT } #They make sure you are accompanied...
 
         random = {
         	chance = 30
@@ -2276,7 +2276,7 @@ character_event = { #Learn about political philosophy or attempt to impress pret
         }
 
         custom_tooltip = {
-			text = EVTTOOLTIP_ZA_BAD_INFLUENCE_ON_EMPEROR_EVALUATION
+			text = EVTTOOLTIP_SE_BAD_INFLUENCE_ON_EMPEROR_EVALUATION
 			hidden_effect = {
 				subtract_variable = {
 					which = kow_tow_emperor_impression_evaluation
@@ -2286,16 +2286,16 @@ character_event = { #Learn about political philosophy or attempt to impress pret
 		}
     }
     after = {
-    	return_to_zakhara_tombola_effect = yes
+    	return_to_seros_tombola_effect = yes
     }
 }
 
 character_event = { #Visit the market
-    id = ZA.15016
+    id = SE.15016
 	has_dlc = "Jade Dragon"
 	
-	title = EVTTITLE_ZA_KOWTOW
-    desc = EVTDESC_ZA_15016
+	title = EVTTITLE_SE_KOWTOW
+    desc = EVTDESC_SE_15016
     picture = GFX_evt_china_stable
     border = GFX_event_normal_frame_diplomacy
     is_triggered_only = yes
@@ -2308,7 +2308,7 @@ character_event = { #Visit the market
     immediate = {
     	set_character_flag = visited_market
     	hidden_effect = {
-	    	zakhara = {
+	    	seros = {
 				governor = {
 					create_random_steward  = {
 						age = 45
@@ -2321,9 +2321,9 @@ character_event = { #Visit the market
 						health = 10
 					}
 					new_character = {
-						save_event_target_as = zakhara_trader
+						save_event_target_as = seros_trader
 						give_nickname = nick_the_trader
-	    				add_zakhara_artifact_effect = yes
+	    				add_seros_artifact_effect = yes
 					}
 				}
 			}
@@ -2331,15 +2331,15 @@ character_event = { #Visit the market
     }
 
     option = { #What is that scent...? Mmhm!
-        name = EVTOPTA_ZA_15016
-        custom_tooltip = { text = EVTOPTA_ZA_15016_TT } #you partake in the local cuisine!
+        name = EVTOPTA_SE_15016
+        custom_tooltip = { text = EVTOPTA_SE_15016_TT } #you partake in the local cuisine!
 
         random = {
         	chance = 50
         	add_trait_gluttonous_effect = yes
         }
         custom_tooltip = {
-			text = EVTTOOLTIP_ZA_GOOD_INFLUENCE_ON_EMPEROR_EVALUATION
+			text = EVTTOOLTIP_SE_GOOD_INFLUENCE_ON_EMPEROR_EVALUATION
 			hidden_effect = {
 				change_variable = {
 					which = kow_tow_emperor_impression_evaluation
@@ -2349,14 +2349,14 @@ character_event = { #Visit the market
 		}
     }
     option = { #Let's trade, you there!
-        name = EVTOPTB_ZA_15016
-        custom_tooltip = { text = EVTOPTB_ZA_15016_TT }
+        name = EVTOPTB_SE_15016
+        custom_tooltip = { text = EVTOPTB_SE_15016_TT }
 		
 		scaled_wealth = { value = -0.6 min = -200 }
 
         hidden_effect = {
-	        event_target:zakhara_trader = {
-	        	event_target:zakhara_artifact = {
+	        event_target:seros_trader = {
+	        	event_target:seros_artifact = {
 		        	transfer_artifact = {
 						from = PREV
 						to = PREVPREV
@@ -2367,7 +2367,7 @@ character_event = { #Visit the market
         }
 
         custom_tooltip = {
-			text = EVTTOOLTIP_ZA_GOOD_INFLUENCE_ON_EMPEROR_EVALUATION
+			text = EVTTOOLTIP_SE_GOOD_INFLUENCE_ON_EMPEROR_EVALUATION
 			hidden_effect = {
 				change_variable = {
 					which = kow_tow_emperor_impression_evaluation
@@ -2375,23 +2375,23 @@ character_event = { #Visit the market
 				}
 			}
 		}
-		trigger = { #only if you don't already have a ton of zakhara artifacts
+		trigger = { #only if you don't already have a ton of seros artifacts
 			NOT = {
 				any_artifact = {
 					count = 13
-					has_artifact_flag = zakhara
+					has_artifact_flag = seros
 				}			
 			}
 		}
     }
 
-    option = { #Steal a zakhara artifact in the market!
-        name = EVTOPTC_ZA_15016
-        custom_tooltip = { text = EVTOPTC_ZA_15016_TT }
+    option = { #Steal a seros artifact in the market!
+        name = EVTOPTC_SE_15016
+        custom_tooltip = { text = EVTOPTC_SE_15016_TT }
         tooltip_info = intrigue
 
 		custom_tooltip = {
-			text = EVTTOOLTIP_ZA_BAD_INFLUENCE_ON_EMPEROR_EVALUATION
+			text = EVTTOOLTIP_SE_BAD_INFLUENCE_ON_EMPEROR_EVALUATION
 			hidden_effect = {
 				subtract_variable = {
 					which = kow_tow_emperor_impression_evaluation
@@ -2401,8 +2401,8 @@ character_event = { #Visit the market
 		}
 
         hidden_effect = {
-	        event_target:zakhara_trader = {
-	        	event_target:zakhara_artifact = {
+	        event_target:seros_trader = {
+	        	event_target:seros_artifact = {
 		        	transfer_artifact = {
 						from = PREV
 						to = PREVPREV
@@ -2419,13 +2419,13 @@ character_event = { #Visit the market
     }
 
     option = { #I just wanna go home.
-        name = EVTOPTD_ZA_15016
+        name = EVTOPTD_SE_15016
     }
 
     after = {
-    	return_to_zakhara_tombola_effect = yes
+    	return_to_seros_tombola_effect = yes
     	hidden_effect = {
-	        event_target:zakhara_trader = { #removes the trader from the game, along with their artifact (if you didn't trade)...
+	        event_target:seros_trader = { #removes the trader from the game, along with their artifact (if you didn't trade)...
 	        	any_artifact = { destroy_artifact = yes }
 	        	death = { death_reason =  death_missing }
 	        }
@@ -2434,15 +2434,15 @@ character_event = { #Visit the market
 }
 
 character_event = { #Encounter a merchant..!
-    id = ZA.15017
+    id = SE.15017
 	has_dlc = "Jade Dragon"
 	
-	title = EVTTITLE_ZA_KOWTOW
-    desc = EVTDESC_ZA_15017
+	title = EVTTITLE_SE_KOWTOW
+    desc = EVTDESC_SE_15017
     picture = GFX_evt_china_stable
     border = GFX_event_normal_frame_diplomacy
     is_triggered_only = yes
-   	portrait = event_target:zakhara_trader
+   	portrait = event_target:seros_trader
 
 	trigger = {
 		trait = kow_tow_travels
@@ -2451,7 +2451,7 @@ character_event = { #Encounter a merchant..!
     immediate = {
     	set_character_flag = met_traveling_merchant
 		hidden_effect = {
-	    	zakhara = {
+	    	seros = {
 				governor = {
 					create_random_intriguer  = {
 						age = 25
@@ -2464,8 +2464,8 @@ character_event = { #Encounter a merchant..!
 					}
 					new_character = {
 						upgrade_education_effect = yes
-						save_event_target_as = zakhara_trader
-	    				add_zakhara_artifact_effect = yes
+						save_event_target_as = seros_trader
+	    				add_seros_artifact_effect = yes
 					}
 				}
 			}
@@ -2473,14 +2473,14 @@ character_event = { #Encounter a merchant..!
     }
 
     option = {      
-        name = EVTOPTA_ZA_15017 #I'd love to take it off your hands!
-        custom_tooltip = { text = EVTOPTA_ZA_15017_TT }
+        name = EVTOPTA_SE_15017 #I'd love to take it off your hands!
+        custom_tooltip = { text = EVTOPTA_SE_15017_TT }
 
 		scaled_wealth = { value = -0.4 min = -150 }
 
         hidden_effect = {
-	        event_target:zakhara_trader = {
-	        	event_target:zakhara_artifact = {
+	        event_target:seros_trader = {
+	        	event_target:seros_artifact = {
 		        	transfer_artifact = {
 						from = PREV
 						to = PREVPREV
@@ -2491,10 +2491,10 @@ character_event = { #Encounter a merchant..!
         }
     }
     option = { #I could use a smooth-talker like you...
-        name = EVTOPTB_ZA_15017
-        custom_tooltip = { text = EVTOPTB_ZA_15017_TT }
+        name = EVTOPTB_SE_15017
+        custom_tooltip = { text = EVTOPTB_SE_15017_TT }
         hidden_effect = {
-	        event_target:zakhara_trader = {
+	        event_target:seros_trader = {
 	        	show_scope_change = no
 	        	move_character = ROOT
 	        }
@@ -2504,17 +2504,17 @@ character_event = { #Encounter a merchant..!
         trigger = { trait = kind }
     }
     option = {
-        name = EVTOPTC_ZA_15017 #Guards! Cut this man/woman down.
-        custom_tooltip = { text = EVTOPTC_ZA_15017_TT } #You steal the artifact.
+        name = EVTOPTC_SE_15017 #Guards! Cut this man/woman down.
+        custom_tooltip = { text = EVTOPTC_SE_15017_TT } #You steal the artifact.
 
-        event_target:zakhara_trader = {
+        event_target:seros_trader = {
         	show_scope_change = no
         	death = { death_reason = death_murder }
         }
-        custom_tooltip = { text = EVTOPTA_ZA_15017_TT } #it's transfered to you.
+        custom_tooltip = { text = EVTOPTA_SE_15017_TT } #it's transfered to you.
 		hidden_effect = { #Steal the artifact
-	        event_target:zakhara_trader = {
-	        	event_target:zakhara_artifact = {
+	        event_target:seros_trader = {
+	        	event_target:seros_artifact = {
 		        	transfer_artifact = {
 						from = PREV
 						to = PREVPREV
@@ -2527,10 +2527,10 @@ character_event = { #Encounter a merchant..!
         trigger = { trait = deceitful }
     }
     option = {      
-        name = EVTOPTD_ZA_15017 #I have no use of whatever that is.
-        custom_tooltip = { text = EVTOPTD_ZA_15017_TT }
+        name = EVTOPTD_SE_15017 #I have no use of whatever that is.
+        custom_tooltip = { text = EVTOPTD_SE_15017_TT }
         hidden_effect = {
-	        event_target:zakhara_trader = { #removes the trader from the game, along with their artifact (if you didn't trade)...
+	        event_target:seros_trader = { #removes the trader from the game, along with their artifact (if you didn't trade)...
 	        	any_artifact = { destroy_artifact = yes }
 	        	death = { death_reason =  death_missing }
 	        }
@@ -2543,7 +2543,7 @@ character_event = { #Encounter a merchant..!
 
 # Fired from on_policy_change
 character_event = {
-	id = ZA.32298
+	id = SE.32298
 	has_dlc = "Jade Dragon"
 	hide_window = yes
 	
@@ -2551,7 +2551,7 @@ character_event = {
 	
 	trigger = {
 		FROM = {
-			has_policy = zakhara_isolationist
+			has_policy = seros_isolationist
 		}
 	}
 	
@@ -2562,7 +2562,7 @@ character_event = {
 			}
 			set_character_flag = kow_tow_abort_isolationist
 			character_event = {
-				id = ZA.32299
+				id = SE.32299
 			}
 		}
 	}
@@ -2570,25 +2570,25 @@ character_event = {
 
 ### Kowtow was aborted for some reason
 character_event = {
-	id = ZA.32299
+	id = SE.32299
 	has_dlc = "Jade Dragon"
 	
-	title = EVTTITLE_ZA_KOWTOW
+	title = EVTTITLE_SE_KOWTOW
     
 	desc = {
-		text = EVTDESCA_ZA_32299
+		text = EVTDESCA_SE_32299
 		trigger = {
 			has_character_flag = kow_tow_abort_war
 		}
 	}
 	desc = {
-		text = EVTDESCB_ZA_32299
+		text = EVTDESCB_SE_32299
 		trigger = {
 			has_character_flag = kow_tow_abort_isolationist
 		}
 	}
 	desc = {
-		text = EVTDESCC_ZA_32299
+		text = EVTDESCC_SE_32299
 		trigger = {
 			NOR = {
 				has_character_flag = kow_tow_abort_war
@@ -2608,7 +2608,7 @@ character_event = {
 	}
 	
 	option = {
-		name = EVTOPTA_ZA_32299
+		name = EVTOPTA_SE_32299
 	}
 	
 	after = {
