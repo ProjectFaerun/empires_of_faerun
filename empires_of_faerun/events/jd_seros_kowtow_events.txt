@@ -243,7 +243,7 @@ character_event = { # Travel Tombola
 							tier = DUKE
 						}
 						capital_scope = {
-							region = custom_southern_access
+							region = custom_center_access
 						}
 						NOT = {
 							num_of_friends = 3
@@ -264,7 +264,7 @@ character_event = { # Travel Tombola
 		                ai = yes
 		                mercenary = yes
 		                OR = {
-		                	culture = shou
+		                	culture = sahuagin
 		                	AND = {
 		                		seros = { has_status = seros_pantheist_invasion }
 		                		culture = hadhar
@@ -516,7 +516,7 @@ character_event = { # Messenger invites you to the Lords keep, travel time > 2
 					tier = DUKE
 				}
 				capital_scope = {
-					region = custom_southern_access
+					region = custom_center_access
 				}
 				NOT = {
 					num_of_friends = 3
@@ -535,7 +535,7 @@ character_event = { # Messenger invites you to the Lords keep, travel time > 2
 					tier = DUKE
 				}
 				capital_scope = {
-					region = custom_southern_access
+					region = custom_center_access
 				}
 				NOT = { block_general_event_trigger = yes }
 				is_rival = ROOT
@@ -1623,7 +1623,7 @@ character_event = {
                 #is_landed = yes
                 mercenary = yes
                 OR = {
-                	culture = shou
+                	culture = sahuagin
                 	AND = {
                 		seros = { has_status = seros_pantheist_invasion }
                 		culture = hadhar
