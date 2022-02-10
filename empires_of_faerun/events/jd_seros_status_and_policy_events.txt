@@ -1,21 +1,21 @@
 ###########################################
 #                                         #
-# zakhara Status, Policy & News Events	  #
+# seros Status, Policy & News Events	  #
 #                                         #
-# ID ZA.50000-ZA.51000    	              #
+# ID SE.50000-SE.51000    	              #
 #                                         #
 ###########################################
 
-namespace = ZA
+namespace = SE
 
 # Written by: 
 # Henrik Fåhraeus
 # Alexander Oltner
 
-# New zakhara Emperor. Pick a new Policy and send a News Event!
+# New seros Emperor. Pick a new Policy and send a News Event!
 # Hidden. Fired from on_offmap_ruler_changed.
 character_event = {
-	id = ZA.50000
+	id = SE.50000
 	offmap = only
 
 	has_dlc = "Jade Dragon"
@@ -23,7 +23,7 @@ character_event = {
 	is_triggered_only = yes
 	hide_window = yes
 
-	trigger = { is_offmap_tag = zakhara }
+	trigger = { is_offmap_tag = seros }
     
 	immediate = {
 		FROMFROM = {
@@ -32,96 +32,96 @@ character_event = {
 				100 = { # OPEN
 					modifier = {
 						factor = 1.5
-						has_status = zakhara_stable
+						has_status = seros_stable
 					}
 					modifier = {
 						factor = 5
-						has_policy = zakhara_open
+						has_policy = seros_open
 						NOT = { days_since_policy_change = 10950 } #30 years
 					}
-					set_policy = zakhara_open
+					set_policy = seros_open
 					log = "-------------------------------------"
-					log = "zakhara Policy Logging:"
-					log = "zakharas new Policy is now OPEN"
+					log = "seros Policy Logging:"
+					log = "seross new Policy is now OPEN"
 					log = "-------------------------------------"
 				}
 				20 = { # ISOLATIONIST
 					trigger = {
 						OR = {
-							NOT = { has_offmap_tmp_flag = zakhara_forced_open }
-							had_offmap_tmp_flag = { flag = zakhara_forced_open years = 50 }
+							NOT = { has_offmap_tmp_flag = seros_forced_open }
+							had_offmap_tmp_flag = { flag = seros_forced_open years = 50 }
 						}
 					}
 					modifier = {
 						factor = 10
-						has_offmap_flag = zakhara_isolationist_trend
+						has_offmap_flag = seros_isolationist_trend
 					}
 					modifier = { # Hard times... (negative Status)
 						factor = 2
-						zakhara_is_suffering_trigger = yes
+						seros_is_suffering_trigger = yes
 					}
 					modifier = {
 						factor = 0.5
-						has_status = zakhara_golden_age
+						has_status = seros_golden_age
 					}
 					modifier = {
 						factor = 5
-						has_policy = zakhara_isolationist
+						has_policy = seros_isolationist
 						NOT = { days_since_policy_change = 10950 } #30 years
 					}
-					set_policy = zakhara_isolationist
+					set_policy = seros_isolationist
 					log = "-------------------------------------"
-					log = "zakhara Policy Logging:"
-					log = "zakharas new Policy is now ISOLATIONIST"
+					log = "seros Policy Logging:"
+					log = "seross new Policy is now ISOLATIONIST"
 					log = "-------------------------------------"
-					clr_offmap_flag = zakhara_isolationist_trend
-					clr_offmap_tmp_flag = zakhara_forced_open
+					clr_offmap_flag = seros_isolationist_trend
+					clr_offmap_tmp_flag = seros_forced_open
 				}
 				10 = { # EXPANSIONIST
 					trigger = {
-						NOT = { has_offmap_flag = zakhara_badly_beaten_3 }
-						NOT = { check_variable = { which = "global_zakhara_change_to_expansionist_count" value = 6 } }
+						NOT = { has_offmap_flag = seros_badly_beaten_3 }
+						NOT = { check_variable = { which = "global_seros_change_to_expansionist_count" value = 6 } }
 					}
 					modifier = {
 						factor = 20
-						has_offmap_flag = zakhara_expansionist_trend
+						has_offmap_flag = seros_expansionist_trend
 					}
 					modifier = {
 						factor = 2
-						has_status = zakhara_golden_age
+						has_status = seros_golden_age
 					}
 					modifier = {
 						factor = 0.75
-						has_offmap_flag = zakhara_badly_beaten_1
+						has_offmap_flag = seros_badly_beaten_1
 					}
 					modifier = {
 						factor = 0.5
-						has_offmap_flag = zakhara_badly_beaten_2
+						has_offmap_flag = seros_badly_beaten_2
 					}
 					modifier = {
 						factor = 10
-						has_policy = zakhara_expansionist
+						has_policy = seros_expansionist
 						NOT = { days_since_policy_change = 14600 } #40 years
 					}
 					modifier = {
 						factor = 0.1
-						has_policy = zakhara_expansionist
+						has_policy = seros_expansionist
 						days_since_policy_change = 32850 #90 years
 					}
 					modifier = {
 						factor = 0.2
-						check_variable = { which = "global_zakhara_change_to_expansionist_count" value = 3 }
+						check_variable = { which = "global_seros_change_to_expansionist_count" value = 3 }
 					}
 					if = {
-						limit = { NOT = { has_policy = zakhara_expansionist } }
-						change_variable = { which = "global_zakhara_change_to_expansionist_count" value = 1 }
+						limit = { NOT = { has_policy = seros_expansionist } }
+						change_variable = { which = "global_seros_change_to_expansionist_count" value = 1 }
 					}
-					set_policy = zakhara_expansionist
+					set_policy = seros_expansionist
 					log = "-------------------------------------"
-					log = "zakhara Policy Logging:"
-					log = "zakharas new Policy is now EXPANSIONIST"
+					log = "seros Policy Logging:"
+					log = "seross new Policy is now EXPANSIONIST"
 					log = "-------------------------------------"
-					clr_offmap_flag = zakhara_expansionist_trend
+					clr_offmap_flag = seros_expansionist_trend
 				}
 			}
 		}
@@ -133,7 +133,7 @@ character_event = {
 					has_offmap_news_enabled = FROMFROM
 					is_within_diplo_range = ROOT
 				}
-				narrative_event = { id = ZA.50001 }
+				narrative_event = { id = SE.50001 }
 			}
 		}
 		
@@ -144,17 +144,17 @@ character_event = {
 	}
 }
 
-# News from zakhara: A new Emperor
+# News from seros: A new Emperor
 narrative_event = {
- 	id = ZA.50001
-	title = NEWS_FROM_zakhara
+ 	id = SE.50001
+	title = NEWS_FROM_seros
 	picture = GFX_evt_china_golden_age
-	portrait = zakhara
+	portrait = seros
 	window = EventWindowOffmap
 	background = GFX_event_window_news_from_china
 	
 	immediate = {
-		zakhara = {
+		seros = {
 			ruler = {
 				save_event_target_as = portrait_target
 			}
@@ -168,16 +168,16 @@ narrative_event = {
 			FROM = {
 				OR = {
 					AND = {
-						prev_policy = zakhara_open
-						has_policy = zakhara_open
+						prev_policy = seros_open
+						has_policy = seros_open
 					}
 					AND = {
-						prev_policy = zakhara_isolationist
-						has_policy = zakhara_isolationist
+						prev_policy = seros_isolationist
+						has_policy = seros_isolationist
 					}
 					AND = {
-						prev_policy = zakhara_expansionist
-						has_policy = zakhara_expansionist
+						prev_policy = seros_expansionist
+						has_policy = seros_expansionist
 					}
 				}
 				FROM = {
@@ -185,23 +185,23 @@ narrative_event = {
 				}
 			}
 		}
-		text = EVTDESC_ZA_50001
+		text = EVTDESC_SE_50001
 	}
 	desc = {
 		trigger = {
 			FROM = {
 				OR = {
 					AND = {
-						prev_policy = zakhara_open
-						has_policy = zakhara_open
+						prev_policy = seros_open
+						has_policy = seros_open
 					}
 					AND = {
-						prev_policy = zakhara_isolationist
-						has_policy = zakhara_isolationist
+						prev_policy = seros_isolationist
+						has_policy = seros_isolationist
 					}
 					AND = {
-						prev_policy = zakhara_expansionist
-						has_policy = zakhara_expansionist
+						prev_policy = seros_expansionist
+						has_policy = seros_expansionist
 					}
 				}
 				FROM = {
@@ -209,23 +209,23 @@ narrative_event = {
 				}
 			}
 		}
-		text = EVTDESC_ZA_50001_NEW_DYN
+		text = EVTDESC_SE_50001_NEW_DYN
 	}
 	desc = {
 		trigger = {
 			FROM = {
 				OR = {
 					AND = {
-						prev_policy = zakhara_open
-						NOT = { has_policy = zakhara_open }
+						prev_policy = seros_open
+						NOT = { has_policy = seros_open }
 					}
 					AND = {
-						prev_policy = zakhara_isolationist
-						NOT = { has_policy = zakhara_isolationist }
+						prev_policy = seros_isolationist
+						NOT = { has_policy = seros_isolationist }
 					}
 					AND = {
-						prev_policy = zakhara_expansionist
-						NOT = { has_policy = zakhara_expansionist }
+						prev_policy = seros_expansionist
+						NOT = { has_policy = seros_expansionist }
 					}
 				}
 				FROM = {
@@ -233,23 +233,23 @@ narrative_event = {
 				}
 			}
 		}
-		text = EVTDESC_ZA_50001_NEW_POLICY
+		text = EVTDESC_SE_50001_NEW_POLICY
 	}
 	desc = {
 		trigger = {
 			FROM = {
 				OR = {
 					AND = {
-						prev_policy = zakhara_open
-						NOT = { has_policy = zakhara_open }
+						prev_policy = seros_open
+						NOT = { has_policy = seros_open }
 					}
 					AND = {
-						prev_policy = zakhara_isolationist
-						NOT = { has_policy = zakhara_isolationist }
+						prev_policy = seros_isolationist
+						NOT = { has_policy = seros_isolationist }
 					}
 					AND = {
-						prev_policy = zakhara_expansionist
-						NOT = { has_policy = zakhara_expansionist }
+						prev_policy = seros_expansionist
+						NOT = { has_policy = seros_expansionist }
 					}
 				}
 				FROM = {
@@ -257,7 +257,7 @@ narrative_event = {
 				}
 			}
 		}
-		text = EVTDESC_ZA_50001_NEW_DYN_NEW_POLICY
+		text = EVTDESC_SE_50001_NEW_DYN_NEW_POLICY
 	}
 
 	has_dlc = "Jade Dragon"
@@ -265,16 +265,16 @@ narrative_event = {
     is_triggered_only = yes
 	
 	option = {
-		name = EVTOPT_ZA_50001_OPEN
+		name = EVTOPT_SE_50001_OPEN
 		trigger = {
-			FROM = { has_policy = zakhara_open }
+			FROM = { has_policy = seros_open }
 			OR = {
-				NOT = { has_character_modifier = peace_deal_with_zakhara }
+				NOT = { has_character_modifier = peace_deal_with_seros }
 				FROM = { FROM = { dynasty = PREV } }
 			}
 		}
 		if = {
-			limit = { has_character_flag = was_tributary_of_zakhara }
+			limit = { has_character_flag = was_tributary_of_seros }
 			tooltip = {
 				FROM = {
 					show_scope_change = no
@@ -283,20 +283,20 @@ narrative_event = {
 					}
 				}
 			}
-			clr_character_flag = was_tributary_of_zakhara
+			clr_character_flag = was_tributary_of_seros
 		}
 	}
 	option = {
-		name = EVTOPT_ZA_50001_ISO
+		name = EVTOPT_SE_50001_ISO
 		trigger = {
-			FROM = { has_policy = zakhara_isolationist }
+			FROM = { has_policy = seros_isolationist }
 			OR = {
-				NOT = { has_character_modifier = peace_deal_with_zakhara }
+				NOT = { has_character_modifier = peace_deal_with_seros }
 				FROM = { FROM = { dynasty = PREV } }
 			}
 		}
 		if = {
-			limit = { has_character_flag = was_tributary_of_zakhara }
+			limit = { has_character_flag = was_tributary_of_seros }
 			tooltip = {
 				FROM = {
 					show_scope_change = no
@@ -305,20 +305,20 @@ narrative_event = {
 					}
 				}
 			}
-			clr_character_flag = was_tributary_of_zakhara
+			clr_character_flag = was_tributary_of_seros
 		}
 	}
 	option = {
-		name = EVTOPT_ZA_50001_EXP
+		name = EVTOPT_SE_50001_EXP
 		trigger = {
-			FROM = { has_policy = zakhara_expansionist }
+			FROM = { has_policy = seros_expansionist }
 			OR = {
-				NOT = { has_character_modifier = peace_deal_with_zakhara }
+				NOT = { has_character_modifier = peace_deal_with_seros }
 				FROM = { FROM = { dynasty = PREV } }
 			}
 		}
 		if = {
-			limit = { has_character_flag = was_tributary_of_zakhara }
+			limit = { has_character_flag = was_tributary_of_seros }
 			tooltip = {
 				FROM = {
 					show_scope_change = no
@@ -327,18 +327,18 @@ narrative_event = {
 					}
 				}
 			}
-			clr_character_flag = was_tributary_of_zakhara
+			clr_character_flag = was_tributary_of_seros
 		}
 	}
 	
 	option = {
-		name = EVTOPT_ZA_50302_BROKEN_PEACE_DEAL
+		name = EVTOPT_SE_50302_BROKEN_PEACE_DEAL
 		trigger = {
-			has_character_modifier = peace_deal_with_zakhara
+			has_character_modifier = peace_deal_with_seros
 			FROM = { FROM = { NOT  = { dynasty = PREV } } }
 		}
 		if = {
-			limit = { has_character_flag = was_tributary_of_zakhara }
+			limit = { has_character_flag = was_tributary_of_seros }
 			tooltip = {
 				FROM = {
 					show_scope_change = no
@@ -347,9 +347,9 @@ narrative_event = {
 					}
 				}
 			}
-			clr_character_flag = was_tributary_of_zakhara
+			clr_character_flag = was_tributary_of_seros
 		}
-		remove_character_modifier = peace_deal_with_zakhara
+		remove_character_modifier = peace_deal_with_seros
 	}
 }
 
@@ -358,7 +358,7 @@ narrative_event = {
 # Root = Governor
 # From = Offmap
 character_event = {
-    id = ZA.50020
+    id = SE.50020
 
     has_dlc = "Jade Dragon"
 
@@ -368,7 +368,7 @@ character_event = {
 	trigger = {
 		FROM = {
 			NOT = { has_offmap_flag = no_policy_news }
-			is_offmap_tag = zakhara
+			is_offmap_tag = seros
 		}
 	}
     
@@ -378,33 +378,33 @@ character_event = {
 				has_offmap_news_enabled = FROM
 				is_within_diplo_range = ROOT
 			}
-			narrative_event = { id = ZA.50021 }
+			narrative_event = { id = SE.50021 }
 		}
 	}
 }
 
-# News from zakhara: New Policy Picked
+# News from seros: New Policy Picked
 narrative_event = {
-	id = ZA.50021
-	title = NEWS_FROM_zakhara
-	portrait = zakhara
+	id = SE.50021
+	title = NEWS_FROM_seros
+	portrait = seros
 	window = EventWindowOffmap
 	background = GFX_event_window_news_from_china
 	
 	desc = {
-		trigger = { FROMFROM = { has_policy = zakhara_open } }
-		picture = GFX_evt_zakhara_open
-		text = EVTDESC_ZA_50021_OPEN
+		trigger = { FROMFROM = { has_policy = seros_open } }
+		picture = GFX_evt_seros_open
+		text = EVTDESC_SE_50021_OPEN
 	}
 	desc = {
-		trigger = { FROMFROM = { has_policy = zakhara_isolationist } }
-		picture = GFX_evt_zakhara_isolationist
-		text = EVTDESC_ZA_50021_ISO
+		trigger = { FROMFROM = { has_policy = seros_isolationist } }
+		picture = GFX_evt_seros_isolationist
+		text = EVTDESC_SE_50021_ISO
 	}
 	desc = {
-		trigger = { FROMFROM = { has_policy = zakhara_expansionist } }
-		picture = GFX_evt_zakhara_expansionist
-		text = EVTDESC_ZA_50021_EXP
+		trigger = { FROMFROM = { has_policy = seros_expansionist } }
+		picture = GFX_evt_seros_expansionist
+		text = EVTDESC_SE_50021_EXP
 	}
 
 	has_dlc = "Jade Dragon"
@@ -412,7 +412,7 @@ narrative_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		zakhara = {
+		seros = {
 			ruler = {
 				save_event_target_as = portrait_target
 			}
@@ -423,38 +423,38 @@ narrative_event = {
 	
 	
 	option = {
-		name = EVTOPT_ZA_50001_OPEN
-		trigger = { FROMFROM = { has_policy = zakhara_open } }
+		name = EVTOPT_SE_50001_OPEN
+		trigger = { FROMFROM = { has_policy = seros_open } }
 	}
 	option = {
-		name = EVTOPT_ZA_50021_ISO
-		trigger = { FROMFROM = { has_policy = zakhara_isolationist } }
+		name = EVTOPT_SE_50021_ISO
+		trigger = { FROMFROM = { has_policy = seros_isolationist } }
 	}
 	option = {
-		name = EVTOPT_ZA_50001_EXP
-		trigger = { FROMFROM = { has_policy = zakhara_expansionist } }
+		name = EVTOPT_SE_50001_EXP
+		trigger = { FROMFROM = { has_policy = seros_expansionist } }
 	}
 }
 
 
-# New zakhara Status
+# New seros Status
 # Hidden. Fired from on_offmap_status_changed.
 # Root = Governor
 # From = Offmap
 character_event = {
-	id = ZA.50030
+	id = SE.50030
 
 	has_dlc = "Jade Dragon"
 
 	is_triggered_only = yes
 	hide_window = yes
 
-	trigger = { FROM = { is_offmap_tag = zakhara } }
+	trigger = { FROM = { is_offmap_tag = seros } }
     
 	immediate = {
 		FROM = {
-			clr_offmap_flag = zakhara_pantheist_invasion
-			clr_offmap_flag = zakhara_badia_invasion
+			clr_offmap_flag = seros_merrow_invasion
+			clr_offmap_flag = seros_sahuagin_invasion
 		}
 		
 		if = {
@@ -468,59 +468,59 @@ character_event = {
 					has_offmap_news_enabled = FROM
 					is_within_diplo_range = ROOT
 				}
-				narrative_event = { id = ZA.50031 }
+				narrative_event = { id = SE.50031 }
 			}
 		}
 	}
 }
 
-# News from zakhara: New Status
+# News from seros: New Status
 narrative_event = {
-	id = ZA.50031
-	title = NEWS_FROM_zakhara
-	portrait = zakhara
+	id = SE.50031
+	title = NEWS_FROM_seros
+	portrait = seros
 	window = EventWindowOffmap
 	background = GFX_event_window_news_from_china
 	
 	desc = {
-		trigger = { FROMFROM = { has_status = zakhara_stable } }
+		trigger = { FROMFROM = { has_status = seros_stable } }
 		picture = GFX_evt_china_stable
-		text = EVTDESC_ZA_50031_STABLE
+		text = EVTDESC_SE_50031_STABLE
 	}
 	desc = {
-		trigger = { FROMFROM = { has_status = zakhara_unrest } }
+		trigger = { FROMFROM = { has_status = seros_unrest } }
 		picture = GFX_evt_china_unrest
-		text = EVTDESC_ZA_50031_UNREST
+		text = EVTDESC_SE_50031_UNREST
 	}
 	desc = {
-		trigger = { FROMFROM = { has_status = zakhara_famine } }
+		trigger = { FROMFROM = { has_status = seros_famine } }
 		picture = GFX_evt_china_famine
-		text = EVTDESC_ZA_50031_FAMINE
+		text = EVTDESC_SE_50031_FAMINE
 	}
 	desc = {
-		trigger = { FROMFROM = { has_status = zakhara_plague } }
+		trigger = { FROMFROM = { has_status = seros_plague } }
 		picture = GFX_evt_china_devastating_plague
-		text = EVTDESC_ZA_50031_PLAGUE
+		text = EVTDESC_SE_50031_PLAGUE
 	}
 	desc = {
-		trigger = { FROMFROM = { has_status = zakhara_pantheist_invasion } }
+		trigger = { FROMFROM = { has_status = seros_merrow_invasion } }
 		picture = GFX_evt_china_mongols_invade
-		text = EVTDESC_ZA_50031_tu_lung
+		text = EVTDESC_SE_50031_sahuagin
 	}
 	desc = {
-		trigger = { FROMFROM = { has_status = zakhara_badia_invasion } }
+		trigger = { FROMFROM = { has_status = seros_sahuagin_invasion } }
 		picture = GFX_evt_china_mongols_invade
-		text = EVTDESC_ZA_50031_tuigan
+		text = EVTDESC_SE_50031_tuigan
 	}
 	desc = {
-		trigger = { FROMFROM = { has_status = zakhara_civil_war } }
+		trigger = { FROMFROM = { has_status = seros_civil_war } }
 		picture = GFX_evt_china_civil_war
-		text = EVTDESC_ZA_50031_CW
+		text = EVTDESC_SE_50031_CW
 	}
 	desc = {
-		trigger = { FROMFROM = { has_status = zakhara_golden_age } }
+		trigger = { FROMFROM = { has_status = seros_golden_age } }
 		picture = GFX_evt_china_golden_age
-		text = EVTDESC_ZA_50031_GOLDEN
+		text = EVTDESC_SE_50031_GOLDEN
 	}
 
 	has_dlc = "Jade Dragon"
@@ -528,7 +528,7 @@ narrative_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		zakhara = {
+		seros = {
 			ruler = {
 				save_event_target_as = portrait_target
 			}
@@ -548,7 +548,7 @@ narrative_event = {
 # Root = Governor
 # From = Offmap
 character_event = {
-	id = ZA.50100
+	id = SE.50100
 
 	has_dlc = "Jade Dragon"
 
@@ -557,12 +557,12 @@ character_event = {
 	
 	trigger = {
 		FROM = {
-			is_offmap_tag = zakhara
+			is_offmap_tag = seros
 			NOR = {
-				has_status = zakhara_stable
-				has_status = zakhara_pantheist_invasion # Resolution handled by ZA.50160
-				has_status = zakhara_badia_invasion # Resolution handled by ZA.50200
-				has_status = zakhara_civil_war # Resolution handled by ZA.50300
+				has_status = seros_stable
+				has_status = seros_merrow_invasion # Resolution handled by SE.50160
+				has_status = seros_sahuagin_invasion # Resolution handled by SE.50200
+				has_status = seros_civil_war # Resolution handled by SE.50300
 			}
 		}
 	}
@@ -572,160 +572,160 @@ character_event = {
 		modifier = { # Unrest last for at least 2 years before becoming Stable/Civil War
 			factor = 0
 			FROM = {
-				has_status = zakhara_unrest
-				has_offmap_flag = zakhara_had_unrest
+				has_status = seros_unrest
+				has_offmap_flag = seros_had_unrest
 				NOT = {
-					had_offmap_tmp_flag = { flag = zakhara_had_unrest years = 2 }
+					had_offmap_tmp_flag = { flag = seros_had_unrest years = 2 }
 				}
 			}
 		}
 		modifier = {
 			factor = 2
 			FROM = {
-				has_status = zakhara_unrest
-				has_offmap_flag = zakhara_had_unrest
-				had_offmap_tmp_flag = { flag = zakhara_had_unrest years = 8 }
+				has_status = seros_unrest
+				has_offmap_flag = seros_had_unrest
+				had_offmap_tmp_flag = { flag = seros_had_unrest years = 8 }
 			}
 		}
 		modifier = {
 			factor = 1.5
 			FROM = {
-				has_status = zakhara_unrest
-				has_offmap_flag = zakhara_had_unrest
-				had_offmap_tmp_flag = { flag = zakhara_had_unrest years = 10 }
+				has_status = seros_unrest
+				has_offmap_flag = seros_had_unrest
+				had_offmap_tmp_flag = { flag = seros_had_unrest years = 10 }
 			}
 		}
 		modifier = {
 			factor = 1.5
 			FROM = {
-				has_status = zakhara_unrest
-				has_offmap_flag = zakhara_had_unrest
-				had_offmap_tmp_flag = { flag = zakhara_had_unrest years = 12 }
+				has_status = seros_unrest
+				has_offmap_flag = seros_had_unrest
+				had_offmap_tmp_flag = { flag = seros_had_unrest years = 12 }
 			}
 		}
 		modifier = {
 			factor = 1.5
 			FROM = {
-				has_status = zakhara_unrest
-				has_offmap_flag = zakhara_had_unrest
-				had_offmap_tmp_flag = { flag = zakhara_had_unrest years = 14 }
+				has_status = seros_unrest
+				has_offmap_flag = seros_had_unrest
+				had_offmap_tmp_flag = { flag = seros_had_unrest years = 14 }
 			}
 		}
 		modifier = {
 			factor = 1.5
 			FROM = {
-				has_status = zakhara_unrest
-				has_offmap_flag = zakhara_had_unrest
-				had_offmap_tmp_flag = { flag = zakhara_had_unrest years = 16 }
+				has_status = seros_unrest
+				has_offmap_flag = seros_had_unrest
+				had_offmap_tmp_flag = { flag = seros_had_unrest years = 16 }
 			}
 		}
 		modifier = { # Famines last for at least 4 years
 			factor = 0
 			FROM = {
-				has_status = zakhara_famine
-				has_offmap_flag = zakhara_had_famine
+				has_status = seros_famine
+				has_offmap_flag = seros_had_famine
 				NOT = {
-					had_offmap_tmp_flag = { flag = zakhara_had_famine years = 4 }
+					had_offmap_tmp_flag = { flag = seros_had_famine years = 4 }
 				}
 			}
 		}
 		modifier = { # Plagues last for at least 2 years
 			factor = 0
 			FROM = {
-				has_status = zakhara_plague
-				has_offmap_flag = zakhara_had_plague
+				has_status = seros_plague
+				has_offmap_flag = seros_had_plague
 				NOT = {
-					had_offmap_tmp_flag = { flag = zakhara_had_plague years = 2 }
+					had_offmap_tmp_flag = { flag = seros_had_plague years = 2 }
 				}
 			}
 		}
 		modifier = {
 			factor = 1.25
 			FROM = {
-				has_status = zakhara_famine
-				has_offmap_flag = zakhara_had_famine
-				had_offmap_tmp_flag = { flag = zakhara_had_famine years = 6 }
+				has_status = seros_famine
+				has_offmap_flag = seros_had_famine
+				had_offmap_tmp_flag = { flag = seros_had_famine years = 6 }
 			}
 		}
 		modifier = {
 			factor = 1.25
 			FROM = {
-				has_status = zakhara_plague
-				has_offmap_flag = zakhara_had_plague
-				had_offmap_tmp_flag = { flag = zakhara_had_plague years = 3 }
+				has_status = seros_plague
+				has_offmap_flag = seros_had_plague
+				had_offmap_tmp_flag = { flag = seros_had_plague years = 3 }
 			}
 		}
 		modifier = {
 			factor = 1.5
 			FROM = {
-				has_status = zakhara_famine
-				has_offmap_flag = zakhara_had_famine
-				had_offmap_tmp_flag = { flag = zakhara_had_famine years = 8 }
+				has_status = seros_famine
+				has_offmap_flag = seros_had_famine
+				had_offmap_tmp_flag = { flag = seros_had_famine years = 8 }
 			}
 		}
 		modifier = {
 			factor = 1.5
 			FROM = {
-				has_status = zakhara_plague
-				has_offmap_flag = zakhara_had_plague
-				had_offmap_tmp_flag = { flag = zakhara_had_plague years = 5 }
+				has_status = seros_plague
+				has_offmap_flag = seros_had_plague
+				had_offmap_tmp_flag = { flag = seros_had_plague years = 5 }
 			}
 		}
 		modifier = {
 			factor = 2
 			FROM = {
-				has_status = zakhara_famine
-				has_offmap_flag = zakhara_had_famine
-				had_offmap_tmp_flag = { flag = zakhara_had_famine years = 10 }
+				has_status = seros_famine
+				has_offmap_flag = seros_had_famine
+				had_offmap_tmp_flag = { flag = seros_had_famine years = 10 }
 			}
 		}
 		modifier = {
 			factor = 2
 			FROM = {
-				has_status = zakhara_plague
-				has_offmap_flag = zakhara_had_plague
-				had_offmap_tmp_flag = { flag = zakhara_had_plague years = 7 }
+				has_status = seros_plague
+				has_offmap_flag = seros_had_plague
+				had_offmap_tmp_flag = { flag = seros_had_plague years = 7 }
 			}
 		}
 		modifier = { # Golden ages last at least 50 years
 			factor = 0
 			FROM = {
-				has_status = zakhara_golden_age
-				has_offmap_flag = zakhara_had_golden_age
+				has_status = seros_golden_age
+				has_offmap_flag = seros_had_golden_age
 				NOT = {
-					had_offmap_tmp_flag = { flag = zakhara_had_golden_age years = 50 }
+					had_offmap_tmp_flag = { flag = seros_had_golden_age years = 50 }
 				}
 			}
 		}
 		modifier = {
 			factor = 1.25
 			FROM = {
-				has_status = zakhara_golden_age
-				has_offmap_flag = zakhara_had_golden_age
-				had_offmap_tmp_flag = { flag = zakhara_had_golden_age years = 60 }
+				has_status = seros_golden_age
+				has_offmap_flag = seros_had_golden_age
+				had_offmap_tmp_flag = { flag = seros_had_golden_age years = 60 }
 			}
 		}
 		modifier = {
 			factor = 1.5
 			FROM = {
-				has_status = zakhara_golden_age
-				has_offmap_flag = zakhara_had_golden_age
-				had_offmap_tmp_flag = { flag = zakhara_had_golden_age years = 70 }
+				has_status = seros_golden_age
+				has_offmap_flag = seros_had_golden_age
+				had_offmap_tmp_flag = { flag = seros_had_golden_age years = 70 }
 			}
 		}
 		modifier = {
 			factor = 2
 			FROM = {
-				has_status = zakhara_golden_age
-				has_offmap_flag = zakhara_had_golden_age
-				had_offmap_tmp_flag = { flag = zakhara_had_golden_age years = 80 }
+				has_status = seros_golden_age
+				has_offmap_flag = seros_had_golden_age
+				had_offmap_tmp_flag = { flag = seros_had_golden_age years = 80 }
 			}
 		}
 	}
     
 	immediate = {
 		FROM = {
-			set_status = zakhara_stable # Players will be notified by ZA.50030
+			set_status = seros_stable # Players will be notified by SE.50030
 		}
 	}
 }
@@ -735,7 +735,7 @@ character_event = {
 # Root = Governor
 # From = Offmap
 character_event = {
-	id = ZA.50120
+	id = SE.50120
 
 	has_dlc = "Jade Dragon"
 
@@ -744,12 +744,12 @@ character_event = {
 	
 	trigger = {
 		FROM = {
-			is_offmap_tag = zakhara
+			is_offmap_tag = seros
 			NOR = {
-				has_status = zakhara_unrest
-				has_status = zakhara_pantheist_invasion # Resolution handled by ZA.50160
-				has_status = zakhara_badia_invasion # Resolution handled by ZA.50200
-				has_status = zakhara_civil_war # Resolution handled by ZA.50300
+				has_status = seros_unrest
+				has_status = seros_merrow_invasion # Resolution handled by SE.50160
+				has_status = seros_sahuagin_invasion # Resolution handled by SE.50200
+				has_status = seros_civil_war # Resolution handled by SE.50300
 			}
 		}
 	}
@@ -759,105 +759,105 @@ character_event = {
 		modifier = { # Slightly less likely to get unrest if things are fine
 			factor = 0.75
 			FROM = {
-				has_status = zakhara_stable
+				has_status = seros_stable
 			}
 		}
 		modifier = { # Golden ages are very unlikely to end with Unrest
 			factor = 0.01
-			FROM = { has_status = zakhara_golden_age }
+			FROM = { has_status = seros_golden_age }
 		}
 		modifier = { # Famines last for at least 4 years
 			factor = 0
 			FROM = {
-				has_status = zakhara_famine
-				has_offmap_flag = zakhara_had_famine
+				has_status = seros_famine
+				has_offmap_flag = seros_had_famine
 				NOT = {
-					had_offmap_tmp_flag = { flag = zakhara_had_famine years = 4 }
+					had_offmap_tmp_flag = { flag = seros_had_famine years = 4 }
 				}
 			}
 		}
 		modifier = { # Plagues last for at least 2 years
 			factor = 0
 			FROM = {
-				has_status = zakhara_plague
-				has_offmap_flag = zakhara_had_plague
+				has_status = seros_plague
+				has_offmap_flag = seros_had_plague
 				NOT = {
-					had_offmap_tmp_flag = { flag = zakhara_had_plague years = 2 }
+					had_offmap_tmp_flag = { flag = seros_had_plague years = 2 }
 				}
 			}
 		}
-		modifier = { # Slightly more likely to get Unrest if non-zakhara emperor
+		modifier = { # Slightly more likely to get Unrest if non-seros emperor
 			factor = 1.25
 			FROM = {
 				NOT = {
-					culture_group = kara_turan_group
+					culture_group = fish_group
 				}
 			}
 		}
 		modifier = {
 			factor = 1.25
 			FROM = {
-				has_status = zakhara_famine
-				has_offmap_flag = zakhara_had_famine
-				had_offmap_tmp_flag = { flag = zakhara_had_famine years = 6 }
+				has_status = seros_famine
+				has_offmap_flag = seros_had_famine
+				had_offmap_tmp_flag = { flag = seros_had_famine years = 6 }
 			}
 		}
 		modifier = {
 			factor = 1.25
 			FROM = {
-				has_status = zakhara_plague
-				has_offmap_flag = zakhara_had_plague
-				had_offmap_tmp_flag = { flag = zakhara_had_plague years = 3 }
+				has_status = seros_plague
+				has_offmap_flag = seros_had_plague
+				had_offmap_tmp_flag = { flag = seros_had_plague years = 3 }
 			}
 		}
 		modifier = {
 			factor = 1.5
 			FROM = {
-				has_status = zakhara_famine
-				has_offmap_flag = zakhara_had_famine
-				had_offmap_tmp_flag = { flag = zakhara_had_famine years = 8 }
+				has_status = seros_famine
+				has_offmap_flag = seros_had_famine
+				had_offmap_tmp_flag = { flag = seros_had_famine years = 8 }
 			}
 		}
 		modifier = {
 			factor = 1.5
 			FROM = {
-				has_status = zakhara_plague
-				has_offmap_flag = zakhara_had_plague
-				had_offmap_tmp_flag = { flag = zakhara_had_plague years = 5 }
+				has_status = seros_plague
+				has_offmap_flag = seros_had_plague
+				had_offmap_tmp_flag = { flag = seros_had_plague years = 5 }
 			}
 		}
 		modifier = {
 			factor = 2
 			FROM = {
-				has_status = zakhara_famine
-				has_offmap_flag = zakhara_had_famine
-				had_offmap_tmp_flag = { flag = zakhara_had_famine years = 10 }
+				has_status = seros_famine
+				has_offmap_flag = seros_had_famine
+				had_offmap_tmp_flag = { flag = seros_had_famine years = 10 }
 			}
 		}
 		modifier = {
 			factor = 2
 			FROM = {
-				has_status = zakhara_plague
-				has_offmap_flag = zakhara_had_plague
-				had_offmap_tmp_flag = { flag = zakhara_had_plague years = 7 }
+				has_status = seros_plague
+				has_offmap_flag = seros_had_plague
+				had_offmap_tmp_flag = { flag = seros_had_plague years = 7 }
 			}
 		}
 	}
 	
 	immediate = {
 		FROM = {
-			set_offmap_flag = zakhara_had_unrest
-			set_status = zakhara_unrest # Players will be notified by ZA.50030
+			set_offmap_flag = seros_had_unrest
+			set_status = seros_unrest # Players will be notified by SE.50030
 		}
 	}
 }
 
-# Status changes to 'Tuigan Invasion'
+# Status changes to 'Merrow Invasion'
 # Hidden. Fired from on_offmap_yearly_pulse.
 # Root = Governor
 # From = Offmap
 character_event = {
-	id = ZA.50140
+	id = SE.50140
 
 	has_dlc = "Jade Dragon"
 
@@ -866,15 +866,15 @@ character_event = {
 	
 	trigger = {
 		FROM = {
-			is_offmap_tag = zakhara
+			is_offmap_tag = seros
 			NOR = {
-				has_status = zakhara_pantheist_invasion # Resolution handled by ZA.50160
-				has_status = zakhara_badia_invasion # Resolution handled by ZA.50200
-				has_status = zakhara_civil_war # Resolution handled by ZA.50300
+				has_status = seros_merrow_invasion # Resolution handled by SE.50160
+				has_status = seros_sahuagin_invasion # Resolution handled by SE.50200
+				has_status = seros_civil_war # Resolution handled by SE.50300
 			}
 			OR = {
-				NOT = { has_offmap_flag = zakhara_invaded_player_dynasty }
-				had_offmap_tmp_flag = { flag = zakhara_invaded_player_dynasty years = 200 }
+				NOT = { has_offmap_flag = seros_invaded_player_dynasty }
+				had_offmap_tmp_flag = { flag = seros_invaded_player_dynasty years = 200 }
 			}
 		}
 	}
@@ -884,132 +884,132 @@ character_event = {
 		modifier = { # Unrest increases the chance of an invasion
 			factor = 3
 			FROM = {
-				has_status = zakhara_unrest
-				has_offmap_flag = zakhara_had_unrest
-				had_offmap_tmp_flag = { flag = zakhara_had_unrest years = 2 }
+				has_status = seros_unrest
+				has_offmap_flag = seros_had_unrest
+				had_offmap_tmp_flag = { flag = seros_had_unrest years = 2 }
 			}
 		}
 		modifier = {
 			factor = 1.5
 			FROM = {
-				has_status = zakhara_unrest
-				has_offmap_flag = zakhara_had_unrest
-				had_offmap_tmp_flag = { flag = zakhara_had_unrest years = 4 }
+				has_status = seros_unrest
+				has_offmap_flag = seros_had_unrest
+				had_offmap_tmp_flag = { flag = seros_had_unrest years = 4 }
 			}
 		}
 		modifier = {
 			factor = 1.5
 			FROM = {
-				has_status = zakhara_unrest
-				has_offmap_flag = zakhara_had_unrest
-				had_offmap_tmp_flag = { flag = zakhara_had_unrest years = 6 }
+				has_status = seros_unrest
+				has_offmap_flag = seros_had_unrest
+				had_offmap_tmp_flag = { flag = seros_had_unrest years = 6 }
 			}
 		}
 		modifier = { # Famines last for at least 4 years
 			factor = 0
 			FROM = {
-				has_status = zakhara_famine
-				has_offmap_flag = zakhara_had_famine
+				has_status = seros_famine
+				has_offmap_flag = seros_had_famine
 				NOT = {
-					had_offmap_tmp_flag = { flag = zakhara_had_famine years = 4 }
+					had_offmap_tmp_flag = { flag = seros_had_famine years = 4 }
 				}
 			}
 		}
 		modifier = { # Plagues last for at least 2 years
 			factor = 0
 			FROM = {
-				has_status = zakhara_plague
-				has_offmap_flag = zakhara_had_plague
+				has_status = seros_plague
+				has_offmap_flag = seros_had_plague
 				NOT = {
-					had_offmap_tmp_flag = { flag = zakhara_had_plague years = 2 }
+					had_offmap_tmp_flag = { flag = seros_had_plague years = 2 }
 				}
 			}
 		}
 		modifier = {
 			factor = 1.25
 			FROM = {
-				has_status = zakhara_famine
-				has_offmap_flag = zakhara_had_famine
-				had_offmap_tmp_flag = { flag = zakhara_had_famine years = 6 }
+				has_status = seros_famine
+				has_offmap_flag = seros_had_famine
+				had_offmap_tmp_flag = { flag = seros_had_famine years = 6 }
 			}
 		}
 		modifier = {
 			factor = 1.25
 			FROM = {
-				has_status = zakhara_plague
-				has_offmap_flag = zakhara_had_plague
-				had_offmap_tmp_flag = { flag = zakhara_had_plague years = 3 }
+				has_status = seros_plague
+				has_offmap_flag = seros_had_plague
+				had_offmap_tmp_flag = { flag = seros_had_plague years = 3 }
 			}
 		}
 		modifier = {
 			factor = 1.5
 			FROM = {
-				has_status = zakhara_famine
-				has_offmap_flag = zakhara_had_famine
-				had_offmap_tmp_flag = { flag = zakhara_had_famine years = 8 }
+				has_status = seros_famine
+				has_offmap_flag = seros_had_famine
+				had_offmap_tmp_flag = { flag = seros_had_famine years = 8 }
 			}
 		}
 		modifier = {
 			factor = 1.5
 			FROM = {
-				has_status = zakhara_plague
-				has_offmap_flag = zakhara_had_plague
-				had_offmap_tmp_flag = { flag = zakhara_had_plague years = 5 }
+				has_status = seros_plague
+				has_offmap_flag = seros_had_plague
+				had_offmap_tmp_flag = { flag = seros_had_plague years = 5 }
 			}
 		}
 		modifier = {
 			factor = 2
 			FROM = {
-				has_status = zakhara_famine
-				has_offmap_flag = zakhara_had_famine
-				had_offmap_tmp_flag = { flag = zakhara_had_famine years = 10 }
+				has_status = seros_famine
+				has_offmap_flag = seros_had_famine
+				had_offmap_tmp_flag = { flag = seros_had_famine years = 10 }
 			}
 		}
 		modifier = {
 			factor = 2
 			FROM = {
-				has_status = zakhara_plague
-				has_offmap_flag = zakhara_had_plague
-				had_offmap_tmp_flag = { flag = zakhara_had_plague years = 7 }
+				has_status = seros_plague
+				has_offmap_flag = seros_had_plague
+				had_offmap_tmp_flag = { flag = seros_had_plague years = 7 }
 			}
 		}
 		modifier = {
 			factor = 0
 			FROM = {
 				offmap_ruler = {
-					culture = hadhar
+					culture = merrow
 				}
 			}
 		}
 		modifier = {
 			factor = 0.3
 			NOT = { 
-				has_global_flag = pantheist_empire_arrival
+				has_global_flag = merrow_empire_arrival
 			}
 		}
 		modifier = {
 			factor = 0.5
-			FROM = { has_status = zakhara_golden_age }
+			FROM = { has_status = seros_golden_age }
 		}
 		modifier = {
 			factor = 0.5
-			FROM = { has_offmap_flag = zakhara_pantheist_won_1 }
+			FROM = { has_offmap_flag = seros_merrow_won_1 }
 		}
 		modifier = {
 			factor = 0.25
-			FROM = { has_offmap_flag = zakhara_pantheist_won_2 }
+			FROM = { has_offmap_flag = seros_merrow_won_2 }
 		}
 		modifier = {
 			factor = 0.1
-			FROM = { has_offmap_flag = zakhara_pantheist_won_3 }
+			FROM = { has_offmap_flag = seros_merrow_won_3 }
 		}
 	}
 	
 	immediate = {
 		FROM = {
 			set_offmap_flag = no_status_news
-			set_status = zakhara_pantheist_invasion
-			set_offmap_flag = zakhara_pantheist_invasion
+			set_status = seros_merrow_invasion
+			set_offmap_flag = seros_merrow_invasion
 			clr_offmap_flag = no_status_news
 		}
 		any_player = {
@@ -1017,17 +1017,17 @@ character_event = {
 				has_offmap_news_enabled = FROM
 				is_within_diplo_range = ROOT
 			}
-			narrative_event = { id = ZA.50141 }
+			narrative_event = { id = SE.50141 }
 		}
 	}
 }
 
-# News from zakhara: Tuigan Invasion
+# News from seros: Merrow Invasion
 narrative_event = {
-	id = ZA.50141
-	title = NEWS_FROM_zakhara
+	id = SE.50141
+	title = NEWS_FROM_seros
 	picture = GFX_evt_mongols
-	portrait = zakhara
+	portrait = seros
 	window = EventWindowOffmap
 	background = GFX_event_window_news_from_china
 
@@ -1035,34 +1035,34 @@ narrative_event = {
 		trigger = {
 			FROMFROM = {
 				OR = {
-					prev_status = zakhara_famine
-					prev_status = zakhara_unrest
-					prev_status = zakhara_plague
+					prev_status = seros_famine
+					prev_status = seros_unrest
+					prev_status = seros_plague
 				}
 			}
 		}
-		text = EVTDESC_ZA_50141_BOOST
+		text = EVTDESC_SE_50141_BOOST
 	}
 	desc = {
 		trigger = {
 			FROMFROM = {
-				prev_status = zakhara_golden_age
+				prev_status = seros_golden_age
 			}
 		}
-		text = EVTDESC_ZA_50141_PENALTY
+		text = EVTDESC_SE_50141_PENALTY
 	}
 	desc = {
 		trigger = {
 			FROMFROM = {
 				NOR = {
-					prev_status = zakhara_famine
-					prev_status = zakhara_unrest
-					prev_status = zakhara_plague
-					prev_status = zakhara_golden_age
+					prev_status = seros_famine
+					prev_status = seros_unrest
+					prev_status = seros_plague
+					prev_status = seros_golden_age
 				}
 			}
 		}
-		text = EVTDESC_ZA_50031_tuigan # Can be the same as the standard status change notification
+		text = EVTDESC_SE_50031_tuigan # Can be the same as the standard status change notification
 	}
 
 	has_dlc = "Jade Dragon"
@@ -1070,7 +1070,7 @@ narrative_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		zakhara = {
+		seros = {
 			ruler = {
 				save_event_target_as = portrait_target
 			}
@@ -1081,16 +1081,16 @@ narrative_event = {
 	
 	
 	option = {
-		name = EVTOPT_ZA_50141
+		name = EVTOPT_SE_50141
 	}
 }
 
-# Chance for an end to the 'Tuigan Invasion' Status
+# Chance for an end to the 'Merrow Invasion' Status
 # Hidden. Fired from on_offmap_yearly_pulse
 # Root = Governor
 # From = Offmap
 character_event = {
-	id = ZA.50160
+	id = SE.50160
 
 	has_dlc = "Jade Dragon"
 
@@ -1099,8 +1099,8 @@ character_event = {
 	
 	trigger = {
 		FROM = {
-			is_offmap_tag = zakhara
-			has_status = zakhara_pantheist_invasion
+			is_offmap_tag = seros
+			has_status = seros_merrow_invasion
 		}
 	}
 	
@@ -1108,50 +1108,50 @@ character_event = {
 		factor = 1
 		modifier = {
 			factor = 2
-			FROM = { had_offmap_tmp_flag = { flag = zakhara_pantheist_invasion years = 2 } }
+			FROM = { had_offmap_tmp_flag = { flag = seros_merrow_invasion years = 2 } }
 		}
 		modifier = {
 			factor = 2
-			FROM = { had_offmap_tmp_flag = { flag = zakhara_pantheist_invasion years = 4 } }
+			FROM = { had_offmap_tmp_flag = { flag = seros_merrow_invasion years = 4 } }
 		}
 		modifier = {
 			factor = 2
-			FROM = { had_offmap_tmp_flag = { flag = zakhara_pantheist_invasion years = 8 } }
+			FROM = { had_offmap_tmp_flag = { flag = seros_merrow_invasion years = 8 } }
 		}
 		modifier = {
 			factor = 5
-			FROM = { had_offmap_tmp_flag = { flag = zakhara_pantheist_invasion years = 10 } }
+			FROM = { had_offmap_tmp_flag = { flag = seros_merrow_invasion years = 10 } }
 		}
 	}
 	
 	immediate = {
 		random_list = {
-			100 = { # zakhara won!
+			100 = { # seros won!
 				modifier = {
 					factor = 3
 					FROM = {
-						prev_status = zakhara_golden_age
+						prev_status = seros_golden_age
 					}
 				}
 				
 				FROM = {
 					set_offmap_flag = no_status_news
-					set_status = zakhara_stable
+					set_status = seros_stable
 					clr_offmap_flag = no_status_news
 					
 					if = {
-						limit = { has_offmap_flag = zakhara_badly_beaten_1 }
-						clr_offmap_flag = zakhara_badly_beaten_1
+						limit = { has_offmap_flag = seros_badly_beaten_1 }
+						clr_offmap_flag = seros_badly_beaten_1
 					}
 					if = {
-						limit = { has_offmap_flag = zakhara_badly_beaten_2 }
-						clr_offmap_flag = zakhara_badly_beaten_2
-						set_offmap_flag = zakhara_badly_beaten_1
+						limit = { has_offmap_flag = seros_badly_beaten_2 }
+						clr_offmap_flag = seros_badly_beaten_2
+						set_offmap_flag = seros_badly_beaten_1
 					}
 					if = {
-						limit = { has_offmap_flag = zakhara_badly_beaten_3 }
-						clr_offmap_flag = zakhara_badly_beaten_3
-						set_offmap_flag = zakhara_badly_beaten_2
+						limit = { has_offmap_flag = seros_badly_beaten_3 }
+						clr_offmap_flag = seros_badly_beaten_3
+						set_offmap_flag = seros_badly_beaten_2
 					}
 				}
 				
@@ -1160,7 +1160,7 @@ character_event = {
 						has_offmap_news_enabled = FROM
 						is_within_diplo_range = ROOT
 					}
-					narrative_event = { id = ZA.50161 }
+					narrative_event = { id = SE.50161 }
 				}
 			}
 			100 = { # Tuigan won!
@@ -1168,55 +1168,55 @@ character_event = {
 					factor = 3
 					FROM = {
 						OR = {
-							prev_status = zakhara_unrest
-							prev_status = zakhara_famine
-							prev_status = zakhara_plague
+							prev_status = seros_unrest
+							prev_status = seros_famine
+							prev_status = seros_plague
 						}
 					}
 				}
 				
 				FROM = {
 					set_offmap_flag = no_status_news
-					set_status = zakhara_unrest
-					set_offmap_flag = zakhara_had_unrest
+					set_status = seros_unrest
+					set_offmap_flag = seros_had_unrest
 					clr_offmap_flag = no_status_news
 				
-					set_offmap_flag = zakhara_expansionist_trend # Likely for the new ruler to pick Expansionist policy
-					clr_offmap_flag = zakhara_badly_beaten_3
-					clr_offmap_flag = zakhara_badly_beaten_2
-					clr_offmap_flag = zakhara_badly_beaten_1
+					set_offmap_flag = seros_expansionist_trend # Likely for the new ruler to pick Expansionist policy
+					clr_offmap_flag = seros_badly_beaten_3
+					clr_offmap_flag = seros_badly_beaten_2
+					clr_offmap_flag = seros_badly_beaten_1
 					
 					if = {
 						limit = {
-							has_offmap_flag = zakhara_pantheist_won_2
+							has_offmap_flag = seros_merrow_won_2
 						}
-						set_offmap_flag = zakhara_pantheist_won_3
-						clr_offmap_flag = zakhara_pantheist_won_2
+						set_offmap_flag = seros_merrow_won_3
+						clr_offmap_flag = seros_merrow_won_2
 					}
 					
 					if = {
 						limit = {
-							has_offmap_flag = zakhara_pantheist_won_1
+							has_offmap_flag = seros_merrow_won_1
 						}
-						set_offmap_flag = zakhara_pantheist_won_2
-						clr_offmap_flag = zakhara_pantheist_won_1
+						set_offmap_flag = seros_merrow_won_2
+						clr_offmap_flag = seros_merrow_won_1
 					}
 					
 					if = {
 						limit = {
 							NOR = {
-								has_offmap_flag = zakhara_pantheist_won_1
-								has_offmap_flag = zakhara_pantheist_won_2
-								has_offmap_flag = zakhara_pantheist_won_3
+								has_offmap_flag = seros_merrow_won_1
+								has_offmap_flag = seros_merrow_won_2
+								has_offmap_flag = seros_merrow_won_3
 							}
 						}
-						set_offmap_flag = zakhara_pantheist_won_1
+						set_offmap_flag = seros_merrow_won_1
 					}
 					
 					set_offmap_flag = no_succession_news
 				}
 				
-				# A new ruler ascends to the Dragon Throne. The fallout is handled by ZA.10005 and ZA.50000 (from 'on_offmap_ruler_changed')
+				# A new ruler ascends to the Dragon Throne. The fallout is handled by SE.10005 and SE.50000 (from 'on_offmap_ruler_changed')
 				random_list = {
 					100 = {
 						modifier = {
@@ -1237,8 +1237,8 @@ character_event = {
 										age = 35
 										random_traits = yes
 										female = yes
-										religion = pantheist_league # A bit strange, but necessary
-										culture = hadhar
+										religion = vaprak # A bit strange, but necessary
+										culture = merrow
 										dynasty = actually_culture
 										trait = brilliant_strategist
 										martial = 10
@@ -1249,8 +1249,8 @@ character_event = {
 										age = 35
 										random_traits = yes
 										female = no
-										religion = pantheist_league # A bit strange, but necessary
-										culture = hadhar
+										religion = vaprak # A bit strange, but necessary
+										culture = merrow
 										dynasty = actually_culture
 										trait = brilliant_strategist
 										martial = 10
@@ -1267,10 +1267,10 @@ character_event = {
 									dynasty = THIS
 								}
 								new_character = {
-									death = { death_reason = death_in_zakhara_historic }
-									save_event_target_as = new_zakhara_ruler_father
+									death = { death_reason = death_in_seros_historic }
+									save_event_target_as = new_seros_ruler_father
 								}
-								set_father = event_target:new_zakhara_ruler_father
+								set_father = event_target:new_seros_ruler_father
 								FROM = {
 									set_offmap_holder = PREV
 								}
@@ -1279,16 +1279,16 @@ character_event = {
 									
 									}
 									10 = {
-										religion = pantheist_league
+										religion = vaprak
 									}
 									10 = {
-										religion = qisma
+										religion = giant_pantheon
 									}
 									5 = {
-										religion = calishite_faith
+										religion = karontor
 									}
 									5 = {
-										religion = muhjari
+										religion = ulutiuan
 									}
 								}
 							}
@@ -1301,7 +1301,7 @@ character_event = {
 						}
 						modifier = {
 							factor = 0
-							event_target:pantheist_zakhara_invader = {
+							event_target:merrow_seros_invader = {
 								is_alive = yes
 							}
 						}
@@ -1318,8 +1318,8 @@ character_event = {
 									age = 35
 									random_traits = yes
 									female = yes
-									religion = pantheist_league # A bit strange, but necessary
-									culture = hadhar
+									religion = vaprak # A bit strange, but necessary
+									culture = merrow
 									dynasty = actually_culture
 									trait = brilliant_strategist
 									martial = 10
@@ -1330,8 +1330,8 @@ character_event = {
 									age = 35
 									random_traits = yes
 									female = no
-									religion = pantheist_league # A bit strange, but necessary
-									culture = hadhar
+									religion = vaprak # A bit strange, but necessary
+									culture = merrow
 									dynasty = actually_culture
 									trait = brilliant_strategist
 									martial = 10
@@ -1348,10 +1348,10 @@ character_event = {
 								dynasty = THIS
 							}
 							new_character = {
-								death = { death_reason = death_in_zakhara_historic }
-								save_event_target_as = new_zakhara_ruler_father
+								death = { death_reason = death_in_seros_historic }
+								save_event_target_as = new_seros_ruler_father
 							}
-							set_father = event_target:new_zakhara_ruler_father
+							set_father = event_target:new_seros_ruler_father
 							FROM = {
 								set_offmap_holder = PREV
 							}
@@ -1360,16 +1360,16 @@ character_event = {
 								
 								}
 								10 = {
-									religion = pantheist_league
+									religion = vaprak
 								}
 								10 = {
-									religion = qisma
+									religion = giant_pantheon
 								}
 								5 = {
-									religion = calishite_faith
+									religion = karontor
 								}
 								5 = {
-									religion = muhjari
+									religion = ulutiuan
 								}
 							}
 						}
@@ -1377,7 +1377,7 @@ character_event = {
 					25 = {
 						modifier = {
 							factor = 0
-							event_target:pantheist_zakhara_invader = {
+							event_target:merrow_seros_invader = {
 								is_alive = yes
 							}
 						}
@@ -1394,8 +1394,8 @@ character_event = {
 									age = 35
 									random_traits = yes
 									female = yes
-									religion = pantheist_league # A bit strange, but necessary
-									culture = hadhar
+									religion = vaprak # A bit strange, but necessary
+									culture = merrow
 									dynasty = actually_culture
 									trait = brilliant_strategist
 									martial = 10
@@ -1406,8 +1406,8 @@ character_event = {
 									age = 35
 									random_traits = yes
 									female = no
-									religion = pantheist_league # A bit strange, but necessary
-									culture = hadhar
+									religion = vaprak # A bit strange, but necessary
+									culture = merrow
 									dynasty = actually_culture
 									trait = brilliant_strategist
 									martial = 10
@@ -1424,10 +1424,10 @@ character_event = {
 								dynasty = THIS
 							}
 							new_character = {
-								death = { death_reason = death_in_zakhara_historic }
-								save_event_target_as = new_zakhara_ruler_father
+								death = { death_reason = death_in_seros_historic }
+								save_event_target_as = new_seros_ruler_father
 							}
-							set_father = event_target:new_zakhara_ruler_father
+							set_father = event_target:new_seros_ruler_father
 							FROM = {
 								set_offmap_holder = PREV
 							}
@@ -1436,16 +1436,16 @@ character_event = {
 								
 								}
 								10 = {
-									religion = pantheist_league
+									religion = vaprak
 								}
 								10 = {
-									religion = qisma
+									religion = giant_pantheon
 								}
 								5 = {
-									religion = calishite_faith
+									religion = karontor
 								}
 								5 = {
-									religion = muhjari
+									religion = ulutiuan
 								}
 							}
 						}
@@ -1453,7 +1453,7 @@ character_event = {
 					25 = {
 						modifier = {
 							factor = 0
-							event_target:pantheist_zakhara_invader = {
+							event_target:merrow_seros_invader = {
 								is_alive = yes
 							}
 						}
@@ -1470,8 +1470,8 @@ character_event = {
 									age = 35
 									random_traits = yes
 									female = yes
-									religion = pantheist_league # A bit strange, but necessary
-									culture = hadhar
+									religion = vaprak # A bit strange, but necessary
+									culture = merrow
 									dynasty = actually_culture
 									trait = brilliant_strategist
 									martial = 10
@@ -1482,8 +1482,8 @@ character_event = {
 									age = 35
 									random_traits = yes
 									female = no
-									religion = pantheist_league # A bit strange, but necessary
-									culture = hadhar
+									religion = vaprak # A bit strange, but necessary
+									culture = merrow
 									dynasty = actually_culture
 									trait = brilliant_strategist
 									martial = 10
@@ -1500,10 +1500,10 @@ character_event = {
 								dynasty = THIS
 							}
 							new_character = {
-								death = { death_reason = death_in_zakhara_historic }
-								save_event_target_as = new_zakhara_ruler_father
+								death = { death_reason = death_in_seros_historic }
+								save_event_target_as = new_seros_ruler_father
 							}
-							set_father = event_target:new_zakhara_ruler_father
+							set_father = event_target:new_seros_ruler_father
 							FROM = {
 								set_offmap_holder = PREV
 							}
@@ -1512,16 +1512,16 @@ character_event = {
 								
 								}
 								10 = {
-									religion = pantheist_league
+									religion = vaprak
 								}
 								10 = {
-									religion = qisma
+									religion = giant_pantheon
 								}
 								5 = {
-									religion = calishite_faith
+									religion = karontor
 								}
 								5 = {
-									religion = muhjari
+									religion = ulutiuan
 								}
 							}
 						}
@@ -1533,7 +1533,7 @@ character_event = {
 						has_offmap_news_enabled = FROM
 						is_within_diplo_range = ROOT
 					}
-					narrative_event = { id = ZA.50162 }
+					narrative_event = { id = SE.50162 }
 				}
 
 				random_list = {
@@ -1541,27 +1541,27 @@ character_event = {
 						modifier = {
 							factor = 0
 							has_game_rule = {
-								name = zakhara_invasions
+								name = seros_invasions
 								value = none
 							}
 						}
-						character_event = { id = ZA.10113 days = 15 } #Spawns a Displaced Prince adventurer...
+						character_event = { id = SE.10113 days = 15 } #Spawns a Displaced Prince adventurer...
 						set_character_flag = spawning_a_displaced_royal
-						log = "zakhara Logging:"
-						log = "Attempting to spawn a Displaced Prince, as aftermath to event ZA.50160 (end of Being Invaded by tu_lungs). Character should spawn in 15 days."
+						log = "seros Logging:"
+						log = "Attempting to spawn a Displaced Prince, as aftermath to event SE.50160 (end of Being Invaded by sahuagins). Character should spawn in 15 days."
 					}
 					50 = {
 						modifier = {
 							factor = 0
 							has_game_rule = {
-								name = zakhara_invasions
+								name = seros_invasions
 								value = none
 							}
 						}
-						character_event = { id =  ZA.10109 days = 15 } #Spawns a tuigan tribe leader...
-						set_character_flag = spawning_a_tuigan_invader
-						log = "zakhara Logging:"
-						log = "Attempting to spawn a tuigan Invader, as aftermath to event ZA.50160 (end of Being Invaded by tu_lungs). Character should spawn in 15 days."
+						character_event = { id =  SE.10109 days = 15 } #Spawns a tuigan tribe leader...
+						set_character_flag = spawning_a_merrow_invader
+						log = "seros Logging:"
+						log = "Attempting to spawn a merrow Invader, as aftermath to event SE.50160 (end of Being Invaded by sahuagins). Character should spawn in 15 days."
 					}
 				}
 			}
@@ -1569,13 +1569,13 @@ character_event = {
 	}
 }
 
-# News from zakhara: tu_lung Invasion Fails
+# News from seros: sahuagin Invasion Fails
 narrative_event = {
-	id = ZA.50161
-	title = NEWS_FROM_zakhara
+	id = SE.50161
+	title = NEWS_FROM_seros
 	picture = GFX_evt_china_mongols_invade
-	portrait = zakhara
-	desc = EVTDESC_ZA_50161
+	portrait = seros
+	desc = EVTDESC_SE_50161
 	window = EventWindowOffmap
 	background = GFX_event_window_news_from_china
 
@@ -1584,7 +1584,7 @@ narrative_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		zakhara = {
+		seros = {
 			ruler = {
 				save_event_target_as = portrait_target
 			}
@@ -1595,17 +1595,17 @@ narrative_event = {
 	
 	
 	option = {
-		name = EVTOPT_ZA_50161
+		name = EVTOPT_SE_50161
 	}
 }
 
-# News from zakhara: tu_lung Invasion Succeeds
+# News from seros: sahuagin Invasion Succeeds
 narrative_event = {
-	id = ZA.50162
-	title = NEWS_FROM_zakhara
+	id = SE.50162
+	title = NEWS_FROM_seros
 	picture = GFX_evt_tengri_throneroom_oldgods
-	portrait = zakhara
-	desc = EVTDESC_ZA_50162
+	portrait = seros
+	desc = EVTDESC_SE_50162
 	window = EventWindowOffmap
 	background = GFX_event_window_news_from_china
 
@@ -1614,7 +1614,7 @@ narrative_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		zakhara = {
+		seros = {
 			ruler = {
 				save_event_target_as = portrait_target
 			}
@@ -1626,27 +1626,27 @@ narrative_event = {
 	
 	option = {
 		trigger = {
-			NOT = { has_character_modifier = peace_deal_with_zakhara }
+			NOT = { has_character_modifier = peace_deal_with_seros }
 		}
-		name = EVTOPT_ZA_50162
+		name = EVTOPT_SE_50162
 	}
 	
 	option = {
 		trigger = {
-			has_character_modifier = peace_deal_with_zakhara
+			has_character_modifier = peace_deal_with_seros
 		}
-		name = EVTOPT_ZA_50302_BROKEN_PEACE_DEAL
+		name = EVTOPT_SE_50302_BROKEN_PEACE_DEAL
 		
-		remove_character_modifier = peace_deal_with_zakhara
+		remove_character_modifier = peace_deal_with_seros
 	}
 }
 
-# Status changes to 'Tu Lung Invasion'
+# Status changes to 'Sahuagin Invasion'
 # Hidden. Fired from on_offmap_yearly_pulse.
 # Root = Governor
 # From = Offmap
 character_event = {
-	id = ZA.50180
+	id = SE.50180
 
 	has_dlc = "Jade Dragon"
 
@@ -1655,15 +1655,15 @@ character_event = {
 	
 	trigger = {
 		FROM = {
-			is_offmap_tag = zakhara
+			is_offmap_tag = seros
 			NOR = {
-				has_status = zakhara_pantheist_invasion # Resolution handled by ZA.50160
-				has_status = zakhara_badia_invasion # Resolution handled by ZA.50200
-				has_status = zakhara_civil_war # Resolution handled by ZA.50300
+				has_status = seros_merrow_invasion # Resolution handled by SE.50160
+				has_status = seros_sahuagin_invasion # Resolution handled by SE.50200
+				has_status = seros_civil_war # Resolution handled by SE.50300
 			}
 			OR = {
-				NOT = { has_offmap_flag = zakhara_invaded_player_dynasty }
-				had_offmap_tmp_flag = { flag = zakhara_invaded_player_dynasty years = 200 }
+				NOT = { has_offmap_flag = seros_invaded_player_dynasty }
+				had_offmap_tmp_flag = { flag = seros_invaded_player_dynasty years = 200 }
 			}
 		}
 	}
@@ -1673,126 +1673,126 @@ character_event = {
 		modifier = { # Unrest increases the chance of an invasion
 			factor = 3
 			FROM = {
-				has_status = zakhara_unrest
-				has_offmap_flag = zakhara_had_unrest
-				had_offmap_tmp_flag = { flag = zakhara_had_unrest years = 2 }
+				has_status = seros_unrest
+				has_offmap_flag = seros_had_unrest
+				had_offmap_tmp_flag = { flag = seros_had_unrest years = 2 }
 			}
 		}
 		modifier = {
 			factor = 1.5
 			FROM = {
-				has_status = zakhara_unrest
-				has_offmap_flag = zakhara_had_unrest
-				had_offmap_tmp_flag = { flag = zakhara_had_unrest years = 4 }
+				has_status = seros_unrest
+				has_offmap_flag = seros_had_unrest
+				had_offmap_tmp_flag = { flag = seros_had_unrest years = 4 }
 			}
 		}
 		modifier = {
 			factor = 1.5
 			FROM = {
-				has_status = zakhara_unrest
-				has_offmap_flag = zakhara_had_unrest
-				had_offmap_tmp_flag = { flag = zakhara_had_unrest years = 6 }
+				has_status = seros_unrest
+				has_offmap_flag = seros_had_unrest
+				had_offmap_tmp_flag = { flag = seros_had_unrest years = 6 }
 			}
 		}
 		modifier = { # Famines last for at least 4 years
 			factor = 0
 			FROM = {
-				has_status = zakhara_famine
-				has_offmap_flag = zakhara_had_famine
+				has_status = seros_famine
+				has_offmap_flag = seros_had_famine
 				NOT = {
-					had_offmap_tmp_flag = { flag = zakhara_had_famine years = 2 }
+					had_offmap_tmp_flag = { flag = seros_had_famine years = 2 }
 				}
 			}
 		}
 		modifier = { # Plagues last for at least 2 years
 			factor = 0
 			FROM = {
-				has_status = zakhara_plague
-				has_offmap_flag = zakhara_had_plague
+				has_status = seros_plague
+				has_offmap_flag = seros_had_plague
 				NOT = {
-					had_offmap_tmp_flag = { flag = zakhara_had_plague years = 2 }
+					had_offmap_tmp_flag = { flag = seros_had_plague years = 2 }
 				}
 			}
 		}
 		modifier = {
 			factor = 1.25
 			FROM = {
-				has_status = zakhara_famine
-				has_offmap_flag = zakhara_had_famine
-				had_offmap_tmp_flag = { flag = zakhara_had_famine years = 6 }
+				has_status = seros_famine
+				has_offmap_flag = seros_had_famine
+				had_offmap_tmp_flag = { flag = seros_had_famine years = 6 }
 			}
 		}
 		modifier = {
 			factor = 1.25
 			FROM = {
-				has_status = zakhara_plague
-				has_offmap_flag = zakhara_had_plague
-				had_offmap_tmp_flag = { flag = zakhara_had_plague years = 3 }
+				has_status = seros_plague
+				has_offmap_flag = seros_had_plague
+				had_offmap_tmp_flag = { flag = seros_had_plague years = 3 }
 			}
 		}
 		modifier = {
 			factor = 1.5
 			FROM = {
-				has_status = zakhara_famine
-				has_offmap_flag = zakhara_had_famine
-				had_offmap_tmp_flag = { flag = zakhara_had_famine years = 8 }
+				has_status = seros_famine
+				has_offmap_flag = seros_had_famine
+				had_offmap_tmp_flag = { flag = seros_had_famine years = 8 }
 			}
 		}
 		modifier = {
 			factor = 1.5
 			FROM = {
-				has_status = zakhara_plague
-				has_offmap_flag = zakhara_had_plague
-				had_offmap_tmp_flag = { flag = zakhara_had_plague years = 5 }
+				has_status = seros_plague
+				has_offmap_flag = seros_had_plague
+				had_offmap_tmp_flag = { flag = seros_had_plague years = 5 }
 			}
 		}
 		modifier = {
 			factor = 2
 			FROM = {
-				has_status = zakhara_famine
-				has_offmap_flag = zakhara_had_famine
-				had_offmap_tmp_flag = { flag = zakhara_had_famine years = 10 }
+				has_status = seros_famine
+				has_offmap_flag = seros_had_famine
+				had_offmap_tmp_flag = { flag = seros_had_famine years = 10 }
 			}
 		}
 		modifier = {
 			factor = 2
 			FROM = {
-				has_status = zakhara_plague
-				has_offmap_flag = zakhara_had_plague
-				had_offmap_tmp_flag = { flag = zakhara_had_plague years = 7 }
+				has_status = seros_plague
+				has_offmap_flag = seros_had_plague
+				had_offmap_tmp_flag = { flag = seros_had_plague years = 7 }
 			}
 		}
 		modifier = {
 			factor = 0
 			FROM = {
 				offmap_ruler = {
-					culture = hadhar
+					culture = sahuagin
 				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			FROM = { has_status = zakhara_golden_age }
+			FROM = { has_status = seros_golden_age }
 		}
 		modifier = {
 			factor = 0.5
-			FROM = { has_offmap_flag = zakhara_badia_won_1 }
+			FROM = { has_offmap_flag = seros_sahuagin_won_1 }
 		}
 		modifier = {
 			factor = 0.25
-			FROM = { has_offmap_flag = zakhara_badia_won_2 }
+			FROM = { has_offmap_flag = seros_sahuagin_won_2 }
 		}
 		modifier = {
 			factor = 0.1
-			FROM = { has_offmap_flag = zakhara_badia_won_3 }
+			FROM = { has_offmap_flag = seros_sahuagin_won_3 }
 		}
 	}
 	
 	immediate = {
 		FROM = {
 			set_offmap_flag = no_status_news
-			set_status = zakhara_badia_invasion
-			set_offmap_flag = zakhara_badia_invasion
+			set_status = seros_sahuagin_invasion
+			set_offmap_flag = seros_sahuagin_invasion
 			clr_offmap_flag = no_status_news
 		}
 		any_player = {
@@ -1800,17 +1800,17 @@ character_event = {
 				has_offmap_news_enabled = FROM
 				is_within_diplo_range = ROOT
 			}
-			narrative_event = { id = ZA.50181 }
+			narrative_event = { id = SE.50181 }
 		}
 	}
 }
 
-# News from zakhara: Tu Lung Invasion
+# News from seros: Sahuagin Invasion
 narrative_event = {
-	id = ZA.50181
-	title = NEWS_FROM_zakhara
+	id = SE.50181
+	title = NEWS_FROM_seros
 	picture = GFX_evt_china_mongols_invade
-	portrait = zakhara
+	portrait = seros
 	window = EventWindowOffmap
 	background = GFX_event_window_news_from_china
 
@@ -1818,34 +1818,34 @@ narrative_event = {
 		trigger = {
 			FROMFROM = {
 				OR = {
-					prev_status = zakhara_famine
-					prev_status = zakhara_unrest
-					prev_status = zakhara_plague
+					prev_status = seros_famine
+					prev_status = seros_unrest
+					prev_status = seros_plague
 				}
 			}
 		}
-		text = EVTDESC_ZA_50181_BOOST
+		text = EVTDESC_SE_50181_BOOST
 	}
 	desc = {
 		trigger = {
 			FROMFROM = {
-				prev_status = zakhara_golden_age
+				prev_status = seros_golden_age
 			}
 		}
-		text = EVTDESC_ZA_50181_PENALTY
+		text = EVTDESC_SE_50181_PENALTY
 	}
 	desc = {
 		trigger = {
 			FROMFROM = {
 				NOR = {
-					prev_status = zakhara_famine
-					prev_status = zakhara_unrest
-					prev_status = zakhara_plague
-					prev_status = zakhara_golden_age
+					prev_status = seros_famine
+					prev_status = seros_unrest
+					prev_status = seros_plague
+					prev_status = seros_golden_age
 				}
 			}
 		}
-		text = EVTDESC_ZA_50031_tu_lung # Can be the same as the standard status change notification
+		text = EVTDESC_SE_50031_sahuagin # Can be the same as the standard status change notification
 	}
 
 	has_dlc = "Jade Dragon"
@@ -1853,7 +1853,7 @@ narrative_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		zakhara = {
+		seros = {
 			ruler = {
 				save_event_target_as = portrait_target
 			}
@@ -1863,16 +1863,16 @@ narrative_event = {
 	portrait = event_target:portrait_target
 	
 	option = {
-		name = EVTOPT_ZA_50141
+		name = EVTOPT_SE_50141
 	}
 }
 
-# Chance for an end to the 'Tu Lung Invasion' Status
+# Chance for an end to the 'Sahuagin Invasion' Status
 # Hidden. Fired from on_offmap_yearly_pulse
 # Root = Governor
 # From = Offmap
 character_event = {
-	id = ZA.50200
+	id = SE.50200
 
 	has_dlc = "Jade Dragon"
 
@@ -1881,8 +1881,8 @@ character_event = {
 	
 	trigger = {
 		FROM = {
-			is_offmap_tag = zakhara
-			has_status = zakhara_badia_invasion
+			is_offmap_tag = seros
+			has_status = seros_sahuagin_invasion
 		}
 	}
 	
@@ -1890,51 +1890,51 @@ character_event = {
 		factor = 1
 		modifier = {
 			factor = 2
-			FROM = { had_offmap_tmp_flag = { flag = zakhara_badia_invasion years = 2 } }
+			FROM = { had_offmap_tmp_flag = { flag = seros_sahuagin_invasion years = 2 } }
 		}
 		modifier = {
 			factor = 2
-			FROM = { had_offmap_tmp_flag = { flag = zakhara_badia_invasion years = 4 } }
+			FROM = { had_offmap_tmp_flag = { flag = seros_sahuagin_invasion years = 4 } }
 		}
 		modifier = {
 			factor = 2
-			FROM = { had_offmap_tmp_flag = { flag = zakhara_badia_invasion years = 8 } }
+			FROM = { had_offmap_tmp_flag = { flag = seros_sahuagin_invasion years = 8 } }
 		}
 		modifier = {
 			factor = 5
-			FROM = { had_offmap_tmp_flag = { flag = zakhara_badia_invasion years = 10 } }
+			FROM = { had_offmap_tmp_flag = { flag = seros_sahuagin_invasion years = 10 } }
 		}
 	}
 	
 	immediate = {
 		random_list = {
-			100 = { # zakhara won!
+			100 = { # seros won!
 				#trigger = { always = no }
 				modifier = {
 					factor = 3
 					FROM = {
-						prev_status = zakhara_golden_age
+						prev_status = seros_golden_age
 					}
 				}
 				
 				FROM = {
 					set_offmap_flag = no_status_news
-					set_status = zakhara_stable
+					set_status = seros_stable
 					clr_offmap_flag = no_status_news
 					
 					if = {
-						limit = { has_offmap_flag = zakhara_badly_beaten_1 }
-						clr_offmap_flag = zakhara_badly_beaten_1
+						limit = { has_offmap_flag = seros_badly_beaten_1 }
+						clr_offmap_flag = seros_badly_beaten_1
 					}
 					if = {
-						limit = { has_offmap_flag = zakhara_badly_beaten_2 }
-						clr_offmap_flag = zakhara_badly_beaten_2
-						set_offmap_flag = zakhara_badly_beaten_1
+						limit = { has_offmap_flag = seros_badly_beaten_2 }
+						clr_offmap_flag = seros_badly_beaten_2
+						set_offmap_flag = seros_badly_beaten_1
 					}
 					if = {
-						limit = { has_offmap_flag = zakhara_badly_beaten_3 }
-						clr_offmap_flag = zakhara_badly_beaten_3
-						set_offmap_flag = zakhara_badly_beaten_2
+						limit = { has_offmap_flag = seros_badly_beaten_3 }
+						clr_offmap_flag = seros_badly_beaten_3
+						set_offmap_flag = seros_badly_beaten_2
 					}
 				}
 				
@@ -1943,62 +1943,62 @@ character_event = {
 						has_offmap_news_enabled = FROM
 						is_within_diplo_range = ROOT
 					}
-					narrative_event = { id = ZA.50201 }
+					narrative_event = { id = SE.50201 }
 				}
 			}
-			100 = { # Tu Lung won!
+			100 = { # Sahuagin won!
 				modifier = {
 					factor = 3
 					FROM = {
 						OR = {
-							prev_status = zakhara_unrest
-							prev_status = zakhara_famine
-							prev_status = zakhara_plague
+							prev_status = seros_unrest
+							prev_status = seros_famine
+							prev_status = seros_plague
 						}
 					}
 				}
 				
 				FROM = {
 					set_offmap_flag = no_status_news
-					set_status = zakhara_unrest
-					set_offmap_flag = zakhara_had_unrest
+					set_status = seros_unrest
+					set_offmap_flag = seros_had_unrest
 					clr_offmap_flag = no_status_news
 				
-					clr_offmap_flag = zakhara_badly_beaten_3
-					clr_offmap_flag = zakhara_badly_beaten_2
-					clr_offmap_flag = zakhara_badly_beaten_1
+					clr_offmap_flag = seros_badly_beaten_3
+					clr_offmap_flag = seros_badly_beaten_2
+					clr_offmap_flag = seros_badly_beaten_1
 					
 					if = {
 						limit = {
-							has_offmap_flag = zakhara_badia_won_2
+							has_offmap_flag = seros_sahuagin_won_2
 						}
-						set_offmap_flag = zakhara_badia_won_3
-						clr_offmap_flag = zakhara_badia_won_2
+						set_offmap_flag = seros_sahuagin_won_3
+						clr_offmap_flag = seros_sahuagin_won_2
 					}
 					
 					if = {
 						limit = {
-							has_offmap_flag = zakhara_badia_won_1
+							has_offmap_flag = seros_sahuagin_won_1
 						}
-						set_offmap_flag = zakhara_badia_won_2
-						clr_offmap_flag = zakhara_badia_won_1
+						set_offmap_flag = seros_sahuagin_won_2
+						clr_offmap_flag = seros_sahuagin_won_1
 					}
 					
 					if = {
 						limit = {
 							NOR = {
-								has_offmap_flag = zakhara_badia_won_1
-								has_offmap_flag = zakhara_badia_won_2
-								has_offmap_flag = zakhara_badia_won_3
+								has_offmap_flag = seros_sahuagin_won_1
+								has_offmap_flag = seros_sahuagin_won_2
+								has_offmap_flag = seros_sahuagin_won_3
 							}
 						}
-						set_offmap_flag = zakhara_badia_won_1
+						set_offmap_flag = seros_sahuagin_won_1
 					}
 					
 					set_offmap_flag = no_succession_news
 				}
 				
-				# A new ruler ascends to the Dragon Throne. The fallout is handled by ZA.10005 and ZA.50000 (from 'on_offmap_ruler_changed')
+				# A new ruler ascends to the Dragon Throne. The fallout is handled by SE.10005 and SE.50000 (from 'on_offmap_ruler_changed')
 				create_character = { #The father
 					age = 60
 					random_traits = yes
@@ -2009,7 +2009,7 @@ character_event = {
 				}
 				new_character = {
 					PREV = { set_father = PREV }
-					death = { death_reason = death_in_zakhara_historic }
+					death = { death_reason = death_in_seros_historic }
 				}
 				random_list = {
 					0 = {
@@ -2025,7 +2025,7 @@ character_event = {
 							random_traits = yes
 							female = yes
 							religion = qisma # A bit strange, but necessary
-							culture = badia
+							culture = sahuagin
 							dynasty = actually_culture
 							trait = brilliant_strategist
 							martial = 10
@@ -2037,7 +2037,7 @@ character_event = {
 							random_traits = yes
 							female = no
 							religion = qisma # A bit strange, but necessary
-							culture = badia
+							culture = sahuagin
 							dynasty = actually_culture
 							trait = brilliant_strategist
 							martial = 10
@@ -2054,10 +2054,10 @@ character_event = {
 						dynasty = THIS
 					}
 					new_character = {
-						death = { death_reason = death_in_zakhara_historic }
-						save_event_target_as = new_zakhara_ruler_father
+						death = { death_reason = death_in_seros_historic }
+						save_event_target_as = new_seros_ruler_father
 					}
-					set_father = event_target:new_zakhara_ruler_father
+					set_father = event_target:new_seros_ruler_father
 					FROM = {
 						set_offmap_holder = PREV
 					}
@@ -2066,7 +2066,7 @@ character_event = {
 								
 						}
 						10 = {
-							religion = pantheist_league
+							religion = vaprak
 						}
 						10 = {
 							religion = qisma
@@ -2085,7 +2085,7 @@ character_event = {
 						has_offmap_news_enabled = FROM
 						is_within_diplo_range = ROOT
 					}
-					narrative_event = { id = ZA.50202 }
+					narrative_event = { id = SE.50202 }
 				}
 				
 				random_list = {
@@ -2093,27 +2093,27 @@ character_event = {
 						modifier = {
 							factor = 0
 							has_game_rule = {
-								name = zakhara_invasions
+								name = seros_invasions
 								value = none
 							}
 						}
-						character_event = { id = ZA.10113 days = 15 } #Spawns a Displaced Prince adventurer...
+						character_event = { id = SE.10113 days = 15 } #Spawns a Displaced Prince adventurer...
 						set_character_flag = spawning_a_displaced_royal
-						log = "zakhara Logging:"
-						log = "Attempting to spawn a Displaced Prince, as aftermath to event ZA.50200 (end of Being Invaded by tuigans). Character should spawn in 15 days."
+						log = "seros Logging:"
+						log = "Attempting to spawn a Displaced Prince, as aftermath to event SE.50200 (end of Being Invaded by tuigans). Character should spawn in 15 days."
 					}
 					50 = {
 						modifier = {
 							factor = 0
 							has_game_rule = {
-								name = zakhara_invasions
+								name = seros_invasions
 								value = none
 							}
 						}
-						character_event = { id =  ZA.10109 days = 15 } #Spawns a tuigan tribe leader...
-						set_character_flag = spawning_a_tu_lung_invader
-						log = "zakhara Logging:"
-						log = "Attempting to spawn a Tu Lung Invader, as aftermath to event ZA.50200 (end of Being Invaded by tu_lungs). Character should spawn in 15 days."
+						character_event = { id =  SE.10109 days = 15 } #Spawns a tuigan tribe leader...
+						set_character_flag = spawning_a_sahuagin_invader
+						log = "seros Logging:"
+						log = "Attempting to spawn a Sahuagin Invader, as aftermath to event SE.50200 (end of Being Invaded by sahuagins). Character should spawn in 15 days."
 					}
 				}
 			}
@@ -2121,13 +2121,13 @@ character_event = {
 	}
 }
 
-# News from zakhara: Tu Lung Invasion Fails
+# News from seros: Sahuagin Invasion Fails
 narrative_event = {
-	id = ZA.50201
-	title = NEWS_FROM_zakhara
+	id = SE.50201
+	title = NEWS_FROM_seros
 	picture = GFX_evt_china_mongols_invade
-	portrait = zakhara
-	desc = EVTDESC_ZA_50201
+	portrait = seros
+	desc = EVTDESC_SE_50201
 	window = EventWindowOffmap
 	background = GFX_event_window_news_from_china
 
@@ -2136,7 +2136,7 @@ narrative_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		zakhara = {
+		seros = {
 			ruler = {
 				save_event_target_as = portrait_target
 			}
@@ -2146,17 +2146,17 @@ narrative_event = {
 	portrait = event_target:portrait_target
 	
 	option = {
-		name = EVTOPT_ZA_50201
+		name = EVTOPT_SE_50201
 	}
 }
 
-# News from zakhara: Tu Lung Invasion Succeeds
+# News from seros: Sahuagin Invasion Succeeds
 narrative_event = {
-	id = ZA.50202
-	title = NEWS_FROM_zakhara
+	id = SE.50202
+	title = NEWS_FROM_seros
 	picture = GFX_evt_tengri_throneroom_oldgods
-	portrait = zakhara
-	desc = EVTDESC_ZA_50202
+	portrait = seros
+	desc = EVTDESC_SE_50202
 	window = EventWindowOffmap
 	background = GFX_event_window_news_from_china
 
@@ -2165,7 +2165,7 @@ narrative_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		zakhara = {
+		seros = {
 			ruler = {
 				save_event_target_as = portrait_target
 			}
@@ -2176,18 +2176,18 @@ narrative_event = {
 	
 	option = {
 		trigger = {
-			NOT = { has_character_modifier = peace_deal_with_zakhara }
+			NOT = { has_character_modifier = peace_deal_with_seros }
 		}
-		name = EVTOPT_ZA_50202
+		name = EVTOPT_SE_50202
 	}
 	
 	option = {
 		trigger = {
-			has_character_modifier = peace_deal_with_zakhara
+			has_character_modifier = peace_deal_with_seros
 		}
-		name = EVTOPT_ZA_50302_BROKEN_PEACE_DEAL
+		name = EVTOPT_SE_50302_BROKEN_PEACE_DEAL
 		
-		remove_character_modifier = peace_deal_with_zakhara
+		remove_character_modifier = peace_deal_with_seros
 	}
 }
 
@@ -2196,7 +2196,7 @@ narrative_event = {
 # Root = Governor
 # From = Offmap
 character_event = {
-	id = ZA.50220
+	id = SE.50220
 
 	has_dlc = "Jade Dragon"
 
@@ -2205,12 +2205,12 @@ character_event = {
 	
 	trigger = {
 		FROM = {
-			is_offmap_tag = zakhara
+			is_offmap_tag = seros
 			NOR = {
-				has_status = zakhara_famine
-				has_status = zakhara_pantheist_invasion # Resolution handled by ZA.50160
-				has_status = zakhara_badia_invasion # Resolution handled by ZA.50200
-				has_status = zakhara_civil_war # Resolution handled by ZA.50300
+				has_status = seros_famine
+				has_status = seros_merrow_invasion # Resolution handled by SE.50160
+				has_status = seros_sahuagin_invasion # Resolution handled by SE.50200
+				has_status = seros_civil_war # Resolution handled by SE.50300
 			}
 		}
 	}
@@ -2220,19 +2220,19 @@ character_event = {
 		modifier = { # Famines don't tend to happen too close to each other
 			factor = 0
 			FROM = {
-				has_offmap_flag = zakhara_had_famine
+				has_offmap_flag = seros_had_famine
 				NOT = {
-					had_offmap_tmp_flag = { flag = zakhara_had_famine years = 90 }
+					had_offmap_tmp_flag = { flag = seros_had_famine years = 90 }
 				}
 			}
 		}
 		modifier = { # Golden Ages tend to not end with a Famine or Plague
 			factor = 0
 			FROM = {
-				has_status = zakhara_golden_age
-				has_offmap_flag = zakhara_had_golden_age
+				has_status = seros_golden_age
+				has_offmap_flag = seros_had_golden_age
 				NOT = {
-					had_offmap_tmp_flag = { flag = zakhara_had_golden_age years = 50 }
+					had_offmap_tmp_flag = { flag = seros_had_golden_age years = 50 }
 				}
 			}
 		}
@@ -2240,8 +2240,8 @@ character_event = {
 			factor = 0.75
 			FROM = {
 				OR = {
-					has_status = zakhara_stable
-					has_status = zakhara_golden_age
+					has_status = seros_stable
+					has_status = seros_golden_age
 				}
 			}
 		}
@@ -2249,8 +2249,8 @@ character_event = {
     
 	immediate = {
 		FROM = {
-			set_offmap_flag = zakhara_had_famine
-			set_status = zakhara_famine # Players will be notified by ZA.50030
+			set_offmap_flag = seros_had_famine
+			set_status = seros_famine # Players will be notified by SE.50030
 		}
 	}
 }
@@ -2260,7 +2260,7 @@ character_event = {
 # Root = Governor
 # From = Offmap
 character_event = {
-	id = ZA.50240
+	id = SE.50240
 
 	has_dlc = "Jade Dragon"
 
@@ -2269,12 +2269,12 @@ character_event = {
 	
 	trigger = {
 		FROM = {
-			is_offmap_tag = zakhara
+			is_offmap_tag = seros
 			NOR = {
-				has_status = zakhara_plague
-				has_status = zakhara_pantheist_invasion # Resolution handled by ZA.50160
-				has_status = zakhara_badia_invasion # Resolution handled by ZA.50200
-				has_status = zakhara_civil_war # Resolution handled by ZA.50300
+				has_status = seros_plague
+				has_status = seros_merrow_invasion # Resolution handled by SE.50160
+				has_status = seros_sahuagin_invasion # Resolution handled by SE.50200
+				has_status = seros_civil_war # Resolution handled by SE.50300
 			}
 		}
 	}
@@ -2284,19 +2284,19 @@ character_event = {
 		modifier = { # Famines don't tend to happen too close to each other
 			factor = 0
 			FROM = {
-				has_offmap_flag = zakhara_had_plague
+				has_offmap_flag = seros_had_plague
 				NOT = {
-					had_offmap_tmp_flag = { flag = zakhara_had_plague years = 90 }
+					had_offmap_tmp_flag = { flag = seros_had_plague years = 90 }
 				}
 			}
 		}
 		modifier = { # Golden Ages tend to not end with a Famine or Plague
 			factor = 0
 			FROM = {
-				has_status = zakhara_golden_age
-				has_offmap_flag = zakhara_had_golden_age
+				has_status = seros_golden_age
+				has_offmap_flag = seros_had_golden_age
 				NOT = {
-					had_offmap_tmp_flag = { flag = zakhara_had_golden_age years = 50 }
+					had_offmap_tmp_flag = { flag = seros_had_golden_age years = 50 }
 				}
 			}
 		}
@@ -2304,8 +2304,8 @@ character_event = {
 			factor = 0.75
 			FROM = {
 				OR = {
-					has_status = zakhara_stable
-					has_status = zakhara_golden_age
+					has_status = seros_stable
+					has_status = seros_golden_age
 				}
 			}
 		}
@@ -2313,8 +2313,8 @@ character_event = {
     
 	immediate = {
 		FROM = {
-			set_offmap_flag = zakhara_had_plague
-			set_status = zakhara_plague # Players will be notified by ZA.50030
+			set_offmap_flag = seros_had_plague
+			set_status = seros_plague # Players will be notified by SE.50030
 		}
 	}
 }
@@ -2324,7 +2324,7 @@ character_event = {
 # Root = Governor
 # From = Offmap
 character_event = {
-	id = ZA.50260
+	id = SE.50260
 
 	has_dlc = "Jade Dragon"
 
@@ -2333,35 +2333,35 @@ character_event = {
 	
 	trigger = {
 		FROM = {
-			is_offmap_tag = zakhara
-			has_status = zakhara_stable
+			is_offmap_tag = seros
+			has_status = seros_stable
 		}
 	}
 	
 	weight_multiplier = {
 		factor = 1
-		modifier = { # zakhara tend to not enter Golden Ages frequently
+		modifier = { # seros tend to not enter Golden Ages frequently
 			factor = 0
 			FROM = {
-				has_offmap_flag = zakhara_had_golden_age
+				has_offmap_flag = seros_had_golden_age
 				NOT = {
-					had_offmap_tmp_flag = { flag = zakhara_had_golden_age years = 200 }
+					had_offmap_tmp_flag = { flag = seros_had_golden_age years = 200 }
 				}
 			}
 		}
 		modifier = { # But they tend to have one at least every 250 years
 			factor = 2
 			FROM = {
-				has_offmap_flag = zakhara_had_golden_age
-				had_offmap_tmp_flag = { flag = zakhara_had_golden_age years = 250 }
+				has_offmap_flag = seros_had_golden_age
+				had_offmap_tmp_flag = { flag = seros_had_golden_age years = 250 }
 			}
 		}
 	}
 
 	immediate = {
 		FROM = {
-			set_offmap_flag = zakhara_had_golden_age
-			set_status = zakhara_golden_age # Players will be notified by ZA.50030
+			set_offmap_flag = seros_had_golden_age
+			set_status = seros_golden_age # Players will be notified by SE.50030
 		}
 	}
 }
@@ -2371,7 +2371,7 @@ character_event = {
 # Root = Governor
 # From = Offmap
 character_event = {
-	id = ZA.50280
+	id = SE.50280
 
 	has_dlc = "Jade Dragon"
 
@@ -2380,15 +2380,15 @@ character_event = {
 	
 	trigger = {
 		FROM = {
-			is_offmap_tag = zakhara
+			is_offmap_tag = seros
 			NOR = {
-				has_status = zakhara_pantheist_invasion # Resolution handled by ZA.50160
-				has_status = zakhara_badia_invasion # Resolution handled by ZA.50200
-				has_status = zakhara_civil_war # Resolution handled by ZA.50300
+				has_status = seros_merrow_invasion # Resolution handled by SE.50160
+				has_status = seros_sahuagin_invasion # Resolution handled by SE.50200
+				has_status = seros_civil_war # Resolution handled by SE.50300
 			}
 			OR = {
-				NOT = { has_offmap_flag = zakhara_invaded_player_dynasty }
-				had_offmap_tmp_flag = { flag = zakhara_invaded_player_dynasty years = 200 }
+				NOT = { has_offmap_flag = seros_invaded_player_dynasty }
+				had_offmap_tmp_flag = { flag = seros_invaded_player_dynasty years = 200 }
 			}
 		}
 	}
@@ -2398,32 +2398,32 @@ character_event = {
 		modifier = { # Unrest last for at least 2 years before becoming Stable/Civil War
 			factor = 0
 			FROM = {
-				has_status = zakhara_unrest
-				has_offmap_flag = zakhara_had_unrest
+				has_status = seros_unrest
+				has_offmap_flag = seros_had_unrest
 				NOT = {
-					had_offmap_tmp_flag = { flag = zakhara_had_unrest years = 2 }
+					had_offmap_tmp_flag = { flag = seros_had_unrest years = 2 }
 				}
 			}
 		}
 		modifier = {
 			factor = 0.01
-			FROM = { has_status = zakhara_golden_age }
+			FROM = { has_status = seros_golden_age }
 		}
 		modifier = {
 			factor = 0.1
-			FROM = { has_status = zakhara_stable }
+			FROM = { has_status = seros_stable }
 		}
 		modifier = {
 			factor = 0.1
-			FROM = { NOT = { has_status = zakhara_unrest } }
+			FROM = { NOT = { has_status = seros_unrest } }
 		}
 	}
 	
 	immediate = {
 		FROM = {
 			set_offmap_flag = no_status_news
-			set_status = zakhara_civil_war
-			set_offmap_flag = zakhara_civil_war
+			set_status = seros_civil_war
+			set_offmap_flag = seros_civil_war
 			clr_offmap_flag = no_status_news
 		}
 		any_player = {
@@ -2431,35 +2431,35 @@ character_event = {
 				has_offmap_news_enabled = FROM
 				is_within_diplo_range = ROOT
 			}
-			narrative_event = { id = ZA.50281 }
+			narrative_event = { id = SE.50281 }
 		}
 	}
 }
 
-# News from zakhara: Civil War
+# News from seros: Civil War
 narrative_event = {
-	id = ZA.50281
-	title = NEWS_FROM_zakhara
+	id = SE.50281
+	title = NEWS_FROM_seros
 	picture = GFX_evt_china_civil_war
-	portrait = zakhara
+	portrait = seros
 	window = EventWindowOffmap
 	background = GFX_event_window_news_from_china
 
 	desc = {
 		trigger = {
 			FROMFROM = {
-				prev_status = zakhara_unrest
+				prev_status = seros_unrest
 			}
 		}
-		text = EVTDESC_ZA_50281_UNREST
+		text = EVTDESC_SE_50281_UNREST
 	}
 	desc = {
 		trigger = {
 			FROMFROM = {
-				NOT = { prev_status = zakhara_unrest }
+				NOT = { prev_status = seros_unrest }
 			}
 		}
-		text = EVTDESC_ZA_50031_CW # Can use the default description
+		text = EVTDESC_SE_50031_CW # Can use the default description
 	}
 
 	has_dlc = "Jade Dragon"
@@ -2467,7 +2467,7 @@ narrative_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		zakhara = {
+		seros = {
 			ruler = {
 				save_event_target_as = portrait_target
 			}
@@ -2477,7 +2477,7 @@ narrative_event = {
 	portrait = event_target:portrait_target
 	
 	option = {
-		name = EVTOPT_ZA_50281
+		name = EVTOPT_SE_50281
 	}
 }
 
@@ -2486,7 +2486,7 @@ narrative_event = {
 # Root = Governor
 # From = Offmap
 character_event = {
-	id = ZA.50300
+	id = SE.50300
 
 	has_dlc = "Jade Dragon"
 
@@ -2495,8 +2495,8 @@ character_event = {
 	
 	trigger = {
 		FROM = {
-			is_offmap_tag = zakhara
-			has_status = zakhara_civil_war
+			is_offmap_tag = seros
+			has_status = seros_civil_war
 		}
 	}
 	
@@ -2506,35 +2506,35 @@ character_event = {
 			factor = 0
 			FROM = {
 				NOT = {
-					had_offmap_tmp_flag = { flag = zakhara_civil_war years = 2 }
+					had_offmap_tmp_flag = { flag = seros_civil_war years = 2 }
 				}
 			}
 		}
 		modifier = {
 			factor = 2
-			FROM = { had_offmap_tmp_flag = { flag = zakhara_civil_war years = 3 } }
+			FROM = { had_offmap_tmp_flag = { flag = seros_civil_war years = 3 } }
 		}
 		modifier = {
 			factor = 2
-			FROM = { had_offmap_tmp_flag = { flag = zakhara_civil_war years = 5 } }
+			FROM = { had_offmap_tmp_flag = { flag = seros_civil_war years = 5 } }
 		}
 		modifier = {
 			factor = 2
-			FROM = { had_offmap_tmp_flag = { flag = zakhara_civil_war years = 8 } }
+			FROM = { had_offmap_tmp_flag = { flag = seros_civil_war years = 8 } }
 		}
 		modifier = {
 			factor = 5
-			FROM = { had_offmap_tmp_flag = { flag = zakhara_civil_war years = 10 } }
+			FROM = { had_offmap_tmp_flag = { flag = seros_civil_war years = 10 } }
 		}
 	}
 	
 	immediate = {
-		clr_offmap_flag = zakhara_civil_war
+		clr_offmap_flag = seros_civil_war
 		random_list = {
 			70 = { # The loyalists won!
 				FROM = {
 					set_offmap_flag = no_status_news
-					set_status = zakhara_stable
+					set_status = seros_stable
 					clr_offmap_flag = no_status_news
 				}
 				
@@ -2543,21 +2543,21 @@ character_event = {
 						has_offmap_news_enabled = FROM
 						is_within_diplo_range = ROOT
 					}
-					narrative_event = { id = ZA.50301 }
+					narrative_event = { id = SE.50301 }
 				}
 				random_list = {
 					50 = {
 						modifier = {
 							factor = 0
 							has_game_rule = {
-								name = zakhara_invasions
+								name = seros_invasions
 								value = none
 							}
 						}
-						character_event = { id =  ZA.10109 days = 15 } #Spawns a tuigan tribe leader...
-						set_character_flag = spawning_a_tu_lung_invader
-						log = "zakhara Logging:"
-						log = "Attempting to spawn a Tu Lung Invader, as aftermath to event ZA.50300 (end of Civil War - the loyalists won). Character should spawn in 15 days."
+						character_event = { id =  SE.10109 days = 15 } #Spawns a tuigan tribe leader...
+						set_character_flag = spawning_a_sahuagin_invader
+						log = "seros Logging:"
+						log = "Attempting to spawn a Sahuagin Invader, as aftermath to event SE.50300 (end of Civil War - the loyalists won). Character should spawn in 15 days."
 					}
 					50 = {
 						trigger = {
@@ -2569,14 +2569,14 @@ character_event = {
 						modifier = {
 							factor = 0
 							has_game_rule = {
-								name = zakhara_invasions
+								name = seros_invasions
 								value = none
 							}
 						}
-						character_event = { id = ZA.60200 days = 15 } #Spawns a Rebel General
+						character_event = { id = SE.60200 days = 15 } #Spawns a Rebel General
 						set_character_flag = spawning_a_rebel_general
-						log = "zakhara Logging:"
-						log = "Attempting to spawn a Rebel General, as aftermath to event ZA.50300 (end of Civil War - the loyalists won). Character should spawn in 15 days."
+						log = "seros Logging:"
+						log = "Attempting to spawn a Rebel General, as aftermath to event SE.50300 (end of Civil War - the loyalists won). Character should spawn in 15 days."
 					}
 				}
 			}
@@ -2585,7 +2585,7 @@ character_event = {
 					factor = 2.5
 					FROM = {
 						holder_scope = {
-							NOT = { culture_group = zakharan_group } # A foreign dynasty is more likely to be ousted
+							NOT = { culture_group = serosn_group } # A foreign dynasty is more likely to be ousted
 						}
 					}
 				}
@@ -2593,8 +2593,8 @@ character_event = {
 				FROM = {
 					set_offmap_flag = no_status_news
 					random_list = {
-						50 = { set_status = zakhara_stable }
-						50 = { set_status = zakhara_unrest set_offmap_flag = zakhara_had_unrest }
+						50 = { set_status = seros_stable }
+						50 = { set_status = seros_unrest set_offmap_flag = seros_had_unrest }
 					}
 					clr_offmap_flag = no_status_news
 					
@@ -2603,14 +2603,14 @@ character_event = {
 					if = {
 						limit = {
 							holder_scope = {
-								NOT = { culture_group = zakharan_group }
+								NOT = { culture_group = serosn_group }
 							}
 						}
 						set_offmap_flag = foreign_dynasty_ousted
 					}
 				}
 				
-				# A new ruler ascends to the Dragon Throne. The fallout is handled by ZA.10005 and ZA.50000 (from 'on_offmap_ruler_changed')
+				# A new ruler ascends to the Dragon Throne. The fallout is handled by SE.10005 and SE.50000 (from 'on_offmap_ruler_changed')
 				random_list = {
 					0 = {
 						additive_modifier = {
@@ -2624,8 +2624,8 @@ character_event = {
 							age = 30
 							random_traits = yes
 							female = yes
-							religion = pantheist_league # A bit strange, but necessary
-							culture = hadhar
+							religion = vaprak # A bit strange, but necessary
+							culture = merrow
 							dynasty = actually_culture
 							trait = brilliant_strategist
 							martial = 10
@@ -2636,8 +2636,8 @@ character_event = {
 							age = 30
 							random_traits = yes
 							female = no
-							religion = pantheist_league # A bit strange, but necessary
-							culture = hadhar
+							religion = vaprak # A bit strange, but necessary
+							culture = merrow
 							dynasty = actually_culture
 							trait = brilliant_strategist
 							martial = 10
@@ -2654,10 +2654,10 @@ character_event = {
 						dynasty = THIS
 					}
 					new_character = {
-						death = { death_reason = death_in_zakhara_historic }
-						save_event_target_as = new_zakhara_ruler_father
+						death = { death_reason = death_in_seros_historic }
+						save_event_target_as = new_seros_ruler_father
 					}
-					set_father = event_target:new_zakhara_ruler_father
+					set_father = event_target:new_seros_ruler_father
 					FROM = {
 						set_offmap_holder = PREV
 					}
@@ -2668,7 +2668,7 @@ character_event = {
 						has_offmap_news_enabled = FROM
 						is_within_diplo_range = ROOT
 					}
-					narrative_event = { id = ZA.50302 }
+					narrative_event = { id = SE.50302 }
 				}
 				
 				FROM = { clr_offmap_flag = foreign_dynasty_ousted }
@@ -2678,27 +2678,27 @@ character_event = {
 						modifier = {
 							factor = 0
 							has_game_rule = {
-								name = zakhara_invasions
+								name = seros_invasions
 								value = none
 							}
 						}
-						character_event = { id = ZA.10113 days = 15 } #Spawns a Displaced Prince adventurer...
+						character_event = { id = SE.10113 days = 15 } #Spawns a Displaced Prince adventurer...
 						set_character_flag = spawning_a_displaced_royal
-						log = "zakhara Logging:"
-						log = "Attempting to spawn a Displaced Prince, as aftermath to event ZA.50300 (end of Civil War - the rebels won). Character should spawn in 15 days."
+						log = "seros Logging:"
+						log = "Attempting to spawn a Displaced Prince, as aftermath to event SE.50300 (end of Civil War - the rebels won). Character should spawn in 15 days."
 					}
 					50 = {
 						modifier = {
 							factor = 0
 							has_game_rule = {
-								name = zakhara_invasions
+								name = seros_invasions
 								value = none
 							}
 						}
-						character_event = { id = ZA.10109 days = 15 } #Spawns a tuigan tribe leader...
-						set_character_flag = spawning_a_tuigan_invader
-						log = "zakhara Logging:"
-						log = "Attempting to spawn a tuigan Invader, as aftermath to event ZA.50300 (end of Civil War - the rebels won). Character should spawn in 15 days."
+						character_event = { id = SE.10109 days = 15 } #Spawns a tuigan tribe leader...
+						set_character_flag = spawning_a_merrow_invader
+						log = "seros Logging:"
+						log = "Attempting to spawn a merrow Invader, as aftermath to event SE.50300 (end of Civil War - the rebels won). Character should spawn in 15 days."
 					}
 				}
 			}
@@ -2707,14 +2707,14 @@ character_event = {
 					factor = 0.5
 					FROM = {
 						holder_scope = {
-							NOT = { culture_group = zakharan_group }
+							NOT = { culture_group = serosn_group }
 						}
 					}
 				}
 				
 				FROM = {
 					set_offmap_flag = no_status_news
-					set_status = zakhara_stable
+					set_status = seros_stable
 					clr_offmap_flag = no_status_news
 					
 					set_offmap_flag = no_succession_news
@@ -2730,21 +2730,21 @@ character_event = {
 						has_offmap_news_enabled = FROM
 						is_within_diplo_range = ROOT
 					}
-					narrative_event = { id = ZA.50303 days = 1 }
+					narrative_event = { id = SE.50303 days = 1 }
 				}
 				random_list = {
 					90 = {
 						modifier = {
 							factor = 0
 							has_game_rule = {
-								name = zakhara_invasions
+								name = seros_invasions
 								value = none
 							}
 						}
-						character_event = { id =  ZA.10109 days = 15 } #Spawns a tuigan tribe leader...
-						set_character_flag = spawning_a_tu_lung_invader
-						log = "zakhara Logging:"
-						log = "Attempting to spawn a Tu Lung Invader, as aftermath to event ZA.50300 (end of Civil War - the rebels won (old dynasty pretender)). Character should spawn in 15 days."
+						character_event = { id =  SE.10109 days = 15 } #Spawns a tuigan tribe leader...
+						set_character_flag = spawning_a_sahuagin_invader
+						log = "seros Logging:"
+						log = "Attempting to spawn a Sahuagin Invader, as aftermath to event SE.50300 (end of Civil War - the rebels won (old dynasty pretender)). Character should spawn in 15 days."
 					}
 					10 = {
 						#nothing happens...
@@ -2755,13 +2755,13 @@ character_event = {
 	}
 }
 
-# News from zakhara: Civil War Ends - Loyalists Win!
+# News from seros: Civil War Ends - Loyalists Win!
 narrative_event = {
-	id = ZA.50301
-	title = NEWS_FROM_zakhara
+	id = SE.50301
+	title = NEWS_FROM_seros
 	picture = GFX_evt_china_civil_war
-	portrait = zakhara
-	desc = EVTDESC_ZA_50301
+	portrait = seros
+	desc = EVTDESC_SE_50301
 	window = EventWindowOffmap
 	background = GFX_event_window_news_from_china
 
@@ -2770,7 +2770,7 @@ narrative_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		zakhara = {
+		seros = {
 			ruler = {
 				save_event_target_as = portrait_target
 			}
@@ -2780,16 +2780,16 @@ narrative_event = {
 	portrait = event_target:portrait_target
 	
 	option = {
-		name = EVTOPT_ZA_50301
+		name = EVTOPT_SE_50301
 	}
 }
 
-# News from zakhara: Civil War Ends - Rebels Win, New Dynasty!
+# News from seros: Civil War Ends - Rebels Win, New Dynasty!
 narrative_event = {
-	id = ZA.50302
-	title = NEWS_FROM_zakhara
+	id = SE.50302
+	title = NEWS_FROM_seros
 	picture = GFX_evt_china_civil_war
-	portrait = zakhara
+	portrait = seros
 	window = EventWindowOffmap
 	background = GFX_event_window_news_from_china
 
@@ -2799,7 +2799,7 @@ narrative_event = {
 				has_offmap_flag = foreign_dynasty_ousted
 			}
 		}
-		text = EVTDESC_ZA_50302_HAN_DYNASTY
+		text = EVTDESC_SE_50302_HAN_DYNASTY
 	}
 	desc = {
 		trigger = {
@@ -2807,7 +2807,7 @@ narrative_event = {
 				NOT = { has_offmap_flag = foreign_dynasty_ousted }
 			}
 		}
-		text = EVTDESC_ZA_50302_NEW_DYNASTY
+		text = EVTDESC_SE_50302_NEW_DYNASTY
 	}
 
 	has_dlc = "Jade Dragon"
@@ -2816,7 +2816,7 @@ narrative_event = {
 	hide_new = yes
 	
 	immediate = {
-		zakhara = {
+		seros = {
 			ruler = {
 				save_event_target_as = portrait_target
 			}
@@ -2827,28 +2827,28 @@ narrative_event = {
 	
 	option = {
 		trigger = {
-			NOT = { has_character_modifier = peace_deal_with_zakhara }
+			NOT = { has_character_modifier = peace_deal_with_seros }
 		}
-		name = EVTOPT_ZA_50301
+		name = EVTOPT_SE_50301
 	}
 	
 	option = {
 		trigger = {
-			has_character_modifier = peace_deal_with_zakhara
+			has_character_modifier = peace_deal_with_seros
 		}
-		name = EVTOPT_ZA_50302_BROKEN_PEACE_DEAL
+		name = EVTOPT_SE_50302_BROKEN_PEACE_DEAL
 		
-		remove_character_modifier = peace_deal_with_zakhara
+		remove_character_modifier = peace_deal_with_seros
 	}
 }
 
-# News from zakhara: Civil War Ends - Rebels Win but Old Dynasty stays in power
+# News from seros: Civil War Ends - Rebels Win but Old Dynasty stays in power
 narrative_event = {
-	id = ZA.50303
-	title = NEWS_FROM_zakhara
+	id = SE.50303
+	title = NEWS_FROM_seros
 	picture = GFX_evt_china_civil_war
-	portrait = zakhara
-	desc = EVTDESC_ZA_50303
+	portrait = seros
+	desc = EVTDESC_SE_50303
 	window = EventWindowOffmap
 	background = GFX_event_window_news_from_china
 
@@ -2857,7 +2857,7 @@ narrative_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		zakhara = {
+		seros = {
 			ruler = {
 				save_event_target_as = portrait_target
 			}
@@ -2867,25 +2867,25 @@ narrative_event = {
 	portrait = event_target:portrait_target
 	
 	option = {
-		name = EVTOPT_ZA_50301
+		name = EVTOPT_SE_50301
 	}
 }
 
 character_event = { # Update Silk Road values
-	id = ZA.50400
+	id = SE.50400
 
 	has_dlc = "Jade Dragon"
 
 	is_triggered_only = yes
 	hide_window = yes
 
-	trigger = { FROM = { is_offmap_tag = zakhara } }
+	trigger = { FROM = { is_offmap_tag = seros } }
 	
 	immediate = {
 		FROM = {
 			if = {
 				limit = {
-					has_status = zakhara_golden_age
+					has_status = seros_golden_age
 				}
 				set_trade_route_value_multiplier = {
 					which = silk_road
@@ -2894,7 +2894,7 @@ character_event = { # Update Silk Road values
 			}
 			if = {
 				limit = {
-					has_status = zakhara_unrest
+					has_status = seros_unrest
 				}
 				set_trade_route_value_multiplier = {
 					which = silk_road
@@ -2904,9 +2904,9 @@ character_event = { # Update Silk Road values
 			if = {
 				limit = {
 					OR = {
-						has_status = zakhara_civil_war
-						has_status = zakhara_pantheist_invasion
-						has_status = zakhara_badia_invasion
+						has_status = seros_civil_war
+						has_status = seros_merrow_invasion
+						has_status = seros_sahuagin_invasion
 					}
 				}
 				set_trade_route_value_multiplier = {
@@ -2916,7 +2916,7 @@ character_event = { # Update Silk Road values
 			}
 			if = {
 				limit = {
-					has_status = zakhara_famine
+					has_status = seros_famine
 				}
 				set_trade_route_value_multiplier = {
 					which = silk_road
@@ -2925,7 +2925,7 @@ character_event = { # Update Silk Road values
 			}
 			if = {
 				limit = {
-					has_status = zakhara_plague
+					has_status = seros_plague
 				}
 				set_trade_route_value_multiplier = {
 					which = silk_road
@@ -2934,7 +2934,7 @@ character_event = { # Update Silk Road values
 			}
 			if = {
 				limit = {
-					has_policy = zakhara_isolationist
+					has_policy = seros_isolationist
 				}
 				set_trade_route_value_multiplier = {
 					which = silk_road
@@ -2944,14 +2944,14 @@ character_event = { # Update Silk Road values
 			if = {
 				limit = {
 					NOR = {
-						has_policy = zakhara_isolationist
-						has_status = zakhara_famine
-						has_status = zakhara_plague
-						has_status = zakhara_unrest
-						has_status = zakhara_civil_war
-						has_status = zakhara_pantheist_invasion
-						has_status = zakhara_badia_invasion
-						has_status = zakhara_golden_age
+						has_policy = seros_isolationist
+						has_status = seros_famine
+						has_status = seros_plague
+						has_status = seros_unrest
+						has_status = seros_civil_war
+						has_status = seros_merrow_invasion
+						has_status = seros_sahuagin_invasion
+						has_status = seros_golden_age
 					}
 				}
 				set_trade_route_value_multiplier = {
@@ -2964,7 +2964,7 @@ character_event = { # Update Silk Road values
 }
 
 character_event = { # Update Silk Road values on startup
-	id = ZA.50401
+	id = SE.50401
 
 	has_dlc = "Jade Dragon"
 
@@ -2977,10 +2977,10 @@ character_event = { # Update Silk Road values on startup
 	}
 	
 	immediate = {
-		zakhara = {
+		seros = {
 			if = {
 				limit = {
-					has_status = zakhara_golden_age
+					has_status = seros_golden_age
 				}
 				set_trade_route_value_multiplier = {
 					which = silk_road
@@ -2989,7 +2989,7 @@ character_event = { # Update Silk Road values on startup
 			}
 			if = {
 				limit = {
-					has_status = zakhara_unrest
+					has_status = seros_unrest
 				}
 				set_trade_route_value_multiplier = {
 					which = silk_road
@@ -2999,9 +2999,9 @@ character_event = { # Update Silk Road values on startup
 			if = {
 				limit = {
 					OR = {
-						has_status = zakhara_civil_war
-						has_status = zakhara_pantheist_invasion
-						has_status = zakhara_badia_invasion
+						has_status = seros_civil_war
+						has_status = seros_merrow_invasion
+						has_status = seros_sahuagin_invasion
 					}
 				}
 				set_trade_route_value_multiplier = {
@@ -3011,7 +3011,7 @@ character_event = { # Update Silk Road values on startup
 			}
 			if = {
 				limit = {
-					has_status = zakhara_famine
+					has_status = seros_famine
 				}
 				set_trade_route_value_multiplier = {
 					which = silk_road
@@ -3020,7 +3020,7 @@ character_event = { # Update Silk Road values on startup
 			}
 			if = {
 				limit = {
-					has_status = zakhara_plague
+					has_status = seros_plague
 				}
 				set_trade_route_value_multiplier = {
 					which = silk_road
@@ -3029,7 +3029,7 @@ character_event = { # Update Silk Road values on startup
 			}
 			if = {
 				limit = {
-					has_policy = zakhara_isolationist
+					has_policy = seros_isolationist
 				}
 				set_trade_route_value_multiplier = {
 					which = silk_road
@@ -3039,14 +3039,14 @@ character_event = { # Update Silk Road values on startup
 			if = {
 				limit = {
 					NOR = {
-						has_policy = zakhara_isolationist
-						has_status = zakhara_famine
-						has_status = zakhara_plague
-						has_status = zakhara_unrest
-						has_status = zakhara_civil_war
-						has_status = zakhara_pantheist_invasion
-						has_status = zakhara_badia_invasion
-						has_status = zakhara_golden_age
+						has_policy = seros_isolationist
+						has_status = seros_famine
+						has_status = seros_plague
+						has_status = seros_unrest
+						has_status = seros_civil_war
+						has_status = seros_merrow_invasion
+						has_status = seros_sahuagin_invasion
+						has_status = seros_golden_age
 					}
 				}
 				set_trade_route_value_multiplier = {
@@ -3059,12 +3059,12 @@ character_event = { # Update Silk Road values on startup
 }
 
 character_event = {
-	id = ZA.30500
+	id = SE.30500
 	
 	hide_window = yes
 	is_triggered_only = yes
 
-	trigger = { FROM = { is_offmap_tag = zakhara } }
+	trigger = { FROM = { is_offmap_tag = seros } }
 	
 	immediate = {
 		change_variable = {
@@ -3079,50 +3079,50 @@ character_event = {
 }
 
 character_event = {
-	id = ZA.30501
+	id = SE.30501
 	
 	hide_window = yes
 	is_triggered_only = yes
 
-	trigger = { FROM = { is_offmap_tag = zakhara } }
+	trigger = { FROM = { is_offmap_tag = seros } }
 	
 	immediate = {
 		FROM = {
-			print_zakhara_policy_update_effect = yes
+			print_seros_policy_update_effect = yes
 		}
 	}
 }
 
 character_event = {
-	id = ZA.30502
+	id = SE.30502
 	
 	hide_window = yes
 	is_triggered_only = yes
 
-	trigger = { FROM = { is_offmap_tag = zakhara } }
+	trigger = { FROM = { is_offmap_tag = seros } }
 	
 	immediate = {
 		FROM = {
-			print_zakhara_status_update_effect = yes
+			print_seros_status_update_effect = yes
 		}
 	}
 }
 
 character_event =  {
-	id = ZA.30503
+	id = SE.30503
 	
 	hide_window = yes
 	is_triggered_only = yes
 
-	trigger = { FROMFROM = { is_offmap_tag = zakhara } }
+	trigger = { FROMFROM = { is_offmap_tag = seros } }
 	
 	immediate = {
-		print_zakhara_ruler_update_effect = yes
+		print_seros_ruler_update_effect = yes
 	}
 }
 
-character_event =  { # Clean up living members of the zakhara dynasty
-	id = ZA.30504
+character_event =  { # Clean up living members of the seros dynasty
+	id = SE.30504
 	
 	hide_window = yes
 	is_triggered_only = yes
@@ -3135,7 +3135,7 @@ character_event =  { # Clean up living members of the zakhara dynasty
 	}
 	
 	immediate = {
-		zakhara = {
+		seros = {
 			offmap_ruler = {
 				any_dynasty_member = {
 					limit = {
@@ -3144,7 +3144,7 @@ character_event =  { # Clean up living members of the zakhara dynasty
 							is_ruler = yes
 						}
 					}
-					death = { death_reason = death_went_back_to_zakhara }
+					death = { death_reason = death_went_back_to_seros }
 				}
 			}
 			offmap_prev_ruler = {
@@ -3155,7 +3155,7 @@ character_event =  { # Clean up living members of the zakhara dynasty
 							is_ruler = yes
 						}
 					}
-					death = { death_reason = death_went_back_to_zakhara }
+					death = { death_reason = death_went_back_to_seros }
 				}
 			}
 		}

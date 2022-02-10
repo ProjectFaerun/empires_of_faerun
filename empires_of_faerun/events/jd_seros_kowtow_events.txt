@@ -264,14 +264,14 @@ character_event = { # Travel Tombola
 		                ai = yes
 		                mercenary = yes
 		                OR = {
-		                	culture = sahuagin
+		                	culture = sea_elf
 		                	AND = {
-		                		seros = { has_status = seros_pantheist_invasion }
-		                		culture = hadhar
+		                		seros = { has_status = seros_merrow_invasion }
+		                		culture = merrow
 		                	}
 		                	AND = {
-		                		seros = { has_status = seros_badia_invasion }
-		                		culture = badia
+		                		seros = { has_status = seros_sahuagin_invasion }
+		                		culture = sahuagin
 		                	}
 		                }
 						primary_title = {
@@ -1623,14 +1623,14 @@ character_event = {
                 #is_landed = yes
                 mercenary = yes
                 OR = {
-                	culture = sahuagin
+                	culture = sea_elf
                 	AND = {
-                		seros = { has_status = seros_pantheist_invasion }
-                		culture = hadhar
+                		seros = { has_status = seros_sahuagin_invasion }
+                		culture = sahuagin
                 	}
                 	AND = {
-                		seros = { has_status = seros_badia_invasion }
-                		culture = badia
+                		seros = { has_status = seros_merrow_invasion }
+                		culture = merrow
                 	}
                 }
 				primary_title = {
@@ -1646,8 +1646,8 @@ character_event = {
                 seros_stable = { ROOT = { set_character_flag = seros_stable } }
                 seros_unrest = { ROOT = { set_character_flag = seros_unrest } }
                 seros_civil_war = { ROOT = { set_character_flag = seros_civil_war } }
-                seros_badia_invasion = { ROOT = { set_character_flag = seros_badia_invasion } }
-                seros_pantheist_invasion = { ROOT = { set_character_flag = seros_pantheist_invasion } }
+                seros_sahuagin_invasion = { ROOT = { set_character_flag = seros_sahuagin_invasion } }
+                seros_merrow_invasion = { ROOT = { set_character_flag = seros_merrow_invasion } }
                 seros_famine = { ROOT = { set_character_flag = seros_famine } }
                 seros_plague = { ROOT = { set_character_flag = seros_plague } }
                 seros_golden_age = { ROOT = { set_character_flag = seros_golden_age } }
@@ -1675,8 +1675,8 @@ character_event = { #PING EVENT for the Mercenary leader...
 						OR = {
 				    		has_character_flag = seros_unrest
 				    		has_character_flag = seros_civil_war
-				    		has_character_flag = seros_badia_invasion
-				    		has_character_flag = seros_pantheist_invasion
+				    		has_character_flag = seros_sahuagin_invasion
+				    		has_character_flag = seros_merrow_invasion
 			    		}
     				}
     			}
@@ -1780,8 +1780,8 @@ character_event = { #Mercenaries wants root to pay a "bridge fee"...
         clr_character_flag = seros_stable
         clr_character_flag = seros_unrest
         clr_character_flag = seros_civil_war
-        clr_character_flag = seros_badia_invasion
-        clr_character_flag = seros_pantheist_invasion
+        clr_character_flag = seros_sahuagin_invasion
+        clr_character_flag = seros_merrow_invasion
         clr_character_flag = seros_famine
         clr_character_flag = seros_plague
         clr_character_flag = seros_golden_age
@@ -1829,8 +1829,8 @@ character_event = { #Mercenaries: "We're here to escort you!"
         clr_character_flag = seros_stable
         clr_character_flag = seros_unrest
         clr_character_flag = seros_civil_war
-        clr_character_flag = seros_badia_invasion
-        clr_character_flag = seros_pantheist_invasion
+        clr_character_flag = seros_sahuagin_invasion
+        clr_character_flag = seros_merrow_invasion
         clr_character_flag = seros_famine
         clr_character_flag = seros_plague
         clr_character_flag = seros_golden_age
@@ -1919,8 +1919,8 @@ character_event = { #We see starving people...
         clr_character_flag = seros_stable
         clr_character_flag = seros_unrest
         clr_character_flag = seros_civil_war
-        clr_character_flag = seros_badia_invasion
-        clr_character_flag = seros_pantheist_invasion
+        clr_character_flag = seros_sahuagin_invasion
+        clr_character_flag = seros_merrow_invasion
         clr_character_flag = seros_famine
         clr_character_flag = seros_plague
         clr_character_flag = seros_golden_age
