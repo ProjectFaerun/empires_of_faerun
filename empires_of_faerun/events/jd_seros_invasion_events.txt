@@ -3906,7 +3906,11 @@ character_event = {
 		government = seros_government
 		current_heir = { 
 			OR = {
-				NOT = { culture_group = fish_group }
+				NOR = {
+					culture = sea_elf
+					culture = merrow
+					culture_group = fish_group
+				}
 				NOR = {
 					controls_religion = no
 					has_religion_feature = religion_temporal_head

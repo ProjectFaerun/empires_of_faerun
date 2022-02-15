@@ -789,7 +789,9 @@ character_event = {
 		modifier = { # Slightly more likely to get Unrest if non-seros emperor
 			factor = 1.25
 			FROM = {
-				NOT = {
+				NOR = {
+					culture = sea_elf
+					culture = merrow
 					culture_group = fish_group
 				}
 			}
@@ -1062,7 +1064,7 @@ narrative_event = {
 				}
 			}
 		}
-		text = EVTDESC_SE_50031_tuigan # Can be the same as the standard status change notification
+		text = EVTDESC_SE_50031_merrow # Can be the same as the standard status change notification
 	}
 
 	has_dlc = "Jade Dragon"
@@ -2024,7 +2026,7 @@ character_event = {
 							age = 30
 							random_traits = yes
 							female = yes
-							religion = qisma # A bit strange, but necessary
+							religion = infernal # A bit strange, but necessary
 							culture = sahuagin
 							dynasty = actually_culture
 							trait = brilliant_strategist
@@ -2036,7 +2038,7 @@ character_event = {
 							age = 30
 							random_traits = yes
 							female = no
-							religion = qisma # A bit strange, but necessary
+							religion = infernal # A bit strange, but necessary
 							culture = sahuagin
 							dynasty = actually_culture
 							trait = brilliant_strategist
@@ -2066,16 +2068,16 @@ character_event = {
 								
 						}
 						10 = {
-							religion = vaprak
+							religion = scale_cult
 						}
 						10 = {
-							religion = qisma
+							religion = infernal
 						}
 						5 = {
-							religion = calishite_faith
+							religion = abyssal_cult
 						}
 						5 = {
-							religion = muhjari
+							religion = dead_three
 						}
 					}
 				}
@@ -2100,7 +2102,7 @@ character_event = {
 						character_event = { id = SE.10113 days = 15 } #Spawns a Displaced Prince adventurer...
 						set_character_flag = spawning_a_displaced_royal
 						log = "seros Logging:"
-						log = "Attempting to spawn a Displaced Prince, as aftermath to event SE.50200 (end of Being Invaded by tuigans). Character should spawn in 15 days."
+						log = "Attempting to spawn a Displaced Prince, as aftermath to event SE.50200 (end of Being Invaded by merrow). Character should spawn in 15 days."
 					}
 					50 = {
 						modifier = {
@@ -2585,7 +2587,7 @@ character_event = {
 					factor = 2.5
 					FROM = {
 						holder_scope = {
-							NOT = { culture_group = serosn_group } # A foreign dynasty is more likely to be ousted
+							NOT = { culture_group = fish_group } # A foreign dynasty is more likely to be ousted
 						}
 					}
 				}
@@ -2603,7 +2605,7 @@ character_event = {
 					if = {
 						limit = {
 							holder_scope = {
-								NOT = { culture_group = serosn_group }
+								NOT = { culture_group = fish_group }
 							}
 						}
 						set_offmap_flag = foreign_dynasty_ousted
@@ -2707,7 +2709,7 @@ character_event = {
 					factor = 0.5
 					FROM = {
 						holder_scope = {
-							NOT = { culture_group = serosn_group }
+							NOT = { culture_group = fish_group }
 						}
 					}
 				}
@@ -2888,7 +2890,7 @@ character_event = { # Update Silk Road values
 					has_status = seros_golden_age
 				}
 				set_trade_route_value_multiplier = {
-					which = silk_road
+					which = sea_fallen_stars_route
 					value = 2
 				}
 			}
@@ -2897,7 +2899,7 @@ character_event = { # Update Silk Road values
 					has_status = seros_unrest
 				}
 				set_trade_route_value_multiplier = {
-					which = silk_road
+					which = sea_fallen_stars_route
 					value = 0.75
 				}
 			}
@@ -2910,7 +2912,7 @@ character_event = { # Update Silk Road values
 					}
 				}
 				set_trade_route_value_multiplier = {
-					which = silk_road
+					which = sea_fallen_stars_route
 					value = 0.5
 				}
 			}
@@ -2919,7 +2921,7 @@ character_event = { # Update Silk Road values
 					has_status = seros_famine
 				}
 				set_trade_route_value_multiplier = {
-					which = silk_road
+					which = sea_fallen_stars_route
 					value = 0.25
 				}
 			}
@@ -2928,7 +2930,7 @@ character_event = { # Update Silk Road values
 					has_status = seros_plague
 				}
 				set_trade_route_value_multiplier = {
-					which = silk_road
+					which = sea_fallen_stars_route
 					value = 0.1
 				}
 			}
@@ -2937,7 +2939,7 @@ character_event = { # Update Silk Road values
 					has_policy = seros_isolationist
 				}
 				set_trade_route_value_multiplier = {
-					which = silk_road
+					which = sea_fallen_stars_route
 					value = 0
 				}
 			}
@@ -2955,7 +2957,7 @@ character_event = { # Update Silk Road values
 					}
 				}
 				set_trade_route_value_multiplier = {
-					which = silk_road
+					which = sea_fallen_stars_route
 					value = 1
 				}
 			}
@@ -2983,7 +2985,7 @@ character_event = { # Update Silk Road values on startup
 					has_status = seros_golden_age
 				}
 				set_trade_route_value_multiplier = {
-					which = silk_road
+					which = sea_fallen_stars_route
 					value = 2
 				}
 			}
@@ -2992,7 +2994,7 @@ character_event = { # Update Silk Road values on startup
 					has_status = seros_unrest
 				}
 				set_trade_route_value_multiplier = {
-					which = silk_road
+					which = sea_fallen_stars_route
 					value = 0.75
 				}
 			}
@@ -3005,7 +3007,7 @@ character_event = { # Update Silk Road values on startup
 					}
 				}
 				set_trade_route_value_multiplier = {
-					which = silk_road
+					which = sea_fallen_stars_route
 					value = 0.5
 				}
 			}
@@ -3014,7 +3016,7 @@ character_event = { # Update Silk Road values on startup
 					has_status = seros_famine
 				}
 				set_trade_route_value_multiplier = {
-					which = silk_road
+					which = sea_fallen_stars_route
 					value = 0.25
 				}
 			}
@@ -3023,7 +3025,7 @@ character_event = { # Update Silk Road values on startup
 					has_status = seros_plague
 				}
 				set_trade_route_value_multiplier = {
-					which = silk_road
+					which = sea_fallen_stars_route
 					value = 0.1
 				}
 			}
@@ -3032,7 +3034,7 @@ character_event = { # Update Silk Road values on startup
 					has_policy = seros_isolationist
 				}
 				set_trade_route_value_multiplier = {
-					which = silk_road
+					which = sea_fallen_stars_route
 					value = 0
 				}
 			}
@@ -3050,7 +3052,7 @@ character_event = { # Update Silk Road values on startup
 					}
 				}
 				set_trade_route_value_multiplier = {
-					which = silk_road
+					which = sea_fallen_stars_route
 					value = 1
 				}
 			}

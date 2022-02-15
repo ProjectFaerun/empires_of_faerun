@@ -12,7 +12,11 @@ decisions = {
 		is_high_prio = yes
 		ai_check_interval = 60
 		potential = {
-			culture_group = fish_group
+			OR = {
+				culture = sea_elf
+				culture = merrow
+				culture_group = fish_group
+			}
 			is_nomadic = no
 			is_feudal = yes
 			NOT = { government = seros_government }

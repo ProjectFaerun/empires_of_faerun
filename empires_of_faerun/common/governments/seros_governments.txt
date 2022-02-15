@@ -26,6 +26,8 @@ feudal_governments = {
 			tier = EMPEROR
 			primary_title = { has_title_flag = pretender_seros_empire }
 			OR = {
+				culture = sea_elf
+				culture = merrow
 				culture_group = fish_group
 				has_character_flag = seros_government_preserve #keeps government when player is given culture change opton
 			}
