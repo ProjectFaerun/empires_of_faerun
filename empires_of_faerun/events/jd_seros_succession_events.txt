@@ -102,6 +102,12 @@ character_event = {
     			modifier = {
     			 	factor = 10
 			 		OR = {
+						AND = {
+    			 			culture = sea_elf
+	    			 		governor = {
+	    			 			NOT = { culture = sea_elf }
+	    			 		}
+	    			 	}
     			 		AND = {
     			 			culture = merrow
 	    			 		governor = {
@@ -160,9 +166,77 @@ character_event = {
     		limit = { NOT = { has_offmap_flag = rename_override } }
 			random_list = {
 	    		#All cultures...
-	    		30 = {  #more likely, in general
-	    			trigger = { NOT = { has_offmap_name = "tang_seros" } }
-	    			set_offmap_name = "tang_seros" 
+	    		20 = { #more likely, in general
+	    			trigger = { NOT = { has_offmap_name = "ivellion_seros" } }
+	    			set_offmap_name = "ivellion_seros"
+	    		}
+				20 = { #more likely, in general
+	    			trigger = { NOT = { has_offmap_name = "zhuirentalon_seros" } }
+	    			set_offmap_name = "zhuirentalon_seros"
+	    		}
+				20 = { #more likely, in general
+	    			trigger = { NOT = { has_offmap_name = "caelynnon_seros" } }
+	    			set_offmap_name = "caelynnon_seros"
+	    		}
+				20 = { #more likely, in general
+	    			trigger = { NOT = { has_offmap_name = "edraelen_seros" } }
+	    			set_offmap_name = "edraelen_seros"
+	    		}
+				20 = { #more likely, in general
+	    			trigger = { NOT = { has_offmap_name = "gelmalgaldon_seros" } }
+	    			set_offmap_name = "gelmalgaldon_seros"
+	    		}
+				20 = { #more likely, in general
+	    			trigger = { NOT = { has_offmap_name = "erwedhenen_seros" } }
+	    			set_offmap_name = "erwedhenen_seros"
+	    		}
+				20 = { #more likely, in general
+	    			trigger = { NOT = { has_offmap_name = "lysanderen_seros" } }
+	    			set_offmap_name = "lysanderen_seros"
+	    		}
+				20 = { #more likely, in general
+	    			trigger = { NOT = { has_offmap_name = "jehastran_seros" } }
+	    			set_offmap_name = "jehastran_seros"
+	    		}
+				20 = { #more likely, in general
+	    			trigger = { NOT = { has_offmap_name = "perwraekon_seros" } }
+	    			set_offmap_name = "perwraekon_seros"
+	    		}
+				20 = { #more likely, in general
+	    			trigger = { NOT = { has_offmap_name = "nacaciaen_seros" } }
+	    			set_offmap_name = "nacaciaen_seros"
+	    		}
+				20 = { #more likely, in general
+	    			trigger = { NOT = { has_offmap_name = "shehstreken_seros" } }
+	    			set_offmap_name = "shehstreken_seros"
+	    		}
+				20 = { #more likely, in general
+	    			trigger = { NOT = { has_offmap_name = "zocrixen_seros" } }
+	    			set_offmap_name = "zocrixen_seros"
+	    		}
+				20 = { #more likely, in general
+	    			trigger = { NOT = { has_offmap_name = "hilazieon_seros" } }
+	    			set_offmap_name = "hilazieon_seros"
+	    		}
+				20 = { #more likely, in general
+	    			trigger = { NOT = { has_offmap_name = "gokekuen_seros" } }
+	    			set_offmap_name = "gokekuen_seros"
+	    		}
+				20 = { #more likely, in general
+	    			trigger = { NOT = { has_offmap_name = "aggezzenon_seros" } }
+	    			set_offmap_name = "aggezzenon_seros"
+	    		}
+				20 = { #more likely, in general
+	    			trigger = { NOT = { has_offmap_name = "drazrosen_seros" } }
+	    			set_offmap_name = "drazrosen_seros"
+	    		}
+				20 = { #more likely, in general
+	    			trigger = { NOT = { has_offmap_name = "thaalison_seros" } }
+	    			set_offmap_name = "thaalison_seros"
+	    		}
+				20 = { #more likely, in general
+	    			trigger = { NOT = { has_offmap_name = "sheshon_seros" } }
+	    			set_offmap_name = "sheshon_seros"
 	    		}
 	    	}
 		}
@@ -256,10 +330,61 @@ character_event = {
             }
             set_government_type = celestial_bureaucracy
             random_list = {
-                10 = {  #pretty likely
-                    set_offmap_name = "song_seros"
-                }
-            }
+                10 = {
+					set_offmap_name = "ivellion_seros"
+	    		}
+				10 = {
+					set_offmap_name = "zhuirentalon_seros"
+	    		}
+				10 = {
+					set_offmap_name = "caelynnon_seros"
+	    		}
+				10 = {
+					set_offmap_name = "edraelen_seros"
+	    		}
+				10 = {
+					set_offmap_name = "gelmalgaldon_seros"
+	    		}
+				10 = {
+					set_offmap_name = "erwedhenen_seros"
+	    		}
+				10 = {
+					set_offmap_name = "lysanderen_seros"
+	    		}
+				10 = {
+					set_offmap_name = "jehastran_seros"
+	    		}
+				10 = {
+					set_offmap_name = "perwraekon_seros"
+	    		}
+				10 = {
+					set_offmap_name = "nacaciaen_seros"
+	    		}
+				10 = {
+					set_offmap_name = "shehstreken_seros"
+	    		}
+				10 = {
+					set_offmap_name = "zocrixen_seros"
+	    		}
+				10 = {
+					set_offmap_name = "hilazieon_seros"
+	    		}
+				10 = {
+					set_offmap_name = "gokekuen_seros"
+	    		}
+				10 = {
+					set_offmap_name = "aggezzenon_seros"
+	    		}
+				10 = {
+					set_offmap_name = "drazrosen_seros"
+	    		}
+				10 = {
+					set_offmap_name = "thaalison_seros"
+	    		}
+				10 = {
+					set_offmap_name = "sheshon_seros"
+	    		}
+			}
         }
     }
 }
