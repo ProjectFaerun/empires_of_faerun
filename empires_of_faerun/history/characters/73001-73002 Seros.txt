@@ -1,4 +1,4 @@
-60001 = { # shou_lung chancellor
+73001 = { # shou_lung chancellor
 	dynasty = 8901 # ruling shou_lung dynasty
 	name = "Ju-Hai"
 	religion = the_path
@@ -7,7 +7,7 @@
 	1380.3.13 = {death = yes}
 }
 
-60002 = { # Emperor Xizong of Chin 
+73002 = { # Emperor Xizong of Chin 
 	dynasty = 8902 # Chin - ruling Shou Lung dynasty
 	name = "Xizong"
 	religion = the_path
