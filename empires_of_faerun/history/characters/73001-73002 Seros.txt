@@ -1,8 +1,8 @@
 73001 = { # shou_lung chancellor
 	dynasty = 8901 # ruling shou_lung dynasty
 	name = "Ju-Hai"
-	religion = the_path
-	culture = shou
+	religion = asathalfinare
+	culture = sea_elf
 	1310.7.21 = {birth = yes}
 	1380.3.13 = {death = yes}
 }
@@ -10,8 +10,8 @@
 73002 = { # Emperor Xizong of Chin 
 	dynasty = 8902 # Chin - ruling Shou Lung dynasty
 	name = "Xizong"
-	religion = the_path
-	culture = shou
+	religion = asathalfinare
+	culture = sea_elf
 	1330.6.8 = {
 		birth = yes
 	}
